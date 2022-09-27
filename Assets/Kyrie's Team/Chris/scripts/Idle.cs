@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class Idle : State
 {
-    float visDist = 30f;
-
     public Idle(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
         : base(_npc, _agent, _anim, _player)
     {
@@ -21,19 +19,11 @@ public class Idle : State
 
     public override void Update()
     {
-        if(isGrounded)
+        if (true)
         {
-            Debug.Log("here");
-            var temp = Random.Range(0, 10);
-            rb.AddForce(new Vector3(temp, 3, temp),ForceMode.Impulse);
-            Debug.Log(temp);
+            nextState = new Persuit(npc, agent, anim, player);
+            stage = EVENT.EXIT;
         }
-
-        //if (player.position.magnitude - npc.transform.position.magnitude <= visDist)
-        //{
-        //    nextState = new Persuit(npc, agent, anim, player);
-        //    stage = EVENT.EXIT;
-        //}
     }
 
     public override void Exit()
