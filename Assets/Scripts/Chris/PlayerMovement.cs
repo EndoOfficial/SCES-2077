@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float Movement;
 
     public float speed = 12f;
+    public float sprint = 20f;
     public float gravity = -9.81f;
     public float jumpeHeight = 3f;
 
@@ -26,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         // stop falling if grounded
-        if(isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -35,12 +36,12 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        if(x != 0 || z != 0)
+        if (x != 0 || z != 0)
         {
             Movement = 1;
             StopAllCoroutines();
         }
-        if( x == 0 && z == 0)
+        if (x == 0 && z == 0)
         {
             StartCoroutine(StopWalking());
         }
@@ -52,13 +53,13 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
 
         //if jumped and is grounded, Jump
-        if(Input.GetButtonDown("Jump")&& isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpeHeight * -2f * gravity);
         }
         // apply gravity
         velocity.y += gravity * Time.deltaTime;
-
+        
         controller.Move(velocity * Time.deltaTime);
     }
     private IEnumerator StopWalking()
