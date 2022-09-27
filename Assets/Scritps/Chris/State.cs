@@ -22,10 +22,8 @@ public class State
     protected Transform player;
     protected State nextState;
     protected NavMeshAgent agent;
-
-    float visDist = 30f;
-    float visAngle = 360;
-    float attackDist = 5;
+    protected Rigidbody rb;
+    protected bool isGrounded;
 
     public State(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
     {
