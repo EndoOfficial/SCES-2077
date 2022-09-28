@@ -7,7 +7,7 @@ public class State
 {
     public enum STATE
     {
-        IDLE, ATTACK, PERSUIT
+        IDLE, ATTACK, PURSUIT
     }
     
     public enum EVENT
@@ -19,13 +19,13 @@ public class State
     protected EVENT stage;
     protected GameObject npc;
     protected Animator anim;
-    protected Transform player;
+    protected GameObject player;
     protected State nextState;
     protected NavMeshAgent agent;
     protected Rigidbody rb;
     protected bool grounded;
 
-    public State(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
+    public State(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
     {
         npc = _npc;
         agent = _agent;

@@ -8,9 +8,9 @@ public class AI : MonoBehaviour
 {
     NavMeshAgent agent;
     Animator anim;
-    public Transform player;
+    public GameObject player;
     State currentState;
-    public bool _grounded;
+    public bool detect = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,16 +28,16 @@ public class AI : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEvents.isGrounded += isGrounded;
-    }
-    private void OnDisable()
-    {
-        
-        GameEvents.isGrounded -= isGrounded;
+        GameEvents.DetectPlayer += DetectPlayer;
     }
 
-    private void isGrounded(bool grounded)
+    private void OnDisable()
     {
-        _grounded = true;
+        GameEvents.DetectPlayer -= DetectPlayer;
+    }
+
+    private void DetectPlayer()
+    {
+        detect = true;
     }
 }

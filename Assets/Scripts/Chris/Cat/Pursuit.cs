@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Persuit : State
+public class Pursuit : State
 {
-    public Persuit(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
+    public Pursuit(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
         : base(_npc, _agent, _anim, _player)
     {
-        name = STATE.PERSUIT;
+        name = STATE.PURSUIT;
     }
 
     public override void Enter()
@@ -18,12 +18,11 @@ public class Persuit : State
 
     public override void Update()
     {
-
-        base.Update();
     }
 
     public override void Exit()
     {
+        anim.ResetTrigger("isIdle");
         base.Exit();
     }
 }

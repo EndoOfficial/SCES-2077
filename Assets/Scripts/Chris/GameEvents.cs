@@ -9,4 +9,5 @@ public static class GameEvents
     public static isGroundedDelegate isGrounded;
 
     public static Action AOE;
+    public static Action DetectPlayer;
 }
