@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance; //used to find a position forsprites to look towards, in this case the player ~ Zach
 
     public CharacterController controller;
     public float Movement;
@@ -20,6 +21,10 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     public bool isGrounded;
 
+    private void Awake()
+    {
+        instance = this; //initializes the instance ~ Zach
+    }
     // Update is called once per frame
     void Update()
     {
