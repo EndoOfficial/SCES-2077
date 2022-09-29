@@ -5,8 +5,7 @@ using UnityEngine.AI;
 
 public class Idle : State
 {
-    private AI ai;
-
+    AI ai;
     public Idle(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
         : base(_npc, _agent, _anim, _player)
     {
@@ -17,17 +16,20 @@ public class Idle : State
     {
         anim.SetTrigger("isIdle");
         rb = npc.GetComponent<Rigidbody>();
-        ai = player.GetComponent<AI>();
+        ai = npc.GetComponent<AI>();
         base.Enter();
     }
 
     public override void Update()
     {
-        if (ai.detect)
+        Debug.Log("Idle");
+        if (ai.detected)
         {
             Debug.Log("here");
-            nextState = new Pursuit(npc,  agent,  anim,  player);
+            nextState = new Pursuit(npc, agent, anim, player);
+            stage = EVENT.EXIT;
         }
+        base.Update();
     }
 
     public override void Exit()

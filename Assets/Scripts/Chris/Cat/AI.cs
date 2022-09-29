@@ -10,14 +10,14 @@ public class AI : MonoBehaviour
     Animator anim;
     public GameObject player;
     State currentState;
-    public bool detect = false;
+    public bool detected;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = this.GetComponent<NavMeshAgent>();
         anim = this.GetComponent<Animator>();
-        currentState = new Idle(this.gameObject, agent, anim, player);
+        currentState = new Idle(gameObject, agent, anim, player);
     }
 
     // Update is called once per frame
@@ -36,8 +36,9 @@ public class AI : MonoBehaviour
         GameEvents.DetectPlayer -= DetectPlayer;
     }
 
-    private void DetectPlayer()
+    private void DetectPlayer(bool detect)
     {
-        detect = true;
+        if (detect) { detected = true; }
+        else { detected = false; }
     }
 }
