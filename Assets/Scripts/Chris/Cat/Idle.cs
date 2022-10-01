@@ -29,7 +29,6 @@ public class Idle : State
             nextState = new Pursuit(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }
-        base.Update();
     }
 
     public override void Exit()
