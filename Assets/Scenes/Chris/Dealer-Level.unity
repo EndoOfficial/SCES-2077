@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657993, g: 0.49641424, b: 0.57481825, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657934, g: 0.4964134, b: 0.5748173, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -708,8 +708,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Paper: {fileID: 2496787411330301489, guid: 9a19c2bcd8e64f2448d73cc4c2383204, type: 3}
-  spawnTime: 0.5
-  radius: 5
+  spawnTime: 0.1
+  radius: 20
 --- !u!1 &1125268565
 GameObject:
   m_ObjectHideFlags: 0
