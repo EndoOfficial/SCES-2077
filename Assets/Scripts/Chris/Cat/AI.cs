@@ -38,6 +38,7 @@ public class AI : MonoBehaviour
 
     private void DetectPlayer(bool detect)
     {
+        //passthrough a bool
         if (detect) { detected = true; }
         else { detected = false; }
     }

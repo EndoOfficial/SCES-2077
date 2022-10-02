@@ -22,10 +22,8 @@ public class Idle : State
 
     public override void Update()
     {
-        Debug.Log("Idle");
-        if (ai.detected)
+        if (ai.detected)// if ai.detected is true
         {
-            Debug.Log("here");
             nextState = new Pursuit(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }

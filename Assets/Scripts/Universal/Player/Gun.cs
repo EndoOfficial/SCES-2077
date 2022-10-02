@@ -26,7 +26,7 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            MrCiggs target = hit.transform.GetComponent<MrCiggs>();
+            Enemy target = hit.transform.GetComponent<Enemy>();
             if (target != null)
             {
                 target.TakeDamage(damage);

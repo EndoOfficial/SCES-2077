@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Paper")
+
+        if (other.CompareTag("Ground"))
         {
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
         }
     }
 
