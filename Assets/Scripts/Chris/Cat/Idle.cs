@@ -14,6 +14,7 @@ public class Idle : State
 
     public override void Enter()
     {
+        Debug.Log("FISH IDLE ENTERED");
         anim.SetTrigger("isIdle");
         rb = npc.GetComponent<Rigidbody>();
         ai = npc.GetComponent<AI>();
