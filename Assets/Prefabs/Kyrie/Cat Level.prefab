@@ -4024,7 +4024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6991034953410108559}
   m_Layer: 0
-  m_Name: Environment
+  m_Name: Cat Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
