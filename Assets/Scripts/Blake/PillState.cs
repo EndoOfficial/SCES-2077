@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class PillState : State
 {
-    public enum PillSTATE
+    public PILLSTATE name;
+    public enum PILLSTATE
     {
         IDLE, PURSUIT, ATTACK, RETREAT
     }

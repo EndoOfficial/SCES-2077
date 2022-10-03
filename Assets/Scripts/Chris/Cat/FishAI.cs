@@ -4,20 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AI : MonoBehaviour
+public class FishAI : MonoBehaviour
 {
     NavMeshAgent agent;
     Animator anim;
-    public GameObject player;
+    private GameObject player;
     State currentState;
     public bool detected;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         agent = this.GetComponent<NavMeshAgent>();
         anim = this.GetComponent<Animator>();
-        currentState = new Idle(gameObject, agent, anim, player);
+        currentState = new FishIdle(gameObject, agent, anim, player);
     }
 
     // Update is called once per frame

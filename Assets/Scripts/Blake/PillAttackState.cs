@@ -8,7 +8,7 @@ public class PillAttackState : PillState
     public PillAttackState(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
     : base(_npc, _agent, _anim, _player)
     {
-        name = STATE.ATTACK;
+        name = PILLSTATE.ATTACK;
     }
     public override void Enter()
     {

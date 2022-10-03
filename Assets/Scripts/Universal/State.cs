@@ -4,18 +4,12 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class State
-{
-    public enum STATE
-    {
-        IDLE, PURSUIT, ATTACK
-    }
-    
+{    
     public enum EVENT
     {
         ENTER, UPDATE, EXIT
     }
 
-    public STATE name;
     protected EVENT stage;
     protected GameObject npc;
     protected Animator anim;

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Idle : State
+public class FishIdle : FishState
 {
-    AI ai;
-    public Idle(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
+    FishAI ai;
+    public FishIdle(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
         : base(_npc, _agent, _anim, _player)
     {
-        name = STATE.IDLE;
+        name = FISHSTATE.IDLE;
     }
 
     public override void Enter()
@@ -17,7 +17,7 @@ public class Idle : State
         Debug.Log("FISH IDLE ENTERED");
         anim.SetTrigger("isIdle");
         rb = npc.GetComponent<Rigidbody>();
-        ai = npc.GetComponent<AI>();
+        ai = npc.GetComponent<FishAI>();
         base.Enter();
     }
 
@@ -25,7 +25,7 @@ public class Idle : State
     {
         if (ai.detected)// if ai.detected is true
         {
-            nextState = new Pursuit(npc, agent, anim, player);
+            nextState = new FishPursuit(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }
     }
