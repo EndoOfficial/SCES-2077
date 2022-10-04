@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class PillAttackState : PillState
 {
+    public Vector3 direction;
     public PillAttackState(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
     : base(_npc, _agent, _anim, _player)
     {
@@ -12,12 +13,11 @@ public class PillAttackState : PillState
     }
     public override void Enter()
     {
-        Debug.Log("PILL ATTACK STATE ENTERED");
         base.Enter();
     }
     public override void Update()
     {
-
+    direction = player.transform.position - npc.transform.position;
     }
     public override void Exit()
     {
