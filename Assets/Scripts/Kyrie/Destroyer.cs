@@ -8,10 +8,7 @@ public class Destroyer : MonoBehaviour
     {
         if (other.CompareTag("Paper"))
         {
-            foreach (Transform child in other.transform)
-            {
-                child.parent = null;
-            }
+            var child = other.transform.Find("Player");
             Destroy(other.gameObject);
         }
     }

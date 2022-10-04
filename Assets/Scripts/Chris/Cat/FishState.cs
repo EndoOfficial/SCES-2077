@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class FishState : State
 {
     public FISHSTATE name;
+
     public enum FISHSTATE
     {
         IDLE, PURSUIT, ATTACK

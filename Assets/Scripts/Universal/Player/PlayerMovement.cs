@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     public bool isGrounded;
+    public RaycastHit hitinfo;
 
     private void Awake()
     {
