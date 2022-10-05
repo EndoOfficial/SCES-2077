@@ -22,8 +22,8 @@ public class FishPursuit : FishState
     }
 
     public override void Update()
-    {
-        Debug.Log("pursuit");
+    { 
+        // sets jumpDirection to the direction of the player
         jump.jumpDirection = player.transform.position - npc.transform.position;
         if (!ai.detected)
         {

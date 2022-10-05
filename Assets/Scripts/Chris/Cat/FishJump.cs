@@ -21,12 +21,12 @@ public class FishJump : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) // if Ground tag
         {
             grounded = true;
             jumpDirection = new Vector3(UnityEngine.Random.Range(-5, 5), 0, UnityEngine.Random.Range(-5, 5));// set jump direction randomly
             StartCoroutine(Wait()); // start co-routine
+            GameEvents.AOE?.Invoke();
         }
     }
 
