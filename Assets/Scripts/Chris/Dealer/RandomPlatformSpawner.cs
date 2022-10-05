@@ -8,6 +8,7 @@ public class RandomPlatformSpawner : MonoBehaviour
     public float spawnTime = 1f;
     private Vector3 origin;
     public float radius = 5;
+    public float height;
 
     void Start()
     {
@@ -17,9 +18,7 @@ public class RandomPlatformSpawner : MonoBehaviour
 
     void Spawn()
     {
-        Vector3 randomPosition = origin + Random.insideUnitSphere * radius;
-        randomPosition.y = origin.y + Random.Range(-1,1);
-        randomPosition.z = origin.z;
+        Vector3 randomPosition = new Vector3(origin.x + Random.Range(-radius, radius), origin.y + Random.Range(-height, height), origin.z);
         Instantiate(Paper, randomPosition, Quaternion.identity);
     }
 

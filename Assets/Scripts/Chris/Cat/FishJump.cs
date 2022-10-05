@@ -39,8 +39,6 @@ public class FishJump : MonoBehaviour
     {
         if (grounded)
         {
-            
-            
             _collider.enabled = false;//disable trigger collider
             yield return new WaitForSecondsRealtime(waitTime);
             grounded = false;
