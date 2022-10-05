@@ -8,7 +8,7 @@ public class CiggsState : State
     public CIGGSSTATE name;
     public enum CIGGSSTATE
     {
-         RAGE1, RAGE2, RAGE3
+         RAGE1, RAGE2, RAGE3, RAGE4
     }
 
     public CiggsState(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)

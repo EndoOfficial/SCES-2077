@@ -9,6 +9,8 @@ public class MrCiggs : MonoBehaviour
     public float range = 100f;
     public ParticleSystem muzzelflashBoss;
     public float damage = 1;
+    public float rage;
+    public float RageRate = 1f;
 
 
     public void Update()
@@ -16,6 +18,8 @@ public class MrCiggs : MonoBehaviour
         Vector3 direction = target.transform.position- transform.position;
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation=rotation;
+        Raging();
+        
     }
     public void TakeDamage(float amount)
     {
@@ -47,6 +51,22 @@ public class MrCiggs : MonoBehaviour
 
 
         }
+        
+    }
+    public void Raging()
+    {
+        rage += RageRate * Time.deltaTime;
+        GameEvents.RageIncrease?.Invoke(rage);
+        if (rage >= 100)
+        {
+            RageRate = 0f;
+        }
+        else
+        {
+            RageRate = 1f;
+        }
+       
+      
     }
     private void OnDrawGizmos()
     {
