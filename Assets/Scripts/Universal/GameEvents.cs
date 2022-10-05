@@ -11,5 +11,8 @@ public static class GameEvents
     public delegate void DetectPlayerDelegate(bool detected);
     public static DetectPlayerDelegate DetectPlayer;
 
+    public delegate void PlayerDanageDelegate(int damage);
+    public static PlayerDanageDelegate PlayerDanage;
+
     public static Action AOE;
 }

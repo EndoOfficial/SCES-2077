@@ -13,28 +13,21 @@ public class PlatformStick : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics.Raycast(groundCheck.position, Vector3.down, out RaycastHit hitinfo, groundDistance, groundMask);
+        isGrounded = Physics.Raycast(groundCheck.position, Vector3.down, out RaycastHit hitinfo, groundDistance, groundMask); // raycast's down 
 
-        if(isGrounded && hitinfo.collider.CompareTag("Paper"))
+        //if the ground has "Paper" tag
+        if (isGrounded && hitinfo.collider.CompareTag("Paper"))
         {
-            if (groundedToggle)
+            if (groundedToggle) // one tick toggle
             {
-                Toggle(hitinfo);
+                groundedToggle = false;// stops update from parenting the plaform every frame
+                transform.parent = hitinfo.collider.transform;// makes the player a child of the platform
             }
         }
         if (!isGrounded)
         {
-            groundedToggle = true;
-            transform.parent = null;
-        }
-    }
-
-    private void Toggle(RaycastHit hitinfo)
-    {
-        groundedToggle = false;
-        if (isGrounded && hitinfo.collider.CompareTag("Paper"))
-        {
-            transform.parent = hitinfo.collider.transform;
+            transform.parent = null;// unparents everything from the player
+            groundedToggle = true;// allows update to call the Toggle() function again
         }
     }
 }
