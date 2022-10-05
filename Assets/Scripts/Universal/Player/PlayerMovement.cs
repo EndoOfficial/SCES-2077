@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.8f;
     public LayerMask groundMask;
+    
 
     Vector3 velocity;
     public bool isGrounded;
@@ -71,4 +72,5 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         Movement = 0;
     }
+   
 }

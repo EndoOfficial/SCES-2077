@@ -4826,6 +4826,7 @@ GameObject:
   - component: {fileID: 123589020}
   - component: {fileID: 1202122488}
   - component: {fileID: 1202122494}
+  - component: {fileID: 1142739143}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -4940,6 +4941,19 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1142739143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687675933922462877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2df95224d7826645a76d92cd34ebe34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 300
 --- !u!1 &2687675933984780399
 GameObject:
   m_ObjectHideFlags: 0
@@ -5086,7 +5100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d6e75335d44a24d94a4e0e327ebd86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
+  mouseSensitivity: 300
   playerBody: {fileID: 2687675933922462864}
 --- !u!1 &2687675934401162907
 GameObject:
@@ -5247,11 +5261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4305295660336122, guid: b74ad24102999e741a75c7a4cdc1f57e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: -0.299
       objectReference: {fileID: 0}
     - target: {fileID: 4305295660336122, guid: b74ad24102999e741a75c7a4cdc1f57e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.39
+      value: -0.236
       objectReference: {fileID: 0}
     - target: {fileID: 4305295660336122, guid: b74ad24102999e741a75c7a4cdc1f57e, type: 3}
       propertyPath: m_LocalPosition.z

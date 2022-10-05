@@ -4,12 +4,18 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class State
-{    
+{
+    public enum STATE
+    {
+        IDLE
+    }
+    
     public enum EVENT
     {
         ENTER, UPDATE, EXIT
     }
 
+    
     protected EVENT stage;
     protected GameObject npc;
     protected Animator anim;
@@ -43,4 +49,5 @@ public class State
         }
         return this;
     }
+
 }
