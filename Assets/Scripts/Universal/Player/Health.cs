@@ -8,8 +8,9 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        Debug.Log($"TakeDamage {amount}");
+        
         health -= amount;
+        GameEvents.Health?.Invoke(health);
         if (health <= 0f)
         {
             Die();

@@ -12,7 +12,14 @@ public class MrCiggs : MonoBehaviour
     public float rage;
     public float RageRate = 1f;
 
-
+    private void OnEnable()
+    {
+        GameEvents.Nicotine += DecreaseRage;
+    }
+    private void OnDisable()
+    {
+        GameEvents.Nicotine -= DecreaseRage;
+    }
     public void Update()
     {
         Vector3 direction = target.transform.position- transform.position;
@@ -67,6 +74,10 @@ public class MrCiggs : MonoBehaviour
         }
        
       
+    }
+    public void DecreaseRage()
+    {
+        rage -= 5f;
     }
     private void OnDrawGizmos()
     {
