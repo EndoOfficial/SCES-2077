@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class PillAttackState : PillState
 {
-    public Vector3 direction;
+    PillMovement Running;
+    HitPlayer Hit;
     public PillAttackState(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
     : base(_npc, _agent, _anim, _player)
     {
@@ -13,11 +14,19 @@ public class PillAttackState : PillState
     }
     public override void Enter()
     {
+        Debug.Log("ATTACK");
+        Hit = npc.GetComponent<HitPlayer>();
+        Running = npc.GetComponent<PillMovement>();
+        Running.speed = 2f;
         base.Enter();
     }
     public override void Update()
     {
-    direction = player.transform.position - npc.transform.position;
+        if (Hit.hit)
+        {
+            nextState = new PillRetreatState(npc, agent, anim, player);
+            stage = EVENT.EXIT;
+        }
     }
     public override void Exit()
     {

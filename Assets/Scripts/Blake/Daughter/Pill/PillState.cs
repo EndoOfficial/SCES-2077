@@ -8,7 +8,7 @@ public class PillState : State
     public PILLSTATE name;
     public enum PILLSTATE
     {
-        IDLE, PURSUIT, ATTACK, RETREAT, SPAWN
+        ATTACK, RETREAT, SPAWN
     }
     public override void Enter() { stage = EVENT.UPDATE; }
     public override void Update() { stage = EVENT.UPDATE; }

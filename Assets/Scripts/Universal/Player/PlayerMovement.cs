@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     public bool isGrounded;
-    public RaycastHit hitinfo;
 
     private void Awake()
     {
@@ -31,12 +30,6 @@ public class PlayerMovement : MonoBehaviour
     {
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        // stop falling if grounded
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
 
         // get move direction
         float x = Input.GetAxis("Horizontal");

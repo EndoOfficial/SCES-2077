@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab30f45eb21e43848bc7f8fb7b382fb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  player: {fileID: 0}
 --- !u!136 &1867811137
 CapsuleCollider:
   m_ObjectHideFlags: 0

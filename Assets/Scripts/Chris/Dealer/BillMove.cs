@@ -11,7 +11,7 @@ public class BillMove : MonoBehaviour
     {
         if (!isDead)
         {
-            transform.position = transform.position + transform.forward * speed * Time.deltaTime;
+            transform.position += transform.forward * speed * Time.deltaTime;
         }
     }
 }

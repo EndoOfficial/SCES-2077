@@ -24,7 +24,7 @@ public class AOE : MonoBehaviour
         _aoe = Physics.CheckSphere(transform.position, radius, Player);
         if (_aoe)
         {
-            GameEvents.PlayerDanage?.Invoke(damage);
+            GameEvents.PlayerDamage?.Invoke(damage);
         }
     }
 }

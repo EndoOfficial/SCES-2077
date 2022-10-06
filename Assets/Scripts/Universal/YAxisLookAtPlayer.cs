@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class YAxisLookAtPlayer : MonoBehaviour
 {
-    private float angle;
-    private GameObject Target;
-    public Vector3 TargetPos;
-    public Vector3 ThisPos;
+    private Transform player;
+    public float TurnSpeed = 5f;
     private void Start()
     {
-        Target = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player").transform;
     }
-    void Update()
+    private void Update()
     {
-        TargetPos = Target.transform.position;
-        ThisPos = transform.position;
-        TargetPos.x = TargetPos.x - ThisPos.x;
-        TargetPos.z = TargetPos.z - ThisPos.z;
-        angle = Mathf.Atan2(TargetPos.x, TargetPos.z) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(player.position.x, 0, player.position.z) - new Vector3(transform.position.x, 0, transform.position.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, TurnSpeed * Time.deltaTime);
     }
 }

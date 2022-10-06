@@ -38,7 +38,7 @@ public class YAxisRotate : MonoBehaviour
             }
             else
             {
-                WaitChange = 3f;
+                WaitChange = 1f;
 
                 MaxSpeed = 20;
                 MinSpeed = 10;

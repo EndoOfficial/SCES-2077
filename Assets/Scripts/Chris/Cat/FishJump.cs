@@ -42,10 +42,12 @@ public class FishJump : MonoBehaviour
             _collider.enabled = false;//disable trigger collider
             yield return new WaitForSecondsRealtime(waitTime);
             grounded = false;
+
             rb.velocity = new Vector3(0, 0, 0);//reset velocity
             jumpDirection.x = Mathf.Clamp(jumpDirection.x, -5f, 5f);
             jumpDirection.y = 0f;
             jumpDirection.z = Mathf.Clamp(jumpDirection.z, -5f, 5f);
+
             rb.AddForce(jumpDirection, ForceMode.Impulse);//add force and torque
             rb.AddForce(new Vector3(0, 6, 0), ForceMode.Impulse);
             rb.AddTorque(new Vector3(jumpDirection.x, 0, 0), ForceMode.Impulse);
