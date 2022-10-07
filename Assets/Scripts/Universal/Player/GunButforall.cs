@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class GunButforall : MonoBehaviour
 {
     public float damage = 10f;
     public float range = 100f;
     public Camera fpsCam;
     public ParticleSystem muzzelFlash;
     public float impactForce = 30f;
-    public float fireRate= 15f;
+    public float fireRate = 15f;
     private float nextTimeToFire = 0;
 
     public void Update()
@@ -26,20 +26,16 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            MrCiggs target = hit.transform.GetComponent<MrCiggs>();
-            Enemy target2 = hit.transform.GetComponent<Enemy>();
+           
+            Enemy target = hit.transform.GetComponent<Enemy>();
 
             if (target != null)
             {
                 target.TakeDamage(damage);
             }
-            if(hit.rigidbody != null)
+            if (hit.rigidbody != null)
             {
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
-            }
-            if (target2 != null)
-            {
-                target2.TakeDamage(damage);
             }
 
         }
