@@ -14,11 +14,15 @@ public static class GameEvents
     public delegate void PlayerDanageDelegate(int damage);
     public static PlayerDanageDelegate PlayerDamage;
 
-    public static Action<float> RageIncrease;
+    public delegate void RageIncreaseDelegate(float rage);
+    public static RageIncreaseDelegate RageIncrease;
+
+    public delegate void HealthDelegate(float health);
+    public static HealthDelegate Health;
+
+    public static Action PlayerDeath;
+
     public static Action Nicotine;
-
-    public static Action<float> Health;
-
 
     public static Action AOE;
 }

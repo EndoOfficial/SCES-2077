@@ -16,7 +16,7 @@ public class FishJump : MonoBehaviour
     {
         //get components
         rb = GetComponent<Rigidbody>();
-        _collider = this.GetComponent<BoxCollider>();
+        _collider = GetComponent<BoxCollider>();
     }
 
     private void OnTriggerEnter(Collider other)

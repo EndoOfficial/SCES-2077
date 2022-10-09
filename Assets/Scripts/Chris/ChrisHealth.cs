@@ -2,10 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class ChrisHealth : MonoBehaviour
 {
     public float health = 200;
-    public void TakeDamage(float damage)
+    private void OnEnable()
+    {
+        GameEvents.PlayerDamage += PlayerDamage;
+    }
+    private void OnDisable()
+    {
+        GameEvents.PlayerDamage -= PlayerDamage;
+    }
+
+    public void PlayerDamage(int damage)
     {
         health -= damage;
         GameEvents.Health?.Invoke(health);

@@ -27,6 +27,7 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
             MrCiggs target = hit.transform.GetComponent<MrCiggs>();
+
             if (target != null)
             {
                 target.TakeDamage(damage);
