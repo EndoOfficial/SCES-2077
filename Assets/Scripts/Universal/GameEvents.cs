@@ -20,7 +20,11 @@ public static class GameEvents
     public delegate void HealthDelegate(float health);
     public static HealthDelegate Health;
 
+    public delegate void BillDeathDelegate(GameObject bill, GameObject spawner);
+    public static BillDeathDelegate BillDeath;
+
     public static Action PlayerDeath;
+
 
     public static Action Nicotine;
 

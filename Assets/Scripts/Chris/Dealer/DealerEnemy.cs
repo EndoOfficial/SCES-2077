@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class DealerEnemy : MonoBehaviour
 {
     public float health = 100f;
     public float maxHealth = 100f;
 
     public GameObject healthBarUi;
     public Slider slider;
+    public GameObject baby;
+    public GameObject[] spawners;
 
     private void Start()
     {
@@ -28,7 +30,11 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        Debug.Log("here");
+        for(int i = 0; i < spawners.Length; i++)
+        {
+            Instantiate(baby, spawners[i].transform);
+        }
     }
 
     private void Update()

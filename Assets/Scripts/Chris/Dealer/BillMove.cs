@@ -5,13 +5,9 @@ using UnityEngine;
 public class BillMove : MonoBehaviour
 {
     public float speed;
-    public bool isDead = false;
 
     void Update()
     {
-        if (!isDead)
-        {
             transform.position += transform.forward * speed * Time.deltaTime;
-        }
     }
 }
