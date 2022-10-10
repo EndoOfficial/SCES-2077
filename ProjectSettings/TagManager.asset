@@ -8,6 +8,8 @@ TagManager:
   - Shredder
   - Paper
   - Roof
+  - Enemy
+  - CentreCube
   layers:
   - Default
   - TransparentFX

@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
     {
         if(this.gameObject == target)
         {
-            health -= damage;
+            health = target.GetComponent<Enemy>().health -= damage;
             if (health <= 0f)
             {
                 Die();

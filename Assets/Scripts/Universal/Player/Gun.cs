@@ -24,7 +24,7 @@ public class Gun : MonoBehaviour
         muzzelFlash.Play();
 
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
         {
             Debug.Log("damage" + hit);
             Enemy target = hit.transform.GetComponent<Enemy>();
