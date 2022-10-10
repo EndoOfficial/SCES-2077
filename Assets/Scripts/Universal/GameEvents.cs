@@ -31,4 +31,8 @@ public static class GameEvents
     public static Action Nicotine;
 
     public static Action AOE; // Fish AOE
+
+    public delegate void OnHealthChangedDelegate(float newHealth, float maxHealth);
+    public static OnHealthChangedDelegate OnHealthChanged;
+
 }
