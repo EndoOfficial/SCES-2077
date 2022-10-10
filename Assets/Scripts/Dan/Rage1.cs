@@ -26,7 +26,7 @@ public class Rage1 : CiggsState
     {
         Debug.Log("isRaging");
         float randomShooting = Random.Range(0f, 1f);
-        if(randomShooting >= 0.99f)
+        if(randomShooting >= 0.9f)
         {
             ciggs.Shoot();
         }

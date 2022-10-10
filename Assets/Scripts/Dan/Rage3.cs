@@ -19,7 +19,7 @@ public class Rage3 : CiggsState
         anim.SetTrigger("Rage1");
         rb = npc.GetComponent<Rigidbody>();
         ciggs = npc.GetComponent<MrCiggs>();
-        ciggs.damage = 1f;
+        ciggs.damage = 6f;
         base.Enter();
     }
 
@@ -27,7 +27,7 @@ public class Rage3 : CiggsState
     {
         Debug.Log("isRaging");
         float randomShooting = Random.Range(0f, 1f);
-        if (randomShooting >= 0.95f)
+        if (randomShooting >= 0.75f)
         {
 
             ciggs.Shoot();
