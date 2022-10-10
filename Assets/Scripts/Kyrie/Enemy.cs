@@ -9,36 +9,57 @@ public class Enemy : MonoBehaviour
     public float maxHealth = 100f;
 
     public GameObject healthBarUi;
-    public Slider slider;
+    private Slider slider;
+
+    private void OnEnable()
+    {
+        GameEvents.DamageEnemy += TakeDamage;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.DamageEnemy -= TakeDamage;
+    }
 
     private void Start()
     {
         health = maxHealth;
-        slider.value = CalculateHealth();
-    }
-
-    public void TakeDamage(float amount)
-    {
-        health -= amount;
-        if (health <= 0f)
+        if (healthBarUi != null)
         {
-            Die();
+            slider = healthBarUi.transform.Find("Slider").GetComponent<Slider>();   
+            slider.value = CalculateHealth();
         }
     }
 
-    void Die()
+    public void TakeDamage(int damage, GameObject target)
+    {
+        if(this.gameObject == target)
+        {
+            health -= damage;
+            if (health <= 0f)
+            {
+                Die();
+            }
+        }
+    }
+
+    protected virtual void Die()
     {
         Destroy(gameObject);
     }
 
     private void Update()
     {
-        slider.value = CalculateHealth();
-
-        if (health < maxHealth)
+        if (slider != null)
         {
-            healthBarUi.SetActive(true);
+            slider.value = CalculateHealth();
+
+            if (health < maxHealth)
+            {
+                healthBarUi.SetActive(true);
+            }
         }
+        
     }
 
     float CalculateHealth()

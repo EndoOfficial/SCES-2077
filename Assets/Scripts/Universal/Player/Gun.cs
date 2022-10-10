@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public float damage = 10f;
-    public float range = 100f;
+    public int damage = 10;
     public Camera fpsCam;
     public ParticleSystem muzzelFlash;
     public float impactForce = 30f;
@@ -23,23 +22,19 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         muzzelFlash.Play();
+
         RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
-            MrCiggs target = hit.transform.GetComponent<MrCiggs>();
+            Debug.Log("damage" + hit);
+            Enemy target = hit.transform.GetComponent<Enemy>();
+            Debug.Log(target);
 
             if (target != null)
             {
-                target.TakeDamage(damage);
+                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
             }
-            if(hit.rigidbody != null)
-            {
-                hit.rigidbody.AddForce(-hit.normal * impactForce);
-            }
-
         }
     }
-
-
 }
 

@@ -13,7 +13,7 @@ public class HitPlayer : MonoBehaviour
     {
         if (Physics.CheckSphere(transform.position, radius, Player))
         {
-            GameEvents.PlayerDamage?.Invoke(damage);
+            GameEvents.DamagePlayer?.Invoke(damage);
             hit = true;
         }
         else

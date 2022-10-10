@@ -10,21 +10,12 @@ public class AOE : MonoBehaviour
     public LayerMask Player;
     public int damage;
 
-    private void OnEnable()
-    {
-        GameEvents.AOE += aoe;
-    }
-    private void OnDisable()
-    {
-        GameEvents.AOE -= aoe;
-    }
-
-    private void aoe()
+    public void aoe()
     {
         _aoe = Physics.CheckSphere(transform.position, radius, Player);
         if (_aoe)
         {
-            GameEvents.PlayerDamage?.Invoke(damage);
+            GameEvents.DamagePlayer?.Invoke(damage);
         }
     }
 }

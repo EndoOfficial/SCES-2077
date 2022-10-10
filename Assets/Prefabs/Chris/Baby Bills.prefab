@@ -109,9 +109,9 @@ GameObject:
   - component: {fileID: 887015776990643988}
   - component: {fileID: 887015776990643989}
   - component: {fileID: 887015776990643991}
-  - component: {fileID: 7916187185162763590}
+  - component: {fileID: 3246539306118936472}
+  - component: {fileID: -8765442583670732952}
   - component: {fileID: 1545584391952530588}
-  - component: {fileID: 7218598504482551530}
   m_Layer: 0
   m_Name: Baby Bills
   m_TagString: Paper
@@ -128,7 +128,7 @@ Transform:
   m_GameObject: {fileID: 887015776990643986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.333, y: 0.333, z: 0.333}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 887015776039243116}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
---- !u!114 &7916187185162763590
+--- !u!114 &3246539306118936472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,13 +170,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 887015776990643986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5141527508acc054680551baa57b3b8f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e3cfef0b94a96a4caded3440bb98e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  maxHealth: 100
-  healthBarUi: {fileID: 0}
-  slider: {fileID: 0}
+  health: 1
+  maxHealth: 1
+  healthBarUi: {fileID: 4520816067748193270}
+--- !u!114 &-8765442583670732952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887015776990643986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769653d789f900f47890b6e350759a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1545584391952530588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -190,22 +201,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7218598504482551530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887015776990643986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5141527508acc054680551baa57b3b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
-  healthBarUi: {fileID: 4520816067748193270}
-  slider: {fileID: 4520816068072653692}
 --- !u!1001 &6435740687824709765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,14 +316,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7488767427628731251, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
   m_PrefabInstance: {fileID: 6435740687824709765}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4520816068072653692 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7488767427271502841, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
-  m_PrefabInstance: {fileID: 6435740687824709765}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

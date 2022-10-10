@@ -8,29 +8,28 @@ public class FishJump : MonoBehaviour
     public float waitTime;
     private Rigidbody rb;
     public bool grounded;
-    private BoxCollider _collider;
     public Vector3 jumpDirection;
-    public FishAI ai;
+    private AOE aoe;
 
     private void Start()
     {
         //get components
         rb = GetComponent<Rigidbody>();
-        _collider = GetComponent<BoxCollider>();
+        aoe = GetComponent<AOE>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) // if Ground tag
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             grounded = true;
             jumpDirection = new Vector3(UnityEngine.Random.Range(-5, 5), 0, UnityEngine.Random.Range(-5, 5));// set jump direction randomly
             StartCoroutine(Wait()); // start co-routine
-            GameEvents.AOE?.Invoke();
+            aoe.aoe();
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision collision)
     {
         grounded = false;
     }
@@ -39,7 +38,6 @@ public class FishJump : MonoBehaviour
     {
         if (grounded)
         {
-            _collider.enabled = false;//disable trigger collider
             yield return new WaitForSecondsRealtime(waitTime);
             grounded = false;
 
@@ -51,7 +49,6 @@ public class FishJump : MonoBehaviour
             rb.AddForce(jumpDirection, ForceMode.Impulse);//add force and torque
             rb.AddForce(new Vector3(0, 6, 0), ForceMode.Impulse);
             rb.AddTorque(new Vector3(jumpDirection.x, 0, 0), ForceMode.Impulse);
-            _collider.enabled = true;//re-enable the trigger collider
         }
     }
 }
