@@ -13,16 +13,16 @@ public class Health : MonoBehaviour
     }
     private void OnEnable()
     {
-        GameEvents.DamagePlayer += TakeDamage;
-        GameEvents.PlayerDeath += Die;
+        GameEvents.DamagePlayer += DamagePlayer;
+        GameEvents.PlayerDeath += PlayerDeath;
     }
 
     private void OnDisable()
     {
-        GameEvents.DamagePlayer -= TakeDamage;
-        GameEvents.PlayerDeath -= Die;
+        GameEvents.DamagePlayer -= DamagePlayer;
+        GameEvents.PlayerDeath -= PlayerDeath;
     }
-    public void TakeDamage(int damage)
+    public void DamagePlayer(int damage)
     {
         health -= damage;
         if (health <= 0f)
@@ -34,12 +34,9 @@ public class Health : MonoBehaviour
             GameEvents.CurrentHealth?.Invoke(health);
         }
     }
-    public void Die()
+    public void PlayerDeath()
     {
-        this.GetComponent<Rigidbody>().isKinematic = true;
-        this.GetComponent<CapsuleCollider>().enabled = false;
-        this.GetComponent<MeshRenderer>().enabled = false;
-        //Player.GetComponent<PlayerController>().enabled = false; // Uncomment once new CharacterController exists
+        gameObject.SetActive(false);
     }
 
 }

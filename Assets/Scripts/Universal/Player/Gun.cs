@@ -29,7 +29,6 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, EnemyLayer))
         {
-            Debug.Log("damage" + hit);
             GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
 
         }
