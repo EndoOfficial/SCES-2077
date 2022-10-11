@@ -14,7 +14,7 @@ public static class GameEvents
     public delegate void PlayerDamageDelegate(int damage); // Damages the Player
     public static PlayerDamageDelegate DamagePlayer;
 
-    public delegate void PlayerEnemyDelegate(int damage, Enemy target); // Damages the Enemy
+    public delegate void PlayerEnemyDelegate(int damage, GameObject target); // Damages the Enemy
     public static PlayerEnemyDelegate DamageEnemy;
 
     public delegate void RageIncreaseDelegate(float rage);

@@ -35,7 +35,8 @@ public class Enemy : MonoBehaviour
     {
         if(this.gameObject == target)
         {
-            health = target.health -= damage;
+            health -= damage;
+
             if (health <= 0f)
             {
                 Die();
