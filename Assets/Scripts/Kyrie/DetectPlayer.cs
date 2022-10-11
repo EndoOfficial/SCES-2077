@@ -10,7 +10,6 @@ public class DetectPlayer : MonoBehaviour
         if (other.transform.CompareTag("Player"))
         {
             bool isin = true;
-            Debug.Log("In");
             //Call event to loose health
         }
             
@@ -22,7 +21,6 @@ public class DetectPlayer : MonoBehaviour
         if (other.transform.CompareTag("Player"))
         {
             bool isin = false;
-            Debug.Log("Out");
             //Call Event to take health
         }
 

@@ -318,9 +318,9 @@ GameObject:
   - component: {fileID: 114664798}
   - component: {fileID: 114664803}
   - component: {fileID: 114664805}
-  - component: {fileID: 114664806}
   - component: {fileID: 114664807}
   - component: {fileID: 114664808}
+  - component: {fileID: 114664809}
   m_Layer: 10
   m_Name: Boss
   m_TagString: Enemy
@@ -340,8 +340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6336661da769efc4798b03975c988c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1142739149}
-  range: 100
+  Player: {fileID: 1142739149}
+  Target: {x: 0, y: 0, z: 0}
   muzzelflashBoss: {fileID: 502770075385309305}
   damage: 1
   rage: 0
@@ -418,7 +418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114664797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.7, y: 1.8, z: 12.38}
+  m_LocalPosition: {x: 8.66, y: 1.8, z: 13.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -462,18 +462,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114664806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114664797}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fbd2fe52cd49343a93f00c7c6fb007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114664807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +490,19 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   healthBarUi: {fileID: 0}
+--- !u!114 &114664809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114664797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817d2e56e1862064d8c797be95ed859a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TurnSpeed: 5
 --- !u!1 &139296448
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,7 +917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rageText: {fileID: 315298984}
-  healthText: {fileID: 928598379}
+  HealthText: {fileID: 928598379}
 --- !u!1 &681675637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +1023,7 @@ GameObject:
   - component: {fileID: 928598380}
   - component: {fileID: 928598379}
   m_Layer: 5
-  m_Name: HeealthPlayer
+  m_Name: HealthPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1068,7 +1069,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PlayerHp: 300'
+  m_text: 'PlayerHp: 100'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1145,6 +1146,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928598377}
   m_CullTransparentMesh: 1
+--- !u!1 &968799027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1120050649789320, guid: 33da659deec4f3c4d900ef200e6c8e42, type: 3}
+  m_PrefabInstance: {fileID: 1156344556}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1142739149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2687675933922462864, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}
@@ -1264,6 +1270,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4426131530661664, guid: 33da659deec4f3c4d900ef200e6c8e42, type: 3}
   m_PrefabInstance: {fileID: 1156344556}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1215207039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968799027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fbd2fe52cd49343a93f00c7c6fb007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1499570401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5762759354876339173, guid: eee00b896deec544891a2fcd153bf55a, type: 3}
@@ -6312,7 +6330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2687675933922462864, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.57
+      value: 10.06
       objectReference: {fileID: 0}
     - target: {fileID: 2687675933922462864, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6320,7 +6338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2687675933922462864, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7
+      value: 6.73
       objectReference: {fileID: 0}
     - target: {fileID: 2687675933922462864, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}
       propertyPath: m_LocalRotation.w

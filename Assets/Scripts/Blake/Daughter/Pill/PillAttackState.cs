@@ -14,7 +14,6 @@ public class PillAttackState : PillState
     }
     public override void Enter()
     {
-        Debug.Log("ATTACK");
         Hit = npc.GetComponent<HitPlayer>();
         Running = npc.GetComponent<PillMovement>();
         Running.speed = 2f;

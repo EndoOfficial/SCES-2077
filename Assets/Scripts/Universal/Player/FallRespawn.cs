@@ -5,24 +5,28 @@ using UnityEngine;
 public class FallRespawn : MonoBehaviour
 {
     public GameObject SpawnPoint;
-    // Start is called before the first frame update
-    void Start()
+    private int damage;
+    public int Health;
+
+    private void Update()
     {
-
+        Health = GetComponent<Health>().health;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("KillBox"))
         {
-            Debug.Log("Respawn" + SpawnPoint.transform.position);
             transform.position = SpawnPoint.transform.position;
+
+            if(Health <= 10)
+            {
+                damage = Health - 1;
+            }
+            else
+            {
+                damage = 10;
+            }
+            GameEvents.DamagePlayer(damage);
         }
     }
 }

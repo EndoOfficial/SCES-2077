@@ -5,9 +5,34 @@ using UnityEngine;
 public class BottleEnemy : Enemy
 {
     public GameObject pill;
+    public float spawncount;
+
+    private void OnEnable()
+    {
+        GameEvents.DamageEnemy += TakeDamage;
+    }
+    private void OnDisable()
+    {
+        GameEvents.DamageEnemy -= TakeDamage;
+    }
+
     protected override void Die()
     {
-        Instantiate(pill);
-        base.Die();
+        StartCoroutine(Explode());
+
+    }
+    private IEnumerator Explode()
+    {
+        if (spawncount < 10)
+        {
+            spawncount += 1;
+            yield return new WaitForSeconds(0);
+            Instantiate(pill, new Vector3(transform.position.x, 3, transform.position.z), Quaternion.identity);
+            StartCoroutine(Explode());
+            if (spawncount >= 10)
+            {
+                base.Die();
+            }
+        }
     }
 }

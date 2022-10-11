@@ -20,6 +20,9 @@ public static class GameEvents
     public delegate void RageIncreaseDelegate(float rage);
     public static RageIncreaseDelegate RageIncrease;
 
+    public delegate void CurrentHealthDelegate(int health);
+    public static CurrentHealthDelegate CurrentHealth;
+
     public delegate void BillDeathDelegate(GameObject bill, GameObject spawner);
     public static BillDeathDelegate BillDeath;
 
@@ -28,9 +31,4 @@ public static class GameEvents
     public static Action Nicotine;
 
     public static Action AOE; // Fish AOE
-
-    public delegate void OnHealthChangedDelegate(int newHealth, int maxHealth);
-    public static OnHealthChangedDelegate OnHealthChanged;
-    
-
 }

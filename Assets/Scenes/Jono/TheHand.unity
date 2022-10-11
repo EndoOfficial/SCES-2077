@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45138276, g: 0.5009151, b: 0.5725255, a: 1}
+  m_IndirectSpecularColor: {r: 0.45138228, g: 0.5009147, b: 0.572524, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -563,6 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 1697899241}
+  Health: 0
 --- !u!4 &1560394790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5224874238054267865, guid: 8e95996cf5b74074d853cb73707bd6d3, type: 3}
@@ -581,7 +582,7 @@ GameObject:
   - component: {fileID: 1645446801}
   - component: {fileID: 1645446800}
   m_Layer: 3
-  m_Name: Cube
+  m_Name: '"Kill"Box'
   m_TagString: KillBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,6 +704,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1142739143, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142739143, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1202122488, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}
       propertyPath: m_UseGravity
       value: 1
