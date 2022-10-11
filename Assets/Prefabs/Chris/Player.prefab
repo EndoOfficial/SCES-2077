@@ -4827,7 +4827,6 @@ GameObject:
   - component: {fileID: 1202122488}
   - component: {fileID: 1202122494}
   - component: {fileID: 1142739143}
-  - component: {fileID: 1504785993}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -4886,7 +4885,7 @@ MonoBehaviour:
   controller: {fileID: 2687675933922462867}
   Movement: 0
   speed: 12
-  gravity: 0
+  gravity: 9.81
   jumpeHeight: 3
   groundCheck: {fileID: 2687675934401162904}
   groundDistance: 0.4
@@ -4955,19 +4954,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 300
---- !u!114 &1504785993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2687675933922462877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7745b0fb9946c34494c96b98c8a07af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 200
 --- !u!1 &2687675933984780399
 GameObject:
   m_ObjectHideFlags: 0
