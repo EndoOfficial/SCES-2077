@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Zach/Apartment.unity
+    guid: b0e15fe8d0b96764a8cf7bb2759423f5
+  - enabled: 1
+    path: Assets/Scenes/Blake/PillArena.unity
+    guid: 95af270f1a714fb4b9ee2fb21601c9d4
+  - enabled: 1
+    path: Assets/Scenes/Zach/MotherScene.unity
+    guid: 3b10d45b7a339ab48a7b0d158922feca
+  - enabled: 1
+    path: Assets/Scenes/Zach/MrCigsScene.unity
+    guid: a140cc2242648c54a83727d15e4becd5
   m_configObjects: {}
