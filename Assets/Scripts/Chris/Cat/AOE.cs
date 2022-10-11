@@ -12,6 +12,7 @@ public class AOE : MonoBehaviour
 
     public void aoe()
     {
+        // checks to see if the player is close enough to damage
         _aoe = Physics.CheckSphere(transform.position, radius, Player);
         if (_aoe)
         {

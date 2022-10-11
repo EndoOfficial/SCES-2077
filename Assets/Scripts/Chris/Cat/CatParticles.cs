@@ -5,14 +5,16 @@ using UnityEngine;
 public class CatParticles : MonoBehaviour
 {
     private ParticleSystem particles;
+    private Rigidbody rb;
 
     private void Start()
     {
         particles = GetComponent<ParticleSystem>();
+        rb = GetComponent<Rigidbody>();
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Ground"))
+        if (collision.transform.CompareTag("Ground") && rb.velocity.y <= 0)
         {
             particles.Play();
         }   

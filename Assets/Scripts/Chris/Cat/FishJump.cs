@@ -42,6 +42,7 @@ public class FishJump : MonoBehaviour
             grounded = false;
 
             rb.velocity = new Vector3(0, 0, 0);//reset velocity
+            //clamp velocity
             jumpDirection.x = Mathf.Clamp(jumpDirection.x, -5f, 5f);
             jumpDirection.y = 0f;
             jumpDirection.z = Mathf.Clamp(jumpDirection.z, -5f, 5f);

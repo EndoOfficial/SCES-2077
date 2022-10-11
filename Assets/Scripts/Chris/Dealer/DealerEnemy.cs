@@ -13,6 +13,7 @@ public class DealerEnemy : Enemy
     {
         for(int i = 0; i < spawners.Length; i++)
         {
+            //instantiate baby Bills on all the spawn Points
            BabyBill babyBill = Instantiate(baby, spawners[i].transform.position, Quaternion.identity);
            babyBill.SetParentPos(transform.position);
         }

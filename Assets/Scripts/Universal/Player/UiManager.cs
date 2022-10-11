@@ -24,7 +24,6 @@ public class UiManager : MonoBehaviour
     }
     public void CurrentHealth(int health)
     {
-
         HealthText.text = "PlayerHp: " + health.ToString();
     }
 

@@ -14,9 +14,9 @@ public class Gun : MonoBehaviour
 
     public void Update()
     {
+        //checks for mouse1 and nextTimeToFire
         if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
-            Debug.Log("here1");
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
@@ -24,14 +24,13 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         anim.SetTrigger("Shoot");
-        Debug.Log("here2");
 
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, EnemyLayer))
         {
+            //damage enemy Event
             GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
 
         }
     }
 }
-

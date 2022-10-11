@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 1906761522160848053}
   - component: {fileID: 1906761522160848055}
   - component: {fileID: 7037306340827064873}
+  - component: {fileID: 1237389589940201795}
   - component: {fileID: -8986236554544285892}
   m_Layer: 0
   m_Name: Bill
@@ -447,7 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a714760f0117547a35ad56324e3f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
 --- !u!114 &7037306340827064873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,8 +461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdac167091d863349ba879a8c75fbbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
-  maxHealth: 30
+  health: 40
+  maxHealth: 40
   healthBarUi: {fileID: 7488767426416153073}
   baby: {fileID: -8765442583670732952, guid: a7054876fe5820e45bac61d9ca734b63, type: 3}
   spawners:
@@ -475,6 +476,18 @@ MonoBehaviour:
   - {fileID: 1869930697}
   - {fileID: 554327922}
   temp: []
+--- !u!114 &1237389589940201795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906761522160848050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22eb1d145cfc53a46b3a0940c4ec93f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &-8986236554544285892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -486,8 +499,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0.25}
 --- !u!1001 &1214159490
 PrefabInstance:
   m_ObjectHideFlags: 0

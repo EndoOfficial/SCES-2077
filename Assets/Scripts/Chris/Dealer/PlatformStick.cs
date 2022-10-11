@@ -7,20 +7,18 @@ public class PlatformStick : PlayerController
 
     private void Update()
     {
-
+        // ground check raycast
         isGrounded = Physics.Raycast(transform.position, Vector3.down, out var hitinfo, dist, groundMask);
 
         //if the ground has "Paper" tag
         if (isGrounded && hitinfo.transform.CompareTag("Paper"))
         {
-            rb.useGravity = false;
-            move.y = 0;
-            transform.parent = hitinfo.transform;// makes the player a child of the platform
+            move.y = -2;
+            transform.parent = hitinfo.transform; // makes the player a child of the platform
         }
         else
         {
-            transform.parent = null;// unparents everything from the player
-            rb.useGravity = true;
+            transform.parent = null; // unparents everything from the player
         }
     }
 }

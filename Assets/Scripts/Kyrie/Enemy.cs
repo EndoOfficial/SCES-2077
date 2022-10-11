@@ -36,9 +36,8 @@ public class Enemy : MonoBehaviour
         if(this.gameObject == target)
         {
             health -= damage;
-            if (health <= 0f)
+            if (health <= 0f) // if true, Die
             {
-                
                 Die();
             }
         }
@@ -52,7 +51,8 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         if (slider != null)
-        {
+        { 
+            // update health slider
             slider.value = CalculateHealth();
             healthBarUi.SetActive(true);
         }

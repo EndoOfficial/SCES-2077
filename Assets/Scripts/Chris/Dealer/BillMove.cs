@@ -8,6 +8,7 @@ public class BillMove : MonoBehaviour
 
     void Update()
     {
-            transform.position += transform.forward * speed * Time.deltaTime;
+        // Moves forward
+        transform.Translate(transform.forward * speed * Time.deltaTime);
     }
 }

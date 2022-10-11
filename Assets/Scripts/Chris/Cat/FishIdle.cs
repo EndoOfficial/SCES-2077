@@ -22,7 +22,7 @@ public class FishIdle : FishState
 
     public override void Update()
     {
-        if (ai.detected)
+        if (ai.detected)// if player is detected
         {
             nextState = new FishPursuit(npc, agent, anim, player);
             stage = EVENT.EXIT;

@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     protected Vector3 move;
     protected Rigidbody rb;
-    protected float dist = 1f;
+    protected float dist = 1.3f;
     public float speed;
     protected float x;
     protected float z;
@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
         //Jump
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
+            // Jump
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
