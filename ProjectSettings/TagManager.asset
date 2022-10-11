@@ -10,6 +10,8 @@ TagManager:
   - Roof
   - Enemy
   - CentreCube
+  - PlayerSpawnPoint
+  - KillBox
   layers:
   - Default
   - TransparentFX

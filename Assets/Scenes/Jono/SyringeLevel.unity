@@ -906,7 +906,7 @@ MonoBehaviour:
   damage: 10
   fpsCam: {fileID: 1867460338}
   muzzelFlash: {fileID: 1205647213}
-  impactForce: 30
+  impactForce: 0
   fireRate: 15
 --- !u!1001 &481817916
 PrefabInstance:
@@ -2446,6 +2446,10 @@ PrefabInstance:
     - target: {fileID: 2687675934051228354, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}
       propertyPath: mouseSensitivity
       value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 2687675934854400648, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 762009389, guid: 82634bffb8fc34b45a25db2fd6329db1, type: 3}

@@ -30,27 +30,23 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
+        if (isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask))
+        {
+            velocity.y = gravity;
+        }
+        else
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
         // get move direction
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-
-        if (x != 0 || z != 0)
-        {
-            Movement = 1;
-            StopAllCoroutines();
-        }
-        if (x == 0 && z == 0)
-        {
-            StartCoroutine(StopWalking());
-        }
 
         //get a Vector3 and set it to the direction of movement
         Vector3 move = transform.right * x + transform.forward * z;
 
         //apply Vector3 to character controller
-        controller.Move(move * speed * Time.deltaTime);
+        //velocity = move * speed * Time.deltaTime;
 
         //if jumped and is grounded, Jump
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -58,15 +54,10 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpeHeight * -2f * gravity);
         }
         // apply gravity
-        DownForce = velocity.y += gravity * Time.deltaTime;
+        //DownForce = velocity.y += gravity * Time.deltaTime;
         
-        DownForce = Mathf.Clamp(DownForce, -10, 10);
-        controller.Move(velocity * Time.deltaTime);
-    }
-    private IEnumerator StopWalking()
-    {
-        yield return new WaitForSeconds(0.05f);
-        Movement = 0;
+        //DownForce = Mathf.Clamp(DownForce, -10, 10);
+        //controller.Move(velocity * Time.deltaTime);
     }
    
 }

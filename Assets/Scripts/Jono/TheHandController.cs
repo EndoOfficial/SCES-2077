@@ -98,6 +98,7 @@ public class TheHandController : MonoBehaviour
         child.GetComponent<Rigidbody>().useGravity = true;
         SpawnBucket = true;
         Debug.Log("yeet");
+        ThrowForce.z = Random.Range(-5, -20);
         child.GetComponent<Rigidbody>().AddRelativeForce(ThrowForce, ForceMode.Impulse);
         yield return new WaitForSeconds(2);
 
