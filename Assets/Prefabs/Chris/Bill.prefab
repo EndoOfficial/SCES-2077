@@ -474,6 +474,7 @@ MonoBehaviour:
   - {fileID: 1743655058}
   - {fileID: 1869930697}
   - {fileID: 554327922}
+  temp: []
 --- !u!65 &-8986236554544285892
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -31,11 +31,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage, GameObject target)
+    public void TakeDamage(int damage, Enemy target)
     {
         if(this.gameObject == target)
         {
-            health = target.GetComponent<Enemy>().health -= damage;
+            health = target.health -= damage;
             if (health <= 0f)
             {
                 Die();

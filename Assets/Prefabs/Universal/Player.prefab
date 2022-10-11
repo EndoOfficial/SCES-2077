@@ -4885,8 +4885,9 @@ MonoBehaviour:
   controller: {fileID: 2687675933922462867}
   Movement: 0
   speed: 12
-  gravity: 9.81
+  gravity: -9.81
   jumpeHeight: 3
+  DownForce: 0
   groundCheck: {fileID: 2687675934401162904}
   groundDistance: 0.4
   groundMask:
@@ -4900,7 +4901,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2687675933922462877}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0864c1403f5875f4d83948442a3068dc, type: 3}
   m_Name: 
@@ -4953,7 +4954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2df95224d7826645a76d92cd34ebe34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 100
 --- !u!1 &2687675933984780399
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,6 +5302,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b74ad24102999e741a75c7a4cdc1f57e, type: 3}
+--- !u!1 &1247665857060340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1247665680136580, guid: b74ad24102999e741a75c7a4cdc1f57e, type: 3}
+  m_PrefabInstance: {fileID: 362603632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1572163854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247665857060340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c706f4708749704790992e98e7d2663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  fpsCam: {fileID: 2687675934854400655}
+  muzzelFlash: {fileID: 1125268568}
+  impactForce: 30
+  fireRate: 15
 --- !u!4 &4305296019171210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4305295660336122, guid: b74ad24102999e741a75c7a4cdc1f57e, type: 3}

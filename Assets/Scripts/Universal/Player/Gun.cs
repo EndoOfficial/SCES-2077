@@ -29,10 +29,9 @@ public class Gun : MonoBehaviour
             Debug.Log("damage" + hit);
             Enemy target = hit.transform.GetComponent<Enemy>();
             Debug.Log(target);
-
             if (target != null)
             {
-                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
+                GameEvents.DamageEnemy?.Invoke(damage, target);
             }
         }
     }
