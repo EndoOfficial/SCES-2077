@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grunts : MonoBehaviour
+public class Grunts : Enemy
 {
     private GameObject player;
     public float speed;
+    
+    
+
+   
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +25,7 @@ public class Grunts : MonoBehaviour
          var step = speed * Time.deltaTime; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
     }
+
+    
 
 }

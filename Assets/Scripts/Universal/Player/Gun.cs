@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     public float impactForce = 30f;
     public float fireRate= 15f;
     private float nextTimeToFire = 0;
+    public LayerMask EnemyLayer;
 
     public void Update()
     {
@@ -24,15 +25,11 @@ public class Gun : MonoBehaviour
         muzzelFlash.Play();
 
         RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, EnemyLayer))
         {
             Debug.Log("damage" + hit);
-            Enemy target = hit.transform.GetComponent<Enemy>();
-            Debug.Log(target);
-            if (target != null)
-            {
-                GameEvents.DamageEnemy?.Invoke(damage, target);
-            }
+            GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
+
         }
     }
 }
