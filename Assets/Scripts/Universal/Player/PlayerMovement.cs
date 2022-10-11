@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpeHeight = 3f;
 
+    public float DownForce;
     public Transform groundCheck;
     public float groundDistance = 0.8f;
     public LayerMask groundMask;
@@ -57,8 +58,9 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpeHeight * -2f * gravity);
         }
         // apply gravity
-        velocity.y += gravity * Time.deltaTime;
+        DownForce = velocity.y += gravity * Time.deltaTime;
         
+        DownForce = Mathf.Clamp(DownForce, -10, 10);
         controller.Move(velocity * Time.deltaTime);
     }
     private IEnumerator StopWalking()

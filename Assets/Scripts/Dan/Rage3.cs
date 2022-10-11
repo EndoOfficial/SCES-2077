@@ -19,7 +19,7 @@ public class Rage3 : CiggsState
         anim.SetTrigger("Rage1");
         rb = npc.GetComponent<Rigidbody>();
         ciggs = npc.GetComponent<MrCiggs>();
-        ciggs.damage = 6f;
+        ciggs.damage = 6;
         base.Enter();
     }
 

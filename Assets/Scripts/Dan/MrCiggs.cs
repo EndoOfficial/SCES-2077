@@ -8,7 +8,7 @@ public class MrCiggs : MonoBehaviour
     public float health = 100f;
     public float range = 100f;
     public ParticleSystem muzzelflashBoss;
-    public float damage = 1;
+    public int damage = 1;
     public float rage;
     public float RageRate = 1f;
 
@@ -48,12 +48,9 @@ public class MrCiggs : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, range))
         {
-            Debug.Log("damage" + hit);
-            Health target = hit.transform.GetComponent<Health>();
-            Debug.Log(target);
             if (target != null)
             {
-                target.TakeDamage(damage);
+                GameEvents.DamagePlayer?.Invoke(damage);
             }
 
 
