@@ -5,7 +5,6 @@ using UnityEngine;
 public class MrCiggs : MonoBehaviour
 {
     public Transform target;
-    public float health = 100f;
     public float range = 100f;
     public ParticleSystem muzzelflashBoss;
     public int damage = 1;
@@ -28,18 +27,7 @@ public class MrCiggs : MonoBehaviour
         Raging();
         
     }
-    public void TakeDamage(float amount)
-    {
-        health -= amount;
-        if (health <= 0f)
-        {
-            Die();
-        }
-    }
-    void Die()
-    {
-        Destroy(gameObject);
-    }
+    
     public void Shoot()
     {
         Debug.Log("isShooting");
