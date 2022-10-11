@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage, Enemy target)
+    public void TakeDamage(int damage, GameObject target)
     {
         if(this.gameObject == target)
         {
