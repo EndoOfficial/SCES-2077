@@ -10,7 +10,7 @@ using TMPro;
 public class HUD : MonoBehaviour
 {
     public TextMeshProUGUI HealthLevel;         // UI element set in inspector
-    public RawImage HealthIndicator;               // UI element set in inspector
+    public Image HealthIndicator;               // UI element set in inspector
 
     public Color HighHealthColour = Color.green;
     public Color LowHealthColour = Color.red;
@@ -30,11 +30,11 @@ public class HUD : MonoBehaviour
 
 
     // handler for OnHealthChanged event, which is fired whenever health or max health is changed in-game
-    private void OnHealthChanged(float newHealth, float maxHealth)
+    private void OnHealthChanged(int newHealth, int maxHealth)
     {
         HealthLevel.text = newHealth.ToString();
 
-        float healthPercent = newHealth / maxHealth;
+        float healthPercent = (float)newHealth / (float)maxHealth;
 
         if (healthPercent < LowHealthPercent)
             HealthIndicator.color = LowHealthColour;
