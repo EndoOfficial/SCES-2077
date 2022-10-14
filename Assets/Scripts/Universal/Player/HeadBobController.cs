@@ -10,8 +10,6 @@ public class HeadBobController : MonoBehaviour
     [SerializeField] private Transform cam = null;
     [SerializeField] private Transform cameraHolder = null;
 
-    [SerializeField] private PlayerMovement movement;
-
     // Update is called once per frame
     void Update()
     {
