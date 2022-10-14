@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
     public int jumpForce;
+    public bool canMove;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded = Physics.Raycast(transform.position, Vector3.down, dist, groundMask))
         {
             rb.useGravity = false;
+            rb.velocity = Vector3.zero;
         }
         else rb.useGravity = true;
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformStick : PlayerController
+public class PlatformStick : PlayerMovement
 {
 
     private void Update()
@@ -13,7 +13,6 @@ public class PlatformStick : PlayerController
         //if the ground has "Paper" tag
         if (isGrounded && hitinfo.transform.CompareTag("Paper"))
         {
-            move.y = -2;
             transform.parent = hitinfo.transform; // makes the player a child of the platform
         }
         else

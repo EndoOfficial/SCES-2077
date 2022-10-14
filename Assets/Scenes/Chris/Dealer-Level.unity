@@ -203,6 +203,7 @@ MonoBehaviour:
     m_Bits: 8
   isGrounded: 0
   jumpForce: 0
+  canMove: 0
 --- !u!1 &146713939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,7 +1159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2015154809514674858, guid: d336efa011173e5468d0b2b998fe5a88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.71
+      value: -7.1
       objectReference: {fileID: 0}
     - target: {fileID: 2015154809514674858, guid: d336efa011173e5468d0b2b998fe5a88, type: 3}
       propertyPath: m_LocalPosition.z

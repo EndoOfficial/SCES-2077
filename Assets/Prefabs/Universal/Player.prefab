@@ -237,6 +237,7 @@ MonoBehaviour:
     m_Bits: 8
   isGrounded: 0
   jumpForce: 10
+  canMove: 0
 --- !u!114 &7187276174809544638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +257,7 @@ MonoBehaviour:
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 1024
-  anim: {fileID: 3717333519412331671, guid: d336efa011173e5468d0b2b998fe5a88, type: 3}
+  anim: {fileID: 8412536613612073297}
 --- !u!114 &7068456719778485261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +297,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2687675933922462877}
   m_Material: {fileID: 13400000, guid: eba0d7b470b9b5e4392e2714d313d07f, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2

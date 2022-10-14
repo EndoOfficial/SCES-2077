@@ -134,7 +134,6 @@ MonoBehaviour:
   frequency: 10
   cam: {fileID: 2015154808566484147}
   cameraHolder: {fileID: 2015154809373924599}
-  movement: {fileID: 0}
 --- !u!114 &2015154809373924600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,10 +157,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2015154809514674858}
-  - component: {fileID: 5907172958561803374}
+  - component: {fileID: 595779542}
   - component: {fileID: 5003964179567099197}
   - component: {fileID: 4520434914419971837}
-  - component: {fileID: 4520434914482235586}
+  - component: {fileID: 595779550}
   - component: {fileID: 4520434914482235588}
   - component: {fileID: 4781959700895678151}
   - component: {fileID: 2919686875773001059}
@@ -189,7 +188,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &5907172958561803374
+--- !u!114 &595779542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,15 +197,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2015154809514674855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83781f8ce3f63f243a0726975b3eb3b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 554bd8d05c643914bb7b3c6acedd3cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  controller: {fileID: 595779550}
+  Movement: 0
+  speed: 12
+  gravity: -9.81
+  jumpHeight: 3
   groundMask:
     serializedVersion: 2
     m_Bits: 8
   isGrounded: 0
-  jumpForce: 10
 --- !u!114 &5003964179567099197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,22 +244,24 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   text: {fileID: 4520434913497241659}
---- !u!54 &4520434914482235586
-Rigidbody:
+--- !u!143 &595779550
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015154809514674855}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 2
-  m_Constraints: 122
-  m_CollisionDetection: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &4520434914482235588
 CapsuleCollider:
   m_ObjectHideFlags: 0

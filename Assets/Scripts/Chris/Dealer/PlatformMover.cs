@@ -23,7 +23,7 @@ public class PlatformMover : MonoBehaviour
         active = true;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!active) // stops the platforms when you Win the level
         {

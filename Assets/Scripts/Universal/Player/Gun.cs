@@ -30,7 +30,6 @@ public class Gun : MonoBehaviour
         {
             //damage enemy Event
             GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
-
         }
     }
 }
