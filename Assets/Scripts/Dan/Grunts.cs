@@ -6,10 +6,9 @@ public class Grunts : Enemy
 {
     private GameObject player;
     public float speed;
+    public Collider leftKneeCol;
+    public GameObject leftKnee;
     
-    
-
-   
     
 
     // Start is called before the first frame update
@@ -26,6 +25,12 @@ public class Grunts : Enemy
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
     }
 
-    
+    public void LeftKneeShoot()
+    {
+        if (leftKneecol)
+        {
+            GetComponent<>
+        }
+    }
 
 }
