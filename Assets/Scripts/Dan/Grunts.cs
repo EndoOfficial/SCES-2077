@@ -27,9 +27,9 @@ public class Grunts : Enemy
 
     public void LeftKneeShoot()
     {
-        if (leftKneecol)
+        if (leftKneeCol)
         {
-            GetComponent<>
+            //GetComponent<>
         }
     }
 
