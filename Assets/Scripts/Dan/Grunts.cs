@@ -2,35 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grunts : Enemy
+public class Grunts : MonoBehaviour
 {
-    private GameObject player;
     public float speed;
-    public Collider leftKneeCol;
-    public GameObject leftKnee;
-    
-    
+    public float speedEffect = 1;
+    public LayerMask Player;
+    public float radius;
+    public int damage;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-
-    }
-
-    // Update is called once per frame
+    public bool hit;
     void Update()
     {
-         var step = speed * Time.deltaTime; // calculate distance to move
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
-    }
-
-    public void LeftKneeShoot()
-    {
-        if (leftKneeCol)
+        transform.position += transform.forward * speed * speedEffect * Time.deltaTime;
+        if (Physics.CheckSphere(transform.position, radius, Player))
         {
-            //GetComponent<>
+            if (!hit)
+            {
+                hit = true;
+                GameEvents.DamagePlayer?.Invoke(damage);
+            }
+        }
+        else
+        {
+            hit = false;
         }
     }
+   
 
 }

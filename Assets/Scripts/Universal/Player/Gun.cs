@@ -7,9 +7,10 @@ public class Gun : MonoBehaviour
     public int damage = 10;
     public Camera fpsCam;
     public float impactForce = 30f;
-    public float fireRate= 15f;
+    public float fireRate = 15f;
     private float nextTimeToFire = 0;
     public LayerMask EnemyLayer;
+    public LayerMask KneeLayer;
     public Animator anim;
 
     public void Update()
@@ -20,16 +21,29 @@ public class Gun : MonoBehaviour
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
+
     }
     void Shoot()
     {
         anim.SetTrigger("Shoot");
 
         RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, EnemyLayer))
+
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
         {
-            //damage enemy Event
-            GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
+            WeakPoints target = hit.transform.GetComponent<WeakPoints>();
+            Debug.Log(target);
+            if (target != null)
+            {
+                target.Shot();
+            }
+            else if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, EnemyLayer))
+            {
+                //damage enemy Event
+                Debug.Log("Damage");
+                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
+            }
         }
     }
+
 }

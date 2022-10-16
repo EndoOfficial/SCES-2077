@@ -26,6 +26,7 @@ public class Health : MonoBehaviour
         {
             // stops time for a game over screen instead of destroying the player and the attached camera
             Time.timeScale = 0;
+            PlayerDeath();
         }
         else
         {

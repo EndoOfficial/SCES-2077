@@ -12,6 +12,9 @@ TagManager:
   - CentreCube
   - PlayerSpawnPoint
   - KillBox
+  - LeftKnee
+  - RightKnee
+  - Head
   layers:
   - Default
   - TransparentFX
@@ -25,7 +28,7 @@ TagManager:
   - Grunt
   - Enemy
   - NPC
-  - 
+  - Knees
   - 
   - 
   - 
