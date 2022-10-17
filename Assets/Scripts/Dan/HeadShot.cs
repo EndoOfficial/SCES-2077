@@ -43,7 +43,6 @@ public class HeadShot : MonoBehaviour
             Murked();
         }
     }
-
     public void HeadShotOpen()
     {
         gameObject.GetComponent<Renderer>().material.color = Color.red;
@@ -57,7 +56,6 @@ public class HeadShot : MonoBehaviour
     private IEnumerator GetUp()
     {
         yield return new WaitForSeconds(10f);
-
         gameObject.GetComponent<Renderer>().material.color = Color.white;
         head = false;
         LeftKnee.Recover();
@@ -66,7 +64,6 @@ public class HeadShot : MonoBehaviour
 
     private IEnumerator Left()
     {
-        
         LeftKnee.leftShot = false;
         yield return new WaitForSeconds(5f);
         left = false;
@@ -75,7 +72,6 @@ public class HeadShot : MonoBehaviour
 
     private IEnumerator Right()
     {
-       
         RightKnee.rightShot = false;
         yield return new WaitForSeconds(5f);
         right = false;
