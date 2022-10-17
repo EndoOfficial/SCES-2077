@@ -16,7 +16,7 @@ public class Normal : GruntState
     }
     public override void Enter()
     {
-        anim.SetTrigger("NoKnee");
+        //anim.SetTrigger("NoKnee");
         rb = npc.GetComponent<Rigidbody>();
         Grunt = npc.GetComponent<Grunts>();
         head = npc.GetComponent<HeadShot>();
@@ -47,7 +47,7 @@ public class Normal : GruntState
     }
     public override void Exit()
     {
-        anim.ResetTrigger("NoKnee");
+        //anim.ResetTrigger("NoKnee");
         base.Exit();
     }
 }
