@@ -7,6 +7,7 @@ public class Rage3 : CiggsState
 {
 
     MrCiggs ciggs;
+    EnemyGun shot;
 
     public Rage3(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
         : base(_npc, _agent, _anim, _player)
@@ -19,20 +20,15 @@ public class Rage3 : CiggsState
         anim.SetTrigger("Rage1");
         rb = npc.GetComponent<Rigidbody>();
         ciggs = npc.GetComponent<MrCiggs>();
-        ciggs.damage = 6;
+        shot = npc.GetComponent<EnemyGun>();
+        shot.attackSpeed = 4f;
+        shot.damage = 5;
         base.Enter();
     }
 
     public override void Update()
     {
-        Debug.Log("isRaging");
-        float randomShooting = Random.Range(0f, 1f);
-        if (randomShooting >= 0.75f)
-        {
-
-            ciggs.Shoot();
-
-        }
+        
         if (ciggs.rage >= 75)
         {
             nextState = new Rage4(npc, agent, anim, player);

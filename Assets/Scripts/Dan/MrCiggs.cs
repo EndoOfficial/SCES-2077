@@ -21,7 +21,7 @@ public class MrCiggs : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Aiming());
+        //    StartCoroutine(Aiming());
     }
     private void OnEnable()
     {
@@ -57,21 +57,21 @@ public class MrCiggs : MonoBehaviour
     //            }
     //        }
     //    }
-    public void Shoot()
-    {
-        muzzelflashBoss.Play();
+    //public void Shoot()
+    //{
+    //    muzzelflashBoss.Play();
 
-        RaycastHit hit;
-        Debug.Log("Fire");
-        if (Physics.Raycast(transform.position, Target, out hit))
-        {
-            if (hit.transform.CompareTag("Player"))
-            {
-                GameEvents.DamagePlayer?.Invoke(damage);
-                Debug.Log("Damage");
-            }
-        }
-    }
+    //    RaycastHit hit;
+    //    Debug.Log("Fire");
+    //    if (Physics.Raycast(transform.position, Target, out hit))
+    //    {
+    //        if (hit.transform.CompareTag("Player"))
+    //        {
+    //            GameEvents.DamagePlayer?.Invoke(damage);
+    //            Debug.Log("Damage");
+    //        }
+    //    }
+    //}
     public void Raging()
     {
         rage += RageRate * Time.deltaTime;
@@ -91,16 +91,16 @@ public class MrCiggs : MonoBehaviour
     }
 
     //  Gizmos.DrawLine(transform.position, transform.forward);
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, Player.position);
-    }
-    private IEnumerator Aiming() 
-        // This puts a slight delay on getting the players position, meaning that if the player is running alongside the shooter the shooter will be shooting slightly behind
-    {
-        yield return new WaitForSeconds(0.3f);
-        Target = Player.position - transform.position;
-        StartCoroutine(Aiming());
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawLine(transform.position, Player.position);
+    //}
+    //private IEnumerator Aiming() 
+    //    // This puts a slight delay on getting the players position, meaning that if the player is running alongside the shooter the shooter will be shooting slightly behind
+    //{
+    //    yield return new WaitForSeconds(0.3f);
+    //    Target = Player.position - transform.position;
+    //    StartCoroutine(Aiming());
+    //}
 }
