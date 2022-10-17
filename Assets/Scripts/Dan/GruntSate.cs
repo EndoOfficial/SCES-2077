@@ -8,9 +8,8 @@ public class GruntState : State
     public GRUNTSTATE name;
     public enum GRUNTSTATE
     {
-        NORMAL, ONEKNEE, TWOKNEE
+        NORMAL, LEFTKNEE, RIGHTKNEE, TWOKNEE
     }
-
     public override void Enter() { stage = EVENT.UPDATE; }
     public override void Update() { stage = EVENT.UPDATE; }
     public override void Exit() { stage = EVENT.EXIT; }
@@ -20,5 +19,4 @@ public class GruntState : State
     {
 
     }
-
 }

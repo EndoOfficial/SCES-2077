@@ -14,7 +14,6 @@ public class Normal : GruntState
     {
         name = GRUNTSTATE.NORMAL;
     }
-
     public override void Enter()
     {
         anim.SetTrigger("NoKnee");
@@ -30,22 +29,26 @@ public class Normal : GruntState
     public override void Update()
     {
 
-        if (head.left==true || head.right==true)
+        if (head.left==true)
         {
-            Debug.Log("GoToOneKnee");
-            nextState = new OneKnee(npc, agent, anim, player); 
+            Debug.Log("GoToLeftKnee");
+            nextState = new LeftKnee(npc, agent, anim, player); 
             
             stage = EVENT.EXIT;
         }
         
-
+        if (head.right == true)
+        {
+            Debug.Log("GoToRightKnee");
+            nextState = new RightKnee(npc, agent, anim, player); 
+            
+            stage = EVENT.EXIT;
+        }
     }
-
     public override void Exit()
     {
-        anim.ResetTrigger("OneKnee");
+        anim.ResetTrigger("NoKnee");
         base.Exit();
     }
-
 }
 
