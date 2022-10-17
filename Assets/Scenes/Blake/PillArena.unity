@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1177,6 +1177,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2108590408}
     m_Modifications:
+    - target: {fileID: 3111766049081666905, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 3111766049081666907, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: m_Name
       value: PillBottle (1)
@@ -9743,6 +9747,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2108590408}
     m_Modifications:
+    - target: {fileID: 3111766049081666905, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 3111766049081666907, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: m_Name
       value: PillBottle

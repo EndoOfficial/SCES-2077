@@ -228,6 +228,9 @@ MonoBehaviour:
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 1024
+  KneeLayer:
+    serializedVersion: 2
+    m_Bits: 0
   anim: {fileID: 3717333519412331671}
 --- !u!114 &4520434914419971837
 MonoBehaviour:

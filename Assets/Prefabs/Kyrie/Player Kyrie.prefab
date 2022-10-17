@@ -157,9 +157,7 @@ MonoBehaviour:
   Movement: 0
   speed: 12
   gravity: -9.81
-  jumpeHeight: 3
-  groundCheck: {fileID: 6368043771370325638}
-  groundDistance: 0.4
+  jumpHeight: 3
   groundMask:
     serializedVersion: 2
     m_Bits: 8
@@ -176,8 +174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0864c1403f5875f4d83948442a3068dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 6368043771370325638}
-  groundDistance: 0.5
+  controller: {fileID: 0}
+  Movement: 0
+  speed: 12
+  gravity: -9.81
+  jumpHeight: 3
   groundMask:
     serializedVersion: 2
     m_Bits: 8
@@ -225,6 +226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 300
+  maxHealth: 100
+  text: {fileID: 0}
 --- !u!1 &6368043771183985362
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +278,6 @@ MonoBehaviour:
   frequency: 10
   cam: {fileID: 6368043773065093783}
   cameraHolder: {fileID: 6368043771183985363}
-  movement: {fileID: 6368043771042636940}
 --- !u!114 &6368043771183985372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5181,7 +5183,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5319,11 +5321,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  range: 100
   fpsCam: {fileID: 6368043773065093777}
-  muzzelFlash: {fileID: 9012649636504015942}
   impactForce: 0.1
   fireRate: 15
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  KneeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  anim: {fileID: 0}
 --- !u!4 &9015105514024079252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4305295660336122, guid: b74ad24102999e741a75c7a4cdc1f57e, type: 3}
