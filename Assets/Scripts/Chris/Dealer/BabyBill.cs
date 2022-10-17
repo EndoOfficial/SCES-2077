@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BabyBill : MonoBehaviour
 {
-    private float moveDistance = 7f;
+    public float moveDistance;
     private float moveTime = 0.5f;
 
     public void SetParentPos(Vector3 parentPos)
