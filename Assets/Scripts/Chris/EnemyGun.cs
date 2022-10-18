@@ -7,7 +7,7 @@ public class EnemyGun : MonoBehaviour
     public GameObject player;
     private bool canSeePlayerRay;
     private bool shootAtPlayerRay;
-    private bool seePlayer;
+    public bool seePlayer;
     private Vector3 playerDirection;
     private Vector3 OldPlayerDirection;
     private Vector3 bulletDirection;
@@ -18,9 +18,6 @@ public class EnemyGun : MonoBehaviour
     public float attackSpeed;
     public int damage;
     public float delay;
-
-
-    public float ShootWait;
 
     private void Start()
     {
@@ -36,8 +33,6 @@ public class EnemyGun : MonoBehaviour
         playerDirection = player.transform.position - transform.position;
 
         //playerDirection = playerDirection;
-
-        ray = new Ray(transform.position, bulletDirection);
 
         //if enemy can see player
         if (canSeePlayerRay = Physics.Raycast(transform.position, playerDirection, out RaycastHit hitinfo))
@@ -56,7 +51,6 @@ public class EnemyGun : MonoBehaviour
                 StartCoroutine(Position());
             }
         }
-
     }
 
     //shoot coroutine
@@ -99,7 +93,7 @@ public class EnemyGun : MonoBehaviour
     }
     public IEnumerator Position()
     {
-        yield return new WaitForSecondsRealtime(ShootWait);
+        yield return new WaitForSecondsRealtime(delay);
         OldPlayerDirection = playerDirection;
         StartCoroutine(Position());
     }
@@ -107,8 +101,10 @@ public class EnemyGun : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawRay(ray);
+        Gizmos.DrawRay(transform.position, bulletDirection);
+        Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position, playerDirection);
+        Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, OldPlayerDirection);
     }
 }

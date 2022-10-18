@@ -91,7 +91,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2170966280809630940}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: dfa3085ce932ad8418bf230a37b279e4, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 7065607485802250847}
   - component: {fileID: 538690402215822820}
   - component: {fileID: 1469248374227010636}
+  - component: {fileID: 7822894404216453691}
   m_Layer: 0
   m_Name: SyringeEnemy
   m_TagString: Enemy
@@ -169,7 +170,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -198,11 +199,11 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7068124799584983973}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: dfa3085ce932ad8418bf230a37b279e4, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.2567712, y: 1, z: 1.2802349}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7068124799584983974
 Rigidbody:
@@ -245,7 +246,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7068124799584983973}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: dfa3085ce932ad8418bf230a37b279e4, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
@@ -269,7 +270,8 @@ MonoBehaviour:
   MyRB: {fileID: 7068124799584983974}
   MyChildRB: {fileID: 7068124800717697801}
   Child: {fileID: 7068124800717697907}
-  SpringForce: 500
+  SpringForce: 1000
+  ForwardSpeed: 10
   Jumping: 0
   Turret: 0
   ThisPos: {x: 0, y: 0, z: 0}
@@ -305,6 +307,27 @@ MonoBehaviour:
   health: 40
   maxHealth: 40
   healthBarUi: {fileID: 7473053725370999603}
+--- !u!114 &7822894404216453691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7068124799584983973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11112853aa4e38498bcb800ee120849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  seePlayer: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  bulletSpread: 0.005
+  attackSpeed: 0.1
+  damage: 5
+  delay: 1
 --- !u!1 &7068124800029338961
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +339,6 @@ GameObject:
   - component: {fileID: 7068124800029338960}
   - component: {fileID: 7068124800029338989}
   - component: {fileID: 7068124800029338962}
-  - component: {fileID: 7068124800029338963}
   m_Layer: 0
   m_Name: ForwardIND
   m_TagString: Untagged
@@ -389,19 +411,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7068124800029338963
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7068124800029338961}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7068124800717697907
 GameObject:
   m_ObjectHideFlags: 0

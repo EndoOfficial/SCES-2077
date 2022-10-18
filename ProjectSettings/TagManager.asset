@@ -15,6 +15,7 @@ TagManager:
   - LeftKnee
   - RightKnee
   - Head
+  - Slide
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - Enemy
   - NPC
   - Knees
-  - 
+  - Slide
   - 
   - 
   - 

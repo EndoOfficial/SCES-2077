@@ -40,7 +40,7 @@ public class FaceLessSoundsController : MonoBehaviour
         RotateSpeed = 0;
         var NewFaceless = Instantiate(FacelessFella, this.gameObject.transform.GetChild(0).position, Quaternion.identity);
         yield return new WaitForSeconds(5);
-        timer = Random.Range(1f, 10f);
+        timer = Random.Range(5f, 20f);
         CanSpawn = true;
         RotateSpeed = 50;
     }
