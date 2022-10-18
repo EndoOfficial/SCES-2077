@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -688,6 +688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611506516}
   - component: {fileID: 611506515}
+  - component: {fileID: 611506517}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -772,6 +773,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &611506517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611506514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &853679415
 GameObject:
   m_ObjectHideFlags: 0
@@ -9747,17 +9768,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2108590408}
     m_Modifications:
-    - target: {fileID: 3111766049081666905, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 3111766049081666907, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: m_Name
       value: PillBottle
-      objectReference: {fileID: 0}
-    - target: {fileID: 3111766049081666907, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3111766049081666911, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: m_RootOrder
@@ -9803,22 +9816,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3111766050154402776, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3111766050154402776, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3111766050154402778, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3111766050154402778, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 4600407969043933996, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -9827,6 +9824,5 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3111766049081666910, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
