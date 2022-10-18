@@ -8,10 +8,6 @@ public class FallRespawn : MonoBehaviour
     private int damage;
     public int Health;
 
-    private void Update()
-    {
-        Health = GetComponent<Health>().health;
-    }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("KillBox"))
