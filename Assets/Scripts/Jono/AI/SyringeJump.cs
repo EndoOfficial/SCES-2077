@@ -12,7 +12,8 @@ public class SyringeJump : MonoBehaviour
     public GameObject Child;
     public float SpringForce = 100f;
     private float angle;
-    SyringeJump Jump;
+    public float ForwardSpeed;
+    //SyringeJump Jump;
     public bool Jumping;
     public bool Turret;
     public Vector3 ThisPos;
@@ -25,9 +26,9 @@ public class SyringeJump : MonoBehaviour
         CFGJ = GetComponentInChildren<ConfigurableJoint>();
         Target = GameObject.FindGameObjectWithTag("Player");
 
-        AttachmentPoints.AddRange(GameObject.FindGameObjectsWithTag("AttachmentPoints"));
+        
 
-        Jumping = Jump.Jumping;
+        
     }
 
     // Update is called once per frame
@@ -35,10 +36,7 @@ public class SyringeJump : MonoBehaviour
     {
         IsGrounded = Child.GetComponent<GroundCheck>().Grounded;
 
-        if (!Jumping)
-        {
-            
-        }
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -59,8 +57,8 @@ public class SyringeJump : MonoBehaviour
     {
         if (Child.GetComponent<GroundCheck>().Grounded == false)
         {
-            MyRB.AddRelativeForce(-transform.forward * 2.5f);
-            MyChildRB.AddRelativeForce(-transform.forward * 2.5f);
+            MyRB.AddRelativeForce(-transform.forward * ForwardSpeed);
+            MyChildRB.AddRelativeForce(-transform.forward * ForwardSpeed);
             TargetPos = Target.transform.position;
             ThisPos = transform.position;
             TargetPos.x = TargetPos.x - ThisPos.x;
@@ -71,6 +69,8 @@ public class SyringeJump : MonoBehaviour
         else
         {
             MyRB.AddForce(transform.up * SpringForce);
+            MyRB.velocity = Vector3.zero;
+            MyRB.angularVelocity = Vector3.zero;
             Debug.Log("Jump");
 
 
