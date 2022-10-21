@@ -20,13 +20,6 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 440839797, guid: c8989726ab1c5ad4391f9083aaad1d65, type: 3}
-    attribute: m_Sprite
-    path: 
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-    - time: 0
       value: {fileID: 611554902, guid: f664d965ba210a84e99f729dca729ffa, type: 3}
     attribute: m_Sprite
     path: BillBossSprite
@@ -40,13 +33,6 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-    - serializedVersion: 2
       path: 3928314237
       attribute: 0
       script: {fileID: 0}
@@ -54,7 +40,6 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 440839797, guid: c8989726ab1c5ad4391f9083aaad1d65, type: 3}
     - {fileID: 611554902, guid: f664d965ba210a84e99f729dca729ffa, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2

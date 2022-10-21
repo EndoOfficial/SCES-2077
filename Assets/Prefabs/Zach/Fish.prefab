@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6984344941169835180}
   - component: {fileID: 4147270974725025776}
   - component: {fileID: 2100351894538767789}
+  - component: {fileID: 5559624166225089947}
   - component: {fileID: 7166616299544511406}
   - component: {fileID: 5023814223344649101}
   - component: {fileID: 5023814223344649091}
@@ -36,7 +37,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5023814223344649114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6, y: 2.85, z: 43.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -131,9 +132,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3cfef0b94a96a4caded3440bb98e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 60
   maxHealth: 60
   healthBarUi: {fileID: 849597946478572404}
+--- !u!114 &5559624166225089947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5023814223344649114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fbd2fe52cd49343a93f00c7c6fb007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &7166616299544511406
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5039,9 +5051,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6978354807184143317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.48, z: 0}
-  m_LocalScale: {x: 0.28144607, y: 0.28144607, z: 0.28144607}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.53, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5023814223344649089}
   m_RootOrder: 1

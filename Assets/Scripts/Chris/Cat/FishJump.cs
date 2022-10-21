@@ -10,12 +10,14 @@ public class FishJump : MonoBehaviour
     public bool grounded;
     public Vector3 jumpDirection;
     private AOE aoe;
+    private Animator anim;
 
     private void Start()
     {
         //get components
         rb = GetComponent<Rigidbody>();
         aoe = GetComponent<AOE>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -23,7 +25,6 @@ public class FishJump : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             grounded = true;
-            jumpDirection = new Vector3(UnityEngine.Random.Range(-5, 5), 0, UnityEngine.Random.Range(-5, 5));// set jump direction randomly
             StartCoroutine(Wait()); // start co-routine
             aoe.aoe();
         }
@@ -44,12 +45,11 @@ public class FishJump : MonoBehaviour
             rb.velocity = new Vector3(0, 0, 0);//reset velocity
             //clamp velocity
             jumpDirection.x = Mathf.Clamp(jumpDirection.x, -5f, 5f);
-            jumpDirection.y = 0f;
+            jumpDirection.y = 6f;
             jumpDirection.z = Mathf.Clamp(jumpDirection.z, -5f, 5f);
 
+            anim.SetTrigger("Jump");
             rb.AddForce(jumpDirection, ForceMode.Impulse);//add force and torque
-            rb.AddForce(new Vector3(0, 6, 0), ForceMode.Impulse);
-            rb.AddTorque(new Vector3(jumpDirection.x, 0, 0), ForceMode.Impulse);
         }
     }
 }
