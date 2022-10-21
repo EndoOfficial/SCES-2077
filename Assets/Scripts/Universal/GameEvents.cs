@@ -30,9 +30,4 @@ public static class GameEvents
     public static Action AOE; // Fish AOE
 
     public static Action LevelWin; // when the Level is won
-    public delegate void OnPauseGameDelegate(bool paused);
-    public static OnPauseGameDelegate OnPauseGame;
-    public delegate void OnGameOverDelegate(bool gameover);
-    public static OnGameOverDelegate OnGameOver;
-
 }
