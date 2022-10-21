@@ -21,7 +21,7 @@ public class Rage4 : CiggsState
         rb = npc.GetComponent<Rigidbody>();
         ciggs = npc.GetComponent<MrCiggs>();
         shot = npc.GetComponent<EnemyGun>();
-        shot.attackSpeed = 5;
+        shot.attackSpeed = 5f;
         shot.damage = 10;
         base.Enter();
     }
