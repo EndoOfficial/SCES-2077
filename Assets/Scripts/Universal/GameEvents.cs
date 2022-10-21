@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class GameEvents
 {
-    public delegate void DetectPlayerDelegate(bool detected);
+    public delegate void DetectPlayerDelegate(bool detect);
     public static DetectPlayerDelegate DetectPlayer;// Detects the Player
 
     public delegate void PlayerDamageDelegate(int damage); 
