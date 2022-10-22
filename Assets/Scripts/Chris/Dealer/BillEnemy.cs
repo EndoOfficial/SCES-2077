@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DealerEnemy : Enemy
+public class BillEnemy : Enemy
 {
     public BabyBill baby;
     public GameObject[] spawners;

@@ -16,8 +16,7 @@ public class Health : MonoBehaviour
 
     private void OnDisable()
     {
-        GameEvents.DamagePlayer -= DamagePlayer;
-    }
+        GameEvents.DamagePlayer -= DamagePlayer;    }
     public void DamagePlayer(int damage)
     {
         // reduce health then update it

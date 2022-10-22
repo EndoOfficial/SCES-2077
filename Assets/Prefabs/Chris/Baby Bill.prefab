@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 9001521086661891816}
   - component: {fileID: 5528845978896175756}
   m_Layer: 0
-  m_Name: Baby Bills
+  m_Name: Baby Bill
   m_TagString: Paper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3cfef0b94a96a4caded3440bb98e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
   maxHealth: 1
   healthBarUi: {fileID: 4520816067748193270}
 --- !u!114 &-8765442583670732952
@@ -279,7 +278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4074249410201446464}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0754325, y: 0.0754325, z: 0.0754325}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -327,7 +326,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -636251676, guid: 14000544ee1b126479b5f50c7da9b86d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -335,7 +334,7 @@ SpriteRenderer:
   m_Size: {x: 16.22, y: 21.62}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &6435740687824709765
