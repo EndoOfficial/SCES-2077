@@ -5,17 +5,20 @@ using UnityEngine;
 public class Nicotine : MonoBehaviour
 {
     public Collider Col;
+    AudioSource aud;
     Rigidbody rb;
     private float rage = -5f;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        aud = GetComponent<AudioSource>();
     }
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            aud.Play();
             Debug.Log("Collected");
             GameEvents.Nicotine?.Invoke();
             GameEvents.RageIncrease?.Invoke(rage);
