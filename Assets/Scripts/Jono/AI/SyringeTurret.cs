@@ -6,8 +6,9 @@ public class SyringeTurret : SyringeState
 {
     SyringeAI AI;
     SyringeJump Turret;
-    public SyringeTurret(GameObject _npc, GameObject _player)
-        : base(_npc, _player)
+    Animator anim;
+    public SyringeTurret(GameObject _npc, GameObject _player, Animator _anim)
+        : base(_npc, _player, _anim)
     {
         name = SyringeSTATE.IDLE;
     }
@@ -17,6 +18,7 @@ public class SyringeTurret : SyringeState
         
         rb = NPC.GetComponent<Rigidbody>();
         AI = NPC.GetComponent<SyringeAI>();
+        anim = NPC.GetComponent<Animator>();
         Turret = NPC.GetComponent<SyringeJump>();
         
         base.Enter();
@@ -24,7 +26,7 @@ public class SyringeTurret : SyringeState
 
     public override void Update()
     {
-        if (AI.grounded)
+        if (Turret.IsGrounded)
         {
             Turret.IsTurret();
         }

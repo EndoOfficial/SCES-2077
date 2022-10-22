@@ -8,16 +8,19 @@ public class SyringeAI : MonoBehaviour
     public GameObject Player;
     SyringeState CurrentState;
     public bool Detected;
-    public GameObject Child;
-    public bool grounded;
+    public GameObject Child;    
     public bool Jumping;
     public bool JumpToRoof;
     SyringeJump TurretBool;
+    Animator anim;
+    public BoxCollider GroundCheck;
 
     // Start is called before the first frame update
     void Start()
     {
-        CurrentState = new SyringeIdle(this.gameObject, Player);
+        anim = this.GetComponent<Animator>();
+
+        CurrentState = new SyringeIdle(this.gameObject, Player, anim);
 
         TurretBool = GetComponent<SyringeJump>();
     }
@@ -27,7 +30,8 @@ public class SyringeAI : MonoBehaviour
     {
         CurrentState = CurrentState.Process();
 
-        grounded = Child.GetComponent<GroundCheck>().Grounded;
+        //grounded = Child.GetComponent<GroundCheck>().Grounded;
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,8 +47,9 @@ public class SyringeAI : MonoBehaviour
         }
         
     }
-
     
+
+
 
     private void OnEnable()
     {

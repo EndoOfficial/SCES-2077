@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919859296457858007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.03, y: 0.888, z: 3.16}
+  m_LocalPosition: {x: -1.03, y: 0.888, z: -0.01}
   m_LocalScale: {x: 1, y: 0.31, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -356,8 +356,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6447813, y: 1.79622, z: 0.7188987}
-  m_Center: {x: 0, y: -0.000725761, z: 0}
+  m_Size: {x: 0.9582897, y: 2.35301, z: 1.0131334}
+  m_Center: {x: 0, y: -0.22786646, z: 0}
 --- !u!114 &7065607485802250847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +382,7 @@ MonoBehaviour:
   Turret: 0
   ThisPos: {x: 0, y: 0, z: 0}
   TargetPos: {x: 0, y: 0, z: 0}
+  Anim: {fileID: 0}
 --- !u!114 &538690402215822820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,7 +411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3cfef0b94a96a4caded3440bb98e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 40
   maxHealth: 40
   healthBarUi: {fileID: 7473053725370999603}
 --- !u!114 &7822894404216453691
@@ -532,7 +532,6 @@ GameObject:
   - component: {fileID: 7068124800717697801}
   - component: {fileID: 7068124800717697800}
   - component: {fileID: 7068124800717697906}
-  - component: {fileID: 7068124800717697803}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -616,8 +615,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.99568653, z: 1}
+  m_Center: {x: 0, y: 0.0021567938, z: 0}
 --- !u!54 &7068124800717697801
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -743,19 +742,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Grounded: 0
---- !u!65 &7068124800717697803
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7068124800717697907}
-  m_Material: {fileID: 13400000, guid: dfa3085ce932ad8418bf230a37b279e4, type: 2}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7068124801567380950
 GameObject:
   m_ObjectHideFlags: 0

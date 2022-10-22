@@ -19,24 +19,36 @@ public class SyringeJump : MonoBehaviour
     public Vector3 ThisPos;
     public Vector3 TargetPos;
     bool CanJumpToRoof;
-    bool IsGrounded;
+    public bool IsGrounded;
+    public Animator Anim;
     // Start is called before the first frame update
     void Start()
     {
         CFGJ = GetComponentInChildren<ConfigurableJoint>();
         Target = GameObject.FindGameObjectWithTag("Player");
+        Anim = GetComponent<Animator>();
 
-        
-
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        IsGrounded = Child.GetComponent<GroundCheck>().Grounded;
-
-        
+        //IsGrounded = Child.GetComponent<GroundCheck>().Grounded;
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position,-Vector3.up, out hit, 0.5f))
+        {
+            if(hit.collider.tag == "Ground")
+            {                
+                IsGrounded = true;
+                Debug.Log("Grounded");
+            }
+            else
+            {
+                IsGrounded = false;
+            }
+            
+        }
+        Debug.DrawRay(transform.position, -Vector3.up * 0.5f, Color.green);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -55,8 +67,9 @@ public class SyringeJump : MonoBehaviour
 
     public void IsJumping()
     {
-        if (Child.GetComponent<GroundCheck>().Grounded == false)
+        if (IsGrounded == false)
         {
+            
             MyRB.AddRelativeForce(-transform.forward * ForwardSpeed);
             MyChildRB.AddRelativeForce(-transform.forward * ForwardSpeed);
             TargetPos = Target.transform.position;
@@ -68,7 +81,9 @@ public class SyringeJump : MonoBehaviour
         }
         else
         {
+            // Anim.SetTrigger("Jump");            
             MyRB.AddForce(transform.up * SpringForce);
+            IsGrounded = false;
             MyRB.velocity = Vector3.zero;
             MyRB.angularVelocity = Vector3.zero;
             Debug.Log("Jump");
@@ -83,7 +98,7 @@ public class SyringeJump : MonoBehaviour
         {
             if (!Jumping)
             {
-                transform.rotation = Quaternion.Euler(Random.Range(-50, 50), 0, Random.Range(-50, 50));
+                transform.rotation = Quaternion.Euler(Random.Range(-45, 45), 0, Random.Range(-45, 45));
                 
             }
             //ChosenAttach = AttachmentPoints[Random.Range(0, AttachmentPoints.Count)];

@@ -16,20 +16,16 @@ public class GroundCheck : MonoBehaviour
     {
 
     }
-
-    void OnTriggerEnter(Collider other)
+    
+    void OnCollisionEnter(Collision other)
     {
-        if (other.tag == "Ground")
+        if(other.collider.tag == "Ground")
         {
             Grounded = true;
         }
+
+        
     }
 
-    void OnTriggerExit(Collider target)
-    {
-        if (target.tag == "Ground")
-        {
-            Grounded = false;
-        }
-    }
+    
 }
