@@ -35,13 +35,9 @@ public class Health : MonoBehaviour
     }
     public void PlayerDeath()
     {
-<<<<<<< Updated upstream
-        // display a death screen
-=======
         GameEvents.OnGameOver?.Invoke(true);
         // disables the player because destroying is bad
         //gameObject.SetActive(false);
->>>>>>> Stashed changes
     }
 
 }
