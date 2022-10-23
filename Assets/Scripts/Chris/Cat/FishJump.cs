@@ -11,7 +11,6 @@ public class FishJump : MonoBehaviour
     public Vector3 jumpDirection;
     private AOE aoe;
     private Animator anim;
-    private float temp;
 
     private void Start()
     {
@@ -19,7 +18,6 @@ public class FishJump : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         aoe = GetComponent<AOE>();
         anim = GetComponent<Animator>();
-        temp = waitTime;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -41,7 +39,6 @@ public class FishJump : MonoBehaviour
     {
         if (grounded)
         {
-            waitTime = temp * UnityEngine.Random.Range(0.8f, 1.2f);
             yield return new WaitForSecondsRealtime(waitTime);
             grounded = false;
 

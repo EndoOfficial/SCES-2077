@@ -17,12 +17,13 @@ public class Rage2 : CiggsState
 
     public override void Enter()
     {
-        anim.SetTrigger("Rage1");
+        anim.SetTrigger("Rage2");
         rb = npc.GetComponent<Rigidbody>();
         ciggs = npc.GetComponent<MrCiggs>();
         shot = npc.GetComponent<EnemyGun>();
         shot.attackSpeed = 3f;
         shot.damage = 2;
+        
         base.Enter();
     }
 
@@ -31,6 +32,7 @@ public class Rage2 : CiggsState
        
         if (ciggs.rage >= 50)
         {
+          
             nextState = new Rage3(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }
@@ -44,7 +46,7 @@ public class Rage2 : CiggsState
 
     public override void Exit()
     {
-        anim.ResetTrigger("Rage1");
+        anim.ResetTrigger("Rage2");
         base.Exit();
     }
 

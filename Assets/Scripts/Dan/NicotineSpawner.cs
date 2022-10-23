@@ -49,6 +49,7 @@ public class NicotineSpawner : MonoBehaviour
     {
         while (true)
         {
+            FindObjectOfType<AudioManager>().Play("Spawn");
             yield return new WaitForSeconds(WaitTime);
             Vector3 newPosition;
             VacantRandomPosition(out newPosition);
