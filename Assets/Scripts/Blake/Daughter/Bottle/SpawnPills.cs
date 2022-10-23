@@ -6,6 +6,7 @@ public class SpawnPills : MonoBehaviour
 {
     public Transform player;
     public GameObject PillToSpawn;
+    public float SpawnDelay;
     private void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
@@ -16,7 +17,7 @@ public class SpawnPills : MonoBehaviour
     }
     public IEnumerator Spawner()
     {
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(SpawnDelay);
         Instantiate(PillToSpawn, new Vector3(transform.position.x, 3, transform.position.z), Quaternion.identity);
         StartCoroutine(Spawner());
     }

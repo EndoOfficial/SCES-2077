@@ -44,7 +44,7 @@ public class LeftKnee : GruntState
     }
     public override void Exit()
     {
-        anim.ResetTrigger("LeftKnee");
+        anim.ResetTrigger("LeftLegDowning");
         base.Exit();
     }
 }

@@ -11,22 +11,15 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire = 0;
     public LayerMask EnemyLayer;
     public Animator anim;
-    private bool gamePaused;
 
     public void Update()
     {
-        if (gamePaused)
-        {
-            return;
-        }
         //checks for mouse1 and nextTimeToFire
         if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
-
         }
-
 
     }
     void Shoot()
@@ -35,27 +28,18 @@ public class Gun : MonoBehaviour
 
         RaycastHit hit;
 
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, EnemyLayer))
         {
-            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, EnemyLayer))
+            //damage enemy Event
+            Debug.Log("Damage");
+            GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
+
+            WeakPoints target = hit.transform.GetComponent<WeakPoints>();
+            if (target != null)
             {
-                //damage enemy Event
-                Debug.Log("Damage");
-                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
+                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.parent.gameObject);
+                target.Shot();
             }
         }
-    }
-    private void OnEnable()
-    {
-        GameEvents.OnPauseGame += OnPauseGame;
-    }
-
-    private void OnDisable()
-    {
-        GameEvents.OnPauseGame -= OnPauseGame;
-    }
-    public void OnPauseGame( bool paused)
-    {
-        gamePaused = paused;
     }
 }

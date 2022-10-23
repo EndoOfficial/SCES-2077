@@ -80,6 +80,6 @@ public class HeadShot : MonoBehaviour
 
     public void Murked()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 }

@@ -8,28 +8,15 @@ public class WeakPoints : MonoBehaviour
     public bool rightShot;
     public bool headShot;
     public HeadShot Head;
-
-    private void OnEnable()
-    {
-        GameEvents.DamageEnemy += Shot;
-    }
-
-    private void OnDisable()
-    {
-        GameEvents.DamageEnemy -= Shot;
-
-    }
-
     private void Start()
     {
         Head = Head.GetComponent<HeadShot>();
         leftShot = false;
         rightShot = false;
         headShot = false;
-
     }
 
-    public void Shot(int damage, GameObject Enemy)
+    public void Shot()
     {
         if (CompareTag("LeftKnee"))
         {

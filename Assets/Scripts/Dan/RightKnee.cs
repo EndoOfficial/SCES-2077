@@ -15,7 +15,7 @@ public class RightKnee : GruntState
 
     public override void Enter()
     {
-        anim.SetTrigger("RightKnee");
+        anim.SetTrigger("RightLegDowning");
         rb = npc.GetComponent<Rigidbody>();
         Grunt = npc.GetComponent<Grunts>();
         head = npc.GetComponent<HeadShot>();
@@ -45,7 +45,7 @@ public class RightKnee : GruntState
 
     public override void Exit()
     {
-        anim.ResetTrigger("RightKnee");
+        anim.ResetTrigger("RightLegDowning");
         base.Exit();
     }
 }

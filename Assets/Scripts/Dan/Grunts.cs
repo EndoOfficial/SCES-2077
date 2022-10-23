@@ -9,16 +9,19 @@ public class Grunts : MonoBehaviour
     public LayerMask Player;
     public float radius;
     public int damage;
+    public float Cooldown;
 
     public bool hit;
+
     void Update()
     {
-        transform.position += transform.forward * speed * speedEffect * Time.deltaTime;
+        transform.position += transform.forward * speed * Time.deltaTime;
         if (Physics.CheckSphere(transform.position, radius, Player))
         {
             if (!hit)
             {
                 hit = true;
+                StartCoroutine(HitDelay());
                 GameEvents.DamagePlayer?.Invoke(damage);
             }
         }
@@ -28,5 +31,9 @@ public class Grunts : MonoBehaviour
         }
     }
    
-
+    private IEnumerator HitDelay()
+    {
+        yield return new WaitForSeconds(Cooldown);
+        hit = false;
+    }
 }

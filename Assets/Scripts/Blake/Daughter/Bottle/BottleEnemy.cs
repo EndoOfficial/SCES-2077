@@ -26,7 +26,7 @@ public class BottleEnemy : Enemy
         if (spawncount < 10)
         {
             spawncount += 1;
-            yield return new WaitForSeconds(0);
+            yield return new WaitForSeconds(0.1f);
             Instantiate(pill, new Vector3(transform.position.x, 3, transform.position.z), Quaternion.identity);
             StartCoroutine(Explode());
             if (spawncount >= 10)
