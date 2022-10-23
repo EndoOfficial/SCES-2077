@@ -11,15 +11,22 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire = 0;
     public LayerMask EnemyLayer;
     public Animator anim;
+    private bool gamePaused;
 
     public void Update()
     {
+        if (gamePaused)
+        {
+            return;
+        }
         //checks for mouse1 and nextTimeToFire
         if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
+
         }
+
 
     }
     void Shoot()
@@ -40,5 +47,17 @@ public class Gun : MonoBehaviour
             }
         }
     }
+    private void OnEnable()
+    {
+        GameEvents.OnPauseGame += OnPauseGame;
+    }
 
+    private void OnDisable()
+    {
+        GameEvents.OnPauseGame -= OnPauseGame;
+    }
+    public void OnPauseGame( bool paused)
+    {
+        gamePaused = paused;
+    }
 }

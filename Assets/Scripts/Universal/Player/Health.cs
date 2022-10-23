@@ -37,7 +37,9 @@ public class Health : MonoBehaviour
     }
     public void PlayerDeath()
     {
-        // display a death screen
+        GameEvents.OnGameOver?.Invoke(true);
+        // disables the player because destroying is bad
+        //gameObject.SetActive(false);
     }
 
 }
