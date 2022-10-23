@@ -23,6 +23,7 @@ public class Rage2 : CiggsState
         shot = npc.GetComponent<EnemyGun>();
         shot.attackSpeed = 3f;
         shot.damage = 2;
+        
         base.Enter();
     }
 
@@ -31,6 +32,7 @@ public class Rage2 : CiggsState
        
         if (ciggs.rage >= 50)
         {
+          
             nextState = new Rage3(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }
