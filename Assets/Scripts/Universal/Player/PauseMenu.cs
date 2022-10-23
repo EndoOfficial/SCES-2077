@@ -20,7 +20,6 @@ public class PauseMenu1 : MonoBehaviour
             else
             {
                 Pause();
-
             }
         }
     }

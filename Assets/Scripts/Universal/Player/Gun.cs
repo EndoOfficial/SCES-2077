@@ -32,8 +32,6 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         anim.SetTrigger("Shoot");
-        FindObjectOfType<AudioManager>().Play("Shooting");
-
 
         RaycastHit hit;
 

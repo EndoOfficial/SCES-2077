@@ -8,7 +8,6 @@ public class Health : MonoBehaviour
     public int health = 100;
     public int maxHealth = 100;
     public Text text;
-    public CameraShake cameraShake;
 
     private void OnEnable()
     {
@@ -20,12 +19,10 @@ public class Health : MonoBehaviour
         GameEvents.DamagePlayer -= DamagePlayer;    }
     public void DamagePlayer(int damage)
     {
-        FindObjectOfType<AudioManager>().Play("Hurt");
         // reduce health then update it
         health -= damage;
         if (health <= 0f)
         {
-            StartCoroutine(cameraShake.Shake(.15f,.4f));
             // stops time for a game over screen instead of destroying the player and the attached camera
             PlayerDeath();
         }

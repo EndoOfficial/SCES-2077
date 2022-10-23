@@ -17,7 +17,7 @@ public class Rage3 : CiggsState
 
     public override void Enter()
     {
-        anim.SetTrigger("Rage3");
+        anim.SetTrigger("Rage1");
         rb = npc.GetComponent<Rigidbody>();
         ciggs = npc.GetComponent<MrCiggs>();
         shot = npc.GetComponent<EnemyGun>();
@@ -44,7 +44,7 @@ public class Rage3 : CiggsState
 
     public override void Exit()
     {
-        anim.ResetTrigger("Rage3");
+        anim.ResetTrigger("Rage1");
         base.Exit();
     }
 
