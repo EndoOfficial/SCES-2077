@@ -7,7 +7,6 @@ TagManager:
   - Ground
   - Shredder
   - Paper
-  - Roof
   - Enemy
   - CentreCube
   - PlayerSpawnPoint
@@ -16,6 +15,8 @@ TagManager:
   - RightKnee
   - Head
   - Slide
+  - GameManager
+  - Arm
   layers:
   - Default
   - TransparentFX
