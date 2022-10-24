@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &21794874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7331985560557544736, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+  m_PrefabInstance: {fileID: 4776037827010129488}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &48779364 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5517965005009997536, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
@@ -146,7 +157,7 @@ GameObject:
   m_Layer: 10
   m_Name: Big Bill Spawn
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -614,7 +625,7 @@ GameObject:
   m_Layer: 10
   m_Name: Little Bill Spawn (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -733,7 +744,7 @@ GameObject:
   m_Layer: 10
   m_Name: Little Bill Spawn (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1215,7 +1226,7 @@ GameObject:
   m_Layer: 10
   m_Name: Little Bill Spawn (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1323,13 +1334,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903994334}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.6, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -10.286884, z: 151.9}
+  m_LocalScale: {x: 2, y: 50, z: 50.00003}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 33751838382645625}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &951673702
 PrefabInstance:
@@ -1874,6 +1885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e2cc726aae768489a5a21691b78ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   maxHealth: 1200
   healthBarUi: {fileID: 550858203}
 --- !u!95 &1397516317
@@ -1996,6 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3cfef0b94a96a4caded3440bb98e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   maxHealth: 1200
   healthBarUi: {fileID: 550858203}
 --- !u!1001 &1570097163
@@ -2159,7 +2172,6 @@ GameObject:
   - component: {fileID: 1661686251}
   - component: {fileID: 1661686250}
   - component: {fileID: 1661686249}
-  - component: {fileID: 1661686248}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -2167,19 +2179,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1661686248
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661686247}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1661686249
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2239,7 +2238,7 @@ Transform:
   m_GameObject: {fileID: 1661686247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 400, y: 400, z: 400}
+  m_LocalScale: {x: 300, y: 300, z: 300}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -2696,7 +2695,7 @@ GameObject:
   m_Layer: 10
   m_Name: Little Bill Spawn
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2715,117 +2714,6 @@ Transform:
   m_Father: {fileID: 6919091507134883281}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &33751838382645509
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 33751838382645625}
-  - component: {fileID: 33751838382645510}
-  - component: {fileID: 33751838382645511}
-  - component: {fileID: 33751838382645624}
-  - component: {fileID: 33751838382645627}
-  m_Layer: 10
-  m_Name: Killwall
-  m_TagString: Shredder
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!33 &33751838382645510
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33751838382645509}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &33751838382645511
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33751838382645509}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: bf67ffb4755a1b943b846227e1b0224e, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &33751838382645624
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33751838382645509}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &33751838382645625
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33751838382645509}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -10.286884, z: 174.6}
-  m_LocalScale: {x: 2, y: 50, z: 50.000015}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 903994335}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &33751838382645627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33751838382645509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fddbfe5f22917104cb837d8c00b3f1db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3986314940342570586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2902,6 +2790,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2993430558768293073, guid: d336efa011173e5468d0b2b998fe5a88, type: 3}
+      propertyPath: actionButtonPrompt
+      value: 
+      objectReference: {fileID: 21794874}
     - target: {fileID: 4520434914419971837, guid: d336efa011173e5468d0b2b998fe5a88, type: 3}
       propertyPath: text
       value: 
@@ -3128,3 +3020,4 @@ MonoBehaviour:
   - {fileID: 361310460}
   - {fileID: 840300512}
   - {fileID: 497694107}
+  chance: 65

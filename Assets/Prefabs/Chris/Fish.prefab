@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50e8f60ec3ac7e84eb5cd0f6eec80d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 10
+  distance: 50
   player:
     serializedVersion: 2
     m_Bits: 64
@@ -202,7 +202,7 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 64
-  damage: 10
+  damage: 20
 --- !u!114 &3310792246524887541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 60
+  maxHealth: 80
   healthBarUi: {fileID: 2285080033653398897}
 --- !u!198 &8577302811444653483
 ParticleSystem:
@@ -482,7 +482,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4948,7 +4948,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5891957978583362950
 Rigidbody:

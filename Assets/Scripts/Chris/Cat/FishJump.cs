@@ -9,7 +9,6 @@ public class FishJump : MonoBehaviour
     private Rigidbody rb;
     public bool grounded;
     public Vector3 jumpDirection;
-    private AOE aoe;
     private Animator anim;
     private float temp;
 
@@ -17,7 +16,6 @@ public class FishJump : MonoBehaviour
     {
         //get components
         rb = GetComponent<Rigidbody>();
-        aoe = GetComponent<AOE>();
         anim = GetComponent<Animator>();
         temp = waitTime;
     }
@@ -28,7 +26,6 @@ public class FishJump : MonoBehaviour
         {
             grounded = true;
             StartCoroutine(Wait()); // start co-routine
-            aoe.aoe();
         }
     }
 
