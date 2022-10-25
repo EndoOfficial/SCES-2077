@@ -17,6 +17,6 @@ public class PillState : State
     public PillState(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
         : base(_npc, _agent, _anim, _player)
     {
-        anim = npc.GetComponent<Animator>();
+        
     }
 }

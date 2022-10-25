@@ -9,7 +9,6 @@ public class MiniPillAI : MonoBehaviour
     Animator anim;
     private GameObject player;
     State currentState;
-
     void Start()
     {
         player = GameObject.FindWithTag("Player");

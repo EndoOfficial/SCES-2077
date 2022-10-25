@@ -5,19 +5,26 @@ using UnityEngine;
 public class RetreatTimer : MonoBehaviour
 {
     public bool TimesUp = false;
-    public void Timer()
+    public bool Attack = false;
+    public void ReatreatTimer()
     {
-        TimesUp = false;
         StartCoroutine(RetreatTime());
-        Debug.Log("StartTimer");
+    }
+    public void AttackTimer()
+    {
+        Attack = true;
+        StartCoroutine(AttackTime());
     }
     private IEnumerator RetreatTime()
     {
-        if (!TimesUp)
-        {
-            yield return new WaitForSeconds(1f);
-            TimesUp = true;
-            Debug.Log("StopTimer");
-        }
+        yield return new WaitForSeconds(1f);
+        TimesUp = true;
+        yield return new WaitForSeconds(.1f);
+        TimesUp = false;
+    }
+    private IEnumerator AttackTime()
+    {
+        yield return new WaitForSeconds(.1f);
+        Attack = false;
     }
 }

@@ -14,17 +14,19 @@ public class PillRetreatState : PillState
     }
     public override void Enter()
     {
+        anim = npc.GetComponent<Animator>();
         anim.SetTrigger("RunBackwards");
         Timer = npc.GetComponent<RetreatTimer>();
-        Timer.Timer();
+        Timer.ReatreatTimer();
         Running = npc.GetComponent<PillMovement>();
         Running.speed = -6f;
         base.Enter();
     }
     public override void Update()
     {
-        if (Timer.TimesUp)
+        if (Timer.TimesUp == true)
         {
+            Timer.TimesUp = false;
             nextState = new PillAttackState(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }

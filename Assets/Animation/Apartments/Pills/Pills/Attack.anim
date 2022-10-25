@@ -19,21 +19,13 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0
-      value: {fileID: -713729429, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
-    - time: 0.083333336
-      value: {fileID: 744891660, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
-    - time: 0.16666667
-      value: {fileID: -1898608210, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
-    - time: 0.25
-      value: {fileID: 598275926, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
-    - time: 0.33333334
+    - time: 0.016666668
       value: {fileID: 1324740291, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
-    - time: 0.5
+    - time: 0.18333334
       value: {fileID: 1696453391, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
-    - time: 0.73333335
+    - time: 0.41666666
       value: {fileID: 1848848675, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
-    - time: 0.8666667
+    - time: 0.55
       value: {fileID: -617757245, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
     attribute: m_Sprite
     path: PillSpriteRenderer
@@ -54,10 +46,6 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -713729429, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
-    - {fileID: 744891660, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
-    - {fileID: -1898608210, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
-    - {fileID: 598275926, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
     - {fileID: 1324740291, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
     - {fileID: 1696453391, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
     - {fileID: 1848848675, guid: be1749cc48e8ff448bf3b6c9b640aba8, type: 3}
@@ -67,7 +55,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8833333
+    m_StopTime: 0.56666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -86,4 +74,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.55
+    functionName: AttackTimer
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
