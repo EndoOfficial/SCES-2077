@@ -14,11 +14,12 @@ public class PillRetreatState : PillState
     }
     public override void Enter()
     {
-        base.Enter();
+        anim.SetTrigger("RunBackwards");
         Timer = npc.GetComponent<RetreatTimer>();
         Timer.Timer();
         Running = npc.GetComponent<PillMovement>();
         Running.speed = -6f;
+        base.Enter();
     }
     public override void Update()
     {
@@ -30,6 +31,7 @@ public class PillRetreatState : PillState
     }
     public override void Exit()
     {
+        anim.ResetTrigger("RunBackwards");
         base.Exit();
     }
 }

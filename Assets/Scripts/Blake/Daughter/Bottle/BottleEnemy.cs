@@ -5,34 +5,23 @@ using UnityEngine;
 public class BottleEnemy : Enemy
 {
     public GameObject pill;
-    public float spawncount;
-
-    private void OnEnable()
-    {
-        GameEvents.DamageEnemy += TakeDamage;
-    }
-    private void OnDisable()
-    {
-        GameEvents.DamageEnemy -= TakeDamage;
-    }
-
-    protected override void Die()
-    {
-        StartCoroutine(Explode());
-
-    }
+    public float spawnlimit;
+    private float spawncount;
+    private float randomizer;
+    public float range;
     private IEnumerator Explode()
     {
-        if (spawncount < 10)
+        if (spawncount < spawnlimit)
         {
+            randomizer = Random.Range(-range, range);
             spawncount += 1;
-            yield return new WaitForSeconds(0.1f);
-            Instantiate(pill, new Vector3(transform.position.x, 3, transform.position.z), Quaternion.identity);
-            StartCoroutine(Explode());
-            if (spawncount >= 10)
+            yield return new WaitForSeconds(0);
+            Instantiate(pill, new Vector3(transform.position.x + randomizer, 3 + randomizer, transform.position.z + randomizer), Quaternion.identity);
+            if (spawncount >= spawnlimit)
             {
-                base.Die();
+                Destroy(gameObject);
             }
+            StartCoroutine(Explode());
         }
     }
 }

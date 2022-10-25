@@ -14,6 +14,7 @@ public class PillAttackState : PillState
     }
     public override void Enter()
     {
+        anim.SetTrigger("RunForwards");
         Hit = npc.GetComponent<HitPlayer>();
         Running = npc.GetComponent<PillMovement>();
         Running.speed = 2f;
@@ -23,12 +24,14 @@ public class PillAttackState : PillState
     {
         if (Hit.hit)
         {
+            anim.SetTrigger("Attack");
             nextState = new PillRetreatState(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }
     }
     public override void Exit()
     {
+        anim.ResetTrigger("RunForwards");
         base.Exit();
     }
 }

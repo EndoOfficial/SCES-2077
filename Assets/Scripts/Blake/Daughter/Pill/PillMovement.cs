@@ -10,8 +10,11 @@ public class PillMovement : MonoBehaviour
     public Rigidbody rb;
     public Vector3 direction;
     public bool grounded = false;
+    Animator anim;
     void Start()
     {
+        anim = GetComponent<Animator>();
+        anim.SetTrigger("RunForwards");
         player = GameObject.FindWithTag("Player").transform;
         rb = GetComponent<Rigidbody>();
 

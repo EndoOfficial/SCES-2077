@@ -7,7 +7,7 @@ public class MiniPillAI : MonoBehaviour
 {
     NavMeshAgent agent;
     Animator anim;
-    public GameObject player;
+    private GameObject player;
     State currentState;
 
     void Start()

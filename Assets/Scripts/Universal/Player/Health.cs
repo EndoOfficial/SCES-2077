@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
         health -= damage;
         if (health <= 0f)
         {
-           
+            Debug.Log("Die?");
             // stops time for a game over screen instead of destroying the player and the attached camera
             PlayerDeath();
         }
@@ -37,9 +37,7 @@ public class Health : MonoBehaviour
     public void PlayerDeath()
     {
         GameEvents.OnGameOver?.Invoke(true);
-        Time.timeScale = 0f;
-        // disables the player because destroying is bad
-        //gameObject.SetActive(false);
+
     }
 
 }

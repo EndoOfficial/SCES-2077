@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public float health;
     public float maxHealth;
+    private Animator anim;
 
     public GameObject healthBarUi;
     private Slider slider;
@@ -23,6 +24,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
         health = maxHealth;
         if (healthBarUi != null)
         {
@@ -35,11 +37,13 @@ public class Enemy : MonoBehaviour
     {
         if(this.gameObject == target)
         {
+        anim.SetTrigger("Damage");
             health -= damage;
             if (health <= 0f) // if true, Die
             {
-                
-                Die();
+
+                anim.SetTrigger("Death");
+                //Add Die function as event in death animator
             }
         }
     }

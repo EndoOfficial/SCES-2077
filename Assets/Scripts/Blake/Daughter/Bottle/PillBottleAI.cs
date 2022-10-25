@@ -13,7 +13,7 @@ public class PillBottleAI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        currentState = new BottleSpawnState(gameObject, agent, anim, player);
+        currentState = new ThrowingState(gameObject, agent, anim, player);
     }
     void Update()
     {
