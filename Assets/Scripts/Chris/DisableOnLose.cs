@@ -7,14 +7,14 @@ public class DisableOnWin : MonoBehaviour
 {
     private void OnEnable()
     {
-        GameEvents.LevelWin += LevelWin;
+        GameEvents.OnGameOver += OnGameOver;
     }
     private void OnDisable()
     {
-        GameEvents.LevelWin += LevelWin;
+        GameEvents.OnGameOver += OnGameOver;
     }
 
-    private void LevelWin()
+    private void OnGameOver(bool gameover)
     {
         gameObject.SetActive(false);
     }
