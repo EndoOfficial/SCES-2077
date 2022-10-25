@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489426665669104149}
   - component: {fileID: 532904748054871477}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PillManSpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -219223060, guid: a5632a0117775a14290b5aff728b66dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 19.199999, y: 15.914062}
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817d2e56e1862064d8c797be95ed859a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurnSpeed: 5
+  TurnSpeed: 3
 --- !u!114 &3111766049081666883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,12 +242,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9486c16d06e8074eb6eba782d483fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
-  healthBarUi: {fileID: 4600407970777075093}
+  health: 150
+  maxHealth: 150
+  Canvas: {fileID: 4600407970777075093}
+  slider: {fileID: 4600407970999708959}
   pill: {fileID: 5183225567923066637, guid: 3e7e2ad36c432e84c9d216b33c83d59e, type: 3}
-  spawnlimit: 0
-  range: 0
+  spawnlimit: 12
+  range: 1.5
 --- !u!95 &7692386618914041817
 Animator:
   serializedVersion: 4
@@ -407,3 +408,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7488767427628731251, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
   m_PrefabInstance: {fileID: 6357566312848852710}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4600407970999708959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7488767427271502841, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+  m_PrefabInstance: {fileID: 6357566312848852710}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -13,6 +13,6 @@ public class SpawnPills : MonoBehaviour
     }
     public void StartSpawn()
     {
-        Instantiate(PillToSpawn, new Vector3(transform.position.x, 3, transform.position.z), Quaternion.identity);
+        Instantiate(PillToSpawn, new Vector3(transform.position.x, 5, transform.position.z), Quaternion.identity);
     }
 }

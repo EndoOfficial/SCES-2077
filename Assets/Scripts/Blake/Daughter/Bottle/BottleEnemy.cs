@@ -29,4 +29,9 @@ public class BottleEnemy : Enemy
             yield return null;
         }
     }
+
+    public void die()
+    {
+        Destroy(gameObject);
+    }
 }

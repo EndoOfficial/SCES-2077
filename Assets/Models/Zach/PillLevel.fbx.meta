@@ -1,39 +1,9 @@
 fileFormatVersion: 2
 guid: 414da54b75066cc45ae1be2fe13ef26e
 ModelImporter:
-  serializedVersion: 21300
+  serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Brain
-    second: {fileID: 2100000, guid: 54826917d228d4244a3a3fb5f695a09e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Discoball
-    second: {fileID: 2100000, guid: c192c48b4974d4144b06fc922677f953, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Skull
-    second: {fileID: 2100000, guid: 187453347f0172d4c84201b68c67491d, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Disco_Ball_001_roughness
-    second: {fileID: 2800000, guid: da2771650d104d844891156036328efe, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: closeup-lamb-brain-showing-its-texture-blood-84483702
-    second: {fileID: 2800000, guid: 2285d97403e53404387a4543250519e7, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: deer-skull-texture-top-center-found-death-natural-cause-40045912
-    second: {fileID: 2800000, guid: e34a57618cc9fc84daaf9924c9346a06, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -129,7 +99,6 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

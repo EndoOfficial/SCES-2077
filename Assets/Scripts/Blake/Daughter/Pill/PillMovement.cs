@@ -32,4 +32,8 @@ public class PillMovement : MonoBehaviour
             transform.position += transform.forward * speed * Time.deltaTime;
         }
     }
+    public void DisableIt()
+    {
+        gameObject.GetComponent<PillMovement>().enabled = false;
+    }
 }

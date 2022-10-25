@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour
     {
         if(this.gameObject == target)
         {
+            Debug.Log("E");
         anim.SetTrigger("Damage");
             health -= damage;
             if (health <= 0f) // if true, Die
@@ -49,7 +50,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
-        slider.enabled = false;
+        if (slider != null) slider.enabled = false;
         Destroy(gameObject);
     }
 
@@ -59,7 +60,6 @@ public class Enemy : MonoBehaviour
         { 
             // update health slider
             slider.value = CalculateHealth();
-            Canvas.SetActive(true);
         }
         
     }

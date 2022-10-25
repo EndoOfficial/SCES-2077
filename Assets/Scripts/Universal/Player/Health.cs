@@ -24,7 +24,6 @@ public class Health : MonoBehaviour
         health -= damage;
         if (health <= 0f)
         {
-            Debug.Log("Die?");
             text.text = health.ToString();
             // stops time for a game over screen instead of destroying the player and the attached camera
             PlayerDeath();
@@ -32,7 +31,7 @@ public class Health : MonoBehaviour
         else
         {
             // update the health text
-            text.text = health.ToString();
+            text.text = health.ToString();  
         }
     }
     public void PlayerDeath()
