@@ -27,6 +27,7 @@ public class UiManager : MonoBehaviour
     }
     public void OnGameOver(bool gameover)
     {
+        FindObjectOfType<AudioManager>().Play("GameOver");
         GameOverMenuUi.SetActive(true);
     }
     //public void CurrentHealth(int health)

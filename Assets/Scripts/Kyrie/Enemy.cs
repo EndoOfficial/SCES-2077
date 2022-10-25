@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour
             health -= damage;
             if (health <= 0f) // if true, Die
             {
+                
                 Die();
             }
         }
@@ -45,6 +46,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        GameEvents.LevelWin?.Invoke();
         Destroy(gameObject);
     }
 

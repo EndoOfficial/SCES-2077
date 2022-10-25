@@ -16,6 +16,7 @@ public class Nicotine : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("Upgrade");
             Debug.Log("Collected");
             GameEvents.Nicotine?.Invoke();
             GameEvents.RageIncrease?.Invoke(rage);
