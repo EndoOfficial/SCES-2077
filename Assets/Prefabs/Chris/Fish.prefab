@@ -228,8 +228,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 80
-  healthBarUi: {fileID: 2285080033653398897}
+  maxHealth: 30
+  Canvas: {fileID: 2285080033653398897}
+  slider: {fileID: 2285080033840381435}
 --- !u!198 &8577302811444653483
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5185,3 +5186,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
   m_PrefabInstance: {fileID: 8672611695890011650}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2285080033840381435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7488767427271502841, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+  m_PrefabInstance: {fileID: 8672611695890011650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
