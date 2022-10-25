@@ -17,6 +17,8 @@ TagManager:
   - Slide
   - GameManager
   - Arm
+  - Roof
+  - NPC
   layers:
   - Default
   - TransparentFX

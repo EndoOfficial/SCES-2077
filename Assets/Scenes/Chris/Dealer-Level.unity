@@ -1783,7 +1783,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 1200
-  healthBarUi: {fileID: 735816129}
+  Canvas: {fileID: 0}
+  slider: {fileID: 0}
 --- !u!95 &1397516317
 Animator:
   serializedVersion: 4
@@ -1906,7 +1907,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 1200
-  healthBarUi: {fileID: 735816129}
+  Canvas: {fileID: 735816129}
+  slider: {fileID: 0}
 --- !u!1001 &1570097163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2404,6 +2406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916110957}
   - component: {fileID: 1916110958}
+  - component: {fileID: 1916110959}
   m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
@@ -2485,6 +2488,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1916110959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916110956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc225919ae4f45f43a2ddf417c37d8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2005440380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2803,6 +2818,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1644254529688549005, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: previousLevel
+      value: Dealer-Level
+      objectReference: {fileID: 0}
     - target: {fileID: 4958787710120097658, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2816,6 +2835,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3357169784844681263, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: SceneName
+      value: Slums
+      objectReference: {fileID: 0}
     - target: {fileID: 6407706609725505494, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: m_Enabled
       value: 0

@@ -9,9 +9,6 @@ public class LevelLoader : MonoBehaviour
     public GameObject _camera;
     public Text actionButtonPrompt;
 
-    public LayerMask characterLayer;
-
-
     private float raycastRange = 5;
     public Vector3 Player;
 
@@ -26,19 +23,21 @@ public class LevelLoader : MonoBehaviour
         If the raycast hits on update it activates the UI element that has the action button prompt and allow for the player to load the scene from the sceneloader script
        */
 
-        if(raycheck = Physics.Raycast(_camera.transform.position, _camera.transform.forward , out RaycastHit hitinfo, raycastRange, characterLayer))
+        if(raycheck = Physics.Raycast(_camera.transform.position, _camera.transform.forward , out RaycastHit hitinfo, raycastRange))
         {
-            var sceneLoader = hitinfo.transform.GetComponent<SceneLoader>();
-            if(sceneLoader != null)
+            if (hitinfo.transform.CompareTag("NPC"))
             {
-                actionButtonPrompt.gameObject.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.E))
+                var sceneLoader = hitinfo.transform.GetComponent<SceneLoader>();
+                if (sceneLoader != null)
                 {
-                    sceneLoader.LoadScene();
-                    Debug.Log("get loaded son");
+                    actionButtonPrompt.gameObject.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        sceneLoader.LoadScene();
+                        Debug.Log("get loaded son");
+                    }
                 }
             }
-            
         }
         else
         {

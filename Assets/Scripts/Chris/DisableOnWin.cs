@@ -6,15 +6,15 @@ using UnityEngine;
 public class DisableOnLose : MonoBehaviour
 {
     private void OnEnable()
-    {
-        GameEvents.OnGameOver += onGameOver;
+    { 
+        GameEvents.LevelWin += LevelWin;
     }
     private void OnDisable()
     {
-        GameEvents.OnGameOver += onGameOver;
+        GameEvents.LevelWin += LevelWin;
     }
 
-    private void onGameOver(bool temp)
+    private void LevelWin()
     {
         gameObject.SetActive(false);
     }
