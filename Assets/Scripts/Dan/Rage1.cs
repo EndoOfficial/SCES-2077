@@ -17,7 +17,6 @@ public class Rage1 : CiggsState
 
     public override void Enter()
     {
-       
         anim.SetTrigger("Rage1");
         rb = npc.GetComponent<Rigidbody>();
         ciggs = npc.GetComponent<MrCiggs>();

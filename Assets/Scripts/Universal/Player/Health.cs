@@ -19,12 +19,13 @@ public class Health : MonoBehaviour
         GameEvents.DamagePlayer -= DamagePlayer;    }
     public void DamagePlayer(int damage)
     {
-        FindObjectOfType<AudioManager>().Play("Hurt");
+        //FindObjectOfType<AudioManager>().Play("Hurt");
         // reduce health then update it
         health -= damage;
         if (health <= 0f)
         {
             Debug.Log("Die?");
+            text.text = health.ToString();
             // stops time for a game over screen instead of destroying the player and the attached camera
             PlayerDeath();
         }
@@ -37,7 +38,6 @@ public class Health : MonoBehaviour
     public void PlayerDeath()
     {
         GameEvents.OnGameOver?.Invoke(true);
-
     }
 
 }

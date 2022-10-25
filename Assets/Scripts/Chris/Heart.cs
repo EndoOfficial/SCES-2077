@@ -6,6 +6,7 @@ using UnityEngine;
 public class Heart : MonoBehaviour
 {
     private MeshRenderer heartObj;
+    private MeshCollider mesh;
 
     private void OnEnable()
     {
@@ -21,11 +22,14 @@ public class Heart : MonoBehaviour
     private void LevelWin()
     {
         heartObj.enabled = true; // enable the heart mesh
+        mesh.enabled = true;
+
     }
 
     private void Start()
     {
         heartObj = GetComponent<MeshRenderer>();
+        mesh = GetComponent<MeshCollider>();
     }
 
     private void Update()

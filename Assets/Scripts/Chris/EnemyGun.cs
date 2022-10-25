@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyGun : MonoBehaviour
 {
     public GameObject player;
+    private Animator anim;
+
     private bool canSeePlayerRay;
     private bool shootAtPlayerRay;
     public bool seePlayer;
@@ -12,7 +14,6 @@ public class EnemyGun : MonoBehaviour
     private Vector3 OldPlayerDirection;
     private Vector3 bulletDirection;
     public LayerMask playerMask;
-    private Ray ray;
     public float bulletSpread;
     public float maxSpread;
     private float tempSpread;
@@ -23,6 +24,7 @@ public class EnemyGun : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
+        anim = GetComponent<Animator>();
         tempSpread = bulletSpread;
         StartCoroutine(Position());
     }
@@ -40,7 +42,6 @@ public class EnemyGun : MonoBehaviour
         {
             if (hitinfo.transform.CompareTag("Player") && !seePlayer)
             {
-                Debug.Log("here");
                 seePlayer = true;
                 StartCoroutine(Shoot());
             }
@@ -60,7 +61,6 @@ public class EnemyGun : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         while (true)
         {
-            Debug.Log("Shoot Coroutine");
             //randomizes bulletSpread
             float temp = Random.Range(-bulletSpread, bulletSpread);
             float temp1 = Random.Range(-bulletSpread, bulletSpread);
@@ -77,7 +77,7 @@ public class EnemyGun : MonoBehaviour
             //if the ray hits the player
             if (shootAtPlayerRay = Physics.Raycast(transform.position, bulletDirection, out RaycastHit hitinfo))
             {
-                Debug.Log("BANG!!");
+                anim.SetTrigger("Shoot");
                 if (hitinfo.transform.CompareTag("Player"))
                 {
                     GameEvents.DamagePlayer?.Invoke(damage);

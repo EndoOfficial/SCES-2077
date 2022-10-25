@@ -25,13 +25,12 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         anim.SetTrigger("Shoot");
-        FindObjectOfType<AudioManager>().Play("Shooting");
+        //FindObjectOfType<AudioManager>().Play("Shooting");
         RaycastHit hit;
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, EnemyLayer))
         {
             //damage enemy Event
-            Debug.Log("Damage");
             GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
 
             WeakPoints target = hit.transform.GetComponent<WeakPoints>();

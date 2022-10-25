@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu1 : MonoBehaviour
 {
+   
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUi;
+    public string previousLevel;
 
     //Update is called once per frame
     void Update()
@@ -25,13 +27,14 @@ public class PauseMenu1 : MonoBehaviour
         }
     }
     public void Resume()
-    {
+    {                
+        Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUi.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         GameEvents.OnPauseGame?.Invoke(false);
     }
-    void Pause()
+    public void Pause()
     {
         Cursor.lockState = CursorLockMode.None;
         GameEvents.OnPauseGame?.Invoke(true);
@@ -46,7 +49,7 @@ public class PauseMenu1 : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(previousLevel);
     }
 
     public void QuitGame()

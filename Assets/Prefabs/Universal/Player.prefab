@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116a495236524de42a732bcae3fe0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
+  _camera: {fileID: 1051536309099821870}
   actionButtonPrompt: {fileID: 0}
   characterLayer:
     serializedVersion: 2

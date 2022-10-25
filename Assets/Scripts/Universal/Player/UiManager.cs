@@ -1,34 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class UiManager : MonoBehaviour
 {
-    public TextMeshProUGUI rageText;
     public GameObject GameOverMenuUi;
     //public TextMeshProUGUI HealthText;
-
     private void OnEnable()
     {
-        GameEvents.RageIncrease += UpdateRage;
+
         GameEvents.OnGameOver += OnGameOver;
-        //GameEvents.CurrentHealth += CurrentHealth;
     }
     private void OnDisable()
     {
-        GameEvents.RageIncrease -= UpdateRage;
+
         GameEvents.OnGameOver -= OnGameOver;
-        //GameEvents.CurrentHealth -= CurrentHealth;
     }
-    public void UpdateRage(float rage)
-    {
-        rageText.text = "Rage: " + rage.ToString();
-    }
+
     public void OnGameOver(bool gameover)
     {
-        FindObjectOfType<AudioManager>().Play("GameOver");
+        //FindObjectOfType<AudioManager>().Play("GameOver");
+        Cursor.lockState = CursorLockMode.None;
         GameOverMenuUi.SetActive(true);
+        //GameObject slider = gameObject.transform.Find("Slider").gameObject;
+        //Destroy(slider);
+        
     }
     //public void CurrentHealth(int health)
     //{

@@ -39,7 +39,7 @@ public class DealerAttack : MonoBehaviour
         if (Random.Range(0, 100) < chance)
         {
             anim.SetTrigger("Flurry");
-}
+        }
         else
         {
             anim.SetTrigger("NormalAttack");

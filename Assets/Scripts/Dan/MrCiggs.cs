@@ -14,7 +14,7 @@ public class MrCiggs : MonoBehaviour
 
     public Transform Player;
     public Vector3 Target;
-    public ParticleSystem muzzelflashBoss;
+    //public ParticleSystem muzzelflashBoss;
     public int damage = 1;
     public float rage;
     public float RageRate = 1f;

@@ -7,10 +7,10 @@ public class Enemy : MonoBehaviour
 {
     public float health;
     public float maxHealth;
-    private Animator anim;
+    protected Animator anim;
 
-    public GameObject healthBarUi;
-    private Slider slider;
+    public GameObject Canvas;
+    public Slider slider;
 
     private void OnEnable()
     {
@@ -26,14 +26,14 @@ public class Enemy : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         health = maxHealth;
-        if (healthBarUi != null)
+        if (Canvas != null)
         {
-            slider = healthBarUi.transform.Find("Slider").GetComponent<Slider>();   
+            slider = Canvas.transform.Find("Slider").GetComponent<Slider>();   
             slider.value = CalculateHealth();
         }
     }
 
-    public void TakeDamage(int damage, GameObject target)
+    protected virtual void TakeDamage(int damage, GameObject target)
     {
         if(this.gameObject == target)
         {
@@ -41,7 +41,6 @@ public class Enemy : MonoBehaviour
             health -= damage;
             if (health <= 0f) // if true, Die
             {
-
                 anim.SetTrigger("Death");
                 //Add Die function as event in death animator
             }
@@ -50,7 +49,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
-        GameEvents.LevelWin?.Invoke();
+        slider.enabled = false;
         Destroy(gameObject);
     }
 
@@ -60,7 +59,7 @@ public class Enemy : MonoBehaviour
         { 
             // update health slider
             slider.value = CalculateHealth();
-            healthBarUi.SetActive(true);
+            Canvas.SetActive(true);
         }
         
     }
