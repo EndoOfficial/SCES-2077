@@ -8,18 +8,19 @@ public class SyringeAI : MonoBehaviour
     public GameObject Player;
     SyringeState CurrentState;
     public bool Detected;
+    public GameObject Child;
+    public bool grounded;
     public bool Jumping;
-    SyringeJump syringeJump;
-    Animator anim;
+    public bool JumpToRoof;
+    public bool Turretable;
+    SyringeJump TurretBool;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = this.GetComponent<Animator>();
+        CurrentState = new SyringeIdle(this.gameObject, Player);
 
-        CurrentState = new SyringePursuit(this.gameObject, anim, Player);
-
-        syringeJump = GetComponent<SyringeJump>();
+        TurretBool = GetComponent<SyringeJump>();
     }
 
     // Update is called once per frame
@@ -27,9 +28,37 @@ public class SyringeAI : MonoBehaviour
     {
         CurrentState = CurrentState.Process();
 
-        //grounded = Child.GetComponent<GroundCheck>().Grounded;
+        grounded = Child.GetComponent<GroundCheck>().Grounded;
 
+        Debug.Log(CurrentState);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Roof")
+        {
+            if(Random.Range(0, 100) < 100 && !Turretable)
+            {
+                Turretable = true;
+                TurretBool.Turret = true;
+                JumpToRoof = true;
+            }
+            
+        }
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Roof" && Turretable)
+        {
+            Turretable = false;
+            TurretBool.Turret = false;
+            JumpToRoof = false;
+            TurretBool.Jumping = false;
+        }
+    }
+
+
 
     private void OnEnable()
     {

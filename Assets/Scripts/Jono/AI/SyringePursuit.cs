@@ -8,8 +8,8 @@ public class SyringePursuit : SyringeState
     SyringeJump Jump;
     bool JumpToRoof;
     
-    public SyringePursuit(GameObject _npc, Animator _anim, GameObject _player)
-        : base(_npc, _player, _anim)
+    public SyringePursuit(GameObject _npc, GameObject _player)
+        : base(_npc, _player)
     {
         name = SyringeSTATE.PURSUIT;
     }
@@ -25,18 +25,23 @@ public class SyringePursuit : SyringeState
 
     public override void Update()
     {
-        Jump.IsJumping();
+        Jump.IsJumping();        
 
-        if (JumpToRoof)
+        if (!ai.Detected)
         {
-            nextState = new SyringeTurret(NPC, player, Anim);
+            nextState = new SyringeIdle(NPC, player);
+            stage = EVENT.EXIT;
+        }
+
+        if (ai.JumpToRoof)
+        {
+            nextState = new SyringeTurret(NPC, player);
             stage = EVENT.EXIT;
         }
     }
 
     public override void Exit()
     {
-        //Anim.ResetTrigger("isIdle");
         base.Exit();
     }
 }

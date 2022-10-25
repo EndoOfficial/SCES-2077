@@ -6,8 +6,8 @@ using UnityEditor.AI;
 public class SyringeIdle : SyringeState
 {
     SyringeAI AI;
-    public SyringeIdle (GameObject _npc, GameObject _player, Animator _anim)
-        : base(_npc, _player,_anim )
+    public SyringeIdle (GameObject _npc, GameObject _player)
+        : base(_npc, _player)
     {
         name = SyringeSTATE.IDLE;
     }
@@ -16,8 +16,7 @@ public class SyringeIdle : SyringeState
         Debug.Log("Syringe IDLE");
 
         rb = NPC.GetComponent<Rigidbody>();
-        AI = NPC.GetComponent<SyringeAI>();
-        Anim = NPC.GetComponent<Animator>();
+        AI = NPC.GetComponent<SyringeAI>();        
         base.Enter();
     }
 
@@ -25,9 +24,14 @@ public class SyringeIdle : SyringeState
     {
         if (AI.Detected)
         {
-            nextState = new SyringePursuit(NPC, Anim, player);
+            nextState = new SyringePursuit(NPC, player);
             stage = EVENT.EXIT;
-        }     
+        }   
+        if(!AI.Turretable)
+        {
+            nextState = new SyringePursuit(NPC, player);
+            stage = EVENT.EXIT;
+        }
     }
 
     public override void Exit()

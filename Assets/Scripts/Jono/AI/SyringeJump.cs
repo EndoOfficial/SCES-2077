@@ -4,119 +4,114 @@ using UnityEngine;
 
 public class SyringeJump : MonoBehaviour
 {
+    public ConfigurableJoint CFGJ;
+    public GameObject Target;
     public List<GameObject> AttachmentPoints = new List<GameObject>();
-    private Rigidbody rb;
-    public float SpringForce;
+    public Rigidbody MyRB;
+    public Rigidbody MyChildRB;
+    public GameObject Child;
+    public float SpringForce = 100f;
+    private float angle;
     public float ForwardSpeed;
-    public float tempSpeed;
-    public bool Jumping; //SyringeJump Jump;
-    public bool Turret;
-    bool CanJumpToRoof;
-    public bool IsGrounded;
-    public bool groundToggle;
-    private bool rotationToggle = false;
-    private GameObject Arm;
-    public Animator Anim;
-    public Quaternion JumpRotation;
-    [SerializeField, Range(0, 45)]
-    public float jumpSpread;
-    private GameObject player;
     public float stopDist;
+    public float MainSpeed;
+    //SyringeJump Jump;
+    public bool Jumping;
+    public bool Turret;
+    public Vector3 ThisPos;
+    public Vector3 TargetPos;
     private Vector3 playerDirection;
-
+    public bool CanJumpToRoof;
+    public bool IsGrounded;
+    public bool PlayerClose;
+    public Animator anim;
+    SyringeAI AI;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        player = GameObject.Find("Player");
-        Anim = GetComponent<Animator>();
-        tempSpeed = ForwardSpeed;
+        CFGJ = GetComponentInChildren<ConfigurableJoint>();
+        Target = GameObject.FindGameObjectWithTag("Player");
+
+        anim = GetComponent<Animator>();
+        AI = GetComponent<SyringeAI>();
+
+        MainSpeed = ForwardSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
         //IsGrounded = Child.GetComponent<GroundCheck>().Grounded;
+        Debug.DrawRay(transform.position, -Vector3.up * 0.5f, Color.blue);
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
+        if(Physics.Raycast(transform.position, -Vector3.up, out hit, 0.5f))
         {
-            if (hit.collider.CompareTag("Ground") && !groundToggle)
+            if(hit.collider.tag == "Ground")
             {
-                groundToggle = true;
-                Debug.Log("Grounded");
-            }
-        }
-        else
-        {
-            groundToggle = false;
-        }
-        Debug.DrawRay(transform.position, Vector3.down * 1f, Color.green);
-        if (!rotationToggle)
-        {
-            playerDirection = new Vector3(player.transform.position.x - transform.position.x, 0, player.transform.position.z - transform.position.z);
-            if (playerDirection.magnitude > stopDist)
-            {
-                ForwardSpeed = tempSpeed;
+                IsGrounded = true;
             }
             else
             {
-                ForwardSpeed = -tempSpeed;
+                IsGrounded = false;
             }
+
+            
         }
-        if (rotationToggle)
+
+        playerDirection = new Vector3(Target.transform.position.x - transform.position.x, 0, Target.transform.position.z - transform.position.z);
+        if(playerDirection.magnitude > stopDist)
         {
-            transform.rotation = new Quaternion(rb.velocity.x, 0, rb.velocity.z, 1);
+            PlayerClose = false;
+            ForwardSpeed = MainSpeed;
         }
-        //Debug.Log(transform.position.magnitude - player.transform.position.magnitude);
+        else
+        {
+            PlayerClose = true;
+            ForwardSpeed = -MainSpeed;
+        }
+
+
+        
+
+        //Debug.Log(transform.position.magnitude - Target.transform.position.magnitude);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Arm") && !CanJumpToRoof)
+        if (collision.collider.tag == "Roof" && AI.JumpToRoof)
         {
             transform.SetParent(collision.gameObject.transform);
-            rb.isKinematic = true;
-            rb.useGravity = false;
+            MyRB.isKinematic = true;
+            MyRB.useGravity = false;
             CanJumpToRoof = false;
             Debug.Log("Doink");
+            anim.SetTrigger("Jump");
+            anim.SetTrigger("Wall");
+
         }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Arm"))
-        {
-            if (groundToggle)
-            {
-                if (Random.Range(0, 100) < 100)
-                {
-                    Arm = other.gameObject;
-                    IsTurret();
-                    Debug.Log("Trigger");
-                }
-            }
-        }
+
     }
 
     public void IsJumping()
     {
-        bool toggle = false;
-        if (!groundToggle && !toggle)
+        if (Child.GetComponent<GroundCheck>().Grounded == false)
         {
-            //Makes boy moves forward.
-            Anim.Play("Run");
-            toggle = true;
-            rb.AddForce(transform.forward * ForwardSpeed);
+            anim.ResetTrigger("Grounded");            
+            MyRB.AddRelativeForce(-transform.forward * ForwardSpeed);
+            MyChildRB.AddRelativeForce(-transform.forward * ForwardSpeed);
+            TargetPos = Target.transform.position;
+            ThisPos = transform.position;                                           //Makes Move Forwards when not grounded
+            TargetPos.x = TargetPos.x - ThisPos.x;
+            TargetPos.z = TargetPos.z - ThisPos.z;
+            angle = Mathf.Atan2(TargetPos.x, TargetPos.z) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
         }
         else
         {
-            // makes boy jump
-            //Anim.SetTrigger("Jump");
-            Anim.SetTrigger("Grounded");
-            toggle = false;                        
-            rb.AddForce(transform.up * SpringForce, ForceMode.Impulse);
-            IsGrounded = false;
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
+            anim.SetTrigger("Grounded");
+            MyRB.AddForce(transform.up * SpringForce);
+            MyRB.velocity = Vector3.zero;                                         // Makes Jump Up
+            MyRB.angularVelocity = Vector3.zero;
             Debug.Log("Jump");
 
 
@@ -125,30 +120,19 @@ public class SyringeJump : MonoBehaviour
 
     public void IsTurret()
     {
-
-        if (!Jumping)
+        if (Turret)
         {
-            var ArmDir = Arm.transform.position - transform.position;
-            rb.AddForce(ArmDir * SpringForce);
-            groundToggle = false;
-            rotationToggle = true;
-            //SpringForce = SpringForce * 5;
-            //var temp = transform.position;
-            //temp.x += Random.Range(-jumpSpread, jumpSpread);
-            //temp.z += Random.Range(-jumpSpread, jumpSpread);
-            //temp = temp.normalized;
-            //JumpRotation = Quaternion.Euler(temp.x, 0, temp.z);
-            //transform.rotation = JumpRotation;
-            //Jumping = true;
-            //Debug.Log("Turret");
-            //Debug.Log(temp.x);
-            //Debug.Log(temp.z);
-            //MyRB.AddForce(transform.up * SpringForce);
+            if (!Jumping)
+            {
+                transform.rotation = Quaternion.Euler(Random.Range(-50, 50), 0, Random.Range(-50, 50));
+                
+            }
+            //ChosenAttach = AttachmentPoints[Random.Range(0, AttachmentPoints.Count)];
+            
+            Jumping = true;
+            SpringForce = 800;
+            MyRB.AddForce(transform.up * SpringForce);
+            //CanJumpToRoof = false;
         }
-        //ChosenAttach = AttachmentPoints[Random.Range(0, AttachmentPoints.Count)];
-
-        
-        
-        //CanJumpToRoof = false;
     }
 }
