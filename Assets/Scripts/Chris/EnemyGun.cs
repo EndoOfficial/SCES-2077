@@ -14,6 +14,7 @@ public class EnemyGun : MonoBehaviour
     public LayerMask playerMask;
     private Ray ray;
     public float bulletSpread;
+    public float maxSpread;
     private float tempSpread;
     public float attackSpeed;
     public int damage;
@@ -83,7 +84,7 @@ public class EnemyGun : MonoBehaviour
                 }
             }
             //increases spread every shot
-            if (bulletSpread <= 0.1f)
+            if (bulletSpread <= maxSpread)
             {
                 bulletSpread += 0.01f;
             }
