@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -349,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4958787710120097658, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_Name
-      value: Canvas (1)
+      value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
@@ -793,6 +793,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 6407706609725505498, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407706609725505498, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
 --- !u!1 &1853776213 stripped
@@ -960,4 +968,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9718b1fad2b779744a22377932742f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Spawning: 0
   Enemy: 0

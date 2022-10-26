@@ -46,12 +46,17 @@ public class PauseMenu1 : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");
     }
-    public void LoadMenu()
+    //LoadMenu() was really misleading so im renaming the function - Zach
+    public void LoadPreviousArea()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(previousLevel);
     }
-
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+    }
     public void QuitGame()
     {
         Debug.Log("Quitting game....");

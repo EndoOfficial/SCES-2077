@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -546,7 +546,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30556
+  m_Name: pb_Mesh107254
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1210,7 +1210,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30454
+  m_Name: pb_Mesh107124
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1918,7 +1918,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30718
+  m_Name: pb_Mesh107434
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2082,7 +2082,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30478
+  m_Name: pb_Mesh107150
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2663,7 +2663,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30610
+  m_Name: pb_Mesh107302
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2901,7 +2901,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30782
+  m_Name: pb_Mesh107496
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3525,7 +3525,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421417387}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4008,7 +4008,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30378
+  m_Name: pb_Mesh107030
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4256,7 +4256,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505634477}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4322,7 +4322,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30668
+  m_Name: pb_Mesh107362
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4628,7 +4628,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561432097}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5415,7 +5415,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30414
+  m_Name: pb_Mesh107078
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6268,7 +6268,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853679415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -14820,7 +14820,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974970082}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -14934,7 +14934,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098722849}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -15007,7 +15007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407706609725505494, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6407706609725505496, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: m_RootOrder
@@ -15059,7 +15059,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407706609725505498, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407706609725505498, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
@@ -15102,7 +15106,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155740730}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -15183,7 +15187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3111766049081666911, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30
+      value: -28.4
       objectReference: {fileID: 0}
     - target: {fileID: 3111766049081666911, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15248,7 +15252,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30394
+  m_Name: pb_Mesh107046
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15829,7 +15833,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30436
+  m_Name: pb_Mesh107100
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16109,7 +16113,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373917443}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -16208,7 +16212,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429646244}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -17258,7 +17262,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30582
+  m_Name: pb_Mesh107278
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17455,7 +17459,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716160097}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -17521,7 +17525,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30526
+  m_Name: pb_Mesh107198
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17961,7 +17965,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850030033}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -18572,7 +18576,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054694429}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -18817,7 +18821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3111766049081666911, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25
+      value: 23.06
       objectReference: {fileID: 0}
     - target: {fileID: 3111766049081666911, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: m_LocalPosition.y

@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 1687964600395793602}
   - component: {fileID: 7845275422365751500}
   - component: {fileID: 4656589673240937225}
+  - component: {fileID: 533739642}
   m_Layer: 0
   m_Name: Body.001
   m_TagString: Untagged
@@ -275,6 +276,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &533739642
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5082649862390481149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3014937882001165872, guid: c2fb2008c0bc7d647a53486ebd838cc5, type: 3}
 --- !u!1 &6362161614500556387
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,9 +382,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8784774919227143976}
+  - component: {fileID: 533739641}
   m_Layer: 0
   m_Name: Curled up cat for review V1
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +399,7 @@ Transform:
   m_GameObject: {fileID: 8260193882377760146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 27.559631, y: 1.42, z: 43.163757}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.31942, y: 0.31942, z: 0.31942}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5167410541784308473}
@@ -395,6 +411,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &533739641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8260193882377760146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54df55967258f7a499b87b555642d3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Cat-level
 --- !u!1 &8553066288190944427
 GameObject:
   m_ObjectHideFlags: 0
