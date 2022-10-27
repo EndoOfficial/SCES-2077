@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -366,35 +366,51 @@ MonoBehaviour:
   Move1: {fileID: 83560089}
   Move2: {fileID: 2110248892}
   speed: 5
---- !u!1 &262075735 stripped
+--- !u!1 &404587294
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2385556218673908253, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
-  m_PrefabInstance: {fileID: 1642410768}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &262075739
-MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262075735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc225919ae4f45f43a2ddf417c37d8c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &262075740
-MonoBehaviour:
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 404587295}
+  - component: {fileID: 404587296}
+  m_Layer: 6
+  m_Name: NicotineCollector
+  m_TagString: Pickup
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &404587295
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262075735}
+  m_GameObject: {fileID: 404587294}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886031665}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &404587296
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404587294}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744b88796b3d5594ba366859e5794803, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.5, z: 2.5}
+  m_Center: {x: 0, y: -0.5, z: 0.28}
 --- !u!43 &422231360
 Mesh:
   m_ObjectHideFlags: 0
@@ -1189,7 +1205,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3357169784844681263, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: SceneName
-      value: MrCigsScene
+      value: Apartment
       objectReference: {fileID: 0}
     - target: {fileID: 6407706609725505494, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: m_Enabled
@@ -1255,7 +1271,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh267286
+  m_Name: pb_Mesh51636
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1979,7 +1995,7 @@ PrefabInstance:
       objectReference: {fileID: 545769399}
     - target: {fileID: 404793118311715181, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: health
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 404793118311715181, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: slider
@@ -1987,7 +2003,7 @@ PrefabInstance:
       objectReference: {fileID: 1887278266}
     - target: {fileID: 404793118311715181, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 404793118311715181, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: healthBarUi
@@ -3436,9 +3452,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1644254529688549005, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
-      propertyPath: previousLevel
-      value: Apartment
+    - target: {fileID: 1229536399988290674, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800277820545171849, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3451,6 +3467,10 @@ PrefabInstance:
     - target: {fileID: 4958787710120097658, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170541388827034573, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
@@ -3817,7 +3837,7 @@ RectTransform:
   m_GameObject: {fileID: 1887278264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 716144041}
@@ -4492,6 +4512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

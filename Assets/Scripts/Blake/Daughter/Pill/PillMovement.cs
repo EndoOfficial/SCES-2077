@@ -16,7 +16,7 @@ public class PillMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         lobDirection = player.position - transform.position;
-        rb.AddForce(new Vector3(lobDirection.x * 0.4f, 5, lobDirection.z * 0.4f), ForceMode.Impulse);
+        rb.AddForce(new Vector3(lobDirection.x * 0.3f, 6, lobDirection.z * 0.3f), ForceMode.Impulse);
     }
     private void OnTriggerEnter(Collider other)
     {

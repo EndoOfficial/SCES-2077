@@ -8,7 +8,7 @@ public class BottleEnemy : Enemy
     public float spawnlimit;
     private float spawncount;
     private float randomizer;
-    public float range;
+    private float range = 1;
     private void Explosion()
     {
 

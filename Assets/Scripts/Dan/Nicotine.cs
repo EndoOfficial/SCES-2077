@@ -14,10 +14,9 @@ public class Nicotine : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Pickup"))
         {
             FindObjectOfType<AudioManager>().Play("Upgrade");
-            Debug.Log("Collected");
             GameEvents.Nicotine?.Invoke();
             GameEvents.RageIncrease?.Invoke(rage);
             Destroy(gameObject);

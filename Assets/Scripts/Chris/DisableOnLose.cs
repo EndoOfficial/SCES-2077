@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisableOnWin : MonoBehaviour
+public class DisableOnLose : MonoBehaviour
 {
     private void OnEnable()
     {
@@ -11,7 +11,7 @@ public class DisableOnWin : MonoBehaviour
     }
     private void OnDisable()
     {
-        GameEvents.OnGameOver += OnGameOver;
+        GameEvents.OnGameOver -= OnGameOver;
     }
 
     private void OnGameOver(bool gameover)

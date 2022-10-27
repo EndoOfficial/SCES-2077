@@ -3,17 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisableOnLose : MonoBehaviour
+public class DisableOnWin : MonoBehaviour
 {
     private void OnEnable()
-    { 
+    {
         GameEvents.LevelWin += LevelWin;
     }
     private void OnDisable()
     {
-        GameEvents.LevelWin += LevelWin;
+        GameEvents.LevelWin -= LevelWin;
     }
-
     private void LevelWin()
     {
         gameObject.SetActive(false);

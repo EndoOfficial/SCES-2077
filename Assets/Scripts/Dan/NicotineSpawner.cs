@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NicotineSpawner : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class NicotineSpawner : MonoBehaviour
     public Vector3 TopWallPosition;
     public Vector3 BotWallPosition;
    
-
     private Vector3 RandomSpawnPostion => new Vector3(UnityEngine.Random.Range(LeftWallPosition.x, RightWallPosition.x), 15f, UnityEngine.Random.Range(TopWallPosition.z, BotWallPosition.z));
     public GameObject NicotinesSpawner;
     public void Start()
@@ -25,11 +25,12 @@ public class NicotineSpawner : MonoBehaviour
     }
     public void OnEnable()
     {
-        
+        GameEvents.LevelWin += StopSpawn;
     }
     public void OnDisable()
     {
-        
+
+        GameEvents.LevelWin -= StopSpawn;
     }
     void MrciggsBegin()
     {
@@ -39,11 +40,6 @@ public class NicotineSpawner : MonoBehaviour
         BotWallPosition = new Vector3(BotWallPosition.x, BotWallPosition.y, BotWallPosition.z);
         
         StartCoroutine(SpawnNicotine());
-    }
-    
-    void Stop()
-    {
-        StopAllCoroutines();
     }
     IEnumerator SpawnNicotine()
     {
@@ -77,5 +73,9 @@ public class NicotineSpawner : MonoBehaviour
         }
         position = randomPostion;
         return true;
+    }
+    void StopSpawn()
+    {
+        StopAllCoroutines();
     }
 }
