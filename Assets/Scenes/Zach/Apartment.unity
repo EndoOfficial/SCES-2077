@@ -6609,6 +6609,75 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &511945349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511945351}
+  - component: {fileID: 511945350}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &511945350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511945349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68884d1ade4c75e46b0f00475e983658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - source: {fileID: 0}
+    name: Theme
+    clip: {fileID: 8300000, guid: ef127178bc4f5a84e919af2b19adf9c4, type: 3}
+    volume: 0.345
+    pitch: 1
+    loop: 1
+  - source: {fileID: 0}
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+  - source: {fileID: 0}
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+  - source: {fileID: 0}
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+--- !u!4 &511945351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511945349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.0877, y: 9.394809, z: -21.591705}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553540157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6615448249832276378, guid: a79b535817b86fa45b637ad7c080e6ec, type: 3}
