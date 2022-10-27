@@ -15,10 +15,8 @@ public class EnemyCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Spawning)
-        {
-            Enemy = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        }
+        Enemy = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
         if ( Enemy <= 0)
         {
             GameEvents.LevelWin?.Invoke();

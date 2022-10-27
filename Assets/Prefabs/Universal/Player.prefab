@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amplitude: 0.015
   frequency: 10
-  cam: {fileID: 0}
+  cam: {fileID: 1147568617534769985}
   cameraHolder: {fileID: 2015154809373924599}
 --- !u!114 &2015154809373924600
 MonoBehaviour:
@@ -236,9 +236,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 1051536309099821870}
   actionButtonPrompt: {fileID: 0}
-  characterLayer:
-    serializedVersion: 2
-    m_Bits: 2048
   Player: {x: 0, y: 0, z: 0}
 --- !u!114 &595779542
 MonoBehaviour:
