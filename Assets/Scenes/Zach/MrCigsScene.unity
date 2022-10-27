@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -195,7 +195,7 @@ MonoBehaviour:
     name: Theme
     clip: {fileID: 8300000, guid: ffda8a4c4222ff24b8be41d7010ba997, type: 3}
     volume: 0.08
-    pitch: 0.76
+    pitch: 1
     loop: 1
   - source: {fileID: 0}
     name: Spawn
@@ -217,7 +217,7 @@ MonoBehaviour:
     loop: 0
   - source: {fileID: 0}
     name: Shooting
-    clip: {fileID: 8300000, guid: b38ace9ce6be8b4438ceabe5f5b84ed2, type: 3}
+    clip: {fileID: 8300000, guid: 2203773368e4340d98c114f55c2dd7fd, type: 3}
     volume: 0.12
     pitch: 1.28
     loop: 0

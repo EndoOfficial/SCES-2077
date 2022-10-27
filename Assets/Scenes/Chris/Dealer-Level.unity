@@ -2970,6 +2970,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 6407706609725505498, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
 --- !u!4 &6919091507134883281
