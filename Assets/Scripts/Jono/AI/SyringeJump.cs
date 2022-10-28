@@ -34,6 +34,7 @@ public class SyringeJump : MonoBehaviour
 
         anim = GetComponent<Animator>();
         AI = GetComponent<SyringeAI>();
+        //IsGrounded = GetComponent<GroundCheck>().Grounded;
 
         MainSpeed = ForwardSpeed;
     }
@@ -41,22 +42,28 @@ public class SyringeJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //IsGrounded = Child.GetComponent<GroundCheck>().Grounded;
-        Debug.DrawRay(transform.position, -Vector3.up * 0.5f, Color.blue);
-        RaycastHit hit;
-        if(Physics.Raycast(transform.position, -Vector3.up, out hit, 0.5f))
-        {
-            if(hit.collider.tag == "Ground")
-            {
-                IsGrounded = true;
-            }
-            else
-            {
-                IsGrounded = false;
-            }
+        IsGrounded = Child.GetComponent<GroundCheck>().Grounded;
+        //Debug.DrawRay(transform.position, -Vector3.up * 1f, Color.blue);
+        //RaycastHit hit;
+        //if(Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f))
+        //{
+        //    Debug.Log(hit.collider.tag);
+        //    if(hit.collider.tag == "Ground")
+        //    {
 
-            
-        }
+        //        IsGrounded = true;
+        //        //anim.SetBool("Grounded 0", true);
+        //    }
+        //    if(hit.collider.tag == null)
+        //    {                
+        //        IsGrounded = false;
+        //        //anim.SetBool("Grounded 0", false);
+        //    }
+
+
+        //}
+
+        
 
         playerDirection = new Vector3(Target.transform.position.x - transform.position.x, 0, Target.transform.position.z - transform.position.z);
         if(playerDirection.magnitude > stopDist)
@@ -80,6 +87,7 @@ public class SyringeJump : MonoBehaviour
     {
         if (collision.collider.tag == "Roof" && AI.JumpToRoof)
         {
+            FindObjectOfType<AudioManager>().Play("Impact");
             transform.SetParent(collision.gameObject.transform);
             MyRB.isKinematic = true;
             MyRB.useGravity = false;
@@ -109,6 +117,7 @@ public class SyringeJump : MonoBehaviour
         else
         {
             anim.SetTrigger("Grounded");
+            FindObjectOfType<AudioManager>().Play("Jump");
             MyRB.AddForce(transform.up * SpringForce);
             MyRB.velocity = Vector3.zero;                                         // Makes Jump Up
             MyRB.angularVelocity = Vector3.zero;

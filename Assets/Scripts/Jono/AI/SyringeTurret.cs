@@ -6,8 +6,8 @@ public class SyringeTurret : SyringeState
 {
     SyringeAI AI;
     SyringeJump Turret;
-    public SyringeTurret(GameObject _npc, GameObject _player)
-        : base(_npc, _player)
+    public SyringeTurret(GameObject _npc, Animator _anim, GameObject _player)
+        : base(_npc, _anim, _player)
     {
         name = SyringeSTATE.TURRET;
     }
@@ -19,6 +19,7 @@ public class SyringeTurret : SyringeState
         AI = NPC.GetComponent<SyringeAI>();
         Turret = NPC.GetComponent<SyringeJump>();
         
+
         base.Enter();
     }
 
@@ -30,7 +31,7 @@ public class SyringeTurret : SyringeState
         }
         if (!AI.Turretable)
         {
-            nextState = new SyringePursuit(NPC, player);
+            nextState = new SyringePursuit(NPC,Anim, player);
             stage = EVENT.EXIT;
         }
     }

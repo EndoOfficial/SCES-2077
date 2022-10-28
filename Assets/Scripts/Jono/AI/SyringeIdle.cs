@@ -7,8 +7,8 @@ using UnityEngine.AI;
 public class SyringeIdle : SyringeState
 {
     SyringeAI AI;
-    public SyringeIdle (GameObject _npc, GameObject _player)
-        : base(_npc, _player)
+    public SyringeIdle (GameObject _npc, Animator _anim, GameObject _player)
+        : base(_npc,_anim, _player)
     {
         name = SyringeSTATE.IDLE;
     }
@@ -25,12 +25,12 @@ public class SyringeIdle : SyringeState
     {
         if (AI.Detected)
         {
-            nextState = new SyringePursuit(NPC, player);
+            nextState = new SyringePursuit(NPC,Anim, player);
             stage = EVENT.EXIT;
         }   
         if(!AI.Turretable)
         {
-            nextState = new SyringePursuit(NPC, player);
+            nextState = new SyringePursuit(NPC,Anim, player);
             stage = EVENT.EXIT;
         }
     }

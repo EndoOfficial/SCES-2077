@@ -19,6 +19,7 @@ public class SyringeState
     protected EVENT stage;
     protected GameObject NPC;
     protected GameObject player;
+    protected Animator Anim;
     protected SyringeState nextState;
     protected Rigidbody rb;
 
@@ -26,10 +27,11 @@ public class SyringeState
     float VisDist = 10.0f;
     float VisAngle = 30.0f;
 
-    public SyringeState (GameObject _npc, GameObject _player)
+    public SyringeState (GameObject _npc,Animator _anim, GameObject _player)
     {
         NPC = _npc;
         player = _player;
+        Anim = _anim;
     }
 
     public virtual void Enter() { stage = EVENT.UPDATE; }

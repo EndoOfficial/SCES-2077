@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGun : MonoBehaviour
+public class EnemyGunSyringe : MonoBehaviour
 {
     public GameObject player;
     private Animator anim;
@@ -42,11 +42,11 @@ public class EnemyGun : MonoBehaviour
         {
             if (hitinfo.transform.CompareTag("Player") && !seePlayer)
             {
-                
+                if (GetComponent<SyringeAI>().grounded == false)
+                {
                     seePlayer = true;
                     StartCoroutine(Shoot());
-                
-                
+                }
             }
             else if (!hitinfo.transform.CompareTag("Player") && seePlayer)
             { 

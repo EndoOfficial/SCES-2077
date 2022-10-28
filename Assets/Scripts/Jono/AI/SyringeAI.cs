@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class SyringeAI : MonoBehaviour
 {
     public GameObject Player;
+    Animator anim;
     SyringeState CurrentState;
     public bool Detected;
     public GameObject Child;
@@ -18,7 +19,7 @@ public class SyringeAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentState = new SyringeIdle(this.gameObject, Player);
+        CurrentState = new SyringeIdle(this.gameObject, anim, Player);
 
         TurretBool = GetComponent<SyringeJump>();
     }
