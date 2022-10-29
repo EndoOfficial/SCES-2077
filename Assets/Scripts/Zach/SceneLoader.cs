@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-  public string sceneName;
-  public string levelName;
+    [SerializeField]
+    private string sceneName;
+    [SerializeField]
+    private string levelName;
 
     public void LoadScene()
     {
         SceneManager.LoadScene(sceneName);
-        PlayerPrefs.SetString("LevelName", levelName);
+        //PlayerPrefs.SetString("LevelName", levelName);
     }
 }

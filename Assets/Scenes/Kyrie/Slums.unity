@@ -521,6 +521,22 @@ PrefabInstance:
       propertyPath: sceneName
       value: Cat-Level
       objectReference: {fileID: 0}
+    - target: {fileID: 4180633360221922535, guid: 8af3e3f628d132f4c846b0aeea1f8912, type: 3}
+      propertyPath: levelName.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180633360221922535, guid: 8af3e3f628d132f4c846b0aeea1f8912, type: 3}
+      propertyPath: levelName.Array.data[0]
+      value: Cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180633360221922535, guid: 8af3e3f628d132f4c846b0aeea1f8912, type: 3}
+      propertyPath: levelName.Array.data[1]
+      value: Addict
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180633360221922535, guid: 8af3e3f628d132f4c846b0aeea1f8912, type: 3}
+      propertyPath: levelName.Array.data[2]
+      value: Dealer
+      objectReference: {fileID: 0}
     - target: {fileID: 5082579927006173664, guid: 8af3e3f628d132f4c846b0aeea1f8912, type: 3}
       propertyPath: m_Name
       value: Cat 1
