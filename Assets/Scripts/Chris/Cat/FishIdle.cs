@@ -14,7 +14,6 @@ public class FishIdle : FishState
 
     public override void Enter()
     {
-        anim.SetTrigger("isIdle");
         rb = npc.GetComponent<Rigidbody>();
         ai = npc.GetComponent<FishAI>();
         base.Enter();
@@ -31,7 +30,6 @@ public class FishIdle : FishState
 
     public override void Exit()
     {
-        anim.ResetTrigger("isIdle");
         base.Exit();
     }
 }

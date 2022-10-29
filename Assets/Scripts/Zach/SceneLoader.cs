@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-  public string SceneName;
+  public string sceneName;
+  public string levelName;
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(sceneName);
+        PlayerPrefs.SetString("LevelName", levelName);
     }
 }

@@ -34,7 +34,6 @@ public class FishPursuit : FishState
 
     public override void Exit()
     {
-        anim.ResetTrigger("isIdle");
         base.Exit();
     }
 }

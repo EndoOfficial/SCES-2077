@@ -16,7 +16,6 @@ public class Heart : MonoBehaviour
     private void OnDisable()
     {
         GameEvents.LevelWin -= LevelWin;
-
     }
 
     private void LevelWin()

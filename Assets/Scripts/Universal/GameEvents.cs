@@ -23,6 +23,12 @@ public static class GameEvents
     public delegate void BillDeathDelegate(GameObject bill, GameObject spawner);
     public static BillDeathDelegate BillDeath; // when the Big Bills die
 
+    public delegate void ReturnDelegate(string levelName);
+    public static ReturnDelegate Return; // when you click on a heart
+
+    public delegate void LevelCompleteDelegate(string level);
+    public static LevelCompleteDelegate LevelComplete;
+
     public static Action PlayerDeath; // Player Dies
 
     public static Action Nicotine;

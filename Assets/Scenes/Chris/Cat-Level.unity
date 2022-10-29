@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 633834df053fbfc4d96442465ab5cad0, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -280,6 +280,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3357169784844681263, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: SceneName
+      value: Slums
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357169784844681263, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: levelName
+      value: Cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357169784844681263, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: sceneName
       value: Slums
       objectReference: {fileID: 0}
     - target: {fileID: 6407706609725505494, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
