@@ -28,17 +28,16 @@ public class Enemy : MonoBehaviour
         health = maxHealth;
         if (Canvas != null)
         {
-            slider = Canvas.transform.Find("Slider").GetComponent<Slider>();   
+            slider = Canvas.transform.Find("Slider").GetComponent<Slider>();
             slider.value = CalculateHealth();
         }
     }
 
     protected virtual void TakeDamage(int damage, GameObject target)
     {
-        if(this.gameObject == target)
+        if (this.gameObject == target)
         {
-            Debug.Log("E");
-        anim.SetTrigger("Damage");
+            anim.SetTrigger("Damage");
             health -= damage;
             if (health <= 0f) // if true, Die
             {
@@ -57,11 +56,11 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         if (slider != null)
-        { 
+        {
             // update health slider
             slider.value = CalculateHealth();
         }
-        
+
     }
 
     float CalculateHealth()

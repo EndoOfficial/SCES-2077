@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50e8f60ec3ac7e84eb5cd0f6eec80d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 50
+  distance: 20
   player:
     serializedVersion: 2
     m_Bits: 64
@@ -314,7 +314,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.4
       minScalar: 5
       maxCurve:
         serializedVersion: 2

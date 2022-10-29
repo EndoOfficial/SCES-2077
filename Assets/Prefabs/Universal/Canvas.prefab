@@ -146,7 +146,6 @@ GameObject:
   - component: {fileID: 4895320233868648120}
   - component: {fileID: 681051723257921406}
   - component: {fileID: 2916968388738964706}
-  - component: {fileID: 1229536399988290674}
   - component: {fileID: 8170541388827034573}
   m_Layer: 5
   m_Name: Image
@@ -214,18 +213,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1229536399988290674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2385556218673908253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc225919ae4f45f43a2ddf417c37d8c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8170541388827034573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,7 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUi: {fileID: 5116770755252525140}
-  previousLevel: Apartment
+  previousLevel: 
 --- !u!1 &5116770755252525140
 GameObject:
   m_ObjectHideFlags: 0

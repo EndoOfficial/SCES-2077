@@ -10,6 +10,22 @@ public class RandomPlatformSpawner : MonoBehaviour
     public float radius = 5;
     public float height;
 
+    private void OnEnable()
+    {
+        GameEvents.LevelWin += LevelWin;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.LevelWin -= LevelWin;
+
+    }
+
+    private void LevelWin()
+    {
+        CancelInvoke("Spawn");
+    }
+
     void Start()
     {
         InvokeRepeating("Spawn", spawnTime, spawnTime);

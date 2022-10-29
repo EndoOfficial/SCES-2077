@@ -11,7 +11,6 @@ public class KillBox : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("here");
             chara = other.GetComponent<CharacterController>();
             GameEvents.DamagePlayer?.Invoke(damage);
             chara.enabled = false;
