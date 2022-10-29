@@ -6,6 +6,7 @@ public class EnemyCounter : MonoBehaviour
 {
     public bool Spawning;
     public int Enemy;    
+    public string LevelName;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class EnemyCounter : MonoBehaviour
 
         if ( Enemy <= 0)
         {
-            GameEvents.LevelWin?.Invoke();
+            GameEvents.LevelWin?.Invoke(LevelName);
         }
         
     }

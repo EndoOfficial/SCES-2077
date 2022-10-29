@@ -6,7 +6,7 @@ public class DealerWin : Enemy
 {
     protected override void Die()
     {
-        GameEvents.LevelWin?.Invoke();
+        GameEvents.LevelWin?.Invoke("Dealer");
         base.Die();
     }
 }

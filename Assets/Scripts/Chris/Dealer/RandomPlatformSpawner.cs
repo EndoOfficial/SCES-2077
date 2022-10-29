@@ -21,7 +21,7 @@ public class RandomPlatformSpawner : MonoBehaviour
 
     }
 
-    private void LevelWin()
+    private void LevelWin(string level)
     {
         CancelInvoke("Spawn");
     }

@@ -18,7 +18,7 @@ public class PlatformMover : MonoBehaviour
         GameEvents.LevelWin -= LevelWin;
     }
 
-    private void LevelWin()
+    private void LevelWin(string level)
     {
         active = true;
     }

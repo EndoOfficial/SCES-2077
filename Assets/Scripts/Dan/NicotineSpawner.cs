@@ -74,7 +74,7 @@ public class NicotineSpawner : MonoBehaviour
         position = randomPostion;
         return true;
     }
-    void StopSpawn()
+    void StopSpawn(string level)
     {
         StopAllCoroutines();
     }
