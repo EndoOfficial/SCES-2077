@@ -13,7 +13,7 @@ public class DisableOnWin : MonoBehaviour
     {
         GameEvents.LevelWin -= LevelWin;
     }
-    private void LevelWin(string level)
+    private void LevelWin()
     {
         gameObject.SetActive(false);
     }

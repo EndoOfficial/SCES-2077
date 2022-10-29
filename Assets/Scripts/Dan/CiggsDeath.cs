@@ -9,7 +9,7 @@ public class CiggsDeath : Enemy
     {
         Debug.Log("here");
         slider.enabled = false;
-        GameEvents.LevelWin?.Invoke("Ciggs");
+        GameEvents.LevelWin?.Invoke();
         base.Die();
     }
 }

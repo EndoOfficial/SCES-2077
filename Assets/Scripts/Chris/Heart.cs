@@ -19,7 +19,7 @@ public class Heart : MonoBehaviour
 
     }
 
-    private void LevelWin(string level)
+    private void LevelWin()
     {
         heartObj.enabled = true; // enable the heart mesh
         mesh.enabled = true;
