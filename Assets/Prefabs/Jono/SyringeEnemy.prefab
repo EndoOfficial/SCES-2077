@@ -49,7 +49,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1173789629, guid: f6617fdec958c984d923fb2262d99dbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -200,8 +200,8 @@ GameObject:
   - component: {fileID: 7065607485802250847}
   - component: {fileID: 538690402215822820}
   - component: {fileID: 1469248374227010636}
-  - component: {fileID: 7822894404216453691}
-  m_Layer: 0
+  - component: {fileID: 954595400}
+  m_Layer: 10
   m_Name: SyringeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -345,6 +345,7 @@ MonoBehaviour:
   grounded: 0
   Jumping: 0
   JumpToRoof: 0
+  Turretable: 0
 --- !u!65 &7068124799584983975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -376,9 +377,9 @@ MonoBehaviour:
   MyRB: {fileID: 7068124799584983974}
   MyChildRB: {fileID: 7068124800717697801}
   Child: {fileID: 7068124800717697907}
-  SpringForce: 1000
+  SpringForce: 1500
   ForwardSpeed: 10
-  stopDist: 0
+  stopDist: 5
   MainSpeed: 0
   Jumping: 0
   Turret: 0
@@ -387,7 +388,7 @@ MonoBehaviour:
   CanJumpToRoof: 0
   IsGrounded: 0
   PlayerClose: 0
-  anim: {fileID: 0}
+  anim: {fileID: 1582366709013959249}
 --- !u!114 &538690402215822820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,10 +417,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3cfef0b94a96a4caded3440bb98e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 40
   maxHealth: 40
-  healthBarUi: {fileID: 7473053725370999603}
---- !u!114 &7822894404216453691
+  Canvas: {fileID: 7473053725370999603}
+  slider: {fileID: 7473053725326492601}
+--- !u!114 &954595400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -428,7 +430,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7068124799584983973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e11112853aa4e38498bcb800ee120849, type: 3}
+  m_Script: {fileID: 11500000, guid: 92ddb81f46d68a84997bf3e3f22cedeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
@@ -436,10 +438,11 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletSpread: 0.005
-  attackSpeed: 0.1
-  damage: 5
-  delay: 1
+  bulletSpread: 1
+  maxSpread: 2
+  attackSpeed: 2
+  damage: 1
+  delay: 2
 --- !u!1 &7068124800029338961
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +746,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7068124800717697907}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecad0a3104b8f8c489869ac46a6d7608, type: 3}
   m_Name: 
@@ -871,7 +874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.99
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -895,7 +898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.816
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -915,6 +918,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+--- !u!114 &7473053725326492601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7488767427271502841, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+  m_PrefabInstance: {fileID: 25029869653354560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7473053725370999603 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7488767427628731251, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
