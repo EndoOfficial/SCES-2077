@@ -15,9 +15,4 @@ public class BillDamage : Enemy
             GameEvents.DamagePlayer?.Invoke(damage);
         }
     }
-
-    protected void SetLayer()
-    {
-        gameObject.layer = 2;
-    }
 }

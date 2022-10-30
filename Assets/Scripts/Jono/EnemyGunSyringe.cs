@@ -70,7 +70,7 @@ public class EnemyGunSyringe : MonoBehaviour
             float temp2 = Random.Range(-bulletSpread, bulletSpread);
 
             //get the normalized playerDirection
-            bulletDirection = OldPlayerDirection.normalized;
+            bulletDirection = OldPlayerDirection;
             //applies the random bulletspread to the bullet direction
             bulletDirection = new Vector3(
                 bulletDirection.x + temp,
