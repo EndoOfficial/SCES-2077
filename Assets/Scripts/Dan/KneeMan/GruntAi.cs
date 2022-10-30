@@ -10,7 +10,6 @@ public class GruntAi : MonoBehaviour
     Animator anim;
     private GameObject player;
     State currentState;
-    public bool detected;
 
     // Start is called before the first frame update
     void Start()

@@ -12,10 +12,9 @@ public class Grunts : MonoBehaviour
     public float Cooldown;
 
     public bool hit;
-
     void Update()
     {
-        transform.position += transform.forward * speed * Time.deltaTime;
+        transform.position += transform.forward * speed * speedEffect * Time.deltaTime;
         if (Physics.CheckSphere(transform.position, radius, Player))
         {
             if (!hit)
@@ -30,7 +29,6 @@ public class Grunts : MonoBehaviour
             hit = false;
         }
     }
-   
     private IEnumerator HitDelay()
     {
         yield return new WaitForSeconds(Cooldown);

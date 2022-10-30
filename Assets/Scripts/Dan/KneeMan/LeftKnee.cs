@@ -17,11 +17,9 @@ public class LeftKnee : GruntState
         anim.SetTrigger("LeftLegDowning");
         rb = npc.GetComponent<Rigidbody>();
         Grunt = npc.GetComponent<Grunts>();
-        head = npc.GetComponent<HeadShot>();
+        head = npc.GetComponentInChildren<HeadShot>();
 
         Grunt.speedEffect = 0.5f;
-        Grunt.damage = 5;
-        Debug.Log("LeftKnee");
         base.Enter();
     }
 
@@ -36,8 +34,6 @@ public class LeftKnee : GruntState
 
         if (head.head)
         {
-            Debug.Log("BothLegDowning");
-
             nextState = new TwoKnee(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }

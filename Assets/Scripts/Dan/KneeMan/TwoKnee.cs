@@ -18,10 +18,10 @@ public class TwoKnee : GruntState
         anim.SetTrigger("BothLegDowning");
         rb = npc.GetComponent<Rigidbody>();
         Grunt = npc.GetComponent<Grunts>();
-        head = npc.GetComponent<HeadShot>();
+        head = npc.GetComponentInChildren<HeadShot>();
         
-        Grunt.speedEffect = 0.25f;
-        Grunt.damage = 20;
+        Grunt.speedEffect = 0f;
+        Grunt.damage = 0;
         base.Enter();
     }
 

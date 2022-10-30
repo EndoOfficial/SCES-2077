@@ -16,10 +16,10 @@ public class Normal : GruntState
     }
     public override void Enter()
     {
-        //anim.SetTrigger("NoKnee");
+        anim.SetTrigger("GetUp");
         rb = npc.GetComponent<Rigidbody>();
         Grunt = npc.GetComponent<Grunts>();
-        head = npc.GetComponent<HeadShot>();
+        head = npc.GetComponentInChildren<HeadShot>();
         
         Grunt.speedEffect = 1f;
         Grunt.damage = 2;
@@ -31,7 +31,6 @@ public class Normal : GruntState
 
         if (head.left==true)
         {
-            Debug.Log("GoToLeftKnee");
             nextState = new LeftKnee(npc, agent, anim, player); 
             
             stage = EVENT.EXIT;
@@ -39,7 +38,6 @@ public class Normal : GruntState
         
         if (head.right == true)
         {
-            Debug.Log("GoToRightKnee");
             nextState = new RightKnee(npc, agent, anim, player); 
             
             stage = EVENT.EXIT;
@@ -47,7 +45,7 @@ public class Normal : GruntState
     }
     public override void Exit()
     {
-        //anim.ResetTrigger("NoKnee");
+        anim.ResetTrigger("GetUp");
         base.Exit();
     }
 }

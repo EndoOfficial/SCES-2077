@@ -9,24 +9,29 @@ public class EnemyManager : MonoBehaviour
     public float WaitTime;
     public List<GameObject> Doors;
     public int numEnemies;
-
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SpawnEnemies());
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     IEnumerator SpawnEnemies()
     {
+        int Loops = 0;
         for (int i = 0; i < numEnemies; i++)
         {
+            Loops++;
+            if (Loops > numEnemies)
+            {
+                StopAllCoroutines();
+            }
+
+            if (i >= Doors.Count)
+            {
+                i = 0;
+            }
+            // The above makes it so that the enemies re-use doors to spawn
+            // but still only spawn the amount set by numEnemies
             yield return new WaitForSeconds(WaitTime);
-            Instantiate(EnemyPrefab,Doors[i].transform.position, Quaternion.identity);
+            Instantiate(EnemyPrefab,new Vector3(Doors[i].transform.position.x, Doors[i].transform.position.y + .3f, Doors[i].transform.position.z), Quaternion.identity);
         }
     }
 }

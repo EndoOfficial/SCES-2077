@@ -21,6 +21,5 @@ public class EnemyCounter : MonoBehaviour
         {
             GameEvents.LevelWin?.Invoke();
         }
-        
     }
 }
