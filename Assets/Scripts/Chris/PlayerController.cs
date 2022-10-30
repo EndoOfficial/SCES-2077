@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");

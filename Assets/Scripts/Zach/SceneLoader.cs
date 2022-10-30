@@ -13,6 +13,6 @@ public class SceneLoader : MonoBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene(sceneName);
-        //PlayerPrefs.SetString("LevelName", levelName);
+        PlayerPrefs.SetString("LevelName", levelName);
     }
 }
