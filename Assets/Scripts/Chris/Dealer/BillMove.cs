@@ -5,15 +5,24 @@ using UnityEngine;
 public class BillMove : MonoBehaviour
 {
     public float speed;
+    private bool dead = false;
     void Start()
     {
         transform.parent = null;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // Moves forward
-        //transform.Translate(transform.forward * speed * Time.deltaTime);
-        transform.position += transform.forward * speed * Time.deltaTime;
+        if (!dead)
+        {
+            transform.position += transform.forward * speed * Time.deltaTime;
+        }
+    }
+
+    protected void SetLayer()
+    {
+        dead = true;
+        gameObject.layer = 2;
     }
 }
