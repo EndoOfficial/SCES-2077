@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 538690402215822820}
   - component: {fileID: 1469248374227010636}
   - component: {fileID: 954595400}
+  - component: {fileID: 6660544566519820877}
   m_Layer: 10
   m_Name: SyringeEnemy
   m_TagString: Enemy
@@ -421,6 +422,7 @@ MonoBehaviour:
   maxHealth: 40
   Canvas: {fileID: 7473053725370999603}
   slider: {fileID: 7473053725326492601}
+  IsDead: 1
 --- !u!114 &954595400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,6 +445,18 @@ MonoBehaviour:
   attackSpeed: 2
   damage: 1
   delay: 2
+--- !u!114 &6660544566519820877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7068124799584983973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817d2e56e1862064d8c797be95ed859a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7068124800029338961
 GameObject:
   m_ObjectHideFlags: 0
