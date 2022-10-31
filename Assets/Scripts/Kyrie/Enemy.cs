@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     public GameObject Canvas;
     public Slider slider;
 
+    public bool IsDead;
+
     private void OnEnable()
     {
         GameEvents.DamageEnemy += TakeDamage;
@@ -40,13 +42,22 @@ public class Enemy : MonoBehaviour
             
             if (health <= 0f) // if true, Die
             {
-                anim.SetTrigger("Death");
-                //Add Die function as event in death animator
+                IsDead = true;
+                if (IsDead)
+                {
+                    anim.SetTrigger("Death");
+                    //Add Die function as event in death animator
+                }
+
             }
             else
             {
-                anim.SetTrigger("Damage");
-                health -= damage;
+                if (!IsDead)
+                {
+                    anim.SetTrigger("Damage");
+                    health -= damage;
+                }
+                
             }
         }
     }
