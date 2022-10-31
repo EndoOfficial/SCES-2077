@@ -37,12 +37,16 @@ public class Enemy : MonoBehaviour
     {
         if (this.gameObject == target)
         {
-            anim.SetTrigger("Damage");
-            health -= damage;
+            
             if (health <= 0f) // if true, Die
             {
                 anim.SetTrigger("Death");
                 //Add Die function as event in death animator
+            }
+            else
+            {
+                anim.SetTrigger("Damage");
+                health -= damage;
             }
         }
     }

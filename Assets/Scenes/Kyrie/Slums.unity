@@ -357,6 +357,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8712367201345098808, guid: ef60e2dcd5ff52b45ad771119205d12f, type: 3}
   m_PrefabInstance: {fileID: 1008300736}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &683216770 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4459825560066012448, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+  m_PrefabInstance: {fileID: 1105055120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &831752290
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,20 +553,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 840028162448250623, guid: e43f2f7f41faf0844b11c26173510085, type: 3}
   m_PrefabInstance: {fileID: 1948406845}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &990056178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990056174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54df55967258f7a499b87b555642d3fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 
-  levelName: 
 --- !u!64 &990056179
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -576,6 +567,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7277638064982805320, guid: 31a70056bbc3c1a40ba199bfadded709, type: 3}
+--- !u!114 &990056183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990056174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54df55967258f7a499b87b555642d3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: SyringeLevel
+  levelName: 
 --- !u!1001 &1008300736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1888,6 +1893,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5003964179567099197, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 683216770}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
 --- !u!4 &1616064601 stripped
@@ -2306,8 +2315,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -992868733222789507, guid: e43f2f7f41faf0844b11c26173510085, type: 3}
+      propertyPath: levelName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -992868733222789507, guid: e43f2f7f41faf0844b11c26173510085, type: 3}
       propertyPath: sceneName
-      value: Addict
+      value: SyringeLevel
       objectReference: {fileID: 0}
     - target: {fileID: 840028162448250623, guid: e43f2f7f41faf0844b11c26173510085, type: 3}
       propertyPath: m_Layer
@@ -2385,7 +2398,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -992868733222789507, guid: e43f2f7f41faf0844b11c26173510085, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e43f2f7f41faf0844b11c26173510085, type: 3}
 --- !u!1 &1963391732
 GameObject:
