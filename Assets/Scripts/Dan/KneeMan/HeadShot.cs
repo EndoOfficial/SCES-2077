@@ -12,40 +12,35 @@ public class HeadShot : MonoBehaviour
 
     private void Start()
     {
-        LeftKnee = LeftKnee.GetComponent<WeakPoints>();
-        RightKnee = RightKnee.GetComponent<WeakPoints>();
-        Head = Head.GetComponent<WeakPoints>();
+        Head = GetComponent<WeakPoints>();
         left = false;
         right = false;
         head = false;
     }
     public void Update()
     {
-        if (LeftKnee.leftShot == true)
+        if (left)
         {
-            left = true;
             StartCoroutine(Left());
         }
 
-        if (RightKnee.rightShot == true)
+        if (right)
         {
-            right = true;
             StartCoroutine(Right());
         }
 
-        if (left == true && right == true)
+        if (left && right )
         {
             HeadShotOpen();
         }
 
-        if (head && Head.headShot == true)
+        if (head && Head.headShot)
         {
             Murked();
         }
     }
     public void HeadShotOpen()
     {
-        gameObject.GetComponent<Renderer>().material.color = Color.red;
         left = false;
         right = false;
         StopAllCoroutines();
@@ -55,8 +50,7 @@ public class HeadShot : MonoBehaviour
     }
     private IEnumerator GetUp()
     {
-        yield return new WaitForSeconds(10f);
-        gameObject.GetComponent<Renderer>().material.color = Color.white;
+        yield return new WaitForSeconds(7f);
         head = false;
         LeftKnee.Recover();
         RightKnee.Recover();
@@ -64,22 +58,20 @@ public class HeadShot : MonoBehaviour
 
     private IEnumerator Left()
     {
-        LeftKnee.leftShot = false;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         left = false;
         LeftKnee.Recover();
     }
 
     private IEnumerator Right()
     {
-        RightKnee.rightShot = false;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         right = false;
         RightKnee.Recover();
     }
 
     public void Murked()
     {
-        Destroy(transform.parent.gameObject);
+        GetComponentInParent<Animator>().SetTrigger("Death");
     }
 }

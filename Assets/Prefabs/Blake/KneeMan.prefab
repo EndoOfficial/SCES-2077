@@ -420,6 +420,7 @@ MonoBehaviour:
   LeftKnee: {fileID: 971247656939228642}
   RightKnee: {fileID: 971247657457424102}
   Head: {fileID: 971247657110571466}
+  Enemy: {fileID: 971247658119941918}
   left: 0
   right: 0
   head: 0

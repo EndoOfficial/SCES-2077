@@ -11,22 +11,19 @@ public class WeakPoints : MonoBehaviour
     private void Start()
     {
         Head = Head.GetComponent<HeadShot>();
-        leftShot = false;
-        rightShot = false;
-        headShot = false;
     }
 
     public void Shot()
     {
         if (CompareTag("LeftKnee"))
         {
-            leftShot = true;
+            Head.left = true;
             gameObject.SetActive(false);
         }
 
         if (CompareTag("RightKnee"))
         {
-            rightShot = true;
+            Head.right = true;
             gameObject.SetActive(false);
         }
 
@@ -38,9 +35,6 @@ public class WeakPoints : MonoBehaviour
     }
     public void Recover()
     {
-        leftShot = false;
-        rightShot = false;
-        headShot = false;
         gameObject.SetActive(true);
     }
 }
