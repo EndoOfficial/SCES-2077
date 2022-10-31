@@ -20,6 +20,7 @@ TagManager:
   - Roof
   - NPC
   - Pickup
+  - EnemyCoke
   layers:
   - Default
   - TransparentFX
