@@ -2414,16 +2414,28 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 404793118311715175, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 404793118311715175, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 404793118311715175, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 404793118311715175, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.23
+      value: -26.77
       objectReference: {fileID: 0}
     - target: {fileID: 404793118311715175, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.81
+      value: 5.13
       objectReference: {fileID: 0}
     - target: {fileID: 404793118311715175, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.57
+      value: 5.61
       objectReference: {fileID: 0}
     - target: {fileID: 404793118311715175, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2459,7 +2471,7 @@ PrefabInstance:
       objectReference: {fileID: 545769399}
     - target: {fileID: 404793118311715181, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: health
-      value: 10
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 404793118311715181, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: slider
@@ -2467,7 +2479,7 @@ PrefabInstance:
       objectReference: {fileID: 1887278266}
     - target: {fileID: 404793118311715181, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 404793118311715181, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
       propertyPath: healthBarUi
