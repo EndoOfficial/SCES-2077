@@ -15,8 +15,8 @@ public class FireAI : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        agent = this.GetComponent<NavMeshAgent>();
-        anim = this.GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         currentState = new FireWisp(gameObject, agent, anim, player);
     }
 

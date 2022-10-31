@@ -6,10 +6,11 @@ using UnityEngine.AI;
 public class FireState : State
 {
     public FIRESTATE name;
+    public FireTimer timer;
 
     public enum FIRESTATE
     {
-        Whisp, Fire, Tornado
+        Wisp, Fire, Tornado
     }
 
     public FireState(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)

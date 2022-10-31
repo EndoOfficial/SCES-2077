@@ -5,30 +5,34 @@ using UnityEngine.AI;
 
 public class FireWisp : FireState
 {
-    private Vector3 pos;
+    DetectWheat wheat;
     public FireWisp(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
         : base(_npc, _agent, _anim, _player)
     {
-        name = FIRESTATE.Whisp;
+        name = FIRESTATE.Wisp;
     }
 
     public override void Enter()
     {
-        anim.SetTrigger("isIdle");
+        Debug.Log("FireWisp");
+        wheat = npc.GetComponent<DetectWheat>();
         rb = npc.GetComponent<Rigidbody>();
+        wheat.FindWheat();
         base.Enter();
     }
 
     public override void Update()
     {
-        pos = (npc.transform.position - player.transform.position).normalized;
-        var moveTarget = npc.transform.position + (pos * 1);
-        agent.destination = moveTarget;
+        agent.destination = wheat.closestWheatPatch;
+        if (wheat.inWheat)
+        {
+            nextState = new FireBall(npc, agent, anim, player);
+            stage = EVENT.EXIT;
+        }
     }
 
     public override void Exit()
     {
-        anim.ResetTrigger("isIdle");
         base.Exit();
     }
 }
