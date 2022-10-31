@@ -5,14 +5,16 @@ using UnityEngine;
 public class SpawnPills : MonoBehaviour
 {
     public Transform player;
-    public GameObject PillToSpawn;
+    public GameObject[] PillToSpawn;
     public float SpawnDelay;
+    public int Pillnum;
     private void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
     }
     public void StartSpawn()
     {
-        Instantiate(PillToSpawn, new Vector3(transform.position.x, 5, transform.position.z), Quaternion.identity);
+        Pillnum = Random.Range(0, PillToSpawn.Length);
+        Instantiate(PillToSpawn[Pillnum], new Vector3(transform.position.x, 5, transform.position.z), Quaternion.identity);
     }
 }

@@ -39,28 +39,10 @@ public class Enemy : MonoBehaviour
     {
         if (this.gameObject == target)
         {
-            
-            if (health <= 0f) // if true, Die
-            {
-                IsDead = false;
-                if (!IsDead)
-                {
-                    IsDead = true;
-                    anim.SetTrigger("Death");
-                    //Add Die function as event in death animator
-                }
-
-            }
-            else
-            {
                 anim.SetTrigger("Damage");
                 health -= damage;
-                
-                
-            }
         }
     }
-
     protected virtual void Die()
     {
         if (slider != null) slider.enabled = false;
@@ -69,17 +51,25 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (health <= 0f) // if true, Die
+        {
+            IsDead = false;
+            if (!IsDead)
+            {
+                IsDead = true;
+                anim.SetTrigger("Death");
+                //Add Die function as event in death animator
+            }
+        }
         if (slider != null)
         {
             // update health slider
             slider.value = CalculateHealth();
         }
-
     }
 
     float CalculateHealth()
     {
         return health / maxHealth;
     }
-
 }

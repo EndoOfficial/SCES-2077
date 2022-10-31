@@ -214,7 +214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817d2e56e1862064d8c797be95ed859a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurnSpeed: 3
 --- !u!114 &3111766049081666883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,8 +227,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  PillToSpawn: {fileID: 5183225567923066637, guid: 3e7e2ad36c432e84c9d216b33c83d59e, type: 3}
+  PillToSpawn:
+  - {fileID: 7540080838102888225, guid: 7857f2a52f5948441825921747d29f66, type: 3}
+  - {fileID: 405892069477294195, guid: 18fc80f7066a2cb458658c23f7a3078b, type: 3}
+  - {fileID: 5183225567923066637, guid: 3e7e2ad36c432e84c9d216b33c83d59e, type: 3}
   SpawnDelay: 1.25
+  Pillnum: 0
 --- !u!114 &6695048194844847527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,9 +249,9 @@ MonoBehaviour:
   maxHealth: 150
   Canvas: {fileID: 4600407970777075093}
   slider: {fileID: 4600407970999708959}
+  IsDead: 1
   pill: {fileID: 5183225567923066637, guid: 3e7e2ad36c432e84c9d216b33c83d59e, type: 3}
   spawnlimit: 12
-  range: 1.5
 --- !u!95 &7692386618914041817
 Animator:
   serializedVersion: 4
