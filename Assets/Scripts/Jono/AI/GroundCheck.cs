@@ -21,7 +21,7 @@ public class GroundCheck : MonoBehaviour
     {
         if (other.tag == "Ground")
         {
-            Grounded = true;
+            Grounded = true;            
         }
     }
 

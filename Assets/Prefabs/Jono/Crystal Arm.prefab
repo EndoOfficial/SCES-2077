@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 814677426212491122}
   - component: {fileID: 814677426212491121}
   - component: {fileID: 814677426212491120}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Crystal Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,10 +94,11 @@ GameObject:
   - component: {fileID: 814677427544903091}
   - component: {fileID: 814677427544903090}
   - component: {fileID: 814677427544903089}
-  - component: {fileID: 814677427544903100}
-  m_Layer: 0
+  - component: {fileID: 1952330404}
+  - component: {fileID: 1952330405}
+  m_Layer: 2
   m_Name: Crystal Arm
-  m_TagString: Untagged
+  m_TagString: Roof
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,15 +110,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814677427544903088}
-  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 814677426212491122}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -70.127}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &814677427544903090
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -168,8 +169,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &814677427544903100
+--- !u!136 &1952330404
 CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814677427544903088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.08143299
+  m_Height: 0.17527993
+  m_Direction: 2
+  m_Center: {x: 1.743002e-16, y: 5.3740196e-16, z: 0.057322677}
+--- !u!64 &1952330405
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -178,7 +193,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.02
-  m_Height: 0.3
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: a9490955d6d173544a821ef5ee25b765, type: 3}

@@ -379,9 +379,10 @@ MonoBehaviour:
   MyChildRB: {fileID: 7068124800717697801}
   Child: {fileID: 7068124800717697907}
   SpringForce: 1500
-  ForwardSpeed: 10
+  ForwardSpeed: 20
   stopDist: 5
   MainSpeed: 0
+  jumpCount: 0
   Jumping: 0
   Turret: 0
   ThisPos: {x: 0, y: 0, z: 0}
@@ -452,7 +453,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7068124799584983973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 817d2e56e1862064d8c797be95ed859a, type: 3}
   m_Name: 
@@ -554,8 +555,8 @@ GameObject:
   - component: {fileID: 7068124800717697805}
   - component: {fileID: 7068124800717697801}
   - component: {fileID: 7068124800717697800}
-  - component: {fileID: 7068124800717697906}
   - component: {fileID: 7068124800717697803}
+  - component: {fileID: 2593029087132547750}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -753,7 +754,20 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 20
   m_ConnectedMassScale: 1
---- !u!114 &7068124800717697906
+--- !u!65 &7068124800717697803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7068124800717697907}
+  m_Material: {fileID: 13400000, guid: dfa3085ce932ad8418bf230a37b279e4, type: 2}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6185056, y: 1.440434, z: 1.4145827}
+  m_Center: {x: 0, y: 0.123421386, z: 0}
+--- !u!114 &2593029087132547750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -766,19 +780,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Grounded: 0
---- !u!65 &7068124800717697803
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7068124800717697907}
-  m_Material: {fileID: 13400000, guid: dfa3085ce932ad8418bf230a37b279e4, type: 2}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.3755224, z: 1}
-  m_Center: {x: 0, y: 0.15587723, z: 0}
 --- !u!1 &7068124801567380950
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ public class SyringeJump : MonoBehaviour
     public float ForwardSpeed;
     public float stopDist;
     public float MainSpeed;
+    public float jumpCount;
     //SyringeJump Jump;
     public bool Jumping;
     public bool Turret;
@@ -35,6 +36,7 @@ public class SyringeJump : MonoBehaviour
         anim = GetComponent<Animator>();
         AI = GetComponent<SyringeAI>();
         //IsGrounded = GetComponent<GroundCheck>().Grounded;
+        jumpCount = Random.Range(2, 8);
 
         MainSpeed = ForwardSpeed;
     }

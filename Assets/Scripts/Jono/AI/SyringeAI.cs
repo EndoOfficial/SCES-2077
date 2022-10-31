@@ -32,34 +32,53 @@ public class SyringeAI : MonoBehaviour
         grounded = Child.GetComponent<GroundCheck>().Grounded;
 
         Debug.Log(CurrentState);
+        //if (grounded)
+        //{
+        //    if (Random.Range(0, 100) < 100 && !Turretable)
+        //    {
+        //        Turretable = true;
+        //        TurretBool.Turret = true;
+        //        JumpToRoof = true;
+        //    }
+
+        //}
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Roof")
+        if (other.tag == "Roof" && grounded)
         {
-            if(Random.Range(0, 100) < 100 && !Turretable)
+            if (Random.Range(0, 100) < 25 && !Turretable)
             {
                 Turretable = true;
                 TurretBool.Turret = true;
                 JumpToRoof = true;
             }
-            
-        }
-        
+
+        }        
+
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Roof" && Turretable)
+        
+        if (other.tag == "Roof")
         {
-            Turretable = false;
-            TurretBool.Turret = false;
-            JumpToRoof = false;
-            TurretBool.Jumping = false;
+            Debug.Log("Exit");
+            StartCoroutine(Stand());
+            
         }
     }
 
-
+    public IEnumerator Stand()
+    {
+        yield return new WaitForSeconds(0.75f);
+        Turretable = false;
+        TurretBool.Turret = false;
+        JumpToRoof = false;
+        TurretBool.Jumping = false;
+        
+        //yield return null;
+    }
 
     private void OnEnable()
     {
