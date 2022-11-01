@@ -5,10 +5,26 @@ using UnityEngine;
 public class DetectWheat : MonoBehaviour
 {
     public Vector3 closestWheatPatch;
+    public int interval;
     public bool inWheat;
+    private GameObject player;
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Wheat"))
+        {
+            other.gameObject.SetActive(false);
+            inWheat = true;
+        }
+    }
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     public void FindWheat()
     {
+        interval = 1;
         StartCoroutine(Repeat());
     }
 
@@ -30,9 +46,9 @@ public class DetectWheat : MonoBehaviour
             }
             if(taggedObjects.Length == 0)
             {
-                closestWheatPatch = GameObject.FindGameObjectWithTag("Player").transform.position;
+                closestWheatPatch = player.transform.position;
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(interval);
         }
     }
 }

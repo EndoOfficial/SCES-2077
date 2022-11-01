@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class FireWisp : FireState
 {
-    DetectWheat wheat;
     public FireWisp(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
         : base(_npc, _agent, _anim, _player)
     {
@@ -14,9 +13,14 @@ public class FireWisp : FireState
 
     public override void Enter()
     {
-        Debug.Log("FireWisp");
         wheat = npc.GetComponent<DetectWheat>();
         rb = npc.GetComponent<Rigidbody>();
+        spawner = npc.GetComponent<WispSpawner>();
+        timer = npc.GetComponent<FireTimer>();
+
+        anim.SetTrigger("BecomeWisp");
+        npc.transform.LeanScale(new Vector3(1, 1, 1), 1);
+        agent.speed = 5f;
         wheat.FindWheat();
         base.Enter();
     }
@@ -33,6 +37,7 @@ public class FireWisp : FireState
 
     public override void Exit()
     {
+        anim.ResetTrigger("BecomeWisp");
         base.Exit();
     }
 }

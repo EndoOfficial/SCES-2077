@@ -278,6 +278,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   anim: {fileID: 0}
+  bulletHit: {fileID: 5172426982756091155, guid: e48994cbea4aef14c98eb6b3d817266d, type: 3}
 --- !u!114 &4520434914419971837
 MonoBehaviour:
   m_ObjectHideFlags: 0

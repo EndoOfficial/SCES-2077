@@ -6,7 +6,9 @@ using UnityEngine.AI;
 public class FireState : State
 {
     public FIRESTATE name;
-    public FireTimer timer;
+    protected FireTimer timer;
+    protected DetectWheat wheat;
+    protected WispSpawner spawner;
 
     public enum FIRESTATE
     {

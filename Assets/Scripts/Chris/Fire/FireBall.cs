@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class FireBall : FireState
 {
-    private Vector3 pos;
     public FireBall(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
         : base(_npc, _agent, _anim, _player)
     {
@@ -14,23 +13,33 @@ public class FireBall : FireState
 
     public override void Enter()
     {
-        Debug.Log("FireBall");
+        wheat = npc.GetComponent<DetectWheat>();
         rb = npc.GetComponent<Rigidbody>();
+        spawner = npc.GetComponent<WispSpawner>();
+        timer = npc.GetComponent<FireTimer>();
+
+        anim.SetTrigger("BecomeFireBall");
+        spawner.stopSpawn();
+        npc.transform.LeanScale(new Vector3(2, 2, 2), 1);
+        agent.speed = 3.5f;
+        timer.StartTimer();
         base.Enter();
     }
 
     public override void Update()
     {
-        if ((npc.transform.position - player.transform.position).magnitude >= 10)
+        if (Vector3.Distance(npc.transform.position, player.transform.position) >= 10)
         {
+            agent.isStopped = false;
             agent.destination = player.transform.position;
         }
         else
         {
-            npc.transform.Translate(npc.transform.right);
+            agent.isStopped = true;
+            npc.transform.RotateAround(player.transform.position, Vector3.up, 0.1f);
         }
 
-        if(timer.time >= timer.changeTime)
+        if(timer.timeDone)
         {
             nextState = new FireNado(npc, agent, anim, player);
             stage = EVENT.EXIT;
@@ -39,6 +48,7 @@ public class FireBall : FireState
 
     public override void Exit()
     {
+        anim.ResetTrigger("BecomeFireBall");
         base.Exit();
     }
 }

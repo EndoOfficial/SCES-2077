@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire = 0;
     public LayerMask EnemyLayer;
     public Animator anim;
+    public GameObject bulletHit;
 
     public void Update()
     {
@@ -31,7 +32,8 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, EnemyLayer))
         {
             //damage enemy Event
-            GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
+            GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject); //This passes though a damage and the object that GET'S HIT
+            Instantiate(bulletHit, hit.point, gameObject.transform.rotation);
 
             WeakPoints target = hit.transform.GetComponent<WeakPoints>();
             if (target != null)

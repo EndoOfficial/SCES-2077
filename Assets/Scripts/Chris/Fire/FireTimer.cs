@@ -7,6 +7,7 @@ public class FireTimer : MonoBehaviour
     public int time;
     public int interval;
     public int changeTime;
+    public bool timeDone;
 
     public void StartTimer()
     {
@@ -21,10 +22,11 @@ public class FireTimer : MonoBehaviour
 
     private IEnumerator Timer()
     {
-        while (true)
+        while (time <= changeTime)
         {
             yield return new WaitForSecondsRealtime(interval);
             time++;
         }
+        timeDone = true;
     }
 }

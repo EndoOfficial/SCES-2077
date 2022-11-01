@@ -10,6 +10,7 @@ public class FireAI : MonoBehaviour
     Animator anim;
     private GameObject player;
     State currentState;
+    Enemy enemy;
 
     // Start is called before the first frame update
     void Start()

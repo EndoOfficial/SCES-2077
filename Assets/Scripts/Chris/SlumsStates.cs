@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelStates : MonoBehaviour
+public class SlumsStates : MonoBehaviour
 {
     // cat objects
     public GameObject Cat1;
@@ -27,39 +27,18 @@ public class LevelStates : MonoBehaviour
         {
             // set catBool to T
             PlayerPrefs.SetString("catBool", "T");
-            Debug.Log("set catBool to catT");
-        }
-        else
-        {
-            // set catBool to F
-            PlayerPrefs.SetString("catBool", "F");
-            Debug.Log("set catBool to catF");
         }
 
         if(levelName == "Addict")
         {
             // set addictBool to T
             PlayerPrefs.SetString("addictBool", "T");
-            Debug.Log("set addictBool to addictT ");
-        }
-        else
-        {
-            // set addictBool to F
-            PlayerPrefs.SetString("addictBool", "F");
-            Debug.Log("set addictBool to addictF ");
         }
         
         if(levelName == "Dealer")
         {
             // set dealerBool to T
             PlayerPrefs.SetString("dealerBool", "T");
-            Debug.Log("set dealerBool to dealerT ");
-        }
-        else
-        {
-            // set dealerBool to F
-            PlayerPrefs.SetString("dealerBool", "F");
-            Debug.Log("set dealerBool to dealerF ");
         }
         
         if (PlayerPrefs.GetString("catBool") == "T")
@@ -67,25 +46,13 @@ public class LevelStates : MonoBehaviour
             // cat changes position
             Cat1.SetActive(false);
             Cat2.SetActive(true);
-            Debug.Log("Cat Change");
-        }
-
-        if (PlayerPrefs.GetString("catBool") == "F")
-        {
-
         }
 
         if (PlayerPrefs.GetString("dealerBool") == "T")
         {
             //Dealer changes position
-            //Dealer1.SetActive(false);
-            //Dealer2.SetActive(true);
-            Debug.Log("Dealer Change");
-        }
-
-        if (PlayerPrefs.GetString("dealerBool") == "F")
-        {
-
+            Dealer1.SetActive(false);
+            Dealer2.SetActive(true);
         }
         
         if (PlayerPrefs.GetString("addictBool") == "T")
@@ -93,12 +60,7 @@ public class LevelStates : MonoBehaviour
             //addict changes position
             Addict1.SetActive(false);
             Addict2.SetActive(true);
-            Debug.Log("Addict Change");
         }
-
-        if (PlayerPrefs.GetString("addictBool") == "F")
-        {
-
-        }
+        PlayerPrefs.Save();
     }
 }
