@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: KneeManDowned
+  m_Name: KneeManLeftDowned
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1151241981, guid: 4d54382b9d7754747aed4614dfbe5c5e, type: 3}
+      value: {fileID: 1023268035, guid: d87fdfa2d84064a44922bbebd22af095, type: 3}
     attribute: m_Sprite
     path: KneeSR
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1151241981, guid: 4d54382b9d7754747aed4614dfbe5c5e, type: 3}
+    - {fileID: 1023268035, guid: d87fdfa2d84064a44922bbebd22af095, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -316,10 +316,11 @@ GameObject:
   - component: {fileID: 971247657110571468}
   - component: {fileID: 971247657110571462}
   - component: {fileID: 971247657110571463}
-  - component: {fileID: 971247657110571464}
   - component: {fileID: 971247657110571465}
   - component: {fileID: 971247657110571466}
   - component: {fileID: 971247657110571467}
+  - component: {fileID: 1672559690}
+  - component: {fileID: 1672559691}
   m_Layer: 0
   m_Name: Head
   m_TagString: Head
@@ -335,7 +336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971247657110571469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14307022, y: 0.13742413, z: 0.43999958}
+  m_LocalPosition: {x: -0.009, y: -0.043, z: 0.563}
   m_LocalScale: {x: 0.5, y: 0.88499326, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -392,19 +393,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &971247657110571464
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971247657110571469}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.43
-  m_Center: {x: 0, y: 0.03486252, z: 0}
 --- !u!114 &971247657110571465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +408,6 @@ MonoBehaviour:
   LeftKnee: {fileID: 971247656939228642}
   RightKnee: {fileID: 971247657457424102}
   Head: {fileID: 971247657110571466}
-  Enemy: {fileID: 971247658119941918}
   left: 0
   right: 0
   head: 0
@@ -456,6 +443,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!65 &1672559690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971247657110571469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.62621474, y: 0.6250328, z: 0.24822961}
+  m_Center: {x: 0.08420849, y: 0.1874844, z: 0.5810257}
+--- !u!65 &1672559691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971247657110571469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2817757, y: 0.3809425, z: 0.060306642}
+  m_Center: {x: 0.032291196, y: -0.105479494, z: 0.4698484}
 --- !u!1 &971247657162443729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1087,7 @@ MonoBehaviour:
   maxHealth: 200
   Canvas: {fileID: 971247657685590711}
   slider: {fileID: 971247657250107173}
+  IsDead: 1
 --- !u!114 &971247658119941919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,7 +1319,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -863999256, guid: 5bac166e64d137840859d5c3292be47d, type: 3}
+  m_Sprite: {fileID: -945504534, guid: 5bac166e64d137840859d5c3292be47d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

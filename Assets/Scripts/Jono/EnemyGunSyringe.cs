@@ -114,7 +114,6 @@ public class EnemyGunSyringe : MonoBehaviour
                 {
                     bulletSpread += 0.01f;
                 }
-                
             }
             yield return new WaitForSecondsRealtime(RateOfFire);
         }

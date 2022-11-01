@@ -101,8 +101,8 @@ public class EnemyGun : MonoBehaviour
                 {
                     bulletSpread += 0.01f;
                 }
-                yield return new WaitForSecondsRealtime(attackSpeed);
             }
+            yield return new WaitForSecondsRealtime(attackSpeed);
         }
     }
     public IEnumerator Position()

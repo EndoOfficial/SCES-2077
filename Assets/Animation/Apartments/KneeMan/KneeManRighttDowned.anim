@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Death
+  m_Name: KneeManRighttDowned
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 368362808, guid: 3d8c77af9d4d9ff47b5d0d35f35423a6, type: 3}
-    - time: 0.16666667
-      value: {fileID: -1189842734, guid: 3d8c77af9d4d9ff47b5d0d35f35423a6, type: 3}
-    - time: 0.33333334
-      value: {fileID: 591443371, guid: 3d8c77af9d4d9ff47b5d0d35f35423a6, type: 3}
-    - time: 0.5
-      value: {fileID: 1873469205, guid: 3d8c77af9d4d9ff47b5d0d35f35423a6, type: 3}
+      value: {fileID: 1023268035, guid: d87fdfa2d84064a44922bbebd22af095, type: 3}
     attribute: m_Sprite
     path: KneeSR
     classID: 212
@@ -46,16 +40,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 368362808, guid: 3d8c77af9d4d9ff47b5d0d35f35423a6, type: 3}
-    - {fileID: -1189842734, guid: 3d8c77af9d4d9ff47b5d0d35f35423a6, type: 3}
-    - {fileID: 591443371, guid: 3d8c77af9d4d9ff47b5d0d35f35423a6, type: 3}
-    - {fileID: 1873469205, guid: 3d8c77af9d4d9ff47b5d0d35f35423a6, type: 3}
+    - {fileID: 1023268035, guid: d87fdfa2d84064a44922bbebd22af095, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -74,11 +65,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.5
-    functionName: Die
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
