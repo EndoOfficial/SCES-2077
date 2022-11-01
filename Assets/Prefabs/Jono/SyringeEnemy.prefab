@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 7074301170955041518}
   - component: {fileID: 1210760025316303293}
   - component: {fileID: 300256261783376859}
-  - component: {fileID: 5388431547784689757}
   m_Layer: 0
   m_Name: PointyBit
   m_TagString: Untagged
@@ -168,19 +167,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5388431547784689757
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2170966280809630940}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.3122491, z: 1}
-  m_Center: {x: 0, y: 0.1561214, z: 0}
 --- !u!1 &7068124799584983973
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +377,7 @@ MonoBehaviour:
   IsGrounded: 0
   PlayerClose: 0
   anim: {fileID: 1582366709013959249}
+  Paused: 0
 --- !u!114 &538690402215822820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,11 +428,12 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletSpread: 1
-  maxSpread: 2
-  attackSpeed: 2
+  maxSpread: 0.5
+  RateOfFire: 1
   damage: 1
-  delay: 2
+  PositionDelay: 2
+  Paused: 0
+  grounded: {fileID: 2593029087132547750}
 --- !u!114 &6660544566519820877
 MonoBehaviour:
   m_ObjectHideFlags: 0

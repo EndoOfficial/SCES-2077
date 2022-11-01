@@ -27,6 +27,7 @@ public class SyringeJump : MonoBehaviour
     public bool PlayerClose;
     public Animator anim;
     SyringeAI AI;
+    public bool Paused;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +42,19 @@ public class SyringeJump : MonoBehaviour
         MainSpeed = ForwardSpeed;
     }
 
+    private void OnEnable()
+    {
+        GameEvents.OnPauseGame += PauseGame;
+    }
+    private void OnDisable()
+    {
+        GameEvents.OnPauseGame -= PauseGame;
+    }
     // Update is called once per frame
+    void PauseGame(bool paused)
+    {
+        Paused = paused;
+    }
     void Update()
     {
         IsGrounded = Child.GetComponent<GroundCheck>().Grounded;
@@ -106,15 +119,19 @@ public class SyringeJump : MonoBehaviour
     {
         if (Child.GetComponent<GroundCheck>().Grounded == false)
         {
-            anim.ResetTrigger("Grounded");            
-            MyRB.AddRelativeForce(-transform.forward * ForwardSpeed);
-            MyChildRB.AddRelativeForce(-transform.forward * ForwardSpeed);
-            TargetPos = Target.transform.position;
-            ThisPos = transform.position;                                           //Makes Move Forwards when not grounded
-            TargetPos.x = TargetPos.x - ThisPos.x;
-            TargetPos.z = TargetPos.z - ThisPos.z;
-            angle = Mathf.Atan2(TargetPos.x, TargetPos.z) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
+            if(!Paused)
+            {
+                anim.ResetTrigger("Grounded");
+                MyRB.AddRelativeForce(-transform.forward * ForwardSpeed);
+                MyChildRB.AddRelativeForce(-transform.forward * ForwardSpeed);
+                TargetPos = Target.transform.position;
+                ThisPos = transform.position;                                           //Makes Move Forwards when not grounded
+                TargetPos.x = TargetPos.x - ThisPos.x;
+                TargetPos.z = TargetPos.z - ThisPos.z;
+                angle = Mathf.Atan2(TargetPos.x, TargetPos.z) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
+            }
+            
         }
         else
         {
@@ -131,7 +148,7 @@ public class SyringeJump : MonoBehaviour
 
     public void IsTurret()
     {
-        if (Turret)
+        if (Turret && !Paused)
         {
             if (!Jumping)
             {

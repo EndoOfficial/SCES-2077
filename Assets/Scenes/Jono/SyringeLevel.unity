@@ -546,6 +546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SyringeEnemy (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1670,6 +1674,10 @@ PrefabInstance:
     - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_Name
       value: SyringeEnemy (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4225,6 +4233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SyringeEnemy (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4708,14 +4720,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 954595400, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: maxSpread
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 954595400, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: bulletSpread
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7068124799584983970, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4772,8 +4776,7 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5388431547784689757, guid: a0ff428855e419444851f57d3c69b645, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ff428855e419444851f57d3c69b645, type: 3}
 --- !u!1 &1935582526
 GameObject:

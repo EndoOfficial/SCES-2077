@@ -14,20 +14,27 @@ public class EnemyGunSyringe : MonoBehaviour
     private Vector3 OldPlayerDirection;
     private Vector3 bulletDirection;
     public LayerMask playerMask;
-    public float bulletSpread;
+    private float bulletSpread = 0.01f;
     public float maxSpread;
     private float tempSpread;
-    public float attackSpeed;
+    public float RateOfFire;
     public int damage;
-    public float delay;
-
+    public float PositionDelay;
+    public bool Paused;
+    public GroundCheck grounded;
     private void Start()
     {
         player = GameObject.Find("Player");
         anim = GetComponent<Animator>();
         tempSpread = bulletSpread;
         StartCoroutine(Position());
+
+        StartCoroutine(Shoot());
+
+        //grounded = GetComponentInChildren<GroundCheck>().Grounded;
+        
     }
+   
 
     private void FixedUpdate()
     {
@@ -40,64 +47,84 @@ public class EnemyGunSyringe : MonoBehaviour
         //if enemy can see player
         if (canSeePlayerRay = Physics.Raycast(transform.position, playerDirection, out RaycastHit hitinfo))
         {
+            
             if (hitinfo.transform.CompareTag("Player") && !seePlayer)
             {
-                if (GetComponent<SyringeAI>().grounded == false)
-                {
-                    seePlayer = true;
-                    StartCoroutine(Shoot());
-                }
+                seePlayer = true;                
             }
             else if (!hitinfo.transform.CompareTag("Player") && seePlayer)
-            { 
+            {
                 seePlayer = false;
-                bulletSpread = tempSpread;
-                StopAllCoroutines();
-                StartCoroutine(Position());
+                bulletSpread = tempSpread;                         
             }
         }
     }
 
+    private void OnEnable()
+    {
+        GameEvents.OnPauseGame += PauseGame;
+    }
+    private void OnDisable()
+    {
+        GameEvents.OnPauseGame -= PauseGame;
+    }
+    // Update is called once per frame
+    void PauseGame(bool paused)
+    {
+        Paused = paused;
+    }
     //shoot coroutine
     private IEnumerator Shoot()
     {
         yield return new WaitForSecondsRealtime(1f);
         while (true)
         {
-            //randomizes bulletSpread
-            float temp = Random.Range(-bulletSpread, bulletSpread);
-            float temp1 = Random.Range(-bulletSpread, bulletSpread);
-            float temp2 = Random.Range(-bulletSpread, bulletSpread);
-
-            //get the normalized playerDirection
-            bulletDirection = OldPlayerDirection;
-            //applies the random bulletspread to the bullet direction
-            bulletDirection = new Vector3(
-                bulletDirection.x + temp,
-                bulletDirection.y + temp1,
-                bulletDirection.z + temp2);
-
-            //if the ray hits the player
-            if (shootAtPlayerRay = Physics.Raycast(transform.position, bulletDirection, out RaycastHit hitinfo))
+            if (!seePlayer)
             {
-                anim.SetTrigger("Shoot");
-                if (hitinfo.transform.CompareTag("Player"))
-                {
-                    GameEvents.DamagePlayer?.Invoke(damage);
-                }
+                yield return null;
             }
-            //increases spread every shot
-            if (bulletSpread <= maxSpread)
+            if (Paused)
             {
-                bulletSpread += 0.01f;
-            }            
-            yield return new WaitForSecondsRealtime(attackSpeed);            
+                yield return null;
+            }
+            if (!grounded.Grounded && seePlayer)
+            {
+                //randomizes bulletSpread
+                float temp = Random.Range(-bulletSpread, bulletSpread);
+                float temp1 = Random.Range(-bulletSpread, bulletSpread);
+                float temp2 = Random.Range(-bulletSpread, bulletSpread);
+
+                //get the normalized playerDirection
+                bulletDirection = OldPlayerDirection;
+                //applies the random bulletspread to the bullet direction
+                bulletDirection = new Vector3(
+                    bulletDirection.x + temp,
+                    bulletDirection.y + temp1,
+                    bulletDirection.z + temp2);
+
+                //if the ray hits the player
+                if (shootAtPlayerRay = Physics.Raycast(transform.position, bulletDirection, out RaycastHit hitinfo))
+                {
+                    anim.SetTrigger("Shoot");
+                    if (hitinfo.transform.CompareTag("Player"))
+                    {
+                        GameEvents.DamagePlayer?.Invoke(damage);
+                    }
+                }
+                //increases spread every shot
+                if (bulletSpread <= maxSpread)
+                {
+                    bulletSpread += 0.01f;
+                }
+                
+            }
+            yield return new WaitForSecondsRealtime(RateOfFire);
         }
 
     }
     public IEnumerator Position()
     {
-        yield return new WaitForSecondsRealtime(delay);
+        yield return new WaitForSecondsRealtime(PositionDelay);
         OldPlayerDirection = playerDirection;
         StartCoroutine(Position());
     }
