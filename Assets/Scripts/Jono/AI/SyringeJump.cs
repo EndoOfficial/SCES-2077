@@ -137,7 +137,7 @@ public class SyringeJump : MonoBehaviour
         {
             anim.SetTrigger("Grounded");
             FindObjectOfType<AudioManager>().Play("Jump");
-            MyRB.AddForce(transform.up * SpringForce);
+            MyRB.AddForce(new Vector3(Random.Range(-10f,10f),Random.Range(6f,10f), Random.Range(-10f, 10f)) * SpringForce);
             MyRB.velocity = Vector3.zero;                                         // Makes Jump Up
             MyRB.angularVelocity = Vector3.zero;
             Debug.Log("Jump");
@@ -152,7 +152,8 @@ public class SyringeJump : MonoBehaviour
         {
             if (!Jumping)
             {
-                transform.rotation = Quaternion.Euler(Random.Range(-50, 50), 0, Random.Range(-50, 50));
+                GetComponent<YAxisLookAtPlayer>().enabled = false;
+                transform.rotation = Quaternion.Euler(Random.Range(-50, 50), 0, Random.Range(-50, 50));                
                 
             }
             //ChosenAttach = AttachmentPoints[Random.Range(0, AttachmentPoints.Count)];
