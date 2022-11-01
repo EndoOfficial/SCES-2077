@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54df55967258f7a499b87b555642d3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Apartments
+  sceneName: Apartment
   levelName: 
 --- !u!114 &322371323
 MonoBehaviour:

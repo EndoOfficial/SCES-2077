@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24966541, g: 0.27371123, b: 0.33461544, a: 1}
+  m_IndirectSpecularColor: {r: 0.2502128, g: 0.274506, b: 0.33517367, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13236,6 +13236,10 @@ PrefabInstance:
       propertyPath: SceneName
       value: MotherScene
       objectReference: {fileID: 0}
+    - target: {fileID: 8913910300894783249, guid: 2997c6e5b7b4a674bb7d3d930bfe4c12, type: 3}
+      propertyPath: sceneName
+      value: MotherScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2997c6e5b7b4a674bb7d3d930bfe4c12, type: 3}
 --- !u!43 &1000774500
@@ -16986,6 +16990,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 571373751}
+    - target: {fileID: 5003964179567099197, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
 --- !u!1 &1386033516
@@ -20958,7 +20966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54df55967258f7a499b87b555642d3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: PillArena
+  sceneName: PillArena
+  levelName: 
 --- !u!4 &1774046219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8312935496435090861, guid: 2997c6e5b7b4a674bb7d3d930bfe4c12, type: 3}
@@ -24455,6 +24464,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8913910300894783249, guid: 2997c6e5b7b4a674bb7d3d930bfe4c12, type: 3}
       propertyPath: SceneName
+      value: MrCigsScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913910300894783249, guid: 2997c6e5b7b4a674bb7d3d930bfe4c12, type: 3}
+      propertyPath: sceneName
       value: MrCigsScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []

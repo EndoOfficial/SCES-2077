@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Zach/MainMenu.unity
+    guid: 2c186ed69ca7db74ab9fc52164f5f83d
+  - enabled: 1
     path: Assets/Scenes/Zach/LevelMenu.unity
     guid: 78f585d028df9224eabbe45434d41fdc
   - enabled: 1
