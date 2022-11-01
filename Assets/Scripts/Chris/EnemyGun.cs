@@ -20,15 +20,29 @@ public class EnemyGun : MonoBehaviour
     public float attackSpeed;
     public int damage;
     public float delay;
+    public bool Paused;
 
     private void Start()
     {
+        StartCoroutine(Shoot());
         player = GameObject.Find("Player");
         anim = GetComponent<Animator>();
         tempSpread = bulletSpread;
         StartCoroutine(Position());
     }
+    private void OnEnable()
+    {
+        GameEvents.OnPauseGame += PauseGame;
+    }
+    private void OnDisable()
+    {
+        GameEvents.OnPauseGame -= PauseGame;
+    }
 
+    void PauseGame(bool paused)
+    {
+        Paused = paused;
+    }
     private void FixedUpdate()
     {
         //gets player direction
@@ -42,18 +56,12 @@ public class EnemyGun : MonoBehaviour
         {
             if (hitinfo.transform.CompareTag("Player") && !seePlayer)
             {
-                
-                    seePlayer = true;
-                    StartCoroutine(Shoot());
-                
-                
+                seePlayer = true;
             }
             else if (!hitinfo.transform.CompareTag("Player") && seePlayer)
-            { 
+            {
                 seePlayer = false;
                 bulletSpread = tempSpread;
-                StopAllCoroutines();
-                StartCoroutine(Position());
             }
         }
     }
@@ -64,36 +72,38 @@ public class EnemyGun : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         while (true)
         {
-            //randomizes bulletSpread
-            float temp = Random.Range(-bulletSpread, bulletSpread);
-            float temp1 = Random.Range(-bulletSpread, bulletSpread);
-            float temp2 = Random.Range(-bulletSpread, bulletSpread);
-
-            //get the normalized playerDirection
-            bulletDirection = OldPlayerDirection.normalized;
-            //applies the random bulletspread to the bullet direction
-            bulletDirection = new Vector3(
-                bulletDirection.x + temp,
-                bulletDirection.y + temp1,
-                bulletDirection.z + temp2);
-
-            //if the ray hits the player
-            if (shootAtPlayerRay = Physics.Raycast(transform.position, bulletDirection, out RaycastHit hitinfo))
+            if(seePlayer && !Paused)
             {
-                anim.SetTrigger("Shoot");
-                if (hitinfo.transform.CompareTag("Player"))
+                //randomizes bulletSpread
+                float temp = Random.Range(-bulletSpread, bulletSpread);
+                float temp1 = Random.Range(-bulletSpread, bulletSpread);
+                float temp2 = Random.Range(-bulletSpread, bulletSpread);
+
+                //get the normalized playerDirection
+                bulletDirection = OldPlayerDirection.normalized;
+                //applies the random bulletspread to the bullet direction
+                bulletDirection = new Vector3(
+                    bulletDirection.x + temp,
+                    bulletDirection.y + temp1,
+                    bulletDirection.z + temp2);
+
+                //if the ray hits the player
+                if (shootAtPlayerRay = Physics.Raycast(transform.position, bulletDirection, out RaycastHit hitinfo))
                 {
-                    GameEvents.DamagePlayer?.Invoke(damage);
+                    anim.SetTrigger("Shoot");
+                    if (hitinfo.transform.CompareTag("Player"))
+                    {
+                        GameEvents.DamagePlayer?.Invoke(damage);
+                    }
                 }
+                //increases spread every shot
+                if (bulletSpread <= maxSpread)
+                {
+                    bulletSpread += 0.01f;
+                }
+                yield return new WaitForSecondsRealtime(attackSpeed);
             }
-            //increases spread every shot
-            if (bulletSpread <= maxSpread)
-            {
-                bulletSpread += 0.01f;
-            }            
-            yield return new WaitForSecondsRealtime(attackSpeed);            
         }
-
     }
     public IEnumerator Position()
     {

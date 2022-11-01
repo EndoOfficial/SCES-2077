@@ -30,9 +30,6 @@ public class EnemyGunSyringe : MonoBehaviour
         StartCoroutine(Position());
 
         StartCoroutine(Shoot());
-
-        //grounded = GetComponentInChildren<GroundCheck>().Grounded;
-        
     }
    
 
