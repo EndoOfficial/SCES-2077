@@ -76,15 +76,16 @@ public class EnemyGunSyringe : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         while (true)
         {
-            if (!seePlayer)
-            {
-                yield return null;
-            }
-            if (Paused)
-            {
-                yield return null;
-            }
-            if (!grounded.Grounded && seePlayer)
+            //if (!seePlayer)
+            //{
+            //    yield return null;
+            //}
+            //if (Paused)
+            //{
+            //    yield return null;
+
+            //}
+            if (!grounded.Grounded && seePlayer && !Paused)
             {
                 //randomizes bulletSpread
                 float temp = Random.Range(-bulletSpread, bulletSpread);

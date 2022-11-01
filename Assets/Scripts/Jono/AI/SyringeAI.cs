@@ -48,7 +48,7 @@ public class SyringeAI : MonoBehaviour
     {
         if (other.tag == "Roof" && grounded)
         {
-            if (Random.Range(0, 100) < 25 && !Turretable)
+            if (Random.Range(0, 100) < 100 && !Turretable)
             {
                 Turretable = true;
                 TurretBool.Turret = true;
