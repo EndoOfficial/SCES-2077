@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     public float KillCount;
     public float ItemsCollected;
+    public float GameWinCollectCount;
 
     public GameObject MrConcaine;
     public Transform CocaineSpawn;
@@ -25,7 +26,17 @@ public class GameController : MonoBehaviour
             {
                 Instantiate(MrConcaine, CocaineSpawn);
             }
+
+            else
+            {
+                
+            }
             
         }
+        if(ItemsCollected >= GameWinCollectCount)
+        {
+            GameEvents.LevelWin?.Invoke();
+        }
+        
     }
 }

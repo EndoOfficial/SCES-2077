@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class FacelessController : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class FacelessController : MonoBehaviour
     new AudioSource audio;
     public float Volume;
 
+    public NavMeshAgent NavMesh;
+
     public GameObject Player;
     public Rigidbody MyRb;
-    public float LungeSpeed;
+    public float Speed;
+    public bool moveTowards;
 
     public bool CanLunge;
 
@@ -30,8 +34,11 @@ public class FacelessController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
-        
+    {
+        if (moveTowards)
+        {
+            transform.Translate(Vector3.forward* Time.deltaTime);
+        }
     }
     private void OnDestroy()
     {
@@ -60,7 +67,7 @@ public class FacelessController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject);            
             damage = 10;
             GameEvents.DamagePlayer(damage);
             
@@ -70,7 +77,9 @@ public class FacelessController : MonoBehaviour
     {
         CanLunge = false;
         yield return new WaitForSeconds(5);
-        MyRb.isKinematic = false;
-        MyRb.AddForce((transform.forward) * LungeSpeed);
+        moveTowards = true;
+        Debug.Log("Lunge");
+        //MyRb.isKinematic = false;
+        //MyRb.AddForce((transform.forward) * LungeSpeed);
     }    
 }

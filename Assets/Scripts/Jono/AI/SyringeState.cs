@@ -24,8 +24,7 @@ public class SyringeState
     protected Rigidbody rb;
 
 
-    float VisDist = 10.0f;
-    float VisAngle = 30.0f;
+    
 
     public SyringeState (GameObject _npc,Animator _anim, GameObject _player)
     {

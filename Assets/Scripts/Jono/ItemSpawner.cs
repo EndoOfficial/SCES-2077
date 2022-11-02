@@ -27,12 +27,12 @@ public class ItemSpawner : MonoBehaviour
 
     public IEnumerator SpawnItem()
     {
-        //CanSpawn = false;
+        CanSpawn = false;
         ItemToSpawn = ItemsToSpawn[Random.Range(0, ItemsToSpawn.Count)];
         SpawnPoint = SpawnPoints[Random.Range(0, SpawnPoints.Count)];
         Instantiate(ItemToSpawn, SpawnPoint);
         ItemsToSpawn.Remove(ItemToSpawn);
         yield return new WaitForSeconds(20);
-        CanSpawn = false;
+        
     }
 }

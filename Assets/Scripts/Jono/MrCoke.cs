@@ -6,7 +6,7 @@ public class MrCoke : MonoBehaviour
 {
     public GameObject ItemSpawner;
 
-    public new AudioClip SpawnNoise;
+    public AudioClip SpawnNoise;
     new AudioSource audio;
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,7 @@ public class MrCoke : MonoBehaviour
         yield return new WaitForSeconds(5);
         //Instantiate(ItemSpawner);
         ItemSpawner = GameObject.FindGameObjectWithTag("ItemSpawner");
-        GetComponent<ItemSpawner>().CanSpawn = true;
+        ItemSpawner.GetComponent<ItemSpawner>().CanSpawn = true;
         Destroy(gameObject);
 
     }
