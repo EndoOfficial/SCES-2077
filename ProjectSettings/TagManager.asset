@@ -23,6 +23,7 @@ TagManager:
   - EnemyCoke
   - Wheat
   - ItemSpawner
+  - CocainePuff
   layers:
   - Default
   - TransparentFX
