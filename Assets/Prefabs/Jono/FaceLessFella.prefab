@@ -128,7 +128,7 @@ MonoBehaviour:
   MyRb: {fileID: 2532741431895804798}
   Speed: 100
   moveTowards: 0
-  Anim: {fileID: 2065207339150407480}
+  Anim: {fileID: 359679531442265646}
   CanLunge: 1
   GameController: {fileID: 4639332557990989947, guid: a8d686c067c22114a9e3940b3f5eb339, type: 3}
 --- !u!82 &-5776644775041538086
@@ -324,7 +324,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3186257078508263964}
   - component: {fileID: 7731737967643166432}
-  - component: {fileID: 2065207339150407480}
   m_Layer: 10
   m_Name: SpriteRenderer
   m_TagString: Untagged
@@ -399,26 +398,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2065207339150407480
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7873632057661052070}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 346e52720e59ca149a1240de30640b18, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5382732114438375041
 PrefabInstance:
   m_ObjectHideFlags: 0
