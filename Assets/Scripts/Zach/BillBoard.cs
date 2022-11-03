@@ -5,6 +5,10 @@ using UnityEngine;
 public class BillBoard : MonoBehaviour
 {
     public Transform camTransform; //Camera's position
+    private void Start()
+    {
+        camTransform = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Transform>();
+    }
 
     void Update()
     {
