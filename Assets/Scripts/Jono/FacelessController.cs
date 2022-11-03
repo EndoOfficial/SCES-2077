@@ -16,6 +16,7 @@ public class FacelessController : MonoBehaviour
     public Rigidbody MyRb;
     public float Speed;
     public bool moveTowards;
+    public Animator Anim;
 
     public bool CanLunge;
 
@@ -37,6 +38,7 @@ public class FacelessController : MonoBehaviour
     {
         if (moveTowards)
         {
+            Anim.SetTrigger("Lunge");
             transform.Translate(Vector3.forward* Time.deltaTime);
         }
     }
