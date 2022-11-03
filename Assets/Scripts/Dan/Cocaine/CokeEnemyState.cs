@@ -8,7 +8,7 @@ public class CokeEnemyState : State
     public COKEENEMYSTATE name;
     public enum COKEENEMYSTATE
     {
-        MOVE,ATTACK,DEAD
+        PATROL,MEELEE
     }
 
     public CokeEnemyState(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)

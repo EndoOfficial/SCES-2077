@@ -10,34 +10,22 @@ public class Cocaine : MonoBehaviour
     public int damage;
     public bool hit;
     public ParticleSystem cokeParticle;
-    public bool particleActivated;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-
+    public bool particleActivated = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("EnemyCoke"))
         {
             particleActivated = true;
-            cokeParticle.gameObject.SetActive(true);
+            cokeParticle.Play();
         }
         if (other.gameObject.CompareTag("Player") && particleActivated)
         {
-
-
             if (Physics.CheckSphere(transform.position, radius, Player))
             {
                 if (!hit)
                 {
                     hit = true;
-
                     GameEvents.DamagePlayer?.Invoke(damage);
                 }
             }

@@ -41,4 +41,6 @@ public static class GameEvents
 
     public delegate void OnGameOverDelegate(bool gameover);
     public static OnGameOverDelegate OnGameOver;
+
+    public static Action CokeTarget;
 }

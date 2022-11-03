@@ -17,7 +17,7 @@ public class EnemyCokeAi : MonoBehaviour
         player = GameObject.Find("Player");
         agent = this.GetComponent<NavMeshAgent>();
         anim = this.GetComponent<Animator>();
-        currentState = new Rage1(gameObject, agent, anim, player);
+        //currentState = new Patrol(gameObject, agent, anim, player);
     }
 
     // Update is called once per frame

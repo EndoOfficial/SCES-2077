@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class Rage1 : CiggsState
 {
-
     MrCiggs ciggs;
     EnemyGun shot;
     
@@ -34,8 +33,6 @@ public class Rage1 : CiggsState
             nextState = new Rage2(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }
-        
-
     }
 
     public override void Exit()
