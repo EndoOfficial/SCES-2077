@@ -43,4 +43,6 @@ public static class GameEvents
     public static OnGameOverDelegate OnGameOver;
 
     public static Action CokeTarget;
+
+    public static Action DoorClose; //pt level
 }
