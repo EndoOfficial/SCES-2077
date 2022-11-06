@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25076213, g: 0.2748683, b: 0.3354764, a: 1}
+  m_IndirectSpecularColor: {r: 0.25071365, g: 0.2751636, b: 0.33572862, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6031,6 +6031,56 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &474386538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474386540}
+  - component: {fileID: 474386539}
+  m_Layer: 0
+  m_Name: Apartment States
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &474386539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474386538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6db1ced7d2cc9e45aedbb19178165ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mum1: {fileID: 995447480}
+  Mum2: {fileID: 0}
+  Pill1: {fileID: 1774046213}
+  Pill2: {fileID: 0}
+  Cigs1: {fileID: 916010446694469168}
+  Cigs2: {fileID: 0}
+--- !u!4 &474386540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474386538}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480598160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5523100056324303455, guid: a79b535817b86fa45b637ad7c080e6ec, type: 3}
@@ -13242,6 +13292,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2997c6e5b7b4a674bb7d3d930bfe4c12, type: 3}
+--- !u!1 &995447480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2485004147525982783, guid: 2997c6e5b7b4a674bb7d3d930bfe4c12, type: 3}
+  m_PrefabInstance: {fileID: 995447479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1000774500
 Mesh:
   m_ObjectHideFlags: 0
@@ -24472,6 +24527,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2997c6e5b7b4a674bb7d3d930bfe4c12, type: 3}
+--- !u!1 &916010446694469168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2485004147525982783, guid: 2997c6e5b7b4a674bb7d3d930bfe4c12, type: 3}
+  m_PrefabInstance: {fileID: 916010446694469167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1201586832316720225
 GameObject:
   m_ObjectHideFlags: 0

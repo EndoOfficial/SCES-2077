@@ -24,7 +24,6 @@ public class DetectWheat : MonoBehaviour
 
     public void FindWheat()
     {
-        interval = 1;
         StartCoroutine(Repeat());
     }
 
