@@ -9,9 +9,9 @@ public class Gun : MonoBehaviour
     public float impactForce = 30f;
     public float fireRate = 15f;
     private float nextTimeToFire = 0;
-    public LayerMask EnemyLayer;
     public Animator anim;
     public GameObject bulletHit;
+    public GameObject enemyHit;
 
     public void Update()
     {
@@ -29,17 +29,24 @@ public class Gun : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Shooting");
         RaycastHit hit;
 
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, EnemyLayer))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
         {
-            //damage enemy Event
-            GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject); //This passes though a damage and the object that GET'S HIT
-            Instantiate(bulletHit, hit.point, gameObject.transform.rotation);
-
-            WeakPoints target = hit.transform.GetComponent<WeakPoints>();
-            if (target != null)
+            if (hit.transform.CompareTag("Enemy"))
             {
-                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.parent.gameObject);
-                target.Shot();
+                //damage enemy Event
+                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject); //This passes though a damage and the object that GET'S HIT
+                Instantiate(enemyHit, hit.point, fpsCam.transform.rotation);
+
+                WeakPoints target = hit.transform.GetComponent<WeakPoints>();
+                if (target != null)
+                {
+                    GameEvents.DamageEnemy?.Invoke(damage, hit.transform.parent.gameObject);
+                    target.Shot();
+                }
+            }
+            else
+            {
+                Instantiate(bulletHit, hit.point + (hit.normal * .01f), Quaternion.FromToRotation(Vector3.forward, hit.normal));
             }
         }
     }

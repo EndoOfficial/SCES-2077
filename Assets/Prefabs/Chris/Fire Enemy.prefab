@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 2001719128921599934}
   - component: {fileID: 2755120432055071399}
   - component: {fileID: -7017663482807270724}
+  - component: {fileID: 3220335970862893622}
+  - component: {fileID: 7808737524930748934}
   m_Layer: 10
   m_Name: Fire Enemy
   m_TagString: Enemy
@@ -185,7 +187,36 @@ MonoBehaviour:
   maxHealth: 1
   Canvas: {fileID: 0}
   slider: {fileID: 0}
-  IsDead: 1
+  canDie: 1
+--- !u!114 &3220335970862893622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3204511869751107905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb661745a18dba4ea462e57d20b4d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  FireRate: 3
+  fireBall: {fileID: 3008580272504976746, guid: a784a2b8d8386434082b9b09d34adbfb, type: 3}
+--- !u!114 &7808737524930748934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3204511869751107905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08283a4d6cf6340a0111e00945d6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 5
+  damage: 0
 --- !u!1 &4193490524991941521
 GameObject:
   m_ObjectHideFlags: 0

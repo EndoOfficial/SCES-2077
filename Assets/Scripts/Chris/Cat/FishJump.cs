@@ -11,12 +11,14 @@ public class FishJump : MonoBehaviour
     public Vector3 jumpDirection;
     private Animator anim;
     private float temp;
+    private AOE aoe;
 
     private void Start()
     {
         //get components
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        aoe = GetComponent<AOE>();
         temp = waitTime;
     }
 
@@ -25,6 +27,7 @@ public class FishJump : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             grounded = true;
+            aoe.aoe();
             StartCoroutine(Wait()); // start co-routine
         }
     }

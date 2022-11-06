@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 661894199792648634}
   - component: {fileID: -5649162818579652904}
   - component: {fileID: -1195709764282646583}
+  - component: {fileID: -184083816775416110}
   m_Layer: 10
   m_Name: Wisp
   m_TagString: Enemy
@@ -139,6 +140,20 @@ MonoBehaviour:
   Canvas: {fileID: 0}
   slider: {fileID: 0}
   canDie: 1
+--- !u!114 &-184083816775416110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246313394264724060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08283a4d6cf6340a0111e00945d6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 2
+  damage: 1
 --- !u!1 &6402070920795909432
 GameObject:
   m_ObjectHideFlags: 0

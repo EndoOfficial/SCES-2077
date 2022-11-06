@@ -17,9 +17,14 @@ public class FireNado : FireState
         rb = npc.GetComponent<Rigidbody>();
         spawner = npc.GetComponent<WispSpawner>();
         timer = npc.GetComponent<FireTimer>();
+        prox = npc.GetComponent<ProximityDamage>();
+        shoot = npc.transform.GetComponentInChildren<FireBallShoot>();
 
         anim.SetTrigger("BecomeTornado");
         spawner.startSpawn();
+        shoot.ShootStop();
+        prox.distance = 20;
+        prox.damage = 10;
         npc.transform.LeanScale(new Vector3(6, 6, 6), 1);
         var moveDirection = (npc.transform.position - player.transform.position).normalized;
         var moveTarget = npc.transform.position + (moveDirection*20);

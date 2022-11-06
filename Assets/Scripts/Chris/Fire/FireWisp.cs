@@ -17,10 +17,15 @@ public class FireWisp : FireState
         rb = npc.GetComponent<Rigidbody>();
         spawner = npc.GetComponent<WispSpawner>();
         timer = npc.GetComponent<FireTimer>();
+        prox = npc.GetComponent<ProximityDamage>();
+        shoot = npc.transform.GetComponentInChildren<FireBallShoot>();
 
         anim.SetTrigger("BecomeWisp");
+        shoot.ShootStop();
+        prox.distance = 2;
+        prox.damage = 1;
         npc.transform.LeanScale(new Vector3(1, 1, 1), 1);
-        agent.speed = 5f;
+        agent.speed = 8f;
         wheat.FindWheat();
         base.Enter();
     }

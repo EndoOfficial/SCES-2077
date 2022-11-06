@@ -274,11 +274,9 @@ MonoBehaviour:
   fpsCam: {fileID: 7771353499210770955}
   impactForce: 30
   fireRate: 15
-  EnemyLayer:
-    serializedVersion: 2
-    m_Bits: 1024
   anim: {fileID: 0}
   bulletHit: {fileID: 5172426982756091155, guid: e48994cbea4aef14c98eb6b3d817266d, type: 3}
+  enemyHit: {fileID: 2666401237946873333, guid: d387a24b6f6c8164985b510125701687, type: 3}
 --- !u!114 &4520434914419971837
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,18 +17,23 @@ public class FireBall : FireState
         rb = npc.GetComponent<Rigidbody>();
         spawner = npc.GetComponent<WispSpawner>();
         timer = npc.GetComponent<FireTimer>();
+        prox = npc.GetComponent<ProximityDamage>();
+        shoot = npc.transform.GetComponentInChildren<FireBallShoot>();
 
         anim.SetTrigger("BecomeFireBall");
         spawner.stopSpawn();
+        prox.distance = 10;
+        prox.damage = 5;
         npc.transform.LeanScale(new Vector3(2, 2, 2), 1);
         agent.speed = 3.5f;
         timer.StartTimer();
+        shoot.ShootStart();
         base.Enter();
     }
 
     public override void Update()
     {
-        if (Vector3.Distance(npc.transform.position, player.transform.position) >= 10)
+        if (Vector3.Distance(npc.transform.position, player.transform.position) >= 15)
         {
             agent.isStopped = false;
             agent.destination = player.transform.position;
@@ -36,7 +41,7 @@ public class FireBall : FireState
         else
         {
             agent.isStopped = true;
-            npc.transform.RotateAround(player.transform.position, Vector3.up, 0.1f);
+            npc.transform.RotateAround(player.transform.position, Vector3.up, 0.07f);
         }
 
         if(timer.timeDone)

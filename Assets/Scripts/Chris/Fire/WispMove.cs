@@ -13,6 +13,7 @@ public class WispMove : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player");
+        agent.speed = 8;
         StartCoroutine(repeat());
     }
 

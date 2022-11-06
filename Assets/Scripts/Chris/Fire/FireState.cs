@@ -9,7 +9,8 @@ public class FireState : State
     protected FireTimer timer;
     protected DetectWheat wheat;
     protected WispSpawner spawner;
-
+    protected FireBallShoot shoot;
+    protected ProximityDamage prox;
     public enum FIRESTATE
     {
         Wisp, Fire, Tornado
