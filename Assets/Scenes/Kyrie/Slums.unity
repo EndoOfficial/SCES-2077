@@ -283,7 +283,7 @@ MonoBehaviour:
   - {fileID: 1235784171}
   - {fileID: 454695890}
   - {fileID: 1404582459}
-  CycleDelay: 0
+  CycleDelay: 4
 --- !u!1 &347377047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1394401253255230960, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}

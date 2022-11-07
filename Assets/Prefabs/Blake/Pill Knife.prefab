@@ -37,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 405892069477294195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.752769, y: 1.16, z: -35.565804}
-  m_LocalScale: {x: 0.36, y: 0.36, z: 0.36}
+  m_LocalScale: {x: 0.48729602, y: 0.48729602, z: 0.48729602}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1734927629170913702}
@@ -104,10 +104,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.7187188
+  m_Height: 1.6258428
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.07344036, y: -0.18707852, z: 0}
 --- !u!114 &405892069477294092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
   maxHealth: 10
   Canvas: {fileID: 0}
   slider: {fileID: 0}
-  IsDead: 0
+  canDie: 1
 --- !u!95 &533445739267195911
 Animator:
   serializedVersion: 4

@@ -25,9 +25,9 @@ public class Mrcoke2 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("CocainePuff"))
         {
-            Puffed = true;
-            other.gameObject.tag = ("Untagged");
-            GameEvents.CokeTarget?.Invoke();
+            Puffed = true; // for states
+            other.gameObject.tag = ("Untagged"); // Ensures that the patch can't be targeted
+            GameEvents.CokeTarget?.Invoke(); // event to retarget if need be
         }
     }
     private void OnEnable()
@@ -40,16 +40,16 @@ public class Mrcoke2 : MonoBehaviour
     }
     void Retarget()
     {
-        if (target.tag != ("CocainePuff"))
+        if (target.tag != ("CocainePuff")) // first checks if the current target is no longer a valid target
         {
-            StartCoroutine(GetTargets());
+            StartCoroutine(GetTargets()); // starts the retargetting coroutine
         }
     }
     public IEnumerator GetTargets()
     {
-        yield return new WaitForSeconds(AnimTime);
-        targets = GameObject.FindGameObjectsWithTag("CocainePuff");
-        targetIndex = Random.Range(0, targets.Length);
-        target = targets[targetIndex];
+        yield return new WaitForSeconds(AnimTime); // waits until the set time (animation time)
+        targets = GameObject.FindGameObjectsWithTag("CocainePuff"); // re-gets the places that can be puffed in
+        targetIndex = Random.Range(0, targets.Length); // re-sets the target array
+        target = targets[targetIndex]; // gets a new target
     }
 }
