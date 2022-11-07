@@ -15321,11 +15321,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: health
-      value: 20
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: pill.Array.data[0]
@@ -16936,11 +16936,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: health
-      value: 20
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: pill.Array.data[0]
@@ -17791,11 +17791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: health
-      value: 20
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: pill.Array.data[0]
@@ -18916,11 +18916,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: health
-      value: 20
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6695048194844847527, guid: 3f1c4eeef8e49f5438dd5fdabd54528e, type: 3}
       propertyPath: pill.Array.data[0]

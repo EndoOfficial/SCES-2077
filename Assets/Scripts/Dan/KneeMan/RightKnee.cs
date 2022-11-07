@@ -20,7 +20,8 @@ public class RightKnee : GruntState
         Grunt = npc.GetComponent<Grunts>();
         head = npc.GetComponentInChildren<HeadShot>();
        
-        Grunt.speedEffect = 0.5f;
+        Grunt.speedEffect = 0f;
+        Grunt.damage = 0;
         base.Enter();
     }
 

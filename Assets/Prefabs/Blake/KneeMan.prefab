@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 971247656939228641}
   m_Layer: 0
   m_Name: LeftKnee
-  m_TagString: LeftKnee
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 1672559691}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Head
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 971247657457424101}
   m_Layer: 0
   m_Name: RightKnee
-  m_TagString: RightKnee
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   maxHealth: 200
   Canvas: {fileID: 971247657685590711}
   slider: {fileID: 971247657250107173}
-  IsDead: 1
+  canDie: 1
 --- !u!114 &971247658119941919
 MonoBehaviour:
   m_ObjectHideFlags: 0

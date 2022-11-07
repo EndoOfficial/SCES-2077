@@ -15,19 +15,19 @@ public class WeakPoints : MonoBehaviour
 
     public void Shot()
     {
-        if (CompareTag("LeftKnee"))
+        if (name == "LeftKnee")
         {
             Head.left = true;
             gameObject.SetActive(false);
         }
 
-        if (CompareTag("RightKnee"))
+        if (name == "RightKnee")
         {
             Head.right = true;
             gameObject.SetActive(false);
         }
 
-        if  (Head.head && CompareTag("Head"))
+        if  (Head.head && name == ("Head"))
         {
             headShot = true;
         }
