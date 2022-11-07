@@ -44,6 +44,10 @@ public class Gun : MonoBehaviour
                     target.Shot();
                 }
             }
+            else if (hit.transform.CompareTag("Player"))
+            {
+                return;
+            }
             else
             {
                 Instantiate(bulletHit, hit.point + (hit.normal * .01f), Quaternion.FromToRotation(Vector3.forward, hit.normal));
