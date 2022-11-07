@@ -8,7 +8,7 @@ public abstract class GameAudioClip
 {
     public AudioClip audioClip;
 
-    public bool Loop= false;
+    public bool Loop = false;
     public float Pitch = 1f;
     public float Volume = 1f;
 

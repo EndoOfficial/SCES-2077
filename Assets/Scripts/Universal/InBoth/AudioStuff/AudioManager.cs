@@ -5,12 +5,11 @@ using System.Linq;
 
 public class AudioManager : MonoBehaviour
 {
-    public UniversalLibrary UniversalaudioLibrary;
-    public SlumsLibrary SlumsaudioLibrary;
-    public ApartmentLibrary ApartmentaudioLibrary;
-    public RuralLibrary RuralaudioLibrary;
-    public CorporateLibrary CorporateaudioLibrary;
-    public Sound[] sounds;
+    public UniversalAudioLibrary UniversalAudioLibrary;
+    public SlumsAudioLibrary SlumsAudioLibrary;
+    public ApartmentAudioLibrary ApartmentAudioLibrary;
+    public RuralAudioLibrary RuralAudioLibrary;
+    public CorporateAudioLibrary CorporateAudioLibrary;
     // Get the music clips you need for each game you can add more to the library when you need them,
     public enum UniversalClipTags
     {
@@ -21,33 +20,21 @@ public class AudioManager : MonoBehaviour
     }
     public enum SlumsClipTags
     {
-        Gunfire,
-        PlayerHurt,
-        PlayerJump,
-        PlayerWalk
+
     }
     
     public enum ApartmentClipTags
     {
-        Gunfire,
-        PlayerHurt,
-        PlayerJump,
-        PlayerWalk
+
     }
     
     public enum CorporateClipTags
     {
-        Gunfire,
-        PlayerHurt,
-        PlayerJump,
-        PlayerWalk
+
     }
     public enum RuralClipTags
     {
-        Gunfire,
-        PlayerHurt,
-        PlayerJump,
-        PlayerWalk
+
     }
 
     public void OnEnable()
@@ -70,7 +57,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        UniversalAudioClip libraryClip = UniversalaudioLibrary.audioClips.FirstOrDefault(clip => clip.UniversalClipTag == clipTag);
+        UniversalAudioClip libraryClip = UniversalAudioLibrary.audioClips.FirstOrDefault(clip => clip.UniversalClipTag == clipTag);
 
         libraryClip.PlayClip(source, libraryClip.audioClip, libraryClip.Loop, libraryClip.Pitch, libraryClip.Volume);
 
@@ -82,7 +69,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("No Audio Source");
             return;
         }
-        SlumsAudioClip libraryClip = SlumsaudioLibrary.audioClips.FirstOrDefault(clip => clip.SlumsClipTag == clipTag);
+        SlumsAudioClip libraryClip = SlumsAudioLibrary.audioClips.FirstOrDefault(clip => clip.SlumsClipTag == clipTag);
 
         libraryClip.PlayClip(source, libraryClip.audioClip, libraryClip.Loop, libraryClip.Pitch, libraryClip.Volume);
     }
@@ -94,7 +81,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("No Audio Source");
             return;
         }
-        ApartmentAudioClip libraryClip = ApartmentaudioLibrary.audioClips.FirstOrDefault(clip => clip.ApartmentClipTag == clipTag);
+        ApartmentAudioClip libraryClip = ApartmentAudioLibrary.audioClips.FirstOrDefault(clip => clip.ApartmentClipTag == clipTag);
 
         libraryClip.PlayClip(source, libraryClip.audioClip, libraryClip.Loop, libraryClip.Pitch, libraryClip.Volume);
     }
@@ -106,7 +93,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("No Audio Source");
             return;
         }
-        CorporateAudioClip libraryClip = CorporateaudioLibrary.audioClips.FirstOrDefault(clip => clip.CorporateClipTag == clipTag);
+        CorporateAudioClip libraryClip = CorporateAudioLibrary.audioClips.FirstOrDefault(clip => clip.CorporateClipTag == clipTag);
 
         libraryClip.PlayClip(source, libraryClip.audioClip, libraryClip.Loop, libraryClip.Pitch, libraryClip.Volume);
     }
@@ -118,7 +105,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("No Audio Source");
             return;
         }
-        RuralAudioClip libraryClip = RuralaudioLibrary.audioClips.FirstOrDefault(clip => clip.RuralClipTag == clipTag);
+        RuralAudioClip libraryClip = RuralAudioLibrary.audioClips.FirstOrDefault(clip => clip.RuralClipTag == clipTag);
 
         libraryClip.PlayClip(source, libraryClip.audioClip, libraryClip.Loop, libraryClip.Pitch, libraryClip.Volume);
     }
