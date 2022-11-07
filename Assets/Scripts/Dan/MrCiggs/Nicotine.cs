@@ -6,17 +6,20 @@ public class Nicotine : MonoBehaviour
 {
     public Collider Col;
     Rigidbody rb;
+    AudioSource audioSource;
     private float rage = -5f;
 
     private void Start()
     {
+         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
     }
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Pickup"))
         {
-            FindObjectOfType<AudioManager>().Play("Upgrade");
+            //GameEvents.OnplayAudio?.Invoke(audioSource, AudioManager.ClipTags.NicotinePickUp);
+            //FindObjectOfType<AudioManager>().Play("Upgrade");
             GameEvents.Nicotine?.Invoke();
             GameEvents.RageIncrease?.Invoke(rage);
             Destroy(gameObject);

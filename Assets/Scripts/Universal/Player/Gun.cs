@@ -12,7 +12,12 @@ public class Gun : MonoBehaviour
     public Animator anim;
     public GameObject bulletHit;
     public GameObject enemyHit;
+    AudioSource audioSource;
 
+    public void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void Update()
     {
         //checks for mouse1 and nextTimeToFire
@@ -26,7 +31,7 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         anim.SetTrigger("Shoot");
-        FindObjectOfType<AudioManager>().Play("Shooting");
+        GameEvents.OnUniversalplayAudio?.Invoke(audioSource,AudioManager.UniversalClipTags.Gunfire);
         RaycastHit hit;
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))

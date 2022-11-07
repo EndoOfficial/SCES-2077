@@ -74,7 +74,7 @@ public class MrCiggs : MonoBehaviour
     //}
     public void Raging()
     {
-        FindObjectOfType<AudioManager>().Play("Rage");
+        //FindObjectOfType<AudioManager>().Play("Rage");
         rage += RageRate * Time.deltaTime;
         GameEvents.RageIncrease?.Invoke(rage);
         if (rage >= 100)

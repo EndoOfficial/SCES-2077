@@ -28,6 +28,7 @@ public class SyringeJump : MonoBehaviour
     public Animator anim;
     SyringeAI AI;
     public bool Paused;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -102,7 +103,7 @@ public class SyringeJump : MonoBehaviour
     {
         if (collision.collider.tag == "Roof" && AI.JumpToRoof)
         {
-            FindObjectOfType<AudioManager>().Play("Impact");
+            //GameEvents.OnplayAudio?.Invoke(audioSource,AudioManager.ClipTags.SyringeJump);
             transform.SetParent(collision.gameObject.transform);
             MyRB.isKinematic = true;
             MyRB.useGravity = false;
@@ -136,7 +137,7 @@ public class SyringeJump : MonoBehaviour
         else
         {
             anim.SetTrigger("Grounded");
-            FindObjectOfType<AudioManager>().Play("Jump");
+            //GameEvents.OnplayAudio?.Invoke(audioSource,AudioManager.ClipTags.Jump);
             MyRB.AddForce(new Vector3(Random.Range(-10f,10f),Random.Range(6f,10f), Random.Range(-10f, 10f)) * SpringForce);
             MyRB.velocity = Vector3.zero;                                         // Makes Jump Up
             MyRB.angularVelocity = Vector3.zero;

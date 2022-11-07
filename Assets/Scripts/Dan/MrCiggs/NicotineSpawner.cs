@@ -16,11 +16,13 @@ public class NicotineSpawner : MonoBehaviour
     public Vector3 RightWallPosition;
     public Vector3 TopWallPosition;
     public Vector3 BotWallPosition;
+    AudioSource audioSource;
    
     private Vector3 RandomSpawnPostion => new Vector3(UnityEngine.Random.Range(LeftWallPosition.x, RightWallPosition.x), 15f, UnityEngine.Random.Range(TopWallPosition.z, BotWallPosition.z));
     public GameObject NicotinesSpawner;
     public void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         MrciggsBegin();
     }
     public void OnEnable()
@@ -45,7 +47,7 @@ public class NicotineSpawner : MonoBehaviour
     {
         while (true)
         {
-            FindObjectOfType<AudioManager>().Play("Spawn");
+            //GameEvents.OnplayAudio?.Invoke(audioSource, AudioManager.ClipTags.NicotinePatchSpawn);
             yield return new WaitForSeconds(WaitTime);
             Vector3 newPosition;
             VacantRandomPosition(out newPosition);

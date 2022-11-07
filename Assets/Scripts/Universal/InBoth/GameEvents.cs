@@ -43,6 +43,20 @@ public static class GameEvents
     public static OnGameOverDelegate OnGameOver;
 
     public static Action CokeTarget;
+    public delegate void OnUniversalplayAudioDelegate(AudioSource source, AudioManager.UniversalClipTags clipName);
+    public static OnUniversalplayAudioDelegate OnUniversalplayAudio;
 
+    public delegate void OnSlumsplayAudioDelegate(AudioSource source, AudioManager.SlumsClipTags clipName);
+    public static OnSlumsplayAudioDelegate OnSlumsplayAudio;
+    
+    public delegate void OnApartmenplayAudioDelegate(AudioSource source, AudioManager.SlumsClipTags clipName);
+    public static OnApartmenplayAudioDelegate OnApartmentplayAudio;
+    
+    public delegate void OnCorporateplayAudioDelegate(AudioSource source, AudioManager.SlumsClipTags clipName);
+    public static OnSlumsplayAudioDelegate OnCorporateplayAudio;
+
+    public delegate void OnRuralplayAudioDelegate(AudioSource source, AudioManager.SlumsClipTags clipName);
+    public static OnSlumsplayAudioDelegate OnRuralplayAudio;
+    
     public static Action DoorClose; //pt level
 }

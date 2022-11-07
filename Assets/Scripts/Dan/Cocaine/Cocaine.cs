@@ -14,7 +14,7 @@ public class Cocaine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("EnemyCoke"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             particleActivated = true;
             cokeParticle.Play();
