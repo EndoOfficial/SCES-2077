@@ -6,8 +6,7 @@ public class SpawnPills : MonoBehaviour
 {
     public Transform player;
     public GameObject[] PillToSpawn;
-    public float SpawnDelay;
-    public int Pillnum;
+    private int Pillnum;
     private void Start()
     {
         player = GameObject.FindWithTag("Player").transform;

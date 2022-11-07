@@ -26,7 +26,6 @@ public class ThrowingState : BottleState
     {
         if(enemy.health < tempHealth)
         {
-            Debug.Log("Take Damage");
             nextState = new DamagedState(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }

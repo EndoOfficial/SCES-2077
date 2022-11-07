@@ -34,6 +34,8 @@ public class PillMovement : MonoBehaviour
     }
     public void DisableIt()
     {
-        gameObject.GetComponent<PillMovement>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+        GetComponent<Rigidbody>().useGravity = false;
+        GetComponent<PillMovement>().enabled = false;
     }
 }

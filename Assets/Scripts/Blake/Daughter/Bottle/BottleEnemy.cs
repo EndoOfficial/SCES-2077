@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BottleEnemy : Enemy
 {
-    public GameObject pill;
+    public GameObject[] pill;
+    private int Pillnum;
     public float spawnlimit;
     private float spawncount;
     private float randomizer;
@@ -20,7 +21,8 @@ public class BottleEnemy : Enemy
         {
             randomizer = Random.Range(-range, range);
             spawncount += 1;
-            Instantiate(pill, new Vector3(transform.position.x + randomizer, 3 + randomizer, transform.position.z + randomizer), Quaternion.identity);
+            Pillnum = Random.Range(0, pill.Length);
+            Instantiate(pill[Pillnum], new Vector3(transform.position.x + randomizer, 3 + randomizer, transform.position.z + randomizer), Quaternion.identity);
             if (spawncount >= spawnlimit)
             {
                 Destroy(gameObject);
