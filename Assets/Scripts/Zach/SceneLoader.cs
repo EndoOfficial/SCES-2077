@@ -15,4 +15,10 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         PlayerPrefs.SetString("LevelName", levelName);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quitting game....");
+    }
 }

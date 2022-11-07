@@ -182,6 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemSpawner: {fileID: 2211369044769113050, guid: 063461a0abe602147ad782e8853645ca, type: 3}
   SpawnNoise: {fileID: 8300000, guid: 25dc8fca8a952554d963431bfb1a1492, type: 3}
+  audio: {fileID: -3933878485050413837}
 --- !u!82 &-3933878485050413837
 AudioSource:
   m_ObjectHideFlags: 0

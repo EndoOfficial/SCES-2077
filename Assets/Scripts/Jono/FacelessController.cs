@@ -64,11 +64,11 @@ public class FacelessController : MonoBehaviour
         }
     }
 
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Damage");
             Destroy(this.gameObject);            
             damage = 10;
             GameEvents.DamagePlayer(damage);

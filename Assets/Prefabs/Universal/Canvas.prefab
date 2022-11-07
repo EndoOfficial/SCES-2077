@@ -937,6 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 695182b99c3248040a47e4eb7e92c491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsPaused: 0
   pauseMenuUi: {fileID: 5116770755252525140}
   previousLevel: 
 --- !u!1 &5116770755252525140
@@ -1782,7 +1783,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644254529688549005}
         m_TargetAssemblyTypeName: PauseMenu1, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: QuitToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
