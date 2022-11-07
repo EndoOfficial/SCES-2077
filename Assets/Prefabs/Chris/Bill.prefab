@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 319188770}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BabyBill Spawn (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 521954599}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BabyBill Spawn (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 554327923}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BabyBill Spawn (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 675190174}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BabyBill Spawn (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1061382793}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BabyBill Spawn (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1564827275}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BabyBill Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1610896381}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BabyBill Spawn (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1743655059}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BabyBill Spawn (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1869930698}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BabyBill Spawn (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,9 +294,9 @@ GameObject:
   - component: {fileID: 1237389589940201795}
   - component: {fileID: -8986236554544285892}
   - component: {fileID: 7569975481357549069}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bill
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -368,6 +368,7 @@ MonoBehaviour:
   maxHealth: 40
   Canvas: {fileID: 7488767426416153073}
   slider: {fileID: 0}
+  canDie: 1
   baby: {fileID: -8765442583670732952, guid: a7054876fe5820e45bac61d9ca734b63, type: 3}
   spawners:
   - {fileID: 1564827274}
@@ -396,6 +397,7 @@ MonoBehaviour:
   maxHealth: 40
   Canvas: {fileID: 7488767426416153073}
   slider: {fileID: 0}
+  canDie: 1
 --- !u!65 &-8986236554544285892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -439,7 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1349468652121911033}
   - component: {fileID: 8258862300939010959}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bill Sprite Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,19 +524,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7488767426199869115, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7488767426215620232, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7488767426299318921, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7488767426967236041, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7488767426967236042, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -546,7 +548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427271502839, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731251, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_Name
@@ -554,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731251, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_Pivot.x

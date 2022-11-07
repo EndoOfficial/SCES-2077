@@ -364,7 +364,7 @@ MonoBehaviour:
   MyRB: {fileID: 7068124799584983974}
   MyChildRB: {fileID: 7068124800717697801}
   Child: {fileID: 7068124800717697907}
-  SpringForce: 200
+  SpringForce: 400
   ForwardSpeed: 20
   stopDist: 5
   MainSpeed: 0
@@ -410,7 +410,7 @@ MonoBehaviour:
   maxHealth: 40
   Canvas: {fileID: 7473053725370999603}
   slider: {fileID: 7473053725326492601}
-  IsDead: 1
+  canDie: 1
 --- !u!114 &954595400
 MonoBehaviour:
   m_ObjectHideFlags: 0
