@@ -37,15 +37,14 @@ public class FacelessController : MonoBehaviour
     void Update()
     {
         if (moveTowards)
-        {
-            Anim.SetTrigger("Lunge");
+        {            
             transform.Translate(Vector3.forward* Time.deltaTime);
         }
     }
     private void OnDestroy()
     {
         GameController = GameObject.FindGameObjectWithTag("GameManager");
-        GameController.GetComponent<GameController>().KillCount = GameController.GetComponent<GameController>().KillCount + 1;
+        GameController.GetComponent<GameController>().KillCount += 1;
         Debug.Log("Dead");
         
     }
@@ -56,9 +55,10 @@ public class FacelessController : MonoBehaviour
         Physics.Raycast(transform.position, transform.position - transform.position, out hit);
 
         Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
-        Debug.DrawRay(transform.position, forward, Color.red);
+        //Debug.DrawRay(transform.position, forward, Color.red);
 
-        if (Physics.Raycast(transform.position, forward, out hit) && hit.collider.tag == "Player" && CanLunge == true)        
+        
+        if (CanLunge == true && Physics.Raycast(transform.position, forward, out hit) && hit.collider.tag == "Player")        
         {
             StartCoroutine(Lunge());
         }
@@ -80,6 +80,7 @@ public class FacelessController : MonoBehaviour
         CanLunge = false;
         yield return new WaitForSeconds(5);
         moveTowards = true;
+        Anim.SetTrigger("Lunge");
         Debug.Log("Lunge");
         //MyRb.isKinematic = false;
         //MyRb.AddForce((transform.forward) * LungeSpeed);
