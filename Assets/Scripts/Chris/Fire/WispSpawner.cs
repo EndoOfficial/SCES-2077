@@ -20,8 +20,8 @@ public class WispSpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSecondsRealtime(Random.Range(2, 3));
-            var obj = Instantiate(wisp, transform.position, Quaternion.identity);;
+            yield return new WaitForSecondsRealtime(.5f);
+            Instantiate(wisp, transform.position, Quaternion.identity);;
         }
     }
 }

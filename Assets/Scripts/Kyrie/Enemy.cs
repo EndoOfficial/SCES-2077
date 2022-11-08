@@ -37,10 +37,10 @@ public class Enemy : MonoBehaviour
 
     protected virtual void TakeDamage(int damage, GameObject target)
     {
-        if (this.gameObject == target)
+        if (gameObject == target)
         {
-                anim.SetTrigger("Damage");
-                health -= damage;
+            anim.SetTrigger("Damage");
+            health -= damage;
         }
     }
     protected virtual void Die()

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3008580272504976741}
   - component: {fileID: -8793963597004351066}
   - component: {fileID: 1018376233382799768}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FireBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77871224d8f54f8458a2bba0c25fa89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   speed: 10
 --- !u!135 &-8793963597004351066
 SphereCollider:
@@ -88,7 +89,7 @@ GameObject:
   - component: {fileID: 7466799332373015626}
   - component: {fileID: 2239338287658921059}
   - component: {fileID: 3348015788330887743}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -19,7 +19,7 @@ public class DetectWheat : MonoBehaviour
     }
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.Find("Player");
     }
 
     public void FindWheat()

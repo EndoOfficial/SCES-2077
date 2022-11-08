@@ -18,11 +18,15 @@ public class FireNado : FireState
         spawner = npc.GetComponent<WispSpawner>();
         timer = npc.GetComponent<FireTimer>();
         prox = npc.GetComponent<ProximityDamage>();
-        shoot = npc.transform.GetComponentInChildren<FireBallShoot>();
+        shoot = npc.GetComponent<FireBallShoot>();
+        enemy = npc.GetComponent<FireEnemy>();
 
         anim.SetTrigger("BecomeTornado");
+        enemy.maxHealth = 300;
+        enemy.IsTornado();
         spawner.startSpawn();
         shoot.ShootStop();
+        timer.StopTimer();
         prox.distance = 20;
         prox.damage = 10;
         npc.transform.LeanScale(new Vector3(6, 6, 6), 1);
@@ -38,6 +42,12 @@ public class FireNado : FireState
     public override void Update()
     {
         agent.destination = wheat.closestWheatPatch;
+        if (enemy.beFire)
+        {
+            enemy.beFire = false;
+            nextState = new FireBall(npc, agent, anim, player);
+            stage = EVENT.EXIT;
+        }
     }
 
     public override void Exit()

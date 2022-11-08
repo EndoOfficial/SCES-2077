@@ -11,6 +11,7 @@ public class FireState : State
     protected WispSpawner spawner;
     protected FireBallShoot shoot;
     protected ProximityDamage prox;
+    protected FireEnemy enemy;
     public enum FIRESTATE
     {
         Wisp, Fire, Tornado

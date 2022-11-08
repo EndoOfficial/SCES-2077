@@ -18,16 +18,21 @@ public class FireBall : FireState
         spawner = npc.GetComponent<WispSpawner>();
         timer = npc.GetComponent<FireTimer>();
         prox = npc.GetComponent<ProximityDamage>();
-        shoot = npc.transform.GetComponentInChildren<FireBallShoot>();
+        shoot = npc.GetComponent<FireBallShoot>();
+        enemy = npc.GetComponent<FireEnemy>();
 
-        anim.SetTrigger("BecomeFireBall");
+        anim.SetTrigger("BecomeFireball");
+        enemy.maxHealth = 50;
+        enemy.IsFireball();
         spawner.stopSpawn();
         prox.distance = 10;
         prox.damage = 5;
         npc.transform.LeanScale(new Vector3(2, 2, 2), 1);
         agent.speed = 3.5f;
+        agent.height = 1;
         timer.StartTimer();
         shoot.ShootStart();
+        Debug.Log("here");
         base.Enter();
     }
 
@@ -46,7 +51,15 @@ public class FireBall : FireState
 
         if(timer.timeDone)
         {
+            timer.timeDone = false;
             nextState = new FireNado(npc, agent, anim, player);
+            stage = EVENT.EXIT;
+        }
+
+        if (enemy.beWisp)
+        {
+            enemy.beWisp = false;
+            nextState = new FireWisp(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }
     }

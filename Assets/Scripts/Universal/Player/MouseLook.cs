@@ -21,8 +21,8 @@ public class MouseLook : MonoBehaviour
     void Update()
     {
         // get the mouse movement
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity /* Time.deltaTime*/;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity /* Time.deltaTime*/;
 
         // set mouse clamp (cant look further up or down than 90 degrees)
         xRotation -= mouseY;

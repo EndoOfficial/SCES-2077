@@ -18,15 +18,21 @@ public class FireWisp : FireState
         spawner = npc.GetComponent<WispSpawner>();
         timer = npc.GetComponent<FireTimer>();
         prox = npc.GetComponent<ProximityDamage>();
-        shoot = npc.transform.GetComponentInChildren<FireBallShoot>();
+        shoot = npc.GetComponent<FireBallShoot>();
+        enemy = npc.GetComponent<FireEnemy>();
 
         anim.SetTrigger("BecomeWisp");
+        enemy.maxHealth = 10;
+        enemy.IsWisp();
         shoot.ShootStop();
+        spawner.stopSpawn();
         prox.distance = 2;
         prox.damage = 1;
-        npc.transform.LeanScale(new Vector3(1, 1, 1), 1);
+        timer.StopTimer();
+        npc.transform.LeanScale(new Vector3(1, 1, 1),1);
         agent.speed = 8f;
         wheat.FindWheat();
+        agent.isStopped = false;
         base.Enter();
     }
 
@@ -35,6 +41,7 @@ public class FireWisp : FireState
         agent.destination = wheat.closestWheatPatch;
         if (wheat.inWheat)
         {
+            wheat.inWheat = false;
             nextState = new FireBall(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }

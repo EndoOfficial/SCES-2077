@@ -454,7 +454,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68884d1ade4c75e46b0f00475e983658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  UniversalAudioLibrary: {fileID: 0}
+  SlumsAudioLibrary: {fileID: 0}
+  ApartmentAudioLibrary: {fileID: 0}
+  RuralAudioLibrary: {fileID: 0}
+  CorporateAudioLibrary: {fileID: 0}
 --- !u!4 &442469287
 Transform:
   m_ObjectHideFlags: 0
@@ -580,6 +584,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 332349670, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618733331, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107905, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_Name
       value: Fire Enemy (2)
@@ -637,6 +649,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 332349670, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618733331, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107905, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_Name
       value: Fire Enemy (5)
@@ -791,6 +811,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 332349670, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618733331, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107905, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_Name
       value: Fire Enemy
@@ -801,7 +829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107916, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.6510983
+      value: -9.32
       objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107916, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -809,7 +837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107916, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.9944
+      value: -12.28
       objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107916, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -945,6 +973,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 332349670, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618733331, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107905, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_Name
       value: Fire Enemy (3)
@@ -1168,6 +1204,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 332349670, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618733331, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107905, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_Name
       value: Fire Enemy (6)
@@ -1225,6 +1269,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 332349670, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618733331, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107905, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_Name
       value: Fire Enemy (4)
@@ -1293,6 +1345,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 332349670, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618733331, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3204511869751107905, guid: 7bfd775b463e87c49a6f81551b4dea5a, type: 3}
       propertyPath: m_Name
       value: Fire Enemy (1)
