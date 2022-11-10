@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25071365, g: 0.2751636, b: 0.33572862, a: 1}
+  m_IndirectSpecularColor: {r: 0.25076213, g: 0.2748683, b: 0.3354764, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6688,9 +6688,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68884d1ade4c75e46b0f00475e983658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UniversalAudioLibrary: {fileID: 0}
+  UniversalAudioLibrary: {fileID: 11400000, guid: 667561e870d832346999e18b4f0701cf, type: 2}
   SlumsAudioLibrary: {fileID: 0}
-  ApartmentAudioLibrary: {fileID: 0}
+  ApartmentAudioLibrary: {fileID: 11400000, guid: fbcf00446a318034db0286d09d3b5b57, type: 2}
   RuralAudioLibrary: {fileID: 0}
   CorporateAudioLibrary: {fileID: 0}
 --- !u!4 &511945351
