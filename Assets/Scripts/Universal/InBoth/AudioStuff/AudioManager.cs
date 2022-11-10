@@ -10,22 +10,60 @@ public class AudioManager : MonoBehaviour
     public ApartmentAudioLibrary ApartmentAudioLibrary;
     public RuralAudioLibrary RuralAudioLibrary;
     public CorporateAudioLibrary CorporateAudioLibrary;
-    // Get the music clips you need for each game you can add more to the library when you need them,
     public enum UniversalClipTags
     {
         Gunfire,
         PlayerHurt,
         PlayerJump,
-        PlayerWalk
+        PlayerWalk,
+        PlayerLowHealth,
+        EnemyBasicMelee
     }
     public enum SlumsClipTags
     {
+        //Cat level
+        FishJump,
+        FishLand,
+        FishHurt,
+        FishDie,
+
+        //Addict level
+        NeedleJump,
+        NeedleShoot,
+        NeedleHurt,
+        NeedleDeath,
+        
+        //Dealer level
+        BillBossDeath,
+        BillBossFlick,
+        BillBossSwarm,
+        BillPaperDeath
 
     }
     
     public enum ApartmentClipTags
     {
+        //Mother level
+        KneeManKneeShot,
+        KneeManFall,
+        KneeManHurt,
+        KneeManHeadOpen,
+        KneeManDeath,
 
+        //Daughter level
+        PillBottleRun,
+        PillBottleThrow,
+        PillBottleHurt,
+        PillBottleDeath,
+
+        PillBattleCry,
+        PillDeath,
+
+        //Father level
+        MrCigsRageUp,
+        MrCigsRageDown,
+        MrCigsAttack,
+        MrCigsDeath
     }
     
     public enum CorporateClipTags
@@ -41,8 +79,9 @@ public class AudioManager : MonoBehaviour
     {
         GameEvents.OnUniversalplayAudio += UniversalOnPlayAudio;
         GameEvents.OnSlumsplayAudio += SlumsOnPlayAudio;
-        //GameEvents.OnCorporateplayAudio += UniversalOnPlayAudio;
-        //GameEvents.OnUniversalplayAudio += UniversalOnPlayAudio;
+        GameEvents.OnRuralplayAudio += RuralOnPlayAudio;
+        GameEvents.OnApartmentplayAudio += ApartmentOnPlayAudio;
+        GameEvents.OnUniversalplayAudio += UniversalOnPlayAudio;
     }
     public void OnDisable()
     {
@@ -109,29 +148,4 @@ public class AudioManager : MonoBehaviour
 
         libraryClip.PlayClip(source, libraryClip.audioClip, libraryClip.Loop, libraryClip.Pitch, libraryClip.Volume);
     }
-
-    //void Awake()
-    //{
-    //    foreach(Sound s in sounds)
-    //    {
-    //        s.source=gameObject.AddComponent<AudioSource>();
-    //        s.source.clip = s.clip;
-    //        s.source.volume = s.volume;
-    //        s.source.pitch = s.pitch;
-    //        s.source.loop = s.loop;
-    //    }
-    //}
-
-    //// Update is called once per frame
-    //public void Play(string name )
-    //{
-    //  Sound s=  Array.Find(sounds, sound => sound.name == name);
-    //    if (s == null)
-    //        return;
-    //    s.source.Play();
-    //}
-    //private void Start()
-    //{
-    //    Play("Theme");
-    //}
 }

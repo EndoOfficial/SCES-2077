@@ -43,20 +43,23 @@ public static class GameEvents
     public static OnGameOverDelegate OnGameOver;
 
     public static Action CokeTarget;
+
     public delegate void OnUniversalplayAudioDelegate(AudioSource source, AudioManager.UniversalClipTags clipName);
     public static OnUniversalplayAudioDelegate OnUniversalplayAudio;
 
     public delegate void OnSlumsplayAudioDelegate(AudioSource source, AudioManager.SlumsClipTags clipName);
     public static OnSlumsplayAudioDelegate OnSlumsplayAudio;
     
-    public delegate void OnApartmenplayAudioDelegate(AudioSource source, AudioManager.SlumsClipTags clipName);
+    public delegate void OnApartmenplayAudioDelegate(AudioSource source, AudioManager.ApartmentClipTags clipName);
     public static OnApartmenplayAudioDelegate OnApartmentplayAudio;
     
-    public delegate void OnCorporateplayAudioDelegate(AudioSource source, AudioManager.SlumsClipTags clipName);
-    public static OnSlumsplayAudioDelegate OnCorporateplayAudio;
+    public delegate void OnCorporateplayAudioDelegate(AudioSource source, AudioManager.CorporateClipTags clipName);
+    public static OnCorporateplayAudioDelegate OnCorporateplayAudio;
 
-    public delegate void OnRuralplayAudioDelegate(AudioSource source, AudioManager.SlumsClipTags clipName);
-    public static OnSlumsplayAudioDelegate OnRuralplayAudio;
+    public delegate void OnRuralplayAudioDelegate(AudioSource source, AudioManager.RuralClipTags clipName);
+    public static OnRuralplayAudioDelegate OnRuralplayAudio;
     
     public static Action DoorClose; //pt level
+
+    public static Action BottleDeath;// Keeps track of pill bottles
 }

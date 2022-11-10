@@ -12,7 +12,6 @@ public class BottleEnemy : Enemy
     private float range = 1;
     private void Explosion()
     {
-
         StartCoroutine(Explode());
     }
     private IEnumerator Explode()
