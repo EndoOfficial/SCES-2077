@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a2ca961610b6444b76358e43b7ff66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 4
+  waitTime: 2
   grounded: 0
   jumpDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &5891957978583362953
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50e8f60ec3ac7e84eb5cd0f6eec80d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 20
+  distance: 25
   player:
     serializedVersion: 2
     m_Bits: 64
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _aoe: 0
-  radius: 2
+  radius: 4
   Player:
     serializedVersion: 2
     m_Bits: 64

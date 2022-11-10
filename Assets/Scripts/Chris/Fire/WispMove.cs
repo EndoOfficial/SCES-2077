@@ -21,7 +21,8 @@ public class WispMove : MonoBehaviour
     {
         while (true)
         {
-            agent.destination = player.transform.position;
+            var playerpos = new Vector3(player.transform.position.x + Random.Range(-10, 10), player.transform.position.y, player.transform.position.z + Random.Range(-10, 10));
+            agent.destination = playerpos;
             yield return new WaitForSecondsRealtime(interval);
         }
     }

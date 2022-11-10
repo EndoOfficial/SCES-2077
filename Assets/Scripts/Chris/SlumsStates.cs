@@ -50,8 +50,8 @@ public class SlumsStates : MonoBehaviour
         if (PlayerPrefs.GetString("dealerBool") == "T")
         {
             //Dealer changes position
-            Dealer1.SetActive(false);
-            Dealer2.SetActive(true);
+            //Dealer1.SetActive(false);
+            //Dealer2.SetActive(true);
         }
         
         if (PlayerPrefs.GetString("addictBool") == "T")

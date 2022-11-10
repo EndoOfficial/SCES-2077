@@ -547,13 +547,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68884d1ade4c75e46b0f00475e983658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - source: {fileID: 0}
-    name: Theme
-    clip: {fileID: 8300000, guid: 1fe9911c63a09c640af2c4053b4e3020, type: 3}
-    volume: 0.38
-    pitch: 1
-    loop: 1
+  UniversalAudioLibrary: {fileID: 0}
+  SlumsAudioLibrary: {fileID: 0}
+  ApartmentAudioLibrary: {fileID: 0}
+  RuralAudioLibrary: {fileID: 0}
+  CorporateAudioLibrary: {fileID: 0}
 --- !u!4 &547875663
 Transform:
   m_ObjectHideFlags: 0
@@ -2169,15 +2167,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2015154809514674858, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -373.07
+      value: -373.75
       objectReference: {fileID: 0}
     - target: {fileID: 2015154809514674858, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.97
+      value: 23.74
       objectReference: {fileID: 0}
     - target: {fileID: 2015154809514674858, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -82.24
+      value: -84.35
       objectReference: {fileID: 0}
     - target: {fileID: 2015154809514674858, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2824,8 +2822,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -992868733222789507, guid: e43f2f7f41faf0844b11c26173510085, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e43f2f7f41faf0844b11c26173510085, type: 3}
 --- !u!1 &1963391732
 GameObject:

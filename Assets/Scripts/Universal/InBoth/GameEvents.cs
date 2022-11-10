@@ -58,10 +58,14 @@ public static class GameEvents
 
     public delegate void OnRuralplayAudioDelegate(AudioSource source, AudioManager.RuralClipTags clipName);
     public static OnRuralplayAudioDelegate OnRuralplayAudio;
+
+    public delegate void WheatRespawnDelegate(GameObject obj);
+    public static WheatRespawnDelegate WheatRespawn;
     
     public static Action DoorClose; //pt level
 
     public static Action BottleCount;// Keeps track of pill bottles
 
     public static Action BottleDeath;// When all pill bottles die
+
 }

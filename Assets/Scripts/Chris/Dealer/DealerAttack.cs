@@ -8,6 +8,7 @@ public class DealerAttack : MonoBehaviour
     public GameObject babyBill;
     public GameObject bigSpawn;
     public GameObject[] babySpawn;
+    public GameObject[] deathSpawn;
     private Animator anim;
     public int chance;
     public float delay;
@@ -31,6 +32,14 @@ public class DealerAttack : MonoBehaviour
             Instantiate(babyBill, babySpawn[i].transform);
         }
         StartCoroutine(Delay());
+    }
+
+    public void Death()
+    {
+        for (int i = 0; i < deathSpawn.Length; i++)
+        {
+            Instantiate(babyBill, deathSpawn[i].transform);
+        }
     }
 
     private IEnumerator Delay()

@@ -521,7 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0
   interval: 1
-  changeTime: 20
+  changeTime: 10
   timeDone: 0
 --- !u!114 &3204511869751107914
 MonoBehaviour:
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closestWheatPatch: {x: 0, y: 0, z: 0}
-  interval: 2
+  interval: 1
   inWheat: 0
 --- !u!114 &2001719128921599934
 MonoBehaviour:
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c306f481197d1489e1e71a9539926a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wisp: {fileID: 246313394264724060, guid: 25a987d6ee1eedf4e80f7db6bff4dda6, type: 3}
+  wisp: {fileID: 3204511869751107905}
 --- !u!135 &2755120432055071399
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  FireRate: 3
+  FireRate: 2
   fireBall: {fileID: 3008580272504976746, guid: a784a2b8d8386434082b9b09d34adbfb, type: 3}
 --- !u!114 &7808737524930748934
 MonoBehaviour:

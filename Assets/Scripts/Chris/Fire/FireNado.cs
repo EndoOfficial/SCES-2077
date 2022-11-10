@@ -25,13 +25,13 @@ public class FireNado : FireState
         enemy.maxHealth = 300;
         enemy.IsTornado();
         spawner.startSpawn();
-        shoot.ShootStop();
+        shoot.FireRate = 1;
         timer.StopTimer();
         prox.distance = 20;
         prox.damage = 10;
         npc.transform.LeanScale(new Vector3(6, 6, 6), 1);
         var moveDirection = (npc.transform.position - player.transform.position).normalized;
-        var moveTarget = npc.transform.position + (moveDirection*20);
+        var moveTarget = new Vector3(npc.transform.position.x + (moveDirection.x * 20), 0, npc.transform.position.x + (moveDirection.z * 20));
         LeanTween.move(npc.gameObject, moveTarget, 2);
         wheat.interval = 10;
         agent.speed = 2f;

@@ -8,7 +8,7 @@ public class ProximityDamage : MonoBehaviour
     public float distance;
     private bool toggle;
     public int damage;
-    private int tempDamage;
+    private float tempDamage;
 
     private void Start()
     {
@@ -17,7 +17,7 @@ public class ProximityDamage : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) <= distance && toggle)
+        if (Vector3.Distance(transform.position, player.transform.position) <= distance && toggle) // is close enough
         {
             toggle = false;
             StartCoroutine(Constant());
@@ -33,9 +33,12 @@ public class ProximityDamage : MonoBehaviour
     {
         while (true)
         {
-            var dam = (int)(Vector3.Distance(transform.position, player.transform.position) + 1);
-
-            GameEvents.DamagePlayer?.Invoke(damage);
+            var dist = (Vector3.Distance(transform.position, player.transform.position) + 1); // set dam to destance converted to an int
+            tempDamage = dist/distance;
+            tempDamage = 1 -tempDamage;
+            tempDamage = Mathf.Clamp(tempDamage, 0, float.PositiveInfinity);
+            var dam = tempDamage * damage;
+            GameEvents.DamagePlayer?.Invoke((int)dam + 1);
             yield return new WaitForSecondsRealtime(1);
         }
     }

@@ -30,9 +30,10 @@ public class FireWisp : FireState
         prox.damage = 1;
         timer.StopTimer();
         npc.transform.LeanScale(new Vector3(1, 1, 1),1);
-        agent.speed = 8f;
+        agent.speed = 10f;
         wheat.FindWheat();
         agent.isStopped = false;
+        wheat.interval = 1;
         base.Enter();
     }
 

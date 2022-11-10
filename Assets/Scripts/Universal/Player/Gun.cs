@@ -70,7 +70,7 @@ public class Gun : MonoBehaviour
         float time = 0;
         Vector3 startposition = trail.transform.position;
 
-        while(time < 1)
+        while(time < 3)
         {
             trail.transform.position = Vector3.Lerp(startposition, hit.point, time);
             time += Time.deltaTime / trail.time;

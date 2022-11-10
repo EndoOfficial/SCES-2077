@@ -22,7 +22,7 @@ public class FireBall : FireState
         enemy = npc.GetComponent<FireEnemy>();
 
         anim.SetTrigger("BecomeFireball");
-        enemy.maxHealth = 50;
+        enemy.maxHealth = 100;
         enemy.IsFireball();
         spawner.stopSpawn();
         prox.distance = 10;
@@ -32,7 +32,7 @@ public class FireBall : FireState
         agent.height = 1;
         timer.StartTimer();
         shoot.ShootStart();
-        Debug.Log("here");
+        shoot.FireRate = 2f;
         base.Enter();
     }
 

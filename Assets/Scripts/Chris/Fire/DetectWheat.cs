@@ -14,6 +14,7 @@ public class DetectWheat : MonoBehaviour
         if (other.CompareTag("Wheat"))
         {
             other.gameObject.SetActive(false);
+            GameEvents.WheatRespawn?.Invoke(other.gameObject);
             inWheat = true;
         }
     }
@@ -45,7 +46,8 @@ public class DetectWheat : MonoBehaviour
             }
             if(taggedObjects.Length == 0)
             {
-                closestWheatPatch = player.transform.position;
+                var playerpos = new Vector3(player.transform.position.x + Random.Range(-10,10), player.transform.position.y, player.transform.position.z + Random.Range(-10, 10));
+                closestWheatPatch = playerpos;
             }
             yield return new WaitForSeconds(interval);
         }

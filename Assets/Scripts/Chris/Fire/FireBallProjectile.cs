@@ -17,7 +17,8 @@ public class FireBallProjectile : MonoBehaviour
 
     private void Update()
     {
-        transform.position += (transform.forward.normalized * speed * Time.deltaTime);
+        transform.position += transform.forward.normalized * speed * Time.deltaTime;
+        transform.position += (player. transform.position - transform.position) * .5f * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)

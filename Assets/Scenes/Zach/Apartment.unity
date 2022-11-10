@@ -6688,31 +6688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68884d1ade4c75e46b0f00475e983658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - source: {fileID: 0}
-    name: Theme
-    clip: {fileID: 8300000, guid: ef127178bc4f5a84e919af2b19adf9c4, type: 3}
-    volume: 0.345
-    pitch: 1
-    loop: 1
-  - source: {fileID: 0}
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-  - source: {fileID: 0}
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-  - source: {fileID: 0}
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
+  UniversalAudioLibrary: {fileID: 0}
+  SlumsAudioLibrary: {fileID: 0}
+  ApartmentAudioLibrary: {fileID: 0}
+  RuralAudioLibrary: {fileID: 0}
+  CorporateAudioLibrary: {fileID: 0}
 --- !u!4 &511945351
 Transform:
   m_ObjectHideFlags: 0
@@ -16980,10 +16960,6 @@ PrefabInstance:
     - target: {fileID: 595779542, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: speed
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015154809373924600, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
-      propertyPath: mouseSensitivity
-      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2015154809373924601, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: cam

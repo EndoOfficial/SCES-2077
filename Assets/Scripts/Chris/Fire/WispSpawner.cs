@@ -21,7 +21,8 @@ public class WispSpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSecondsRealtime(.5f);
-            Instantiate(wisp, transform.position, Quaternion.identity);;
+            var obj = Instantiate(wisp, transform.position, Quaternion.identity);
+            obj.transform.localScale = new Vector3(1, 1, 1);
         }
     }
 }
