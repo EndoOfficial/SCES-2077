@@ -24,15 +24,11 @@ public class BottleEnemy : Enemy
             Instantiate(pill[Pillnum], new Vector3(transform.position.x + randomizer, 3 + randomizer, transform.position.z + randomizer), Quaternion.identity);
             if (spawncount >= spawnlimit)
             {
+                GameEvents.BottleCount?.Invoke();
                 Destroy(gameObject);
             }
             StartCoroutine(Explode());
             yield return null;
         }
-    }
-
-    public void die()
-    {
-        Destroy(gameObject);
     }
 }

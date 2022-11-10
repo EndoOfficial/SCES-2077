@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PillEnemy : Enemy
 {
-    private Animator Anim;
-
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -22,6 +20,6 @@ public class PillEnemy : Enemy
 
     public void KillAll()
     {
-        Anim.SetTrigger("Death");
+        anim.SetTrigger("Death");
     }
 }

@@ -61,5 +61,7 @@ public static class GameEvents
     
     public static Action DoorClose; //pt level
 
-    public static Action BottleDeath;// Keeps track of pill bottles
+    public static Action BottleCount;// Keeps track of pill bottles
+
+    public static Action BottleDeath;// When all pill bottles die
 }
