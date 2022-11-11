@@ -22,7 +22,7 @@ public class FireNado : FireState
         enemy = npc.GetComponent<FireEnemy>();
 
         anim.SetTrigger("BecomeTornado");
-        enemy.maxHealth = 300;
+        enemy.maxHealth = enemy.tornadoHealth;
         enemy.IsTornado();
         spawner.startSpawn();
         shoot.FireRate = 1;

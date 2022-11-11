@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class FireEnemy : Enemy
 {
+    public int wispHealth;
+    public int fireballHealth;
+    public int tornadoHealth;
+
     private bool isWisp;
     private bool isFireball;
     private bool isTornado;

@@ -22,7 +22,7 @@ public class FireBall : FireState
         enemy = npc.GetComponent<FireEnemy>();
 
         anim.SetTrigger("BecomeFireball");
-        enemy.maxHealth = 100;
+        enemy.maxHealth = enemy.fireballHealth;
         enemy.IsFireball();
         spawner.stopSpawn();
         prox.distance = 10;

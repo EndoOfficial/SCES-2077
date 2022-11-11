@@ -22,7 +22,7 @@ public class FireWisp : FireState
         enemy = npc.GetComponent<FireEnemy>();
 
         anim.SetTrigger("BecomeWisp");
-        enemy.maxHealth = 10;
+        enemy.maxHealth = enemy.wispHealth;
         enemy.IsWisp();
         shoot.ShootStop();
         spawner.stopSpawn();

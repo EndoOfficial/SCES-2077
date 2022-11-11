@@ -610,6 +610,9 @@ MonoBehaviour:
   Canvas: {fileID: 4193490524991941521}
   slider: {fileID: 0}
   canDie: 1
+  wispHealth: 10
+  fireballHealth: 100
+  tornadoHealth: 300
   beWisp: 0
   beFire: 0
 --- !u!1 &4193490524991941521
