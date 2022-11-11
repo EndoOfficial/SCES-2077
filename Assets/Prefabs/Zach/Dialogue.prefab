@@ -570,6 +570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7316838627629873849}
+  - component: {fileID: 317526601}
   m_Layer: 11
   m_Name: Dialogue
   m_TagString: Untagged
@@ -595,3 +596,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &317526601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6935941685918587633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72594f05ce83bef44859792da45843b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextToCycle:
+  - {fileID: 3355398917605229341}
+  - {fileID: 5028266283817693200}
+  - {fileID: 4388270370469541753}
+  CycleDelay: 8
