@@ -18,10 +18,10 @@ GameObject:
   - component: {fileID: 7150354681523011822}
   - component: {fileID: 4777334723377883358}
   - component: {fileID: 3494598716936921519}
-  - component: {fileID: 4777334723843361774}
   - component: {fileID: 533445739267195911}
   - component: {fileID: 8898633248968404980}
   - component: {fileID: 179956337}
+  - component: {fileID: 1413937581635156462}
   m_Layer: 10
   m_Name: Pill Knife
   m_TagString: Enemy
@@ -200,23 +200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimesUp: 0
   Attack: 0
---- !u!114 &4777334723843361774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405892069477294195}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3cfef0b94a96a4caded3440bb98e65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  maxHealth: 10
-  Canvas: {fileID: 0}
-  slider: {fileID: 0}
-  canDie: 1
 --- !u!95 &533445739267195911
 Animator:
   serializedVersion: 4
@@ -260,6 +243,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43747126d7c9f674d8d323829843933f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  maxHealth: 10
+  Canvas: {fileID: 0}
+  slider: {fileID: 0}
+  canDie: 1
+--- !u!114 &1413937581635156462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405892069477294195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3cfef0b94a96a4caded3440bb98e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10

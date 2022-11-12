@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class BottleManager : MonoBehaviour
 {
+    public int KillWait;
     private bool StartCheck;
-    public int integer;
-    public int DeadBottles;
+    private int integer;
+    private int DeadBottles;
     public GameObject[] Bottles;
 
 
@@ -31,6 +32,7 @@ public class BottleManager : MonoBehaviour
                 DeadBottles++;
                 if (DeadBottles == Bottles.Length)
                 {
+                    yield return new WaitForSeconds(KillWait);
                     GameEvents.BottleDeath?.Invoke();
                 }
             }
