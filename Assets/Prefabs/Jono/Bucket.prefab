@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bab20996befbb644580db287bd7b999e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,7 +101,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 16
   m_CollisionDetection: 0
 --- !u!114 &8789306806023157680
 MonoBehaviour:
@@ -117,7 +117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
-  healthBarUi: {fileID: 8083682826873333857}
+  Canvas: {fileID: 0}
+  slider: {fileID: 0}
+  canDie: 1
 --- !u!64 &5409668533670205650
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -237,11 +239,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
---- !u!1 &8083682826873333857 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7488767427628731251, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
-  m_PrefabInstance: {fileID: 1712055052998697746}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8083682826873333862 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}

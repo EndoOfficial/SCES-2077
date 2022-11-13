@@ -35,4 +35,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chris/Dealer-Level.unity
     guid: 87a930eb68bf0f74a9f70827b777e472
+  - enabled: 1
+    path: Assets/Scenes/Kyrie/Farm.unity
+    guid: 1a96d4c798ab8ec4aad3062475b52087
+  - enabled: 1
+    path: Assets/Scenes/Jono/TheHand.unity
+    guid: 9e76d3cd8d1c4824a91f26eb3611a632
+  - enabled: 1
+    path: Assets/Scenes/Chris/Farmer-Level.unity
+    guid: 5e98db6ca302d9c4f84606f02a1171f6
+  - enabled: 1
+    path: Assets/Scenes/Jono/FacelessFellas.unity
+    guid: 188c1e88a01a2b646b7a743f4bfdb67a
+  - enabled: 1
+    path: Assets/Scenes/Zach/PTscene.unity
+    guid: 4c533ff694ed3b147a231ccb962d1b72
   m_configObjects: {}
