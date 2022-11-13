@@ -5,15 +5,11 @@ using UnityEngine;
 public class BottleManager : MonoBehaviour
 {
     public int KillWait;
+    private bool StartCheck;
+    private int integer;
     private int DeadBottles;
-    private GameObject[] Bottles; // array of the bottles
+    public GameObject[] Bottles;
 
-    private void Start()
-    {
-        Bottles = GameObject.FindGameObjectsWithTag("Enemy"); // forms array
-        // since the bottles are the only thing starting in
-        // the scene with the enemy tag I deemed this as fine
-    }
 
     private void OnEnable()
     {
@@ -31,26 +27,23 @@ public class BottleManager : MonoBehaviour
     {
         for (int i = 0; i < Bottles.Length;)
         {
-            if (Bottles[i] == null) // checks if any of the array are null
+            if (Bottles[i] == null)
             {
-                DeadBottles ++;
-                if (DeadBottles == Bottles.Length) // if all are null
+                DeadBottles++;
+                if (DeadBottles == Bottles.Length)
                 {
                     yield return new WaitForSeconds(KillWait);
-                    GameEvents.BottleDeath?.Invoke(); // plays all pill's death animations
+                    GameEvents.BottleDeath?.Invoke();
                 }
             }
-            // the -1 is because this is checked before i is increased this 
-            // is becuase if it is checked after, the loop won't run again
-            if (i == Bottles.Length - 1)
-            {
-                DeadBottles = 0; // resets dead bottle count to accurately keep track
-            }
-            // i is increased after everything because otherwise it won't
-            // check the first item in the array if done first
             i++;
-            yield return new WaitForSeconds(.25f);
+            integer = i;
+            if (i >= Bottles.Length)
+            {
+                StartCheck = false;
+                DeadBottles = 0;
+            }
+            yield return null;
         }
     }
 }
-

@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PillEnemy : MonoBehaviour
+public class PillEnemy : Enemy
 {
-    private Animator anim;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -21,9 +20,6 @@ public class PillEnemy : MonoBehaviour
 
     public void KillAll()
     {
-        if (anim != null) 
-        {
-            anim.SetTrigger("Death"); 
-        }
+        anim.SetTrigger("Death");
     }
 }

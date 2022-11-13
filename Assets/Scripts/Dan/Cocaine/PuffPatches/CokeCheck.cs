@@ -12,14 +12,14 @@ public class CokeCheck : MonoBehaviour
     }
     private IEnumerator Checker()
     {
-        CocainePuffs = GameObject.FindGameObjectsWithTag("CocainePuff").Length; // reasigns all the puff patches
-        if (CocainePuffs == 0) // if there are none
+        CocainePuffs = GameObject.FindGameObjectsWithTag("CocainePuff").Length;
+        if (CocainePuffs == 0)
         {
             allPuffed = true;
         }
-        if(CocainePuffs > 0) // if there's at least one
+        if(CocainePuffs > 0)
         {
-            allPuffed = false;
+            allPuffed=false;
         }
         yield return new WaitForSeconds(1.5f);
         StartCoroutine(Checker());
