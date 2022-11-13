@@ -17,7 +17,8 @@ public class CokePursuit : CokeEnemyState
         MrCocaine = npc.GetComponent<Mrcoke2>();
         anim.SetTrigger("Pursuit");
         rb = npc.GetComponent<Rigidbody>();
-        MrCocaine.target = player;
+
+        MrCocaine.target = player; // targets the player
         base.Enter();
     }
     public override void Update()
