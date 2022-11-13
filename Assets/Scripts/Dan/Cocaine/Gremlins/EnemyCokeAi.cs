@@ -17,25 +17,20 @@ public class EnemyCokeAi : MonoBehaviour
         player = GameObject.Find("Player");
         agent = this.GetComponent<NavMeshAgent>();
         anim = this.GetComponent<Animator>();
-        //currentState = new Patrol(gameObject, agent, anim, player);
+        currentState = new PatrolState(gameObject, agent, anim, player);
     }
-
-    // Update is called once per frame
     void Update()
     {
         currentState = currentState.Process();
     }
-
     private void OnEnable()
     {
         GameEvents.DetectPlayer += DetectPlayer;
     }
-
     private void OnDisable()
     {
         GameEvents.DetectPlayer -= DetectPlayer;
     }
-
     private void DetectPlayer(bool detect)
     {
         //passthrough a bool

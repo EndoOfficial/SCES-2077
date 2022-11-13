@@ -1,34 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Mrcoke2 : MonoBehaviour
 {
-    public GameObject[] targets;
+    public float Cooldown;
+    private GameObject[] targets;
     public int speed;
     public float AnimTime;
     int targetIndex;
     public GameObject target;
-    public bool Puffed;
-    // Start is called before the first frame update
+    public int damage;
+    private bool hit;
+    public LayerMask Player;
+    public float radius;
+    public GameObject CokeChecker;
+    public bool Melee;
     void Start()
     {
+        CokeChecker = GameObject.Find("CocaineCheck");
         targets = GameObject.FindGameObjectsWithTag("CocainePuff");
         targetIndex = Random.Range(0, targets.Length);
         target = targets[targetIndex];
     }
     public void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+        transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
+        transform.position += transform.forward * speed * Time.deltaTime;
+        if (Physics.CheckSphere(transform.position, radius, Player))
+        {
+            if (!hit)
+            {
+                hit = true;
+                StartCoroutine(HitDelay());
+                GameEvents.DamagePlayer?.Invoke(damage);
+            }
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("CocainePuff"))
         {
-            Puffed = true; // for states
             other.gameObject.tag = ("Untagged"); // Ensures that the patch can't be targeted
-            GameEvents.CokeTarget?.Invoke(); // event to retarget if need be
+            GameEvents.CokeTarget?.Invoke(); // Event to retarget if need be
         }
+
+       
+    }
+    private IEnumerator HitDelay()
+    {
+        yield return new WaitForSeconds(Cooldown);
+        hit = false;
     }
     private void OnEnable()
     {
@@ -38,7 +59,7 @@ public class Mrcoke2 : MonoBehaviour
     {
         GameEvents.CokeTarget -= Retarget;
     }
-    void Retarget()
+    public void Retarget()
     {
         if (target.tag != ("CocainePuff")) // first checks if the current target is no longer a valid target
         {
@@ -49,6 +70,10 @@ public class Mrcoke2 : MonoBehaviour
     {
         yield return new WaitForSeconds(AnimTime); // waits until the set time (animation time)
         targets = GameObject.FindGameObjectsWithTag("CocainePuff"); // re-gets the places that can be puffed in
+        if (targets.Length <= 0)
+        {
+            yield break;
+        }
         targetIndex = Random.Range(0, targets.Length); // re-sets the target array
         target = targets[targetIndex]; // gets a new target
     }

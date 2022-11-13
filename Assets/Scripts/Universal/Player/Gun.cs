@@ -34,7 +34,7 @@ public class Gun : MonoBehaviour
     {
         anim.SetTrigger("Shoot");
 
-        GameEvents.OnUniversalplayAudio?.Invoke(audioSource,AudioManager.UniversalClipTags.Gunfire); // Sound effect playing
+        //GameEvents.OnUniversalplayAudio?.Invoke(audioSource,AudioManager.UniversalClipTags.Gunfire); // Sound effect playing
 
         RaycastHit hit;
 

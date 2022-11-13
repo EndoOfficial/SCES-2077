@@ -17,7 +17,6 @@ public class PillAttackState : PillState
     {
         anim = npc.GetComponent<Animator>();
         Timer = npc.GetComponent<RetreatTimer>();
-        //anim.SetTrigger("RunForwards");
         Hit = npc.GetComponent<HitPlayer>();
         Running = npc.GetComponent<PillMovement>();
         Running.speed = 2f;

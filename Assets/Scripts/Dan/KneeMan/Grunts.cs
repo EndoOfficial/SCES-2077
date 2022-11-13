@@ -24,10 +24,6 @@ public class Grunts : MonoBehaviour
                 GameEvents.DamagePlayer?.Invoke(damage);
             }
         }
-        else
-        {
-            hit = false;
-        }
     }
     private IEnumerator HitDelay()
     {

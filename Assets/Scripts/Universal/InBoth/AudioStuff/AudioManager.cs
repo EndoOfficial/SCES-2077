@@ -81,12 +81,15 @@ public class AudioManager : MonoBehaviour
         GameEvents.OnSlumsplayAudio += SlumsOnPlayAudio;
         GameEvents.OnRuralplayAudio += RuralOnPlayAudio;
         GameEvents.OnApartmentplayAudio += ApartmentOnPlayAudio;
-        GameEvents.OnUniversalplayAudio += UniversalOnPlayAudio;
+        GameEvents.OnCorporateplayAudio += CorporateOnPlayAudio;
     }
     public void OnDisable()
     {
         GameEvents.OnUniversalplayAudio -= UniversalOnPlayAudio;
-        GameEvents.OnSlumsplayAudio += SlumsOnPlayAudio;
+        GameEvents.OnSlumsplayAudio -= SlumsOnPlayAudio;
+        GameEvents.OnRuralplayAudio -= RuralOnPlayAudio;
+        GameEvents.OnApartmentplayAudio -= ApartmentOnPlayAudio;
+        GameEvents.OnCorporateplayAudio -= CorporateOnPlayAudio;
     }
     private void UniversalOnPlayAudio(AudioSource source, UniversalClipTags clipTag)
     {
