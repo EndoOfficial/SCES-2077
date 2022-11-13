@@ -17,7 +17,8 @@ public class PatrolState : CokeEnemyState
         anim.SetTrigger("Patrol");
         rb = npc.GetComponent<Rigidbody>();
         MrCocaine = npc.GetComponent<Mrcoke2>();
-        MrCocaine.Retarget();
+
+        MrCocaine.Retarget(); // checks to seee if patches are targetable
         base.Enter();
     }
     public override void Update()
