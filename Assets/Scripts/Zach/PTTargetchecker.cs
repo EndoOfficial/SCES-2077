@@ -29,23 +29,28 @@ public class PTTargetchecker : MonoBehaviour
 
     private IEnumerator Checker() //checks if all the targets have been killed and if so the door opens, gets set as open via bool
     {
-        Enemy = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        if (doorOpen == false && Enemy <= 0)
+        while (true)
         {
-            door.transform.RotateAround (door.transform.position, Vector3.up, 90);
-            doorOpen = true;
-            nextArea.SetActive(true);
+            Enemy = GameObject.FindGameObjectsWithTag("Enemy").Length;
+            if (doorOpen == false && Enemy <= 0)
+            {
+                door.transform.RotateAround(door.transform.position, Vector3.up, 90);
+                doorOpen = true;
+                nextArea.SetActive(true);
+            }
+            yield return new WaitForSeconds(1.5f);
         }
-        yield return new WaitForSeconds(1.5f);
-        StartCoroutine(Checker());
     } 
     void DoorCloser() //Closes the door and disables the last area, sets door as closed (activated via events
     {
         if (doorOpen == true)
         {
             doorOpen = false;
-            door.transform.Rotate(0, -90, 0);
-            lastArea.SetActive(false);
+            door.transform.RotateAround(door.transform.position, Vector3.up, -90);
+            if(lastArea != null)
+            {
+              lastArea.SetActive(false);
+            }
             Debug.Log("A");
         }
         else

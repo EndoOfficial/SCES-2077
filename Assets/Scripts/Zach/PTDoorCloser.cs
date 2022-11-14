@@ -8,6 +8,7 @@ public class PTDoorCloser : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("C");
         GameEvents.DoorClose?.Invoke();
         
     }

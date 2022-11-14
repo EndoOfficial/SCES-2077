@@ -16906,10 +16906,6 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 2015154809373924600, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
-      propertyPath: mouseSensitivity
-      value: 250
-      objectReference: {fileID: 0}
     - target: {fileID: 2015154809373924601, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: cam
       value: 
