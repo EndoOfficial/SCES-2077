@@ -192,6 +192,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &167808183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167808184}
+  m_Layer: 10
+  m_Name: Bullet Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &167808184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167808183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.08, y: -3.64, z: -0.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 295926634}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206593848
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +304,11 @@ MonoBehaviour:
   Move1: {fileID: 83560089}
   Move2: {fileID: 2110248892}
   speed: 5
+--- !u!4 &295926634 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8729942230734904504, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
+  m_PrefabInstance: {fileID: 1399989401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &335925556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,6 +2620,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1886031656}
+    - target: {fileID: 7656225759637098297, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
+      propertyPath: bulletHit
+      value: 
+      objectReference: {fileID: 5172426982756091155, guid: e48994cbea4aef14c98eb6b3d817266d, type: 3}
+    - target: {fileID: 7656225759637098297, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
+      propertyPath: bulletSpawn
+      value: 
+      objectReference: {fileID: 167808183}
+    - target: {fileID: 7656225759637098297, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
+      propertyPath: bulletTrail
+      value: 
+      objectReference: {fileID: 5491431827969203855, guid: a993f06506092f54c8b15c12343218e0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f1bcdc97f0d7774fbdfbd379fc004c9, type: 3}
 --- !u!114 &1451255631 stripped
@@ -4029,7 +4077,7 @@ PrefabInstance:
       objectReference: {fileID: 545769407}
     - target: {fileID: 4800277820545171849, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMenu
+      value: ResetScene
       objectReference: {fileID: 0}
     - target: {fileID: 4958787710120097658, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_Name
@@ -5264,7 +5312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

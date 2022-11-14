@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1908,37 +1908,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68884d1ade4c75e46b0f00475e983658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - source: {fileID: 0}
-    name: Theme
-    clip: {fileID: 8300000, guid: bc032148b9a0d664eb0a05a8489ca7a9, type: 3}
-    volume: 0.65
-    pitch: 1
-    loop: 1
-  - source: {fileID: 0}
-    name: Shooting
-    clip: {fileID: 8300000, guid: 2203773368e4340d98c114f55c2dd7fd, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-  - source: {fileID: 0}
-    name: Jump
-    clip: {fileID: 8300000, guid: 6f4b6e12264d7c34d91cd20aad8c3e0a, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-  - source: {fileID: 0}
-    name: Impact
-    clip: {fileID: 8300000, guid: 69984224196d2654da7a338acd044232, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-  - source: {fileID: 0}
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
+  UniversalAudioLibrary: {fileID: 0}
+  SlumsAudioLibrary: {fileID: 0}
+  ApartmentAudioLibrary: {fileID: 0}
+  RuralAudioLibrary: {fileID: 0}
+  CorporateAudioLibrary: {fileID: 0}
 --- !u!4 &2120755512
 Transform:
   m_ObjectHideFlags: 0
