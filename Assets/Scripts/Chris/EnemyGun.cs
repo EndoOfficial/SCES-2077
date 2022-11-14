@@ -5,31 +5,36 @@ using UnityEngine;
 public class EnemyGun : MonoBehaviour
 {
     public GameObject player;
-    private Animator anim;
+    protected Animator anim;
+    protected GameObject cam;
 
-    private bool canSeePlayerRay;
-    private bool shootAtPlayerRay;
+    protected bool canSeePlayerRay;
+    protected bool shootAtPlayerRay;
     public bool seePlayer;
-    private Vector3 playerDirection;
-    private Vector3 OldPlayerDirection;
-    private Vector3 bulletDirection;
-    public LayerMask playerMask;
+    protected Vector3 playerDirection;
+    protected Vector3 OldPlayerDirection;
+    protected Vector3 bulletDirection;
     public float bulletSpread;
     public float maxSpread;
-    private float tempSpread;
+    protected float tempSpread;
     public float attackSpeed;
     public int damage;
     public float delay;
     public bool Paused;
 
+    public GameObject bulletSpawn;
+    public TrailRenderer bulletTrail;
+    public GameObject bulletHit;
+
     private void Start()
     {
-        StartCoroutine(Shoot());
         player = GameObject.Find("Player");
+        cam = player.transform.Find("Head").transform.Find("Camera").gameObject;
         anim = GetComponent<Animator>();
         tempSpread = bulletSpread;
         StartCoroutine(Position());
     }
+
     private void OnEnable()
     {
         GameEvents.OnPauseGame += PauseGame;
@@ -47,7 +52,7 @@ public class EnemyGun : MonoBehaviour
     {
         //gets player direction
 
-        playerDirection = player.transform.position - transform.position;
+        playerDirection = cam.transform.position - transform.position;
 
         //playerDirection = playerDirection;
 
@@ -57,6 +62,7 @@ public class EnemyGun : MonoBehaviour
             if (hitinfo.transform.CompareTag("Player") && !seePlayer)
             {
                 seePlayer = true;
+                StartCoroutine(Attack());
             }
             else if (!hitinfo.transform.CompareTag("Player") && seePlayer)
             {
@@ -66,45 +72,84 @@ public class EnemyGun : MonoBehaviour
         }
     }
 
-    //shoot coroutine
-    private IEnumerator Shoot()
+    protected virtual IEnumerator Attack()
     {
-        yield return new WaitForSecondsRealtime(1f);
-        while (true)
-        {
-            if(seePlayer && !Paused)
-            {
-                //randomizes bulletSpread
-                float temp = Random.Range(-bulletSpread, bulletSpread);
-                float temp1 = Random.Range(-bulletSpread, bulletSpread);
-                float temp2 = Random.Range(-bulletSpread, bulletSpread);
-
-                //get the normalized playerDirection
-                bulletDirection = OldPlayerDirection.normalized;
-                //applies the random bulletspread to the bullet direction
-                bulletDirection = new Vector3(
-                    bulletDirection.x + temp,
-                    bulletDirection.y + temp1,
-                    bulletDirection.z + temp2);
-
-                //if the ray hits the player
-                if (shootAtPlayerRay = Physics.Raycast(transform.position, bulletDirection, out RaycastHit hitinfo))
-                {
-                    anim.SetTrigger("Shoot");
-                    if (hitinfo.transform.CompareTag("Player"))
-                    {
-                        GameEvents.DamagePlayer?.Invoke(damage);
-                    }
-                }
-                //increases spread every shot
-                if (bulletSpread <= maxSpread)
-                {
-                    bulletSpread += 0.01f;
-                }
-            }
-            yield return new WaitForSecondsRealtime(attackSpeed);
-        }
+        yield return new WaitForSeconds(1);
+        anim.SetTrigger("Shoot");
     }
+
+    //shoot coroutine
+    protected virtual IEnumerator Shoot()
+    {
+        if (seePlayer && !Paused)
+        {
+            //randomizes bulletSpread
+            float temp = Random.Range(-bulletSpread, bulletSpread);
+            float temp1 = Random.Range(-bulletSpread, bulletSpread);
+            float temp2 = Random.Range(-bulletSpread, bulletSpread);
+
+            //get the normalized playerDirection
+            bulletDirection = OldPlayerDirection.normalized;
+            //applies the random bulletspread to the bullet direction
+            bulletDirection = new Vector3(
+                bulletDirection.x + temp,
+                bulletDirection.y + temp1,
+                bulletDirection.z + temp2);
+
+            //if the ray hits the player
+            if (shootAtPlayerRay = Physics.Raycast(transform.position, bulletDirection, out RaycastHit hit))
+            {
+
+                TrailRenderer trail = Instantiate(bulletTrail, bulletSpawn.transform.position, Quaternion.identity);
+                StartCoroutine(SpawnTrail(trail, hit));
+                //if (hit.transform.CompareTag("Player"))
+                //{
+                //    GameEvents.DamagePlayer?.Invoke(damage);
+                //}
+            }
+            //increases spread every shot
+            if (bulletSpread <= maxSpread)
+            {
+                bulletSpread += 0.01f;
+            }
+        }
+        yield return new WaitForSecondsRealtime(attackSpeed);
+        anim.SetTrigger("Shoot");
+    }
+
+    protected IEnumerator SpawnTrail(TrailRenderer trail, RaycastHit hit)
+    {
+        float time = 0;
+        Vector3 startposition = trail.transform.position;
+
+        while (time < 3)
+        {
+            trail.transform.position = Vector3.Lerp(startposition, hit.point, time);
+            time += Time.deltaTime / trail.time;
+
+            yield return null;
+        }
+        trail.transform.position = hit.point;
+        if (hit.transform.CompareTag("Player"))
+        {
+            //damage enemy Event
+            GameEvents.DamagePlayer?.Invoke(damage); //This passes though a damage and the object that GET'S HIT
+            //GameEvent to show damage
+
+            WeakPoints target = hit.transform.GetComponent<WeakPoints>();
+            if (target != null)
+            {
+                GameEvents.DamagePlayer?.Invoke(damage);
+                target.Shot();
+            }
+        }
+        else
+        {
+            Instantiate(bulletHit, hit.point + (hit.normal * .01f), Quaternion.FromToRotation(Vector3.forward, hit.normal));
+        }
+        Destroy(trail.gameObject, trail.time);
+    }
+
     public IEnumerator Position()
     {
         yield return new WaitForSecondsRealtime(delay);

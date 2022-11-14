@@ -56,8 +56,8 @@ public class Enemy : MonoBehaviour
             if (canDie)
             {
                 //Toggle canDie
-                canDie = false;
                 anim.SetTrigger("Death");
+                canDie = false;
                 //Add Die function as event in death animator
             }
         }
