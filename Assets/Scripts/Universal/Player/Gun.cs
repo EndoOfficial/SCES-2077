@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(AudioCycle))]
 public class Gun : MonoBehaviour
 {
     public int damage = 10;
@@ -15,16 +17,20 @@ public class Gun : MonoBehaviour
     AudioSource audioSource;
     public TrailRenderer bulletTrail;
     public GameObject bulletSpawn;
+    private AudioCycle audioCycle;
 
     public void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+       
+        audioCycle = GetComponent<AudioCycle>();
     }
     public void Update()
     {
         //checks for mouse1 and nextTimeToFire
         if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
+            
+            GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(),AudioManager.UniversalClipTags.Gunfire);
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }

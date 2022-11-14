@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 public class Mrcoke2 : MonoBehaviour
 {
     public float Cooldown;
@@ -15,17 +16,21 @@ public class Mrcoke2 : MonoBehaviour
     public float radius;
     public GameObject CokeChecker;
     public bool Melee;
+    private NavMeshAgent _agent;
     void Start()
     {
         CokeChecker = GameObject.Find("CocaineCheck");
         targets = GameObject.FindGameObjectsWithTag("CocainePuff");
         targetIndex = Random.Range(0, targets.Length);
         target = targets[targetIndex];
+        _agent = GetComponent<NavMeshAgent>();
+        _agent.SetDestination(target.transform.position);
+
     }
     public void Update()
     {
-        transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
-        transform.position += transform.forward * speed * Time.deltaTime;
+        //transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
+        //transform.position += transform.forward * speed * Time.deltaTime;
         if (Physics.CheckSphere(transform.position, radius, Player))
         {
             if (!hit)
@@ -41,7 +46,8 @@ public class Mrcoke2 : MonoBehaviour
         if (other.gameObject.CompareTag("CocainePuff"))
         {
             other.gameObject.tag = ("Untagged"); // Ensures that the patch can't be targeted
-            GameEvents.CokeTarget?.Invoke(); // Event to retarget if need be
+            //GameEvents.CokeTarget?.Invoke(); // Event to retarget if need be
+            Retarget();
         }
 
        
@@ -51,18 +57,19 @@ public class Mrcoke2 : MonoBehaviour
         yield return new WaitForSeconds(Cooldown);
         hit = false;
     }
-    private void OnEnable()
-    {
-        GameEvents.CokeTarget += Retarget;
-    }
-    private void OnDisable()
-    {
-        GameEvents.CokeTarget -= Retarget;
-    }
+    //private void OnEnable()
+    //{
+    //    GameEvents.CokeTarget += Retarget;
+    //}
+    //private void OnDisable()
+    //{
+    //    GameEvents.CokeTarget -= Retarget;
+    //}
     public void Retarget()
     {
         if (target.tag != ("CocainePuff")) // first checks if the current target is no longer a valid target
         {
+            Debug.Log($"Retarget");
             StartCoroutine(GetTargets()); // starts the retargetting coroutine
         }
     }
@@ -74,7 +81,11 @@ public class Mrcoke2 : MonoBehaviour
         {
             yield break;
         }
+        Debug.Log($"NewTarget{target.name}");
         targetIndex = Random.Range(0, targets.Length); // re-sets the target array
         target = targets[targetIndex]; // gets a new target
+        _agent.SetDestination( target.transform.position);
+        _agent.speed += 5;
     }
+    
 }

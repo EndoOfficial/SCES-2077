@@ -12,3 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db44b7a6fd5bc4418d5a28b2c1c4d6f, type: 3}
   m_Name: Universal Audio Library
   m_EditorClassIdentifier: 
+  audioClips:
+  - audioClip: {fileID: 8300000, guid: 96230f0c0c413544cb195f67342ea554, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    UniversalClipTag: 0
+  - audioClip: {fileID: 8300000, guid: f35baf967c18f7b4f980062197640f27, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    UniversalClipTag: 1
+  - audioClip: {fileID: 0}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    UniversalClipTag: 2
+  - audioClip: {fileID: 0}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    UniversalClipTag: 3
+  - audioClip: {fileID: 8300000, guid: 9646462823f49e248a9b2a93382a5ae4, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    UniversalClipTag: 4
+  - audioClip: {fileID: 8300000, guid: 4682b9915e793294c8c004ab65d58363, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    UniversalClipTag: 5

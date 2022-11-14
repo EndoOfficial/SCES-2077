@@ -28,23 +28,27 @@ public abstract class GameAudioClip
         }
     }
 }
-
+[System.Serializable] 
 public class UniversalAudioClip : GameAudioClip
 {
     public AudioManager.UniversalClipTags UniversalClipTag;
 }
+[System.Serializable]
 public class SlumsAudioClip : GameAudioClip
 {
     public AudioManager.SlumsClipTags SlumsClipTag;
 }
+[System.Serializable]
 public class CorporateAudioClip : GameAudioClip
 {
     public AudioManager.CorporateClipTags CorporateClipTag;
 }
+[System.Serializable]
 public class ApartmentAudioClip : GameAudioClip
 {
     public AudioManager.ApartmentClipTags ApartmentClipTag;
 }
+[System.Serializable]
 public class RuralAudioClip : GameAudioClip
 {
     public AudioManager.RuralClipTags RuralClipTag;

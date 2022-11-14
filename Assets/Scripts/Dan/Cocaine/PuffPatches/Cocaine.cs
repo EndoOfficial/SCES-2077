@@ -10,12 +10,22 @@ public class Cocaine : MonoBehaviour
     public bool hit;
     public ParticleSystem cokeParticle;
     public bool particleActivated = false;
+    
     private void OnTriggerEnter(Collider other)
     {
+
+        
         if (other.gameObject.CompareTag("Enemy"))
         {
-            particleActivated = true;
-            cokeParticle.Play();
+           var mrCoke= other.gameObject.GetComponent<Mrcoke2>();
+
+            if (mrCoke !=null&& mrCoke.target==this.gameObject)
+            {
+                particleActivated = true;
+                cokeParticle.Play();
+            }
+           
+            
         }
     }
     private void OnTriggerStay(Collider other)
