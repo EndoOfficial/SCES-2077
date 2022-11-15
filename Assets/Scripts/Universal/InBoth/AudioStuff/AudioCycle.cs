@@ -12,7 +12,7 @@ public class AudioCycle : MonoBehaviour
         currentIndex++;
         if (currentIndex > audioSources.Count - 1)
             currentIndex = 0;
-        Debug.Log($"Current Index {currentIndex} {audioSources.Count}");
+        //Debug.Log($"Current Index {currentIndex} {audioSources.Count}");
         return audioSources[currentIndex];
     }
 }
