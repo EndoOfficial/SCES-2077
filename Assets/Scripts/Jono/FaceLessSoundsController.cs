@@ -31,7 +31,7 @@ public class FaceLessSoundsController : MonoBehaviour
         //Physics.Raycast(Player.transform.position, SpawnPoint.position - Player.transform.position, out hit);
         
         
-        Debug.Log(hit.collider.gameObject.name);
+        //Debug.Log(hit.collider.gameObject.name);
         Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
 
         if (timer < 0 && CanSpawn)

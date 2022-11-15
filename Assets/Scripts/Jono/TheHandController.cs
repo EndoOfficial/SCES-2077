@@ -7,6 +7,7 @@ public class TheHandController : MonoBehaviour
     public GameObject HandsCentrePos;
     public GameObject BarrelHolder;
     public GameObject Bucket;
+    public GameObject PlayerDetector;
     public float MaxDist;
     public float Speed;
     public Vector3 ThrowForce;
@@ -22,6 +23,8 @@ public class TheHandController : MonoBehaviour
 
     private void Update()
     {
+        playerDetected = PlayerDetector.GetComponent<PlayerDetection>().playerDetected;
+
         Debug.Log(BarrelHolder.transform.childCount);
         if (MoveLeft)
         {
@@ -41,6 +44,8 @@ public class TheHandController : MonoBehaviour
             StopCoroutine(SpawnNewBucket());
             StartCoroutine(ThrowBucket());
         }
+
+        
     }
     void FixedUpdate()
     {
@@ -64,20 +69,7 @@ public class TheHandController : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            playerDetected = true;
-        }
-    }
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            playerDetected = false;
-        }
-    }
+    
 
     public IEnumerator SpawnNewBucket()
     {

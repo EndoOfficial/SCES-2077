@@ -69,10 +69,9 @@ public class FacelessController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Damage");
-            Destroy(this.gameObject);            
             damage = 10;
             GameEvents.DamagePlayer(damage);
-            
+            Destroy(this.gameObject);
         }
     }
     public IEnumerator Lunge()

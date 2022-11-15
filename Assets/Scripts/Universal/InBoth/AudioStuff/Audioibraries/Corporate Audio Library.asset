@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0307e7c913e9e646a5aed770fa64c71, type: 3}
   m_Name: Corporate Audio Library
   m_EditorClassIdentifier: 
+  audioClips:
+  - audioClip: {fileID: 0}
+    Loop: 0
+    Pitch: 0
+    Volume: 0
+    CorporateClipTag: 0
