@@ -17,14 +17,20 @@ public class CokePursuit : CokeEnemyState
         MrCocaine = npc.GetComponent<Mrcoke2>();
         anim.SetTrigger("Pursuit");
         rb = npc.GetComponent<Rigidbody>();
-
-        MrCocaine.target = player; // targets the player
+        
+        MrCocaine.target = player;
+        agent.SetDestination(player.transform.position);
+        Debug.Log($"Target{player.transform.position}");
+        /*agent.SetDestination(player.transform.position)*/ // targets the player
         base.Enter();
     }
     public override void Update()
     {
+
+        agent.SetDestination(player.transform.position);
         if (check.Pursue == false)
         {
+            
             anim.SetTrigger("Patrol");
             nextState = new PatrolState(npc, agent, anim, player);
             stage = EVENT.EXIT;

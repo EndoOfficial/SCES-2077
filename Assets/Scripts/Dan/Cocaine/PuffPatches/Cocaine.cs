@@ -10,7 +10,12 @@ public class Cocaine : MonoBehaviour
     public bool hit;
     public ParticleSystem cokeParticle;
     public bool particleActivated = false;
-    
+    private Animator animator;
+
+    private void Start()
+    {
+        //animator = GetComponent<Animator>();
+    }
     private void OnTriggerEnter(Collider other)
     {
 
@@ -23,6 +28,8 @@ public class Cocaine : MonoBehaviour
             {
                 particleActivated = true;
                 cokeParticle.Play();
+                //animator.SetTrigger("Puff");
+                
             }
            
             

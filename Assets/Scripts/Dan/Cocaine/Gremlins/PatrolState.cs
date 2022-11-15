@@ -19,7 +19,6 @@ public class PatrolState : CokeEnemyState
         MrCocaine = npc.GetComponent<Mrcoke2>();
         Debug.Log($"SetDestination{MrCocaine.target.name}");
 
-        agent.speed = 15;
 
         MrCocaine.Retarget(); // checks to seee if patches are targetable
         base.Enter();
@@ -28,6 +27,7 @@ public class PatrolState : CokeEnemyState
     {
         if (check.Pursue)
         {
+           
             anim.SetTrigger("Pursuit");
             nextState = new CokePursuit(npc, agent, anim, player);
             stage = EVENT.EXIT;
