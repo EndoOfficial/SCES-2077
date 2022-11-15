@@ -25,7 +25,6 @@ public class LevelLoader : MonoBehaviour
         if (raycheck = Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hitinfo, raycastRange))
         {
             
-
             if (hitinfo.transform.CompareTag("NPC"))
             {
                 var sceneLoader = hitinfo.transform.GetComponent<SceneLoader>();
@@ -51,13 +50,8 @@ public class LevelLoader : MonoBehaviour
                         call.PresentCollect();
                         Debug.Log("Collectable");
                     }
-               
-
                 }
-
             }
-
-            
             else
             {
               
@@ -66,7 +60,6 @@ public class LevelLoader : MonoBehaviour
                     
                     Debug.Log("Test");
                     call.DisableCollect();
-                    
                 }
                 actionButtonPrompt.gameObject.SetActive(false);
             }

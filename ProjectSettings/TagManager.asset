@@ -25,6 +25,7 @@ TagManager:
   - ItemSpawner
   - CocainePuff
   - Collectable
+  - SpawnLocation
   layers:
   - Default
   - TransparentFX

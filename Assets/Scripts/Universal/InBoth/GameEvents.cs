@@ -68,4 +68,6 @@ public static class GameEvents
 
     public static Action BottleDeath;// When all pill bottles die
 
+    public static Action CellsShot; // When a spreadsheet cell is shot
+
 }
