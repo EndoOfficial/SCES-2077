@@ -22,6 +22,7 @@ public class DealerAttack : MonoBehaviour
     public void Attack()
     {
         Instantiate(bigBill, bigSpawn.transform.position, bigSpawn.transform.rotation);
+        anim.ResetTrigger("NormalAttack");
         StartCoroutine(Delay());
     }
 
@@ -31,6 +32,7 @@ public class DealerAttack : MonoBehaviour
         {
             Instantiate(babyBill, babySpawn[i].transform);
         }
+        anim.ResetTrigger("Flurry");
         StartCoroutine(Delay());
     }
 
@@ -44,7 +46,7 @@ public class DealerAttack : MonoBehaviour
 
     private IEnumerator Delay()
     {
-        yield return new WaitForSecondsRealtime(delay + Random.Range(-2, 2));
+        yield return new WaitForSecondsRealtime(delay + Random.Range(0, 2));
         if (Random.Range(0, 100) < chance)
         {
             anim.SetTrigger("Flurry");

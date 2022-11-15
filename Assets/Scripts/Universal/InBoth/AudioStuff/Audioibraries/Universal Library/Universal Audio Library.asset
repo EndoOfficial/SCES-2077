@@ -16,7 +16,7 @@ MonoBehaviour:
   - audioClip: {fileID: 8300000, guid: 96230f0c0c413544cb195f67342ea554, type: 3}
     Loop: 0
     Pitch: 1
-    Volume: 1
+    Volume: 0.3
     UniversalClipTag: 0
   - audioClip: {fileID: 8300000, guid: f35baf967c18f7b4f980062197640f27, type: 3}
     Loop: 0

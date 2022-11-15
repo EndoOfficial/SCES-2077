@@ -28,6 +28,7 @@ public class FishJump : MonoBehaviour
         {
             grounded = true;
             aoe.aoe();
+            GameEvents.OnSlumsplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.SlumsClipTags.FishLand);
             StartCoroutine(Wait()); // start co-routine
         }
     }

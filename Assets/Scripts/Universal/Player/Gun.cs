@@ -21,7 +21,6 @@ public class Gun : MonoBehaviour
 
     public void Start()
     {
-       
         audioCycle = GetComponent<AudioCycle>();
     }
     public void Update()
@@ -30,7 +29,7 @@ public class Gun : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
             
-            GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(),AudioManager.UniversalClipTags.Gunfire);
+            GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.Gunfire);
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
@@ -84,25 +83,28 @@ public class Gun : MonoBehaviour
             yield return null;
         }
         trail.transform.position = hit.point;
-        if (hit.transform.CompareTag("Enemy"))
+        if (hit.transform != null)
         {
-            //damage enemy Event
-            GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject); //This passes though a damage and the object that GET'S HIT
-            Instantiate(enemyHit, hit.point, bulletSpawn.transform.rotation);
-
-            WeakPoints target = hit.transform.GetComponent<WeakPoints>();
-            if (target != null)
+            if (hit.transform.CompareTag("Enemy"))
             {
-                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.parent.gameObject);
-                target.Shot();
+                //damage enemy Event
+                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject); //This passes though a damage and the object that GET'S HIT
+                Instantiate(enemyHit, hit.point, bulletSpawn.transform.rotation);
+
+                WeakPoints target = hit.transform.GetComponent<WeakPoints>();
+                if (target != null)
+                {
+                    GameEvents.DamageEnemy?.Invoke(damage, hit.transform.parent.gameObject);
+                    target.Shot();
+                }
             }
-        }
-        else if (hit.transform.CompareTag("Player"))
-        {
-        }
-        else
-        {
-            Instantiate(bulletHit, hit.point + (hit.normal * .01f), Quaternion.FromToRotation(Vector3.forward, hit.normal));
+            else if (hit.transform.CompareTag("Player"))
+            {
+            }
+            else
+            {
+                Instantiate(bulletHit, hit.point + (hit.normal * .01f), Quaternion.FromToRotation(Vector3.forward, hit.normal));
+            }
         }
         Destroy(trail.gameObject, trail.time);
     }

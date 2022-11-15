@@ -72,6 +72,14 @@ public class AudioManager : MonoBehaviour
     }
     public enum RuralClipTags
     {
+        //Farmer Level
+        FireExtenguish,
+        FireGrow,
+
+        //Farmer's son Level
+
+
+        //Cow Level
 
     }
 

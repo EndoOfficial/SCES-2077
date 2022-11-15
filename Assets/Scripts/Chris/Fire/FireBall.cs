@@ -33,6 +33,7 @@ public class FireBall : FireState
         timer.StartTimer();
         shoot.ShootStart();
         shoot.FireRate = 2f;
+        GameEvents.OnRuralplayAudio?.Invoke(npc.GetComponent<AudioSource>(), AudioManager.RuralClipTags.FireGrow);
         base.Enter();
     }
 
@@ -52,6 +53,7 @@ public class FireBall : FireState
         if(timer.timeDone)
         {
             timer.timeDone = false;
+            GameEvents.OnRuralplayAudio?.Invoke(npc.GetComponent<AudioSource>(), AudioManager.RuralClipTags.FireGrow);
             nextState = new FireNado(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }
@@ -59,6 +61,7 @@ public class FireBall : FireState
         if (enemy.beWisp)
         {
             enemy.beWisp = false;
+            GameEvents.OnRuralplayAudio?.Invoke(npc.GetComponent<AudioSource>(), AudioManager.RuralClipTags.FireExtenguish);
             nextState = new FireWisp(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }

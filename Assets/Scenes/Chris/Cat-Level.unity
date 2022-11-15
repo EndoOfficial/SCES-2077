@@ -1117,7 +1117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: distance
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
@@ -1631,7 +1631,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1822
+  m_Name: pb_Mesh-47014
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2522,7 +2522,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1764
+  m_Name: pb_Mesh-46956
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2686,7 +2686,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1778
+  m_Name: pb_Mesh-46970
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

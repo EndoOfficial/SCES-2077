@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364ad79c1b592df46a548436492c1134, type: 3}
   m_Name: Rural Audio Library
   m_EditorClassIdentifier: 
+  audioClips:
+  - audioClip: {fileID: 8300000, guid: cf1586cdffdf68d46aba1f62116cc634, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    RuralClipTag: 0
+  - audioClip: {fileID: 8300000, guid: cf1586cdffdf68d46aba1f62116cc634, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    RuralClipTag: 1
