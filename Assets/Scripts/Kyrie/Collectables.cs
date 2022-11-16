@@ -6,15 +6,18 @@ using UnityEngine.SceneManagement;
 public class Collectables : MonoBehaviour
 {
     public GameObject Presentable;
-
+    public GameObject Panel;
     public void PresentCollect()
     {
-         Presentable.SetActive(true);
+         Panel.SetActive(true);
+        Presentable.SetActive(true);
     }
 
     public void DisableCollect()
     {
+        Panel.SetActive(false);
         Presentable.SetActive(false);
+        
     }
 
 }
