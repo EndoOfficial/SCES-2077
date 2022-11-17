@@ -17,6 +17,9 @@ public class LevelLoader : MonoBehaviour
     
     public string minutes;
     public string seconds;
+
+
+    public bool PlayerMissing = true;
     // Start is called before the first frame update
     private void Update()
     {
@@ -27,49 +30,74 @@ public class LevelLoader : MonoBehaviour
         */
         if (raycheck = Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hitinfo, raycastRange))
         {
-            
+
+            /*if (Input.anyKey && PlayerMissing == true)
+            {
+                actionButtonPrompt.gameObject.SetActive(false);
+                call.DisableCollect();
+            }*/
+
             if (hitinfo.transform.CompareTag("NPC"))
             {
                 var sceneLoader = hitinfo.transform.GetComponent<SceneLoader>();
                 if (sceneLoader != null)
                 {
                     actionButtonPrompt.gameObject.SetActive(true);
+
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        GameObject.Find("Player").SendMessage("Finnish");
-                        minutes = GetComponent<Timer>().minutes;
-                        seconds = GetComponent<Timer>().seconds;
+                        //GameObject.Find("Player").SendMessage("Finnish");
+                        //minutes = GetComponent<Timer>().minutes;
+                        //seconds = GetComponent<Timer>().seconds;
                         sceneLoader.LoadScene();                        
                         //GameEvents.OnSaveTimer?.Invoke(GameObject.Find("TimerText"));                        
-                        Debug.Log("get loaded son");
+
                     }
                 }
             }
 
             else if (hitinfo.transform.CompareTag("Collectable"))
+                //if your looking at a collectable
             {
-                call = hitinfo.transform.GetComponent<Collectables>();
-                if (call != null)
+                // you are no longer missing the raycast
+                if (PlayerMissing == true)
                 {
+                    //allowing you to stop setting PRESS E to disable
+                    PlayerMissing = false;
                     actionButtonPrompt.gameObject.SetActive(true);
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        call.PresentCollect();
-                        Debug.Log("Collectable");
-                    }
+                    call = hitinfo.transform.GetComponent<Collectables>();
                 }
-            }
-            else
-            {
-              
-                if (call != null)
-                {
+               
                     
-                    Debug.Log("Test");
-                    call.DisableCollect();
+            
+                if (Input.GetKeyDown(KeyCode.E))
+                    {
+                    //however once you press E it will disable
+                    // And present the collectable 
+                        call.PresentCollect();
+
+                    actionButtonPrompt.gameObject.SetActive(false);
+
                 }
-                actionButtonPrompt.gameObject.SetActive(false);
+                
             }
+            
+
+            else if (call != null)
+            {              
+                
+                
+                    actionButtonPrompt.gameObject.SetActive(false);
+                    call.DisableCollect();
+                    PlayerMissing = true;
+                
+
+
+
+            }
+
+           
+
         }
 
     }

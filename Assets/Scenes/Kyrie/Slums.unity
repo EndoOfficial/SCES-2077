@@ -8785,8 +8785,16 @@ PrefabInstance:
       value: Cat 2
       objectReference: {fileID: 0}
     - target: {fileID: 8712367201345098808, guid: ef60e2dcd5ff52b45ad771119205d12f, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712367201345098808, guid: ef60e2dcd5ff52b45ad771119205d12f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712367201345098808, guid: ef60e2dcd5ff52b45ad771119205d12f, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef60e2dcd5ff52b45ad771119205d12f, type: 3}
@@ -9028,6 +9036,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 983025665, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 707907690681550223, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -15756,6 +15768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5106530236493112708, guid: ded6f0b3f66eb2e4787e686a052b74de, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5590614881742552894, guid: ded6f0b3f66eb2e4787e686a052b74de, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -17627,8 +17643,16 @@ PrefabInstance:
       value: Addict 2
       objectReference: {fileID: 0}
     - target: {fileID: 3957197694821279890, guid: 3b3a0df1add354c4692966e0fc2ecab3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957197694821279890, guid: 3b3a0df1add354c4692966e0fc2ecab3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957197694821279890, guid: 3b3a0df1add354c4692966e0fc2ecab3, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 4440860371886109224, guid: 3b3a0df1add354c4692966e0fc2ecab3, type: 3}
       propertyPath: m_RootOrder
@@ -18882,6 +18906,10 @@ PrefabInstance:
     - target: {fileID: 1213651056656473478, guid: ff7fb552c5a550c45a0bca90f95072d2, type: 3}
       propertyPath: m_Name
       value: Dealer 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213651056656473478, guid: ff7fb552c5a550c45a0bca90f95072d2, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1213651056656473478, guid: ff7fb552c5a550c45a0bca90f95072d2, type: 3}
       propertyPath: m_IsActive
@@ -20294,6 +20322,10 @@ PrefabInstance:
     - target: {fileID: 4157985514344582599, guid: 63732406d6da21b40873985ccd0ae2a6, type: 3}
       propertyPath: m_Name
       value: Dealer 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157985514344582599, guid: 63732406d6da21b40873985ccd0ae2a6, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63732406d6da21b40873985ccd0ae2a6, type: 3}

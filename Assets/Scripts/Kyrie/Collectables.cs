@@ -11,6 +11,7 @@ public class Collectables : MonoBehaviour
     {
          Panel.SetActive(true);
         Presentable.SetActive(true);
+
     }
 
     public void DisableCollect()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25076213, g: 0.2748683, b: 0.3354764, a: 1}
+  m_IndirectSpecularColor: {r: 0.2502128, g: 0.274506, b: 0.33517367, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -34314,6 +34314,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 983025665, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 707907690681550223, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -37766,9 +37770,9 @@ GameObject:
   - component: {fileID: 1411129800976665115}
   - component: {fileID: 1792018957450793123}
   - component: {fileID: 1792018957450793124}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mum 1
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45846,9 +45850,9 @@ GameObject:
   - component: {fileID: 6785399235932530411}
   - component: {fileID: 6785399235932530413}
   - component: {fileID: 6785399235932530412}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Dad 1
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50381,9 +50385,9 @@ GameObject:
   - component: {fileID: 8700313522380924875}
   - component: {fileID: 8700313522380924877}
   - component: {fileID: 8700313522380924876}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Daughter 1
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
