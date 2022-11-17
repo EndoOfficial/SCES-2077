@@ -83,7 +83,7 @@ public class TheHandController : MonoBehaviour
 
     public IEnumerator ThrowBucket()
     {
-        
+        GameEvents.OnRuralplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.RuralClipTags.Whoosh);
         var child = BarrelHolder.gameObject.transform.GetChild(0).gameObject;
         child.transform.parent = null;
         child.GetComponent<Rigidbody>().isKinematic = false;

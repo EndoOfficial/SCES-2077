@@ -24,7 +24,8 @@ public class MrCoke : MonoBehaviour
     {
         Debug.Log("Hello");
         StartCoroutine(GiveOrder());
-        audio.PlayOneShot(SpawnNoise);
+        GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.BossSpawn);
+        //audio.PlayOneShot(SpawnNoise);
     }
 
     public IEnumerator GiveOrder()

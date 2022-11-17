@@ -68,7 +68,11 @@ public class AudioManager : MonoBehaviour
     
     public enum CorporateClipTags
     {
-
+        //Faceless Level
+        PickUp,
+        FacelessSound1,
+        FaceLessSound2,
+        BossSpawn,
     }
     public enum RuralClipTags
     {
@@ -80,6 +84,7 @@ public class AudioManager : MonoBehaviour
 
 
         //Cow Level
+        Whoosh,
 
     }
 

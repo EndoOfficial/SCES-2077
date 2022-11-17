@@ -13,8 +13,23 @@ MonoBehaviour:
   m_Name: Corporate Audio Library
   m_EditorClassIdentifier: 
   audioClips:
-  - audioClip: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 9b63d02fce42b6247bef633d00832e3c, type: 3}
     Loop: 0
-    Pitch: 0
-    Volume: 0
+    Pitch: 1
+    Volume: 1
     CorporateClipTag: 0
+  - audioClip: {fileID: 8300000, guid: d483e76bcc16fc644a8d86c7e8b482de, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    CorporateClipTag: 1
+  - audioClip: {fileID: 8300000, guid: 5d9a89a38b76c08438592cfa1a6cf9f6, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    CorporateClipTag: 2
+  - audioClip: {fileID: 8300000, guid: 25dc8fca8a952554d963431bfb1a1492, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    CorporateClipTag: 3

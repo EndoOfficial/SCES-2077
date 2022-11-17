@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class FacelessController : MonoBehaviour
 {
     public List<AudioClip> SpawnSounds = new List<AudioClip>();
-    new AudioClip SpawnNoise;
+    new float SpawnNoise;
     new AudioSource audio;
     public float Volume;
 
@@ -25,10 +25,19 @@ public class FacelessController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        //audio = GetComponent<AudioSource>();
 
-        SpawnNoise = SpawnSounds[Random.Range(0, SpawnSounds.Count)];
-        audio.PlayOneShot(SpawnNoise);
+        SpawnNoise = Random.Range(0, 3);
+        Debug.Log(SpawnNoise);        
+
+        if (SpawnNoise == 2)
+        {
+            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound1);
+        }
+        if (SpawnNoise == 1)
+        {
+            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FaceLessSound2);
+        }
 
         Player = GameObject.FindGameObjectWithTag("Player");
     }

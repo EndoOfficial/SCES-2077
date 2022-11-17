@@ -13,7 +13,10 @@ public class LevelLoader : MonoBehaviour
 
     private Collectables call;
 
-    private bool raycheck;
+    private bool raycheck;  
+    
+    public string minutes;
+    public string seconds;
     // Start is called before the first frame update
     private void Update()
     {
@@ -33,7 +36,11 @@ public class LevelLoader : MonoBehaviour
                     actionButtonPrompt.gameObject.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        sceneLoader.LoadScene();
+                        GameObject.Find("Player").SendMessage("Finnish");
+                        minutes = GetComponent<Timer>().minutes;
+                        seconds = GetComponent<Timer>().seconds;
+                        sceneLoader.LoadScene();                        
+                        //GameEvents.OnSaveTimer?.Invoke(GameObject.Find("TimerText"));                        
                         Debug.Log("get loaded son");
                     }
                 }

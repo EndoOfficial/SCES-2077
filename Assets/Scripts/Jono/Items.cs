@@ -19,7 +19,8 @@ public class Items : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
-        {
+        {            
+            //GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.PickUp);
             GameController = GameObject.FindGameObjectWithTag("GameManager");
             GameController.GetComponent<GameController>().ItemsCollected = GameController.GetComponent<GameController>().ItemsCollected + 1;
             Destroy(gameObject);
