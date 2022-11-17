@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     public int health = 100;
     public int maxHealth = 100;
     public Text text;
+    private AudioCycle audioCycle;
 
     private void OnEnable()
     {
@@ -18,11 +19,18 @@ public class Health : MonoBehaviour
     {
         GameEvents.DamagePlayer -= DamagePlayer;    
     }
+
+    private void Start()
+    {
+        audioCycle = GetComponent<AudioCycle>();
+    }
+
     public void DamagePlayer(int damage)
     {
         //FindObjectOfType<AudioManager>().Play("Hurt");
         // reduce health then update it
         health -= damage;
+        GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.PlayerHurt);
         if (health <= 0f)
         {
             text.text = health.ToString();

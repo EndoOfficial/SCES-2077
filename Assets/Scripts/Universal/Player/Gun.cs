@@ -28,7 +28,6 @@ public class Gun : MonoBehaviour
         //checks for mouse1 and nextTimeToFire
         if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
-            
             GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.Gunfire);
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
@@ -39,35 +38,12 @@ public class Gun : MonoBehaviour
     {
         anim.SetTrigger("Shoot");
 
-        //GameEvents.OnUniversalplayAudio?.Invoke(audioSource,AudioManager.UniversalClipTags.Gunfire); // Sound effect playing
-
         RaycastHit hit;
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
         {
             TrailRenderer trail = Instantiate(bulletTrail, bulletSpawn.transform.position, Quaternion.identity);
             StartCoroutine(SpawnTrail(trail, hit));
-            //if (hit.transform.CompareTag("Enemy"))
-            //{
-            //    //damage enemy Event
-            //    GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject); //This passes though a damage and the object that GET'S HIT
-            //    Instantiate(enemyHit, hit.point, fpsCam.transform.rotation);
-
-            //    WeakPoints target = hit.transform.GetComponent<WeakPoints>();
-            //    if (target != null)
-            //    {
-            //        GameEvents.DamageEnemy?.Invoke(damage, hit.transform.parent.gameObject);
-            //        target.Shot();
-            //    }
-            //}
-            //else if (hit.transform.CompareTag("Player"))
-            //{
-            //    return;
-            //}
-            //else
-            //{
-            //    Instantiate(bulletHit, hit.point + (hit.normal * .01f), Quaternion.FromToRotation(Vector3.forward, hit.normal));
-            //}
         }
     }
     private IEnumerator SpawnTrail(TrailRenderer trail, RaycastHit hit)
