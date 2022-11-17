@@ -8,7 +8,7 @@ public class PlatformStick : PlayerMovement
     private void Update()
     {
         // ground check raycast
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, out var hitinfo, dist, groundMask);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitinfo, dist, groundMask);
 
         //if the ground has "Paper" tag
         if (isGrounded && hitinfo.transform.CompareTag("Paper"))

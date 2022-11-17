@@ -14,7 +14,7 @@ public class Gun : MonoBehaviour
     public Animator anim;
     public GameObject bulletHit;
     public GameObject enemyHit;
-    AudioSource audioSource;
+    public GameObject paperHit;
     public TrailRenderer bulletTrail;
     public GameObject bulletSpawn;
     private AudioCycle audioCycle;
@@ -97,6 +97,10 @@ public class Gun : MonoBehaviour
                     GameEvents.DamageEnemy?.Invoke(damage, hit.transform.parent.gameObject);
                     target.Shot();
                 }
+            }
+            else if (hit.transform.CompareTag("Paper"))
+            {
+                Instantiate(paperHit, hit.point, bulletSpawn.transform.rotation);
             }
             else if (hit.transform.CompareTag("Player"))
             {

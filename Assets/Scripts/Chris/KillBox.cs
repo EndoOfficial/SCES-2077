@@ -12,11 +12,17 @@ public class KillBox : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             chara = other.GetComponent<CharacterController>();
-            GameEvents.DamagePlayer?.Invoke(damage);
             chara.enabled = false;
             other.transform.position = respawnPos.transform.position;
             chara.enabled = true;
-
+            if(other.GetComponent<Health>().health > damage)
+            {
+                GameEvents.DamagePlayer?.Invoke(damage);
+            }
+            else
+            {
+                GameEvents.DamagePlayer?.Invoke(0);
+            }
         }
     }
 }

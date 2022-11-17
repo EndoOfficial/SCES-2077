@@ -7,7 +7,6 @@ public class CiggsDeath : Enemy
 {
     protected override void Die()
     {
-        Debug.Log("here");
         slider.enabled = false;
         GameEvents.LevelWin?.Invoke();
         base.Die();

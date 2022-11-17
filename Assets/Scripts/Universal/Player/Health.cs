@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
         if (health <= 0f)
         {
             text.text = health.ToString();
-            GameObject.Find("Player").SendMessage("Finnish");
+            //GameObject.Find("Player").SendMessage("Finnish");
             // stops time for a game over screen instead of destroying the player and the attached camera
             PlayerDeath();
         }

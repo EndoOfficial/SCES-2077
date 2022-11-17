@@ -22,7 +22,6 @@ public class ApartmentStates: MonoBehaviour
     private void Awake()
     {
         levelName = PlayerPrefs.GetString("LevelName"); // get the completed level's name
-        Debug.Log(levelName);
         if (levelName == "Mum")
         {
             //mumBool = T

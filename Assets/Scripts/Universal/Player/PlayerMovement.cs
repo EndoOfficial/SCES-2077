@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 3f;
 
     public float dist;
+    public GameObject checkBox;
     public LayerMask groundMask;
 
     Vector3 velocity;
@@ -21,8 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, dist, groundMask);
+        isGrounded = Physics.CheckBox(checkBox.transform.position, new Vector3(.5f, .5f, .5f) * dist, Quaternion.identity, groundMask);
 
         // stop falling if grounded
         if (isGrounded && velocity.y < 0)
@@ -53,7 +53,8 @@ public class PlayerMovement : MonoBehaviour
         //if jumped and is grounded, Jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);        }
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
         // apply gravity
         velocity.y += gravity * Time.deltaTime;
 

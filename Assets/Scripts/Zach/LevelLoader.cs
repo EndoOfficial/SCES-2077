@@ -74,8 +74,7 @@ public class LevelLoader : MonoBehaviour
                     {
                     //however once you press E it will disable
                     // And present the collectable 
-                        call.PresentCollect();
-
+                    call.PresentCollect();
                     actionButtonPrompt.gameObject.SetActive(false);
 
                 }
