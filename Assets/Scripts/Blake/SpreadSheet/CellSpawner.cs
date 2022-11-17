@@ -13,7 +13,7 @@ public class CellSpawner : MonoBehaviour
     public int SpawnDealChance;
     void Start()
     {
-        CellSpawnPoints = GameObject.FindGameObjectsWithTag("SpawnLocation"); 
+        CellSpawnPoints = GameObject.FindGameObjectsWithTag("SpawnLocation");
         // gets all the spawn locations once
         StartCoroutine(Spawn());
     }
@@ -39,7 +39,7 @@ public class CellSpawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         // waits before spawning, to ensure all spawnpoints are available
         for (int i = 0; i < SpawnLimit; i++)
         {
@@ -67,7 +67,9 @@ public class CellSpawner : MonoBehaviour
                     Instantiate(TakeDamageCell, CellTarget.transform);
                 }
                 // chance to spawn the cells that deal damage to the boss vs player
+
                 yield return new WaitForSeconds(0.02f);
+                // ensures that the cells have time to spawn so they can't overlap
             }
         }
     }
