@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Zach/PTscene.unity
     guid: 4c533ff694ed3b147a231ccb962d1b72
+  - enabled: 1
+    path: Assets/Scenes/Zach/Corpo.unity
+    guid: 2df9f4634492a9b4c9367518d35d83bb
   m_configObjects: {}
