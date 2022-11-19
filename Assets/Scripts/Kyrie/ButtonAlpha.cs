@@ -17,7 +17,7 @@ public class ButtonAlpha : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     void Start()
     {
-
+        GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
         image = GetComponent<Image>();
         var tempColor = image.color;
         tempColor.a = 0f;
@@ -32,16 +32,18 @@ public class ButtonAlpha : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         var tempColor = image.color;
         tempColor.a = 1f;
         image.color = tempColor;
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
+       
         Debug.Log("Unhighlighted");
         image = GetComponent<Image>();
         var tempColor = image.color;
         tempColor.a = 0f;
         image.color = tempColor;
+        GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
     }
 
 }
