@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364ad79c1b592df46a548436492c1134, type: 3}
+  m_Name: Rural Audio Library
+  m_EditorClassIdentifier: 
+  audioClips:
+  - audioClip: {fileID: 8300000, guid: cf1586cdffdf68d46aba1f62116cc634, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    RuralClipTag: 0
+  - audioClip: {fileID: 8300000, guid: cf1586cdffdf68d46aba1f62116cc634, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    RuralClipTag: 1
+  - audioClip: {fileID: 8300000, guid: 3853687d65a6d3e44bbb4d73f6e273c8, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    RuralClipTag: 2
