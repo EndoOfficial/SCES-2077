@@ -17,7 +17,7 @@ public class FaceLessSoundsController : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         //transform.SetParent(Player.gameObject.transform);
-        timer = Random.Range(5, 10);
+        timer = Random.Range(1, 3);
     }
 
     // Update is called once per frame

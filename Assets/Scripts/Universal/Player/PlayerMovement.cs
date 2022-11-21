@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject checkBox;
     public LayerMask groundMask;
 
-    Vector3 velocity;
+    public Vector3 velocity;
     public bool isGrounded;
 
     // Update is called once per frame
