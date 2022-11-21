@@ -1095,10 +1095,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
       value: Fish (22)
@@ -1163,10 +1159,6 @@ PrefabInstance:
     - target: {fileID: 5891957978583362948, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
@@ -1458,10 +1450,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
       value: Fish (24)
@@ -1742,6 +1730,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1439090014}
+    - target: {fileID: 5003964179567099197, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+      propertyPath: fireRate
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
 --- !u!1001 &762188761
@@ -2030,10 +2022,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
       value: Fish (13)
@@ -2098,10 +2086,6 @@ PrefabInstance:
     - target: {fileID: 5891957978583362948, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
@@ -2264,10 +2248,6 @@ PrefabInstance:
     - target: {fileID: 5891957978583362948, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
@@ -2593,10 +2573,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
       value: Fish (18)
@@ -2726,10 +2702,6 @@ PrefabInstance:
     - target: {fileID: 5891957978583362948, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
@@ -3039,10 +3011,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
       value: Fish (23)
@@ -3107,10 +3075,6 @@ PrefabInstance:
     - target: {fileID: 5891957978583362948, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
@@ -3311,10 +3275,6 @@ PrefabInstance:
     - target: {fileID: 5891957978583362948, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
@@ -3968,10 +3928,6 @@ PrefabInstance:
     - target: {fileID: 5891957978583362948, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
-      propertyPath: distance
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name

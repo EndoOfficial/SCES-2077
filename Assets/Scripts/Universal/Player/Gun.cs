@@ -7,10 +7,8 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     public int damage = 10;
+    public float fireRate;
     public Camera fpsCam;
-    public float impactForce = 30f;
-    public float fireRate = 15f;
-    private float nextTimeToFire = 0;
     public Animator anim;
     public GameObject bulletHit;
     public GameObject enemyHit;
@@ -19,21 +17,41 @@ public class Gun : MonoBehaviour
     public GameObject bulletSpawn;
     private AudioCycle audioCycle;
 
+    private List<Coroutine> fireCorutines = new();
+
     public void Start()
     {
+        fireRate *= .1f;
         audioCycle = GetComponent<AudioCycle>();
     }
     public void Update()
     {
         //checks for mouse1 and nextTimeToFire
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
+        if (Input.GetButtonDown("Fire1"))
         {
-            GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.Gunfire);
-            nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
+            fireCorutines.Add(StartCoroutine(fire()));
         }
 
+        if (Input.GetButtonUp("Fire1"))
+        {
+            foreach (Coroutine fire in fireCorutines)
+            {
+                StopCoroutine(fire);
+            }
+            fireCorutines.Clear();
+        }
     }
+
+    private IEnumerator fire()
+    {
+        while (true)
+        {
+            GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.Gunfire);
+            Shoot();
+            yield return new WaitForSeconds(fireRate);
+        }
+    }
+
     void Shoot()
     {
         anim.SetTrigger("Shoot");
