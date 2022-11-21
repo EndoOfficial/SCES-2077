@@ -13,12 +13,10 @@ public class Enemy : MonoBehaviour
     public Slider slider;
 
     public bool canDie = true;
-
     private void OnEnable()
     {
         GameEvents.DamageEnemy += TakeDamage;
     }
-
     private void OnDisable()
     {
         GameEvents.DamageEnemy -= TakeDamage;
@@ -67,7 +65,6 @@ public class Enemy : MonoBehaviour
             slider.value = CalculateHealth();
         }
     }
-
     float CalculateHealth()
     {
         return health / maxHealth;

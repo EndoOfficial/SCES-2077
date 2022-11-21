@@ -4,31 +4,30 @@ using UnityEngine;
 
 public class BottleEnemy : Enemy
 {
+    // Inherits from enemy so I do not have to retype everything in the enemy script into here
+    // whilst having it's own functions that do not affect the original script in any way 
     public GameObject[] pill;
     private int Pillnum;
     public float spawnlimit;
-    private float spawncount;
     private float randomizer;
-    private float range = 1;
     private void Explosion()
     {
         StartCoroutine(Explode());
     }
     private IEnumerator Explode()
     {
-        if (spawncount < spawnlimit)
+        for (int i = 0; i < spawnlimit;)
         {
-            randomizer = Random.Range(-range, range);
-            spawncount += 1;
-            Pillnum = Random.Range(0, pill.Length);
+            randomizer = Random.Range(-1, 1); // gets a random number from -1 to 1
+            Pillnum = Random.Range(0, pill.Length); // chooses a rondom pill
             Instantiate(pill[Pillnum], new Vector3(transform.position.x + randomizer, 3 + randomizer, transform.position.z + randomizer), Quaternion.identity);
-            if (spawncount >= spawnlimit)
-            {
-                GameEvents.BottleCount?.Invoke();
-                Destroy(gameObject);
-            }
-            StartCoroutine(Explode());
-            yield return null;
+            // spawns the random pill just above the bottle, with some slight variation to it's spawn location as to make the pills fly in random directions
+            i++;
         }
+        // once done
+
+        GameEvents.BottleCount?.Invoke(); // counts the bottles deaths for all pill death
+        Destroy(gameObject);
+        yield return null;
     }
 }

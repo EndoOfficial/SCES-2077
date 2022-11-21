@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4999662437669521105}
   - component: {fileID: -4630514297606644127}
   - component: {fileID: 8879772274127975973}
+  - component: {fileID: 1981123391}
   m_Layer: 0
   m_Name: TakeDamageCell
   m_TagString: Enemy
@@ -126,8 +127,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -222,6 +223,7 @@ MonoBehaviour:
   Canvas: {fileID: 0}
   slider: {fileID: 0}
   canDie: 1
+  Damage: 0
 --- !u!95 &8879772274127975973
 Animator:
   serializedVersion: 4
@@ -242,3 +244,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1981123391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047450425656885114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712d245507224ae4ea34fb266948de9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  DamageInt: {fileID: 6047450425656885113}
