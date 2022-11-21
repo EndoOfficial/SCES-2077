@@ -33,3 +33,8 @@ MonoBehaviour:
     Pitch: 1
     Volume: 1
     CorporateClipTag: 3
+  - audioClip: {fileID: 8300000, guid: 2fab8998fb481c048b26b07ebf3ebc2f, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    CorporateClipTag: 5

@@ -13,6 +13,7 @@ public class CokePursuit : CokeEnemyState
     }
     public override void Enter()
     {
+        Vector3 direction = player.transform.position;
         check = npc.GetComponent<PuffPatchChecker>();
         MrCocaine = npc.GetComponent<Mrcoke2>();
         anim.SetTrigger("Pursuit");

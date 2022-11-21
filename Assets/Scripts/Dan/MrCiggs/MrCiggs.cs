@@ -83,7 +83,7 @@ public class MrCiggs : MonoBehaviour
         }
         else
         {
-            RageRate = 1f;
+            RageRate = 5f;
         }
     }
     public void DecreaseRage()

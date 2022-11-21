@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af95df4fdc05de4496d09fe4020b17a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NicotinePrefab: {fileID: 4410241946897672567, guid: 93490ff73bd972f4297ebadcbb39beae, type: 3}
+  NicotinePrefab: {fileID: 1687113442073028745, guid: db023988b83d2d145b1581a792a7c439, type: 3}
   WaitTime: 5
   raycastRadius: 1
   hitLayerMask:
@@ -839,6 +839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverMenuUi: {fileID: 476948759}
+  Wave1TXT: {fileID: 0}
+  GameWinTXT: {fileID: 0}
   rageText: {fileID: 1870639381}
 --- !u!224 &545769406 stripped
 RectTransform:
@@ -3977,7 +3979,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 983025665, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 501271483304875439, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: slider
@@ -4082,6 +4084,14 @@ PrefabInstance:
     - target: {fileID: 1644254529688549005, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: previousLevel
       value: Apartment
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805154939037699214, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871996318174187533, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4800277820545171849, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

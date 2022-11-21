@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 
     public GameObject Canvas;
     public Slider slider;
+    private AudioCycle audioCycle;
 
     public bool canDie = true;
     private void OnEnable()
@@ -24,6 +25,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        audioCycle = GetComponent<AudioCycle>();
         anim = GetComponent<Animator>();
         health = maxHealth;
         if (Canvas != null)
@@ -37,6 +39,7 @@ public class Enemy : MonoBehaviour
     {
         if (gameObject == target)
         {
+            GameEvents.OnCorporateplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.CorporateClipTags.CokeHurt);
             anim.SetTrigger("Damage");
             health -= damage;
         }

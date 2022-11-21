@@ -36,6 +36,7 @@ public class WaveSpawner : MonoBehaviour
             if (!EnemyIsAlive())
             {
                 WaveCompleated();
+                //GameEvents.NewWave?.Invoke();
             }
             else
             {
@@ -60,22 +61,27 @@ public class WaveSpawner : MonoBehaviour
         waveCountDown=timeBeetweenWave;
         if(nextWave+1 > waves.Length - 1)
         {
+            
+           
             nextWave = 0;
+            //GameEvents.LevelWin?.Invoke();
             Debug.Log("Compleated all waves");
         }
         else
         {
-           nextWave++;
+            GameEvents.WaveWin?.Invoke();
+            Debug.Log("new Wave");
+            nextWave++;
         }
        
     }
     bool EnemyIsAlive()
     {
         searchCountdown -= Time.deltaTime;
-        if(searchCountdown <= 0)
+        if(searchCountdown <= 0f)
         {
-            searchCountdown = 1;
-            if (GameObject.FindGameObjectsWithTag("EnemyCoke") == null)
+            searchCountdown = 1f;
+            if (GameObject.FindGameObjectsWithTag("Enemy") == null)
             {
                 return false;
             }
@@ -85,11 +91,12 @@ public class WaveSpawner : MonoBehaviour
     }
     IEnumerator SpawnWave(Wave _wave)
     {
+        //GameEvents.NewWave?.Invoke();
         state = SpawnState.SPAWNING;
-        for(int i = 0; i < _wave.count; i++)
+        for (int i = 0; i < _wave.count; i++)
         {
             SpawnEnemy(_wave.enemy);
-            yield return new WaitForSeconds(1 / _wave.spawnRate);
+            yield return new WaitForSeconds(_wave.spawnRate);
         }
 
         state = SpawnState.WAITING;

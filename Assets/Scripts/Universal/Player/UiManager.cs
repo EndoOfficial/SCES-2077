@@ -7,11 +7,15 @@ using TMPro;
 public class UiManager : MonoBehaviour
 {
     public GameObject GameOverMenuUi;
+    public GameObject Wave1TXT;
+    public GameObject GameWinTXT;
     //public TextMeshProUGUI HealthText;
     private void OnEnable()
     {
 
         GameEvents.OnGameOver += OnGameOver;
+        GameEvents.NewWave += Wave1;
+        GameEvents.WaveWin += OnWaveWin;
     }
     private void OnDisable()
     {
@@ -27,6 +31,31 @@ public class UiManager : MonoBehaviour
         //GameObject slider = gameObject.transform.Find("Slider").gameObject;
         //Destroy(slider);
         
+    }
+
+    public void Wave1()
+    {
+        Wave1TXT.SetActive(true);
+        StartCoroutine(WaveTxtDissapear());
+        
+        
+    }
+
+    IEnumerator WaveTxtDissapear()
+    {
+        yield return new WaitForSeconds(4);
+        Wave1TXT.SetActive(false);
+    }
+    public void OnWaveWin()
+    {
+        GameWinTXT.SetActive(true);
+        StartCoroutine(WinWaveDis());
+    }
+
+    IEnumerator WinWaveDis()
+    {
+        yield return new WaitForSeconds(4);
+       GameWinTXT.SetActive(false);
     }
     //public void CurrentHealth(int health)
     //{

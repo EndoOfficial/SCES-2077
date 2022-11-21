@@ -73,6 +73,11 @@ public class AudioManager : MonoBehaviour
         FacelessSound1,
         FaceLessSound2,
         BossSpawn,
+
+        // For Cocaine Level,
+        PuffNoise,
+        CokeHurt,
+        CokeDeath,
     }
     public enum RuralClipTags
     {

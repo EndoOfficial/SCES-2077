@@ -29,8 +29,8 @@ public class Mrcoke2 : MonoBehaviour
     }
     public void Update()
     {
-        //transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
-        //transform.position += transform.forward * speed * Time.deltaTime;
+        transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
+        transform.position += transform.forward * speed * Time.deltaTime;
         if (Physics.CheckSphere(transform.position, radius, Player))
         {
             if (!hit)
@@ -46,7 +46,7 @@ public class Mrcoke2 : MonoBehaviour
         if (other.gameObject.CompareTag("CocainePuff"))
         {
             other.gameObject.tag = ("Untagged"); // Ensures that the patch can't be targeted
-            //GameEvents.CokeTarget?.Invoke(); // Event to retarget if need be
+            GameEvents.CokeTarget?.Invoke(); // Event to retarget if need be
             Retarget();
         }
 
@@ -57,14 +57,14 @@ public class Mrcoke2 : MonoBehaviour
         yield return new WaitForSeconds(Cooldown);
         hit = false;
     }
-    //private void OnEnable()
-    //{
-    //    GameEvents.CokeTarget += Retarget;
-    //}
-    //private void OnDisable()
-    //{
-    //    GameEvents.CokeTarget -= Retarget;
-    //}
+    private void OnEnable()
+    {
+        GameEvents.CokeTarget += Retarget;
+    }
+    private void OnDisable()
+    {
+        GameEvents.CokeTarget -= Retarget;
+    }
     public void Retarget()
     {
         if (target.tag != ("CocainePuff")) // first checks if the current target is no longer a valid target
