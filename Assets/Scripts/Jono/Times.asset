@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e5a5f5706dff444bdb412a75dad1ec, type: 3}
   m_Name: Times
   m_EditorClassIdentifier: 
+  times:
+  - LevelName: 
+    Time: 
