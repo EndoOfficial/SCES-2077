@@ -26,6 +26,7 @@ TagManager:
   - CocainePuff
   - Collectable
   - SpawnLocation
+  - Nose
   layers:
   - Default
   - TransparentFX

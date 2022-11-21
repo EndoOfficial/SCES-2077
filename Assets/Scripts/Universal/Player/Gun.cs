@@ -78,6 +78,10 @@ public class Gun : MonoBehaviour
             {
                 Instantiate(paperHit, hit.point, bulletSpawn.transform.rotation);
             }
+            else if (hit.transform.CompareTag("Nose"))
+            {
+
+            }
             else if (hit.transform.CompareTag("Player"))
             {
             }
