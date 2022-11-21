@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
     {
         if (gameObject == target)
         {
-            GameEvents.OnCorporateplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.CorporateClipTags.CokeHurt);
+            //GameEvents.OnCorporateplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.CorporateClipTags.CokeHurt);
             anim.SetTrigger("Damage");
             health -= damage;
         }
