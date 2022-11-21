@@ -66,6 +66,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Kyrie/Intros/SlumsIntro.unity
     guid: f984c130e741412408357c30b44e32ef
   - enabled: 1
-    path: Assets/Scenes/Kyrie/Intros/NewGameIntro 1.unity
+    path: Assets/Scenes/Kyrie/Intros/NewGameIntro.unity
     guid: 3cb3bb97faea5c44eab54d7bf7f9520b
   m_configObjects: {}

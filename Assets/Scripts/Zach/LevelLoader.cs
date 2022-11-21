@@ -8,18 +8,20 @@ public class LevelLoader : MonoBehaviour
     public GameObject _camera;
     public Text actionButtonPrompt;
 
-    private float raycastRange = 10;
+    private float raycastRange = 5;
     public Vector3 Player;
 
-    private Collectables call;
+    private Collectables coll;
 
     private bool raycheck;  
     
     public string minutes;
     public string seconds;
 
+    private bool Active;
 
-    public bool PlayerMissing = true;
+
+    public bool pressedEOnCollectable = false;
     // Start is called before the first frame update
     private void Update()
     {
@@ -31,10 +33,10 @@ public class LevelLoader : MonoBehaviour
         if (raycheck = Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hitinfo, raycastRange))
         {
 
-            /*if (Input.anyKey && PlayerMissing == true)
+            /*if (Input.anyKey && pressedEOnCollectable == true)
             {
                 actionButtonPrompt.gameObject.SetActive(false);
-                call.DisableCollect();
+                coll.DisableCollect();
             }*/
 
             if (hitinfo.transform.CompareTag("NPC"))
@@ -42,62 +44,52 @@ public class LevelLoader : MonoBehaviour
                 var sceneLoader = hitinfo.transform.GetComponent<SceneLoader>();
                 if (sceneLoader != null)
                 {
-                    actionButtonPrompt.gameObject.SetActive(true);
-
+                    actionButtonPrompt.gameObject.SetActive(true); // press E text
                     if (Input.GetKeyDown(KeyCode.E))
                     {
+                        sceneLoader.LoadScene();
                         //GameObject.Find("Player").SendMessage("Finnish");
                         //minutes = GetComponent<Timer>().minutes;
                         //seconds = GetComponent<Timer>().seconds;
-                        sceneLoader.LoadScene();                        
-                        //GameEvents.OnSaveTimer?.Invoke(GameObject.Find("TimerText"));                        
-
+                        //GameEvents.OnSaveTimer?.Invoke(GameObject.Find("TimerText"));
                     }
                 }
             }
 
-            else if (hitinfo.transform.CompareTag("Collectable"))
-                //if your looking at a collectable
+            else if (hitinfo.transform.CompareTag("Collectable")) //if your looking at a collectable
             {
-                // you are no longer missing the raycast
-                if (PlayerMissing == true)
+                actionButtonPrompt.gameObject.SetActive(true); // press E text
+                coll = hitinfo.transform.GetComponent<Collectables>();
+                if (Input.GetKeyDown(KeyCode.E) && !pressedEOnCollectable)
                 {
-                    //allowing you to stop setting PRESS E to disable
-                    PlayerMissing = false;
-                    actionButtonPrompt.gameObject.SetActive(true);
-                    call = hitinfo.transform.GetComponent<Collectables>();
+                    pressedEOnCollectable = true;
+                    actionButtonPrompt.gameObject.SetActive(false);
+                    coll.PresentCollect();
                 }
-               
-                    
-            
-                if (Input.GetKeyDown(KeyCode.E))
+                else if (pressedEOnCollectable)
+                {
+                    actionButtonPrompt.gameObject.SetActive(false);
+                    if (Input.GetKeyDown(KeyCode.E))
                     {
-                    //however once you press E it will disable
-                    // And present the collectable 
-                    call.PresentCollect();
-                    actionButtonPrompt.gameObject.SetActive(false);
-
+                        coll.DisableCollect();
+                        pressedEOnCollectable = false;
+                    }
                 }
-                
             }
-            
-
-            else if (call != null)
-            {              
-                
-                
-                    actionButtonPrompt.gameObject.SetActive(false);
-                    call.DisableCollect();
-                    PlayerMissing = true;
-                
-
-
-
+            else
+            {
+                actionButtonPrompt.gameObject.SetActive(false);
+                pressedEOnCollectable = false;
+                if(coll !=null) 
+                    coll.DisableCollect();
             }
-
-           
-
         }
-
+        else
+        {
+            actionButtonPrompt.gameObject.SetActive(false);
+            pressedEOnCollectable = false;
+            if(coll !=null)
+                coll.DisableCollect();
+        }
     }
 }
