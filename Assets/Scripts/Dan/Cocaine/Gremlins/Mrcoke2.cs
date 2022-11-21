@@ -29,8 +29,8 @@ public class Mrcoke2 : MonoBehaviour
     }
     public void Update()
     {
-        transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
-        transform.position += transform.forward * speed * Time.deltaTime;
+        //transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
+        //transform.position += transform.forward * speed * Time.deltaTime;
         if (Physics.CheckSphere(transform.position, radius, Player))
         {
             if (!hit)

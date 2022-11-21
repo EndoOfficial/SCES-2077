@@ -6,6 +6,7 @@ public class CokePursuit : CokeEnemyState
 {
     Mrcoke2 MrCocaine;
     PuffPatchChecker check;
+    private Vector3 playersPosition;
     public CokePursuit(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
         : base(_npc, _agent, _anim, _player)
     {
@@ -13,22 +14,23 @@ public class CokePursuit : CokeEnemyState
     }
     public override void Enter()
     {
-        Vector3 direction = player.transform.position;
+        playersPosition = player.transform.position;
         check = npc.GetComponent<PuffPatchChecker>();
         MrCocaine = npc.GetComponent<Mrcoke2>();
         anim.SetTrigger("Pursuit");
         rb = npc.GetComponent<Rigidbody>();
+        //GameEvents.CokeTarget?.Invoke();
         
         MrCocaine.target = player;
-        agent.SetDestination(player.transform.position);
+        agent.SetDestination(playersPosition);
         Debug.Log($"Target{player.transform.position}");
         /*agent.SetDestination(player.transform.position)*/ // targets the player
         base.Enter();
     }
     public override void Update()
     {
-
-        agent.SetDestination(player.transform.position);
+         playersPosition = player.transform.position;
+        agent.SetDestination(playersPosition);
         if (check.Pursue == false)
         {
             

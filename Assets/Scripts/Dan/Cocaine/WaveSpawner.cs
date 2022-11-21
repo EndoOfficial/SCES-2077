@@ -26,6 +26,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void Start()
     {
+        
         waveCountDown = timeBeetweenWave;
 
     }
@@ -33,9 +34,10 @@ public class WaveSpawner : MonoBehaviour
     {
         if(state== SpawnState.WAITING)
         {
-            if (!EnemyIsAlive())
+            if (EnemyIsAlive()==false)
             {
                 WaveCompleated();
+                Debug.Log("Completed Current Wave");
                 //GameEvents.NewWave?.Invoke();
             }
             else
@@ -47,6 +49,7 @@ public class WaveSpawner : MonoBehaviour
         {
             if(state!= SpawnState.SPAWNING)
             {
+                Debug.Log("New Wave");
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
             else
@@ -69,7 +72,7 @@ public class WaveSpawner : MonoBehaviour
         }
         else
         {
-            GameEvents.WaveWin?.Invoke();
+            //GameEvents.WaveWin?.Invoke();
             Debug.Log("new Wave");
             nextWave++;
         }
@@ -81,12 +84,16 @@ public class WaveSpawner : MonoBehaviour
         if(searchCountdown <= 0f)
         {
             searchCountdown = 1f;
-            if (GameObject.FindGameObjectsWithTag("Enemy") == null)
-            {
+            Debug.Log($"EnemyIsAlive: {GameObject.FindGameObjectsWithTag("Enemy").Length}");
+
+            if (GameObject.FindGameObjectsWithTag("Enemy").Length==0)
+                {
+              
+                Debug.Log("All enemies dead");
                 return false;
             }
         }
-       
+        
         return true;
     }
     IEnumerator SpawnWave(Wave _wave)
@@ -95,11 +102,13 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.SPAWNING;
         for (int i = 0; i < _wave.count; i++)
         {
+            Debug.Log("Spawn New Enemy");
             SpawnEnemy(_wave.enemy);
-            yield return new WaitForSeconds(_wave.spawnRate);
+            yield return new WaitForSeconds(1/_wave.spawnRate);
         }
 
         state = SpawnState.WAITING;
+        Debug.Log("Waiting for next Wave");
         yield break;
     }
     void SpawnEnemy(Transform _enemy)
