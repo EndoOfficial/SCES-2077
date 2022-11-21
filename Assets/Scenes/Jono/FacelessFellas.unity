@@ -204,6 +204,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimerText: {fileID: 983025666}
   StartTime: 0
+  SceneName: 
+  minutes: 
+  seconds: 
+  TimesLibrary: {fileID: 0}
+  TimesSO: {fileID: 0}
 --- !u!1001 &468992826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,6 +274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+--- !u!82 &548335425 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2111992612, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+  m_PrefabInstance: {fileID: 1642346401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &578949566 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8297667423064805489, guid: e16148ac747fc6a43bd7067b902b64f6, type: 3}
@@ -646,6 +656,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2015154809373924599, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
   m_PrefabInstance: {fileID: 1642346401}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1461788980 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 174953642, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+  m_PrefabInstance: {fileID: 1642346401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1516533755 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4300363297843782398, guid: e16148ac747fc6a43bd7067b902b64f6, type: 3}
@@ -862,7 +877,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 10
   m_Range: 20
   m_SpotAngle: 49.33191
   m_InnerSpotAngle: 13.806046
@@ -982,15 +997,15 @@ PrefabInstance:
     - target: {fileID: 3613728070308367054, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: audioSources.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2119723682}
     - target: {fileID: 3613728070308367054, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: audioSources.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 548335425}
     - target: {fileID: 3613728070308367054, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: audioSources.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1461788980}
     - target: {fileID: 4520434914419971837, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: text
       value: 
@@ -1049,7 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  RotateSpeed: 50
+  RotateSpeed: 80
   timer: 0
   FacelessFella: {fileID: 3238503305658340918, guid: dd0b4798375bc4c4890609991b9a03b5, type: 3}
   SpawnPoint: {fileID: 2012852923}
@@ -1156,6 +1171,11 @@ Transform:
   m_Father: {fileID: 1698594508}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2119723682 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 879084278, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+  m_PrefabInstance: {fileID: 1642346401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1840714596002862689
 GameObject:
   m_ObjectHideFlags: 0

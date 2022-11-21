@@ -14,25 +14,38 @@ public class TheHandController : MonoBehaviour
     public bool MoveLeft;
     public bool SpawnBucket;
     public bool playerDetected;
-
+    public Transform CentrePoint;
+    public float timer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = Random.Range(0, 3);
     }
 
     private void Update()
     {
         playerDetected = PlayerDetector.GetComponent<PlayerDetection>().playerDetected;
+        timer -= Time.deltaTime;
+
+        if(timer <= 0)
+        {
+            StartCoroutine(ThrowBucket());
+            MoveLeft = MoveLeft ? false : true;
+            timer = Random.Range(5, 15);
+            
+        }
+        
 
         Debug.Log(BarrelHolder.transform.childCount);
         if (MoveLeft)
         {
-            transform.Translate(Vector3.right * Speed * Time.deltaTime);
+            transform.RotateAround(CentrePoint.position, Vector3.up, Speed * Time.deltaTime);
+            //transform.Translate(Vector3.right * Speed * Time.deltaTime);
         }
         else
         {
-            transform.Translate(-Vector3.right * Speed * Time.deltaTime);
+            transform.RotateAround(CentrePoint.position, Vector3.up, -Speed * Time.deltaTime);
+            //transform.Translate(-Vector3.right * Speed * Time.deltaTime);
         }
 
         if(BarrelHolder.transform.childCount == 0 && SpawnBucket)
@@ -45,28 +58,40 @@ public class TheHandController : MonoBehaviour
             StartCoroutine(ThrowBucket());
         }
 
+        if(GetComponent<Enemy>().health <= 0)
+        {
+            //GameEvents.LevelWin?.Invoke();
+        }
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == ("Enemy"))
+        {
+            MoveLeft = MoveLeft ? false : true;
+        }
     }
     void FixedUpdate()
     {
         
-        RaycastHit hit;
-        Physics.Raycast(transform.position, HandsCentrePos.transform.position - transform.position, out hit);
+        //RaycastHit hit;
+        //Physics.Raycast(transform.position, HandsCentrePos.transform.position - transform.position, out hit);
         
 
 
 
-        if (transform.position.x > MaxDist)
-        {
-            Debug.DrawRay(transform.position, HandsCentrePos.transform.position - transform.position, Color.yellow);
-            MoveLeft = MoveLeft ? false : true;
-        }    
+        //if (transform.position.x > MaxDist)
+        //{
+        //    Debug.DrawRay(transform.position, HandsCentrePos.transform.position - transform.position, Color.yellow);
+        //    MoveLeft = MoveLeft ? false : true;
+        //}    
         
-        if(transform.position.x < -MaxDist)
-        {
-            Debug.DrawRay(transform.position, HandsCentrePos.transform.position - transform.position, Color.green);
-            MoveLeft = MoveLeft ? false : true;
-        }
+        //if(transform.position.x < -MaxDist)
+        //{
+        //    Debug.DrawRay(transform.position, HandsCentrePos.transform.position - transform.position, Color.green);
+        //    MoveLeft = MoveLeft ? false : true;
+        //}
     }
 
     
@@ -75,8 +100,7 @@ public class TheHandController : MonoBehaviour
     {
         SpawnBucket = false;
         yield return new WaitForSeconds(2);
-        var newBucket = Instantiate(Bucket, (BarrelHolder.transform.position), Quaternion.Euler(0, 0, 90));
-        newBucket.transform.parent = BarrelHolder.transform;
+        var newBucket = Instantiate(Bucket, (BarrelHolder.transform));        
         
         yield return new WaitForSeconds(2);
     }
@@ -93,7 +117,5 @@ public class TheHandController : MonoBehaviour
         ThrowForce.z = Random.Range(-5, -20);
         child.GetComponent<Rigidbody>().AddRelativeForce(ThrowForce, ForceMode.Impulse);
         yield return new WaitForSeconds(2);
-
-
     }
 }

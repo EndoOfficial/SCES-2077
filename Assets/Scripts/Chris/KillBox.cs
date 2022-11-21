@@ -21,7 +21,7 @@ public class KillBox : MonoBehaviour
             }
             else
             {
-                GameEvents.DamagePlayer?.Invoke(0);
+                GameEvents.DamagePlayer?.Invoke(10);
             }
         }
     }
