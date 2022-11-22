@@ -1004,6 +1004,7 @@ GameObject:
   - component: {fileID: 8410541316103668388}
   - component: {fileID: 3613728070308367054}
   - component: {fileID: 2193214932884065639}
+  - component: {fileID: 8679599372049520130}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1070,6 +1071,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+  velocity: {x: 0, y: 0, z: 0}
   isGrounded: 0
 --- !u!114 &5003964179567099197
 MonoBehaviour:
@@ -1084,9 +1086,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  fpsCam: {fileID: 7771353499210770955}
-  impactForce: 30
   fireRate: 15
+  fpsCam: {fileID: 7771353499210770955}
   anim: {fileID: 0}
   bulletHit: {fileID: 5172426982756091155, guid: e48994cbea4aef14c98eb6b3d817266d, type: 3}
   enemyHit: {fileID: 2666401237946873333, guid: d387a24b6f6c8164985b510125701687, type: 3}
@@ -1253,6 +1254,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8679599372049520130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015154809514674855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fd9515250e3a5459dfab2e2a20ec1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimerText: {fileID: 0}
+  BestTime: {fileID: 0}
+  Record: 0
+  StartTime: 0
+  SceneName: 
+  IsTimedLevel: 0
+  minutes: 
+  seconds: 
+  TimesLibrary: {fileID: 11400000, guid: 4f0c13a31aa5b3f40b554363452cd892, type: 2}
 --- !u!1 &2961345996499876376
 GameObject:
   m_ObjectHideFlags: 0

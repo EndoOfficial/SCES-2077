@@ -20,6 +20,7 @@ public class PickupIndicator : MonoBehaviour
 
         if(GameObject.FindGameObjectsWithTag("Pickup").Length <= 0)
         {
+
             Indicator.SetActive(false);
             //PickUp = null;
             Debug.Log("NoPickup");

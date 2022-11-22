@@ -47,8 +47,8 @@ public class LevelLoader : MonoBehaviour
                     actionButtonPrompt.gameObject.SetActive(true); // press E text
                     if (Input.GetKeyDown(KeyCode.E))
                     {
+                        GameObject.Find("Player").SendMessage("Finnnish");
                         sceneLoader.LoadScene();
-                        //GameObject.Find("Player").SendMessage("Finnish");
                         //minutes = GetComponent<Timer>().minutes;
                         //seconds = GetComponent<Timer>().seconds;
                         //GameEvents.OnSaveTimer?.Invoke(GameObject.Find("TimerText"));
