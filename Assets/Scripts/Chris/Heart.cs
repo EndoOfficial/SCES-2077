@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour
 {
+    public GameObject winStuff;
     private MeshRenderer heartObj;
     private MeshCollider mesh;
 
@@ -20,16 +21,19 @@ public class Heart : MonoBehaviour
 
     private void LevelWin()
     {
-        heartObj.enabled = true; // enable the heart mesh
-        mesh.enabled = true;
+        /*heartObj.enabled = true; // enable the heart mesh
+        mesh.enabled = true;*/
+
+        winStuff.SetActive(true);
+        //winstuff should be the child of this object and will be the things you want enabled
 
     }
 
-    private void Start()
+/*    private void Start()
     {
         heartObj = GetComponent<MeshRenderer>();
         mesh = GetComponent<MeshCollider>();
-    }
+    }*/
 
     private void Update()
     {
