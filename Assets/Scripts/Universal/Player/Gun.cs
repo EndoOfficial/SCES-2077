@@ -47,6 +47,7 @@ public class Gun : MonoBehaviour
         while (true)
         {
             GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.Gunfire);
+            anim.SetTrigger("Shoot");
             Shoot();
             yield return new WaitForSeconds(fireRate);
         }
@@ -54,8 +55,6 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
-        anim.SetTrigger("Shoot");
-
         RaycastHit hit;
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))

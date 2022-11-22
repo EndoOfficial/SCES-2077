@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: Times
   m_EditorClassIdentifier: 
   times:
-  - LevelName: 
-    Time: 
+  - LevelName: ' '
+    Time: 0
+  - LevelName: SyringeLevel
+    Time: 0
+  - LevelName: Cat-Level
+    Time: 0
+  - LevelName: FacelessFellas
+    Time: 0
+  - LevelName: Dealer-Level
+    Time: 0

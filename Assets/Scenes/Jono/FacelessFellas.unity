@@ -190,25 +190,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2015154809514674855, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
   m_PrefabInstance: {fileID: 1642346401}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &375916355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375916346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fd9515250e3a5459dfab2e2a20ec1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimerText: {fileID: 983025666}
-  StartTime: 0
-  SceneName: 
-  minutes: 
-  seconds: 
-  TimesLibrary: {fileID: 0}
-  TimesSO: {fileID: 0}
 --- !u!1001 &468992826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -216,14 +197,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3357169784844681263, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
-      propertyPath: levelName
-      value: FaceLessFellas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3357169784844681263, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
-      propertyPath: sceneName
-      value: Corpo
-      objectReference: {fileID: 0}
     - target: {fileID: 6407706609725505496, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -298,6 +271,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 375916346}
   Indicator: {fileID: 1516533755}
+--- !u!114 &596654978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 596654978, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+  m_PrefabInstance: {fileID: 1619275067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &668382135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -585,7 +569,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.038917053, b: 0.103773594, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -643,14 +627,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401819094}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 0, y: 33.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 90}
 --- !u!4 &1459709638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2015154809373924599, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
@@ -877,7 +861,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
+  m_Intensity: 20
   m_Range: 20
   m_SpotAngle: 49.33191
   m_InnerSpotAngle: 13.806046
@@ -1030,6 +1014,14 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8679599372049520130, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+      propertyPath: BestTime
+      value: 
+      objectReference: {fileID: 596654978}
+    - target: {fileID: 8679599372049520130, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+      propertyPath: TimerText
+      value: 
+      objectReference: {fileID: 983025666}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
 --- !u!1 &1698594506
@@ -1833,7 +1825,7 @@ PrefabInstance:
       objectReference: {fileID: 1081442335}
     - target: {fileID: 4639332557990989944, guid: a8d686c067c22114a9e3940b3f5eb339, type: 3}
       propertyPath: GameWinCollectCount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4639332557990989945, guid: a8d686c067c22114a9e3940b3f5eb339, type: 3}
       propertyPath: m_RootOrder

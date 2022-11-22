@@ -7,22 +7,30 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public Text TimerText;
+    public Text BestTime;
+    public float Record;
     public float StartTime;
+    private float t;
+    public float BMinutes;
+
     private Scene C_Scene;
     public string SceneName;
     private bool Finished = false;
+    public bool IsTimedLevel = true;
 
     public string minutes;
     public string seconds;
 
-    public LevelTimes TimesLibrary;
-    public ScriptableObject TimesSO;
+    public float _time;
 
+    private LevelTime FoundTime;
+
+    public LevelTimes TimesLibrary;
     private void Start()
     {
         //StartTime = Time.time;
+        _time = 0;
 
-       
         //TimerText.text = PlayerPrefs.GetString("LevelTime", seconds);
         //SceneName = PlayerPrefs.GetString("LevelName", SceneName);
 
@@ -30,32 +38,90 @@ public class Timer : MonoBehaviour
         //Debug.Log(SceneName);
 
         TimerText.text = StartTime.ToString("f2");
+
+        minutes = "";
+        seconds = "";
+
+        C_Scene = SceneManager.GetActiveScene();
+        SceneName = C_Scene.name;
+
+        FoundTime = LookUpTime(SceneName);
+        Debug.Log(FoundTime);
+
+        if(FoundTime == null)
+        {
+            Debug.LogError($"No Name Found {SceneName}");
+            IsTimedLevel = false;
+            
+        }
+        else
+        {
+            IsTimedLevel = true;
+            BestTime.text = "Best: " + FoundTime.Time.ToString("f2");
+            Record = FoundTime.Time;
+        }
+        if(Record <= 0)
+        {
+            BestTime.gameObject.SetActive (false);
+        }
+        else
+        {
+            BestTime.gameObject.SetActive(true);
+        }
         
     }
 
     
     private void Update()
     {
-        
 
+        if (!IsTimedLevel)
+        {
+            TimerText.gameObject.SetActive(false);
+            return;
+        }
+        else
+        {
+            TimerText.gameObject.SetActive(true);
+        }
+            
+        
         if (Finished)
             return;
 
-        float t = Time.time - StartTime;
-
+        _time += Time.deltaTime;
+        t = _time;
         minutes = ((int)t / 60).ToString();
         seconds = (t % 60).ToString("f2");
 
         TimerText.text = minutes + ":" + seconds;
     }
-    
-    public void Finnish()
+
+    public LevelTime LookUpTime(string LevelName)
     {
+        foreach(LevelTime levelTime in TimesLibrary.times)
+        {
+            if(LevelName == levelTime.LevelName)
+            {
+                return levelTime;
+            }
+        }
+        return null;
+    }
+    
+    public void Finnnish()
+    {
+        if(t < Record || Record == 0)
+        {
+            FoundTime.Time = t;
+            if(Record >= 60)
+            {
+                 
+            }
+
+        }
+        Debug.Log(SceneName);
         Finished = true;
-        //PlayerPrefs.SetString("LevelTime", seconds);        
-        C_Scene = SceneManager.GetActiveScene();
-        SceneName = C_Scene.name;
-        //PlayerPrefs.SetString("LevelName", SceneName);
         TimerText.color = Color.red;
     }
 }

@@ -13,15 +13,18 @@ public class LevelLoader : MonoBehaviour
 
     private Collectables coll;
 
-    private bool raycheck;  
-    
+    private bool raycheck;
+
     public string minutes;
     public string seconds;
 
-    private bool Active;
-
+    private float time;
+    private Animator anim;
 
     public bool pressedEOnCollectable = false;
+    private void Start()
+    {
+    }
     // Start is called before the first frame update
     private void Update()
     {
@@ -47,8 +50,8 @@ public class LevelLoader : MonoBehaviour
                     actionButtonPrompt.gameObject.SetActive(true); // press E text
                     if (Input.GetKeyDown(KeyCode.E))
                     {
+                        GameObject.Find("Player").SendMessage("Finnnish");
                         sceneLoader.LoadScene();
-                        //GameObject.Find("Player").SendMessage("Finnish");
                         //minutes = GetComponent<Timer>().minutes;
                         //seconds = GetComponent<Timer>().seconds;
                         //GameEvents.OnSaveTimer?.Invoke(GameObject.Find("TimerText"));
@@ -80,7 +83,7 @@ public class LevelLoader : MonoBehaviour
             {
                 actionButtonPrompt.gameObject.SetActive(false);
                 pressedEOnCollectable = false;
-                if(coll !=null) 
+                if (coll != null)
                     coll.DisableCollect();
             }
         }
@@ -88,8 +91,15 @@ public class LevelLoader : MonoBehaviour
         {
             actionButtonPrompt.gameObject.SetActive(false);
             pressedEOnCollectable = false;
-            if(coll !=null)
+            if (coll != null)
                 coll.DisableCollect();
         }
+    }
+
+    public IEnumerator LoadScene(SceneLoader sceneLoader)
+    {
+        GetComponent<Gun>().anim.SetTrigger("JackIn");
+        yield return new WaitForSeconds(1.5f);
+        sceneLoader.LoadScene();
     }
 }
