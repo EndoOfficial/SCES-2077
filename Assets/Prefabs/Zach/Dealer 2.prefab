@@ -1109,7 +1109,6 @@ Transform:
   m_LocalScale: {x: 185.00003, y: 185.00002, z: 185.00002}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2916970127118071006}
   - {fileID: 5616420944047464670}
   - {fileID: 1282185165382218673}
   - {fileID: 1185080448029211473}
@@ -4766,7 +4765,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289105047865493069}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8427936255897745809
 MeshFilter:
@@ -6554,7 +6553,7 @@ Transform:
   - {fileID: 6538772962357068714}
   - {fileID: 8005332668492466204}
   m_Father: {fileID: 289105047865493069}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5633631360849242469
 GameObject:
@@ -11152,7 +11151,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 289105047865493069}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &543216486632427973
 MeshFilter:
@@ -11204,91 +11203,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &5616420942620151399
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 289105047865493069}
-    m_Modifications:
-    - target: {fileID: 3355398917605229336, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_text
-      value: God, I love making drugs.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5393484945018780138, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_text
-      value: "Shit dude, I\u2019m so lucky I work doing the thing I love, rent or
-        no rent.\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768938126785398024, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_text
-      value: "With a little bit of this\u2026 and a little bit of that\u2026 you
-        can make anyone chemically dependent on your product!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935941685918587633, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_Name
-      value: Dialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.018061914
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.018061914
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.018061914
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.00006
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.00709
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.00369
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.056997105
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.027764656
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.90968156
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.4104388
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -48.037
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 190.904
-      objectReference: {fileID: 0}
-    - target: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -8.367
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
---- !u!4 &2916970127118071006 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7316838627629873849, guid: 317a984c2543a34438d21214c2f36a7b, type: 3}
-  m_PrefabInstance: {fileID: 5616420942620151399}
-  m_PrefabAsset: {fileID: 0}
