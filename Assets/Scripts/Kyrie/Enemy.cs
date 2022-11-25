@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public float health;
     public float maxHealth;
+    public int xpPoints;
     protected Animator anim;
 
     public GameObject Canvas;
@@ -45,6 +46,7 @@ public class Enemy : MonoBehaviour
     protected virtual void Die()
     {
         if (slider != null) slider.enabled = false;
+        GameEvents.GetXP?.Invoke(xpPoints);
         Destroy(gameObject);
     }
 

@@ -29,6 +29,12 @@ public static class GameEvents
     public delegate void LevelCompleteDelegate(string level);
     public static LevelCompleteDelegate LevelComplete;
 
+    public delegate void GetXPDelegate(int xpPoints);
+    public static GetXPDelegate GetXP;
+
+    public delegate void XPtoUIDelegate(int currentXP, int nextXP, int currentLevel);
+    public static XPtoUIDelegate XPtoUI;
+
     public static Action PlayerDeath; // Player Dies
 
     public static Action Nicotine;
