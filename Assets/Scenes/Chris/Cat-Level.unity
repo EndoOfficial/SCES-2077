@@ -7826,9 +7826,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 349861111}
     m_Modifications:
+    - target: {fileID: 673761003845149608, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 996409675592652128, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: MaxDistance
-      value: 16.58899
+      value: 9.8155365
       objectReference: {fileID: 0}
     - target: {fileID: 2285080035134667720, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7898,6 +7902,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5891957978583362951, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
+      propertyPath: waitTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891957978583362953, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
+      propertyPath: distance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5891957978583362975, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: m_Name
       value: BOSS FISH
@@ -7905,6 +7917,10 @@ PrefabInstance:
     - target: {fileID: 8399561041029583529, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
       propertyPath: damage
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399561041029583529, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
+      propertyPath: radius
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d7333aac175ab34eb8539594e4ef2c1, type: 3}
