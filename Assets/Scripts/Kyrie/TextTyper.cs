@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 
@@ -9,7 +10,9 @@ public class TextTyper : MonoBehaviour
 {
     // Is the text
     [SerializeField] TextMeshProUGUI _textMeshPro;
-
+    [SerializeField] private string sceneName;
+    public GameObject Loading;
+    public GameObject Canvas;
     //is the array all the characters 
     public string[] stringArray;
     //is the count FOR the array
@@ -20,6 +23,19 @@ public class TextTyper : MonoBehaviour
         //starts function on frame 1 
         EndCheck();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("space") && i >= stringArray.Length)
+        {
+            Loading.SetActive(true);
+            Canvas.SetActive(false);
+            Debug.Log("Tester");
+            SceneManager.LoadScene(sceneName);
+        }
+    }
+
+
 
     public void EndCheck()
     {
@@ -53,10 +69,19 @@ public class TextTyper : MonoBehaviour
                 i += 1;
             }
 
+
+
             counter += 1;
             yield return new WaitForSeconds(0f);
             //chang the 0 to change how slow it is 0.02 could work
+
+
         }
-        
+
+
+
+
     }
+
+
 }

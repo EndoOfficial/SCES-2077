@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 753664266}
   - component: {fileID: 753664268}
   - component: {fileID: 753664267}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: APARTMENT TEXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,9 +577,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 1098312553}
   - component: {fileID: 1098312555}
   - component: {fileID: 1098312554}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SLUMS TEXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,9 +981,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -5.239792, y: 0, z: -15.403343, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1210,7 +1210,7 @@ GameObject:
   - component: {fileID: 1489587176}
   - component: {fileID: 1489587178}
   - component: {fileID: 1489587177}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: RURAL TEXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1251,9 +1251,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1320,7 +1320,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -5.239792, y: 0, z: -15.403343, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1694,7 +1694,7 @@ GameObject:
   - component: {fileID: 1953229475}
   - component: {fileID: 1953229477}
   - component: {fileID: 1953229476}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: CORPO TEXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1735,9 +1735,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1804,7 +1804,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -5.239792, y: 0, z: -15.403343, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
