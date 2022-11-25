@@ -16,10 +16,24 @@ MonoBehaviour:
   - LevelName: ' '
     Time: 0
   - LevelName: SyringeLevel
-    Time: 0
+    Time: 25.176378
   - LevelName: Cat-Level
     Time: 0
   - LevelName: FacelessFellas
     Time: 0
   - LevelName: Dealer-Level
+    Time: 0
+  - LevelName: PillArena
+    Time: 0
+  - LevelName: MotherScene
+    Time: 0
+  - LevelName: MrCigsScene
+    Time: 0
+  - LevelName: TheHand
+    Time: 0
+  - LevelName: PTscene
+    Time: 0
+  - LevelName: SpreadsheetArena
+    Time: 0
+  - LevelName: Farmoer-Level
     Time: 0

@@ -497,6 +497,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &650894149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2634781721476975232, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+  m_PrefabInstance: {fileID: 1753495460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &686571209 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7331985560557544736, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
@@ -518,33 +523,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3958082338776606859, guid: 71b0360bf0b5445429a437a526a11e15, type: 3}
   m_PrefabInstance: {fileID: 1378221369}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &890114389 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2015154809514674855, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
-  m_PrefabInstance: {fileID: 1121472060}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &890114390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890114389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fd9515250e3a5459dfab2e2a20ec1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimerText: {fileID: 1285629997}
-  BestTime: {fileID: 0}
-  Record: 0
-  StartTime: 0
-  SceneName: 
-  IsTimedLevel: 1
-  minutes: 
-  seconds: 
-  _time: 0
-  TimesLibrary: {fileID: 0}
 --- !u!1 &907953384
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,11 +727,11 @@ PrefabInstance:
     - target: {fileID: 8679599372049520130, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: BestTime
       value: 
-      objectReference: {fileID: 1702384005}
+      objectReference: {fileID: 0}
     - target: {fileID: 8679599372049520130, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: TimerText
       value: 
-      objectReference: {fileID: 1285629997}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
 --- !u!1 &1172313257 stripped
@@ -1772,17 +1750,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
---- !u!114 &1702384005 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 596654978, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
-  m_PrefabInstance: {fileID: 1702384004}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1753495460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1790,6 +1757,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 570858996974779123, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: sceneName
+      value: Slums
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634781721476975232, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3357169784844681263, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: SceneName
       value: Slums
@@ -1802,6 +1777,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: Slums
       objectReference: {fileID: 0}
+    - target: {fileID: 5881500734052654095, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: winStuff
+      value: 
+      objectReference: {fileID: 650894149}
     - target: {fileID: 6407706609725505494, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: m_Enabled
       value: 0

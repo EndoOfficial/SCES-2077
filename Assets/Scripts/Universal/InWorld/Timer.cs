@@ -21,6 +21,9 @@ public class Timer : MonoBehaviour
     public string minutes;
     public string seconds;
 
+    public string RMinutes;
+    public string RSeconds;
+
     public float _time;
 
     private LevelTime FoundTime;
@@ -31,6 +34,8 @@ public class Timer : MonoBehaviour
         //StartTime = Time.time;
         _time = 0;
 
+        TimerText = GameObject.Find("TimerText").GetComponent<Text>();
+        BestTime = GameObject.Find("BestTime").GetComponent<Text>();
         //TimerText.text = PlayerPrefs.GetString("LevelTime", seconds);
         //SceneName = PlayerPrefs.GetString("LevelName", SceneName);
 
@@ -57,8 +62,15 @@ public class Timer : MonoBehaviour
         else
         {
             IsTimedLevel = true;
-            BestTime.text = "Best: " + FoundTime.Time.ToString("f2");
             Record = FoundTime.Time;
+
+            RMinutes = ((int)Record / 60).ToString();
+            RSeconds = (Record % 60).ToString("f2");
+            BestTime.text = RMinutes + ":" + RSeconds;
+
+            
+
+            //FoundTime.Time.ToString("f2");
         }
         if(Record <= 0)
         {
@@ -116,7 +128,7 @@ public class Timer : MonoBehaviour
             FoundTime.Time = t;
             if(Record >= 60)
             {
-                 
+               
             }
 
         }
