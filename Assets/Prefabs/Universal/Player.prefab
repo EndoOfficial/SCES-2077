@@ -734,7 +734,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -1271,10 +1271,14 @@ MonoBehaviour:
   BestTime: {fileID: 0}
   Record: 0
   StartTime: 0
+  BMinutes: 0
   SceneName: 
   IsTimedLevel: 0
   minutes: 
   seconds: 
+  RMinutes: 
+  RSeconds: 
+  _time: 0
   TimesLibrary: {fileID: 11400000, guid: 4f0c13a31aa5b3f40b554363452cd892, type: 2}
 --- !u!1 &2961345996499876376
 GameObject:
