@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  fireRate: 15
+  fireRate: 1.5
   fpsCam: {fileID: 7771353499210770955}
   anim: {fileID: 0}
   bulletHit: {fileID: 5172426982756091155, guid: e48994cbea4aef14c98eb6b3d817266d, type: 3}

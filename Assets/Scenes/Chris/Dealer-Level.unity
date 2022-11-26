@@ -30562,7 +30562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 983025665, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1507579634, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_RootOrder
@@ -30666,7 +30666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3871996318174187533, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4496181252793508273, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_RootOrder
@@ -30731,6 +30731,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: Slums
       objectReference: {fileID: 0}
+    - target: {fileID: 2634781721476975232, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3357169784844681263, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: levelName
       value: Dealer
@@ -30749,7 +30753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407706609725505496, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.4
+      value: -15.94
       objectReference: {fileID: 0}
     - target: {fileID: 6407706609725505496, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: m_LocalPosition.z

@@ -12,6 +12,7 @@ public class FishJump : MonoBehaviour
     private Animator anim;
     private float temp;
     private AOE aoe;
+    public float jump = 6;
 
     private void Start()
     {
@@ -49,7 +50,7 @@ public class FishJump : MonoBehaviour
             rb.velocity = new Vector3(0, 0, 0);//reset velocity
             //clamp velocity
             jumpDirection.x = Mathf.Clamp(jumpDirection.x, -5f, 5f);
-            jumpDirection.y = 6f;
+            jumpDirection.y = jump;
             jumpDirection.z = Mathf.Clamp(jumpDirection.z, -5f, 5f);
 
             anim.SetTrigger("Jump");

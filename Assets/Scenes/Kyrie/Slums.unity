@@ -22889,6 +22889,7 @@ GameObject:
   - component: {fileID: 4170755073873123457}
   - component: {fileID: 1030941895499618084}
   - component: {fileID: 3002303880538252270}
+  - component: {fileID: 4170755073873123458}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -23442,8 +23443,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3650922900152500795}
   m_LocalRotation: {x: -0.007527071, y: -0.7070667, z: -0.7070667, w: 0.007527034}
-  m_LocalPosition: {x: -9.299533, y: -87.999, z: 44.145374}
-  m_LocalScale: {x: 101.5836, y: 101.5836, z: 101.5836}
+  m_LocalPosition: {x: -9.299533, y: -88.61, z: 44.145374}
+  m_LocalScale: {x: 72.21, y: 72.21, z: 72.21}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 761642157}
@@ -23452,6 +23453,20 @@ Transform:
   m_Father: {fileID: 1325900370}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -178.78}
+--- !u!64 &4170755073873123458
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650922900152500795}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 361d789278ff5c148b0b2ab31b6994d6, type: 3}
 --- !u!1001 &4191623682560586959
 PrefabInstance:
   m_ObjectHideFlags: 0
