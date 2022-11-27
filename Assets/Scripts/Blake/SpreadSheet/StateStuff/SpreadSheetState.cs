@@ -8,7 +8,7 @@ public class SpreadSheetState : State
     public SPREADSHEETSTATE name;
     public enum SPREADSHEETSTATE
     {
-        FIRST, SECOND, THIRD
+        SpreadSheetState1, SpreadSheetState2, SpreadSheetState3
     }
     public override void Enter() { stage = EVENT.UPDATE; }
     public override void Update() { stage = EVENT.UPDATE; }
@@ -19,4 +19,5 @@ public class SpreadSheetState : State
     {
 
     }
+    
 }

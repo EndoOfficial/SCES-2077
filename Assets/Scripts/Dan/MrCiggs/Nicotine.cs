@@ -8,11 +8,16 @@ public class Nicotine : MonoBehaviour
     Rigidbody rb;
     AudioSource audioSource;
     private float rage = -5f;
+    private float rotation = 1.5f;
 
     private void Start()
     {
          audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
+    }
+    private void Update()
+    {
+        transform.Rotate(0f, rotation, 0f);
     }
     public void OnTriggerEnter(Collider other)
     {

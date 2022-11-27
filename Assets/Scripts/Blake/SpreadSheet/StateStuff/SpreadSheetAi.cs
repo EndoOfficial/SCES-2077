@@ -12,7 +12,7 @@ public class SpreadSheetAi : MonoBehaviour
 
     void Start()
     {
-        currentState = new SpreadSheetState(gameObject, agent, anim, player);
+        currentState = new SpreadSheetState1(gameObject, agent, anim, player);
     }
     void Update()
     {

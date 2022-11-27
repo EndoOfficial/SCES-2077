@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class CellShot : Enemy
 {
+    public GameObject Spreadsheet;
     public int Damage;
+    private void Start()
+    {
+        Spreadsheet = GameObject.FindWithTag("SpreadSheet");
+    }
     private void Update()
     {
-        Damage = GetComponent<CellDamage>().damage;
+        Damage = GetComponent<CellCalculations>().damage;
     }
     protected override void TakeDamage(int damage, GameObject target)
     {
@@ -21,6 +26,7 @@ public class CellShot : Enemy
             else if(name == "DealDamageCell(Clone)")
             {
                 Debug.Log(Damage + " Damage Dealt (once I get there)");
+                GameEvents.DamageEnemy?.Invoke(Damage, Spreadsheet);
             }
             GameEvents.CellsShot?.Invoke();
         }

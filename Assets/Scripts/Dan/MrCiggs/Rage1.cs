@@ -24,7 +24,6 @@ public class Rage1 : CiggsState
         shot.damage = 1;
         base.Enter();
     }
-
     public override void Update()
     {
        

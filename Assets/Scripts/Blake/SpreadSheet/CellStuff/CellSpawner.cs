@@ -11,14 +11,14 @@ public class CellSpawner : MonoBehaviour
     private int CellLocation;
     public int SpawnLimit;
     public int SpawnDealChance;
+    public bool State2;
+    public bool State3;
     void Start()
     {
         CellSpawnPoints = GameObject.FindGameObjectsWithTag("SpawnLocation");
         // gets all the spawn locations once
         StartCoroutine(Spawn());
     }
-
-
     private void OnEnable()
     {
         GameEvents.CellsShot += Respawn;
