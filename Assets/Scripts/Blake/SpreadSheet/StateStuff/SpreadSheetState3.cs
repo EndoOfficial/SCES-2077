@@ -14,12 +14,16 @@ public class SpreadSheetState3 : SpreadSheetState
     }
     public override void Enter()
     {
-        Debug.Log("ThirdState");
         CellSpawner = npc.GetComponent<CellSpawner>();
+
         CellSpawner.SpawnLimit = 30;
         CellSpawner.SpawnDealChance = 25;
         CellSpawner.State2 = false;
         CellSpawner.State3 = true;
+
+        // ensures more cells spawn and there is a lesser
+        // chance of spawning cells to deal damage to the boss
+        // as well as colour setting in the cells
         SpreadSheet = npc.GetComponent<Enemy>();
         base.Enter();
     }
@@ -27,15 +31,15 @@ public class SpreadSheetState3 : SpreadSheetState
     {
         if (SpreadSheet.health <= 0)
         {
-            GameEvents.LevelWin?.Invoke();
+            GameEvents.LevelWin?.Invoke(); 
+            // currently because I have no death animation set up
             stage = EVENT.EXIT;
         }
     }
 
     public override void Exit()
     {
-            GameObject.Destroy(npc);
-        //anim.ResetTrigger("Rage1");
+        Object.Destroy(npc);
         base.Exit();
     }
 }

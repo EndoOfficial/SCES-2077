@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Eyes : MonoBehaviour
 {
+    //----------------------------------------
+    // Every time a cell is shot this checks
+    // to see what state the boss is in and
+    // change eye colour accordingly
+    //----------------------------------------
+
     private CellSpawner CellManager;
-    // Start is called before the first frame update
     void Start()
     {
         CellManager = GameObject.FindWithTag("SpreadSheet").GetComponent<CellSpawner>();
-
     }
     private void OnEnable()
     {
@@ -27,15 +31,18 @@ public class Eyes : MonoBehaviour
     private IEnumerator Delay()
     {
         yield return new WaitForSeconds(.1f);
+        // has to wait before checking to allow changes to be made
         if (CellManager.State2 == true)
         {
             gameObject.GetComponent<Renderer>().material.color = Color.red;
+            // first sets both eyes from green to red
         }
         if (CellManager.State3 == true)
         {
             if (name == "Right")
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.white;
+                gameObject.GetComponent<Renderer>().material.color = Color.green;
+                // then sets one of the eyes back to green
             }
         }
     }

@@ -11,20 +11,15 @@ public class CellCalculations : MonoBehaviour
     public TextMeshPro DamageInt;
     private CellSpawner CellManager;
     public int RndColour;
-    // Start is called before the first frame update
     void Start()
     {
         CellManager = GameObject.FindWithTag("SpreadSheet").GetComponent<CellSpawner>();
-
-        if (Random.value < 0.5f)
-            RndColour = 0;
-        else RndColour = 255;
 
         if (CellManager.State2 == true)
         {
             if (name == "TakeDamageCell(Clone)")
             {
-                DamageInt.color = Color.white;
+                DamageInt.color = Color.green;
             }
             else if (name == "DealDamageCell(Clone)")
             {
@@ -32,17 +27,27 @@ public class CellCalculations : MonoBehaviour
             }
         }
 
+        // checks if the boss is in state 2 or 3 then checks
+        // the name of the cell and changes colour accordingly
+
         if (CellManager.State3 == true)
         {
             if (name == "TakeDamageCell(Clone)")
             {
                 DamageInt.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1);
+                // selects a random value from 0 to 1, and assigns it as a colour value
+                // the final "1" is alpha and naturally I wanted them to always be visible
             }
             else if (name == "DealDamageCell(Clone)")
             {
-                DamageInt.color = new Color(255, RndColour, RndColour);
+                if (Random.value < 0.5f)
+                    DamageInt.color = Color.red;
+                else DamageInt.color = Color.green;
+                // 50/50 chance of spawning as green or red
             }
         }
+
+        // sets the text on the cell as well as damage
         First = Random.Range(11, 15);
         Second = Random.Range(0, 10);
         damage = First - Second;
