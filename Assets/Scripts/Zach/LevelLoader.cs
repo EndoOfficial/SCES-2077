@@ -50,7 +50,7 @@ public class LevelLoader : MonoBehaviour
                     actionButtonPrompt.gameObject.SetActive(true); // press E text
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        GameObject.Find("Player").SendMessage("Finnnish");
+                        //GameObject.Find("Player").SendMessage("Finnnish");
                         sceneLoader.LoadScene();
                         //minutes = GetComponent<Timer>().minutes;
                         //seconds = GetComponent<Timer>().seconds;
@@ -96,7 +96,7 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    public IEnumerator LoadScene(SceneLoader sceneLoader)
+    private IEnumerator LoadScene(SceneLoader sceneLoader)
     {
         GetComponent<Gun>().anim.SetTrigger("JackIn");
         yield return new WaitForSeconds(1.5f);

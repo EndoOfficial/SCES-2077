@@ -68,7 +68,7 @@ public class Gun : MonoBehaviour
         float time = 0;
         Vector3 startposition = trail.transform.position;
 
-        while(time < 3)
+        while(time < 1)
         {
             trail.transform.position = Vector3.Lerp(startposition, hit.point, time);
             time += Time.deltaTime / trail.time;
@@ -81,7 +81,7 @@ public class Gun : MonoBehaviour
             if (hit.transform.CompareTag("Enemy"))
             {
                 //damage enemy Event
-                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject); //This passes though a damage and the object that GET'S HIT
+                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject); //This passes though a damage AND the object that GET'S HIT
                 Instantiate(enemyHit, hit.point, bulletSpawn.transform.rotation);
 
                 WeakPoints target = hit.transform.GetComponent<WeakPoints>();

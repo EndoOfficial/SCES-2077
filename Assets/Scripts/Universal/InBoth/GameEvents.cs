@@ -77,6 +77,6 @@ public static class GameEvents
     public static Action CellsShot; // When a spreadsheet cell is shot
 
     public static Action NewWave;
-    public static Action WaveWin;
 
+    public static Action WaveWin;
 }
