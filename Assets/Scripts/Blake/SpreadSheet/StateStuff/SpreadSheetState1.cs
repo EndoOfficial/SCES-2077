@@ -13,13 +13,12 @@ public class SpreadSheetState1 : SpreadSheetState
     }
     public override void Enter()
     {
-        Debug.Log("FirstState");
         SpreadSheet = npc.GetComponent<Enemy>();
         base.Enter();
     }
     public override void Update()
     {
-        if (SpreadSheet.health <= 100)
+        if (SpreadSheet.health <= SpreadSheet.maxHealth/3 * 2) // made dynamic so if max health is changed
         {
             nextState = new SpreadSheetState2(npc, agent, anim, player);
             stage = EVENT.EXIT;
@@ -28,7 +27,6 @@ public class SpreadSheetState1 : SpreadSheetState
 
     public override void Exit()
     {
-        //anim.ResetTrigger("Rage1");
         base.Exit();
     }
 }
