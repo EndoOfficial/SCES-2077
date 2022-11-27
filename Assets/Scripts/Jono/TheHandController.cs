@@ -14,8 +14,10 @@ public class TheHandController : MonoBehaviour
     public bool MoveLeft;
     public bool SpawnBucket;
     public bool playerDetected;
+    public bool Invulnarable;
     public Transform CentrePoint;
     public float timer;
+    public BoxCollider Col;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,15 @@ public class TheHandController : MonoBehaviour
             timer = Random.Range(5, 15);
             
         }
-        
+
+        if (Invulnarable)
+        {
+            Col.enabled = false;
+        }
+        else
+        {
+            Col.enabled = true;
+        }
 
         Debug.Log(BarrelHolder.transform.childCount);
         if (MoveLeft)
@@ -97,10 +107,14 @@ public class TheHandController : MonoBehaviour
     
 
     public IEnumerator SpawnNewBucket()
-    {
+    {        
+        Invulnarable = true;
         SpawnBucket = false;
-        yield return new WaitForSeconds(2);
-        var newBucket = Instantiate(Bucket, (BarrelHolder.transform));        
+        yield return new WaitForSeconds(Random.Range(2 , 5));
+        Invulnarable = false;
+        var newBucket = Instantiate(Bucket, (BarrelHolder.transform));
+        
+        
         
         yield return new WaitForSeconds(2);
     }

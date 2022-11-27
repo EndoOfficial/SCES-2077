@@ -27,6 +27,7 @@ public class FacelessController : MonoBehaviour
     {
         //audio = GetComponent<AudioSource>();
 
+        GameController = GameObject.FindGameObjectWithTag("GameManager");
         SpawnNoise = Random.Range(0, 3);
         Debug.Log(SpawnNoise);        
 
@@ -52,7 +53,7 @@ public class FacelessController : MonoBehaviour
     }
     private void OnDestroy()
     {
-        GameController = GameObject.FindGameObjectWithTag("GameManager");
+        
         GameController.GetComponent<GameController>().KillCount += 1;
         Debug.Log("Dead");
         
