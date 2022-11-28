@@ -67,7 +67,7 @@ public class WaveSpawner : MonoBehaviour
             
            
             nextWave = 0;
-            //GameEvents.LevelWin?.Invoke();
+            GameEvents.LevelWin?.Invoke();
             //GameEvents.WaveWin?.Invoke();
             Debug.Log("Compleated all waves");
         }
