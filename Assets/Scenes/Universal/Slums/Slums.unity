@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25071365, g: 0.2751636, b: 0.33572862, a: 1}
+  m_IndirectSpecularColor: {r: 0.24966526, g: 0.2737107, b: 0.33461305, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: e5878315338cd2d4a9bad8ef1bb16f4b, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 399ffba3118b3ca41abd8d721666551a, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -11618,8 +11618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54df55967258f7a499b87b555642d3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: SyringeLevel
-  levelName: 
+  sceneName: 0
+  levelName: 0
 --- !u!1 &1000007806
 GameObject:
   m_ObjectHideFlags: 0
@@ -19717,8 +19717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54df55967258f7a499b87b555642d3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: SyringeLevel
-  levelName: 
+  sceneName: 0
+  levelName: 0
 --- !u!1 &2094578292
 GameObject:
   m_ObjectHideFlags: 0
