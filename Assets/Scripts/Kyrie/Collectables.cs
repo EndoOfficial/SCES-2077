@@ -9,16 +9,13 @@ public class Collectables : MonoBehaviour
     public GameObject Panel;
     public void PresentCollect()
     {
-         Panel.SetActive(true);
+        Panel.SetActive(true);
         Presentable.SetActive(true);
 
     }
-
     public void DisableCollect()
     {
         Panel.SetActive(false);
         Presentable.SetActive(false);
-        
     }
-
 }

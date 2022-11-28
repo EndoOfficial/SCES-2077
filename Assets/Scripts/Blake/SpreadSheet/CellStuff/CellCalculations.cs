@@ -49,7 +49,7 @@ public class CellCalculations : MonoBehaviour
 
         // sets the text on the cell as well as damage
         First = Random.Range(11, 15);
-        Second = Random.Range(0, 10);
+        Second = Random.Range(0, 14);
         damage = First - Second;
         DamageInt.text = First + "-" + Second;
     }

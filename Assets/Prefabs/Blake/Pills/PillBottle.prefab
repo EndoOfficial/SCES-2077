@@ -117,8 +117,8 @@ Transform:
   m_GameObject: {fileID: 3111766049081666907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15, y: 1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.28, y: 2.28, z: 2.28}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4600407970777075090}
   - {fileID: 7489426665669104149}
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3111766049081666907}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4776dc3355f5734f80b43247764ee5b, type: 3}
   m_Name: 
@@ -231,8 +231,6 @@ MonoBehaviour:
   - {fileID: 7540080838102888225, guid: 7857f2a52f5948441825921747d29f66, type: 3}
   - {fileID: 405892069477294195, guid: 18fc80f7066a2cb458658c23f7a3078b, type: 3}
   - {fileID: 5183225567923066637, guid: 3e7e2ad36c432e84c9d216b33c83d59e, type: 3}
-  SpawnDelay: 1.25
-  Pillnum: 0
 --- !u!114 &6695048194844847527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,10 +245,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 150
   maxHealth: 150
+  xpPoints: 0
   Canvas: {fileID: 4600407970777075093}
   slider: {fileID: 4600407970999708959}
-  IsDead: 1
-  pill: {fileID: 5183225567923066637, guid: 3e7e2ad36c432e84c9d216b33c83d59e, type: 3}
+  canDie: 1
+  pill:
+  - {fileID: 7540080838102888225, guid: 7857f2a52f5948441825921747d29f66, type: 3}
+  - {fileID: 405892069477294195, guid: 18fc80f7066a2cb458658c23f7a3078b, type: 3}
+  - {fileID: 5183225567923066637, guid: 3e7e2ad36c432e84c9d216b33c83d59e, type: 3}
   spawnlimit: 12
 --- !u!95 &7692386618914041817
 Animator:
@@ -307,6 +309,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7488767427271502840, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488767427271502840, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488767427271502840, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731251, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_Name
       value: Health Canvas
@@ -349,6 +363,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
