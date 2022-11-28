@@ -905,11 +905,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 570858996974779123, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: levelName
-      value: Farmer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 570858996974779123, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: sceneName
-      value: Farm
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3357169784844681263, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: levelName

@@ -15,49 +15,49 @@ EditorBuildSettings:
     path: Assets/Scenes/Zach/Apartment.unity
     guid: b0e15fe8d0b96764a8cf7bb2759423f5
   - enabled: 1
-    path: Assets/Scenes/Blake/PillArena.unity
+    path: Assets/Scenes/Blake/Pill.unity
     guid: 95af270f1a714fb4b9ee2fb21601c9d4
   - enabled: 1
-    path: Assets/Scenes/Zach/MotherScene.unity
+    path: Assets/Scenes/Zach/KneeMan.unity
     guid: 3b10d45b7a339ab48a7b0d158922feca
   - enabled: 1
-    path: Assets/Scenes/Zach/MrCigsScene.unity
+    path: Assets/Scenes/Zach/Ciggs.unity
     guid: a140cc2242648c54a83727d15e4becd5
   - enabled: 1
     path: Assets/Scenes/Kyrie/Slums.unity
     guid: 8e1b4435d02741b488256b9732c0f244
   - enabled: 1
-    path: Assets/Scenes/Chris/Cat-Level.unity
+    path: Assets/Scenes/Chris/Fish.unity
     guid: 540d58099aad33b47865a9acd494ac0b
   - enabled: 1
-    path: Assets/Scenes/Jono/SyringeLevel.unity
+    path: Assets/Scenes/Jono/Syringe.unity
     guid: fd93c3b17b8850640ad36db6a47f9d28
   - enabled: 1
-    path: Assets/Scenes/Chris/Dealer-Level.unity
+    path: Assets/Scenes/Chris/Bills.unity
     guid: 87a930eb68bf0f74a9f70827b777e472
   - enabled: 1
     path: Assets/Scenes/Kyrie/Farm.unity
     guid: 1a96d4c798ab8ec4aad3062475b52087
   - enabled: 1
-    path: Assets/Scenes/Jono/TheHand.unity
+    path: Assets/Scenes/Jono/Hands.unity
     guid: 9e76d3cd8d1c4824a91f26eb3611a632
   - enabled: 1
-    path: Assets/Scenes/Chris/Farmer-Level.unity
+    path: Assets/Scenes/Chris/Fire.unity
     guid: 5e98db6ca302d9c4f84606f02a1171f6
   - enabled: 1
-    path: Assets/Scenes/Zach/PTscene.unity
+    path: Assets/Scenes/Zach/PT.unity
     guid: 4c533ff694ed3b147a231ccb962d1b72
   - enabled: 1
     path: Assets/Scenes/Zach/Corpo.unity
     guid: 2df9f4634492a9b4c9367518d35d83bb
   - enabled: 1
-    path: Assets/Scenes/Dan+Blake Test/Cocaine TestGrounds.unity
+    path: Assets/Scenes/Dan+Blake Test/Cocaine.unity
     guid: a4b567990731ba641824672a4cff2d7a
   - enabled: 1
-    path: Assets/Scenes/Jono/FacelessFellas.unity
+    path: Assets/Scenes/Jono/Faceless.unity
     guid: 188c1e88a01a2b646b7a743f4bfdb67a
   - enabled: 1
-    path: Assets/Scenes/Blake/SpreadsheetArena.unity
+    path: Assets/Scenes/Blake/Spreadsheet.unity
     guid: 5fe4678932d98bf4abbeae69462015bb
   - enabled: 1
     path: Assets/Scenes/Kyrie/Intros/FarmIntro.unity

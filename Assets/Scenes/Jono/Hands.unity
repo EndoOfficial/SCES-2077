@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43591532, g: 0.16587082, b: 0.47170532, a: 1}
+  m_IndirectSpecularColor: {r: 0.43591467, g: 0.16587067, b: 0.47170466, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1355,8 +1355,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 570858996974779123, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
+      propertyPath: levelName
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 570858996974779123, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: sceneName
-      value: Rural
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2634781721476975232, guid: e896174f8ced3754bb04177762c9d04f, type: 3}
       propertyPath: m_IsActive
