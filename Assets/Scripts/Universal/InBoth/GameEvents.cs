@@ -35,8 +35,6 @@ public static class GameEvents
     public delegate void XPtoUIDelegate(int currentXP, int nextXP, int currentLevel);
     public static XPtoUIDelegate XPtoUI;
 
-    public static Action PlayerDeath; // Player Dies
-
     public static Action Nicotine;
 
     public static Action AOE; // Fish AOE
