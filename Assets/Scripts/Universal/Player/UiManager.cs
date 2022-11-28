@@ -28,6 +28,8 @@ public class UiManager : MonoBehaviour
     {
         GameEvents.OnGameOver -= OnGameOver;
         GameEvents.XPtoUI += XPtoUI;
+        GameEvents.NewWave -= Wave1;
+        GameEvents.WaveWin -= OnWaveWin;
     }
 
     private void XPtoUI(int currentXP, int nextXP, int currentLevel)

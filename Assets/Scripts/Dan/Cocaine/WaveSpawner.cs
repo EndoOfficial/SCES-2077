@@ -38,7 +38,7 @@ public class WaveSpawner : MonoBehaviour
             {
                 WaveCompleated();
                 Debug.Log("Completed Current Wave");
-                //GameEvents.NewWave?.Invoke();
+                GameEvents.WaveWin?.Invoke();
             }
             else
             {
@@ -68,11 +68,12 @@ public class WaveSpawner : MonoBehaviour
            
             nextWave = 0;
             //GameEvents.LevelWin?.Invoke();
+            //GameEvents.WaveWin?.Invoke();
             Debug.Log("Compleated all waves");
         }
         else
         {
-            //GameEvents.WaveWin?.Invoke();
+           
             Debug.Log("new Wave");
             nextWave++;
         }

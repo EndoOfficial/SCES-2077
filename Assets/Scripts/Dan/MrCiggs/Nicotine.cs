@@ -7,7 +7,7 @@ public class Nicotine : MonoBehaviour
     public Collider Col;
     Rigidbody rb;
     AudioSource audioSource;
-    private float rage = -5f;
+    private float rage = -20f;
     private float rotation = 1.5f;
 
     private void Start()

@@ -88,7 +88,7 @@ public class MrCiggs : MonoBehaviour
     }
     public void DecreaseRage()
     {
-        rage -= 5f;
+        rage -= 7f;
     }
 
     //  Gizmos.DrawLine(transform.position, transform.forward);

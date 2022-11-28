@@ -97,7 +97,7 @@ public class Gun : MonoBehaviour
             }
             else if (hit.transform.CompareTag("Nose"))
             {
-
+                GameEvents.DamageEnemy?.Invoke(damage, hit.transform.gameObject);
             }
             else if (hit.transform.CompareTag("Player"))
             {

@@ -55,7 +55,7 @@ public class Timer : MonoBehaviour
 
         if(FoundTime == null)
         {
-            Debug.LogError($"No Name Found {SceneName}");
+            //Debug.LogError($"No Name Found {SceneName}");
             IsTimedLevel = false;
             
         }

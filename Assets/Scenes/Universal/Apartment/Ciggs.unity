@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NicotinePrefab: {fileID: 1687113442073028745, guid: db023988b83d2d145b1581a792a7c439, type: 3}
-  WaitTime: 2
+  WaitTime: 1
   raycastRadius: 1
   hitLayerMask:
     serializedVersion: 2
@@ -226,7 +226,7 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  LeftWallPosition: {x: -7, y: 8, z: 0}
+  LeftWallPosition: {x: -9, y: 8, z: 0}
   RightWallPosition: {x: 9, y: 8, z: 0}
   TopWallPosition: {x: 0, y: 8, z: 16}
   BotWallPosition: {x: 0, y: 8, z: -16}
@@ -3140,7 +3140,7 @@ Transform:
   m_GameObject: {fileID: 3761795592957165269}
   m_LocalRotation: {x: -0.012069043, y: 0.15227498, z: -0.025674012, w: 0.98793095}
   m_LocalPosition: {x: -3.9212239, y: 0.15371667, z: -9.636998}
-  m_LocalScale: {x: 100, y: 100, z: 460.2588}
+  m_LocalScale: {x: 45.95, y: 59.68705, z: 460.2588}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5404605162107174440}
@@ -3893,7 +3893,7 @@ Transform:
   m_GameObject: {fileID: 8444365959273946359}
   m_LocalRotation: {x: -0.008190211, y: 0.006364829, z: -0.027161317, w: 0.9995773}
   m_LocalPosition: {x: -5.978804, y: 0.3133363, z: 12.8624325}
-  m_LocalScale: {x: 99.99999, y: 99.99999, z: 460.25876}
+  m_LocalScale: {x: 38.725, y: 35.745, z: 460.25876}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5404605162107174440}
@@ -4360,7 +4360,7 @@ Transform:
   m_GameObject: {fileID: 7508432789464544662}
   m_LocalRotation: {x: 0.0019425056, y: -0.13450436, z: 0.017823704, w: 0.9907508}
   m_LocalPosition: {x: -12.208276, y: 0.41134855, z: 24.524162}
-  m_LocalScale: {x: 100.00001, y: 100, z: 460.2588}
+  m_LocalScale: {x: 26.391684, y: 40.68822, z: 395.92383}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5404605162107174440}
@@ -4441,7 +4441,7 @@ Transform:
   m_GameObject: {fileID: 1947339497418911966}
   m_LocalRotation: {x: -0.01178716, y: 0.27471307, z: -0.035846986, w: 0.9607855}
   m_LocalPosition: {x: -9.877972, y: 0.3078729, z: -22.093925}
-  m_LocalScale: {x: 99.99999, y: 99.99999, z: 460.25873}
+  m_LocalScale: {x: 46.340996, y: 48.856018, z: 460.25873}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5404605162107174440}

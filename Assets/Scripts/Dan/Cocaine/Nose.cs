@@ -23,6 +23,7 @@ public class Nose : MonoBehaviour
     {
         if (gameObject == target && hit == false)
         {
+            Debug.Log("Nose Hit");
             hit = true; // ensures nose can't be spammed
             StartCoroutine(Delay());
         }
