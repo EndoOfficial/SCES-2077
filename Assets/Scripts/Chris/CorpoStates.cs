@@ -61,6 +61,12 @@ public class CorpoStates: MonoBehaviour
             Accountant1.SetActive(false);
             Accountant2.SetActive(true);
         }
+
+        if (PlayerPrefs.GetString("ceoBool") == "T" && PlayerPrefs.GetString("internBool") == "T" && PlayerPrefs.GetString("accountantBool") == "T")
+        {
+            GameEvents.LevelWin?.Invoke();
+        }
+
         //Save PlayerPrefs
         PlayerPrefs.Save();
     }

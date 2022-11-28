@@ -3693,6 +3693,10 @@ PrefabInstance:
       propertyPath: actionButtonPrompt
       value: 
       objectReference: {fileID: 2129939332}
+    - target: {fileID: 595779550, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+      propertyPath: m_StepOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2015154809514674855, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: m_Icon
       value: 

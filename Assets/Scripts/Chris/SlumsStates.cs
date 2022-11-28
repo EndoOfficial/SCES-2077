@@ -60,6 +60,12 @@ public class SlumsStates : MonoBehaviour
             Addict1.SetActive(false);
             Addict2.SetActive(true);
         }
+
+        if(PlayerPrefs.GetString("catBool") == "T" && PlayerPrefs.GetString("dealerBool") == "T" && PlayerPrefs.GetString("addictBool") == "T")
+        {
+            GameEvents.LevelWin?.Invoke();
+        }
+
         PlayerPrefs.Save();
     }
 }

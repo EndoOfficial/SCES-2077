@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2958128341205372935}
   - component: {fileID: 5945240515568978953}
   - component: {fileID: 9150821256215271372}
+  - component: {fileID: 7368828657398956232}
   m_Layer: 0
   m_Name: Cat Standing
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7368828657398956232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712367201345098808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54df55967258f7a499b87b555642d3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 8
+  levelName: 0

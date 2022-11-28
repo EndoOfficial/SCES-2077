@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    enum SceneName { Slums, Apartment, Farm, Corpo, Pill, Spreadsheet, Bills, Fire, Fish, Cocaine, Faceless, Hands, Syringe, Ciggs, KneeMan, PT, MainMenu, NewGameIntro, CorpoIntro, ApartmentIntro, FarmIntro, SlumsIntro};
+    enum SceneName { Slums, Apartment, Farm, Corpo, Pill, Spreadsheet, Bills, Fire, Fish, Cocaine, Faceless, Hands, Syringe, Ciggs, KneeMan, PT, MainMenu, NewGameIntro, CorpoIntro, ApartmentIntro, FarmIntro, SlumsIntro, LevelMenu};
     [SerializeField]
     private SceneName sceneName;
 

@@ -60,6 +60,12 @@ public class ApartmentStates: MonoBehaviour
             Cigs1.SetActive(false);
             Cigs2.SetActive(true);
         }
+
+        if (PlayerPrefs.GetString("mumBool") == "T" && PlayerPrefs.GetString("pillBool") == "T" && PlayerPrefs.GetString("cigsBool") == "T")
+        {
+            GameEvents.LevelWin?.Invoke();
+        }
+
         //Save PlayerPrefs
         PlayerPrefs.Save();
     }

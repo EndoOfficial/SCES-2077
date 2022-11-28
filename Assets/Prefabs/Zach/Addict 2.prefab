@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 5076573426455515054}
   - component: {fileID: 7684151886123947280}
   - component: {fileID: 6801469645164496681}
+  - component: {fileID: 5676836889868182198}
   m_Layer: 0
   m_Name: head_Cube.002_Material.001
   m_TagString: Untagged
@@ -368,6 +369,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5676836889868182198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5967973875821069195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54df55967258f7a499b87b555642d3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 0
+  levelName: 0
 --- !u!1 &6014231840690606698
 GameObject:
   m_ObjectHideFlags: 0

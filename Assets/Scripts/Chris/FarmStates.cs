@@ -61,6 +61,12 @@ public class FarmStates: MonoBehaviour
             Cow1.SetActive(false);
             Cow2.SetActive(true);
         }
+
+        if (PlayerPrefs.GetString("farmerBool") == "T" && PlayerPrefs.GetString("sonBool") == "T" && PlayerPrefs.GetString("cowBool") == "T")
+        {
+            GameEvents.LevelWin?.Invoke();
+        }
+
         //Save PlayerPrefs
         PlayerPrefs.Save();
     }

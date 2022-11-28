@@ -29,6 +29,22 @@ public class Health : MonoBehaviour
     {
         //FindObjectOfType<AudioManager>().Play("Hurt");
         // reduce health then update it
+
+        if (PlayerPrefs.HasKey("Difficulty"))
+        {
+            if(PlayerPrefs.GetInt("Difficulty") == 0)
+            {
+                var tempdamage = damage * 0.5f;
+                damage = (int)tempdamage;
+            }
+            
+            if(PlayerPrefs.GetInt("Difficulty") == 2)
+            {
+                var tempdamage = damage * 1.5f;
+                damage = (int)tempdamage;
+            }
+        }
+
         health -= damage;
         GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.PlayerHurt);
         if (health <= 0f)
