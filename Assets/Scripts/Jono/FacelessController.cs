@@ -14,7 +14,7 @@ public class FacelessController : MonoBehaviour
 
     public GameObject Player;
     public Rigidbody MyRb;
-    public float Speed;
+    public float Speed = 10;
     public bool moveTowards;
     public Animator Anim;
 
@@ -48,7 +48,7 @@ public class FacelessController : MonoBehaviour
     {
         if (moveTowards)
         {            
-            transform.Translate(Vector3.forward* Time.deltaTime);
+            transform.Translate(Vector3.forward* Time.deltaTime * Speed);
         }        
     }
     private void OnDestroy()
@@ -64,13 +64,13 @@ public class FacelessController : MonoBehaviour
         RaycastHit hit;
         Physics.Raycast(transform.position, transform.position - transform.position, out hit);
 
-        Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
         //Debug.DrawRay(transform.position, forward, Color.red);
 
         
         if (CanLunge == true && Physics.Raycast(transform.position, forward, out hit) && hit.collider.tag == "Player")        
         {
-            StartCoroutine(Lunge());
+            StartCoroutine(StartLunge());
         }
     }
 
@@ -84,14 +84,20 @@ public class FacelessController : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    public IEnumerator Lunge()
+    public IEnumerator StartLunge()
     {
+        
         CanLunge = false;
-        yield return new WaitForSeconds(5);
-        moveTowards = true;
+        yield return new WaitForSeconds(2);
         Anim.SetTrigger("Lunge");
-        Debug.Log("Lunge");
+        
         //MyRb.isKinematic = false;
         //MyRb.AddForce((transform.forward) * LungeSpeed);
     }    
+    public void Lunge()
+    {
+        moveTowards = true;
+        Speed = 12;
+        Debug.Log("Lunge");
+    }
 }
