@@ -34,7 +34,7 @@ public class FaceLessSoundsController : MonoBehaviour
         //Debug.Log(hit.collider.gameObject.name);
         Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
 
-        if (timer < 0 && CanSpawn)
+        if (timer < 0 && CanSpawn && !Blocked)
         {
             if (!Spawned)
             {
@@ -63,7 +63,7 @@ public class FaceLessSoundsController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Ground")
         {
