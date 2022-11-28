@@ -15,27 +15,27 @@ MonoBehaviour:
   times:
   - LevelName: ' '
     Time: 0
-  - LevelName: SyringeLevel
-    Time: 25.176378
-  - LevelName: Cat-Level
+  - LevelName: Syringe
     Time: 0
-  - LevelName: Dealer-Level
+  - LevelName: Fish
     Time: 0
-  - LevelName: FacelessFellas
+  - LevelName: Bills
     Time: 0
-  - LevelName: PillArena
+  - LevelName: Faceless
     Time: 0
-  - LevelName: MotherScene
+  - LevelName: Pill
     Time: 0
-  - LevelName: MrCigsScene
+  - LevelName: KneeMan
     Time: 0
-  - LevelName: TheHand
+  - LevelName: Ciggs
     Time: 0
-  - LevelName: SpreadsheetArena
+  - LevelName: Hands
     Time: 0
-  - LevelName: PTscene
+  - LevelName: Spreadsheet
     Time: 0
-  - LevelName: Farmer-Level
+  - LevelName: PT
     Time: 0
-  - LevelName: Cocaine TestGrounds
+  - LevelName: Fire
+    Time: 0
+  - LevelName: Cocaine
     Time: 0

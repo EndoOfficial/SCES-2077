@@ -49,7 +49,7 @@ public class FacelessController : MonoBehaviour
         if (moveTowards)
         {            
             transform.Translate(Vector3.forward* Time.deltaTime);
-        }
+        }        
     }
     private void OnDestroy()
     {
