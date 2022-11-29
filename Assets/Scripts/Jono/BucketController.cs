@@ -9,6 +9,8 @@ public class BucketController : MonoBehaviour
     Vector3 Direction;
     private int damage;
     private bool Grounded;
+    public bool IsMoving;
+    public Rigidbody MyRb;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,19 +20,24 @@ public class BucketController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (MyRb.IsSleeping())
+        {
+            IsMoving = false;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (!Grounded)
+            if (IsMoving)
             {
                 StartCoroutine(KnockBack());
+                damage = 10;
+                GameEvents.DamagePlayer(damage);
+                Debug.Log("Bonk");
             }            
-            damage = 10;
-            GameEvents.DamagePlayer(damage);
+                
         }
         if (collision.gameObject.tag == "Ground")
         {
@@ -49,7 +56,6 @@ public class BucketController : MonoBehaviour
     private IEnumerator Destroy()
     {   
         yield return new WaitForSeconds(2);
-        Debug.Log("DestroyBucket");
         Destroy(this.gameObject);        
     }
     private IEnumerator GroundSet()
@@ -68,10 +74,11 @@ public class BucketController : MonoBehaviour
         LeanTween.value(Player.GetComponent<PlayerMovement>().velocity.z, 0, 2f)
             .setOnUpdate((float val) =>
             {
-                 Player.GetComponent<PlayerMovement>().velocity.z = val;
-                Debug.Log(val);
+                Player.GetComponent<PlayerMovement>().velocity.z = val;
+                //Debug.Log(val);
             });
 
         yield return null;
     }
+    
 }

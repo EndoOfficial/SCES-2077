@@ -150,3 +150,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ForceMulti: 20
+  IsMoving: 1
+  MyRb: {fileID: 5224874238054267861}

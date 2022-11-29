@@ -30,7 +30,7 @@ public class MrCoke : MonoBehaviour
 
     public IEnumerator GiveOrder()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         //Instantiate(ItemSpawner);
         ItemSpawner = GameObject.FindGameObjectWithTag("ItemSpawner");
         ItemSpawner.GetComponent<ItemSpawner>().CanSpawn = true;
