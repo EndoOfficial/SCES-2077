@@ -42790,7 +42790,7 @@ MeshRenderer:
   - {fileID: -9041050585693081717, guid: d0fb9abfcd0843b4dbec777ca0a87d28, type: 3}
   - {fileID: -3990916435953701145, guid: d0fb9abfcd0843b4dbec777ca0a87d28, type: 3}
   - {fileID: 4993001648047810509, guid: d0fb9abfcd0843b4dbec777ca0a87d28, type: 3}
-  - {fileID: 8992934318045909824, guid: d0fb9abfcd0843b4dbec777ca0a87d28, type: 3}
+  - {fileID: 2100000, guid: fa2b5cf20b8379c45a1e32ae35c8f25e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
