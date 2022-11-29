@@ -20,7 +20,8 @@ public class Normal : GruntState
         rb = npc.GetComponent<Rigidbody>();
         Grunt = npc.GetComponent<Grunts>();
         head = npc.GetComponentInChildren<HeadShot>();
-        
+        npc.GetComponent<CapsuleCollider>().height = 2;
+        npc.GetComponent<CapsuleCollider>().center = Vector3.zero;
         Grunt.speedEffect = 1f;
         Grunt.damage = 2;
         base.Enter();

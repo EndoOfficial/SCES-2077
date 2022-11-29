@@ -6,8 +6,6 @@ using UnityEngine;
 public class Heart : MonoBehaviour
 {
     public GameObject winStuff;
-    private MeshRenderer heartObj;
-    private MeshCollider mesh;
 
     private void OnEnable()
     {

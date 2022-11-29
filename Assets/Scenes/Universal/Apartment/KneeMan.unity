@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 971247658119941889, guid: 881b49e3396c2f349b9e7f701c1c3ff4, type: 3}
-  WaitTime: 2
+  WaitTime: 1.5
   Doors:
   - {fileID: 6434993595693303404}
   - {fileID: 3033069475481252888}

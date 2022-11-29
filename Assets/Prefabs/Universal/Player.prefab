@@ -1046,6 +1046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 1051536309099821870}
   actionButtonPrompt: {fileID: 0}
+  raycastRange: 5
   Player: {x: 0, y: 0, z: 0}
   minutes: 
   seconds: 

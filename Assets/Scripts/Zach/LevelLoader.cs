@@ -8,7 +8,7 @@ public class LevelLoader : MonoBehaviour
     public GameObject _camera;
     public Text actionButtonPrompt;
 
-    private float raycastRange = 5;
+    public float raycastRange;
     public Vector3 Player;
 
     private Collectables coll;
@@ -51,7 +51,7 @@ public class LevelLoader : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         //GameObject.Find("Player").SendMessage("Finnnish");
-                        sceneLoader.LoadScene();
+                        StartCoroutine(LoadScene(sceneLoader, hitinfo));
                         //minutes = GetComponent<Timer>().minutes;
                         //seconds = GetComponent<Timer>().seconds;
                         //GameEvents.OnSaveTimer?.Invoke(GameObject.Find("TimerText"));
@@ -96,10 +96,20 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    private IEnumerator LoadScene(SceneLoader sceneLoader)
+    private IEnumerator LoadScene(SceneLoader sceneLoader, RaycastHit hitinfo)
     {
+        StartCoroutine(LookAtPlayer(hitinfo));
         GetComponent<Gun>().anim.SetTrigger("JackIn");
         yield return new WaitForSeconds(1.5f);
         sceneLoader.LoadScene();
+    }
+
+    private IEnumerator LookAtPlayer(RaycastHit hitinfo)
+    {
+        while (true)
+        {
+            _camera.transform.LookAt(hitinfo.transform.position);
+            yield return null;
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class MouseLook : MonoBehaviour
     public float mouseSensitivity = 100f;
 
     public Transform playerBody;
+
+    private bool _paused;
 
     float xRotation = 0f;
 
@@ -21,6 +24,21 @@ public class MouseLook : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        GameEvents.OnPauseGame += OnPauseGame;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnPauseGame -= OnPauseGame;
+    }
+
+    private void OnPauseGame(bool paused)
+    {
+        _paused = paused;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -32,8 +50,11 @@ public class MouseLook : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        //sets rotation
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+        if (!_paused)
+        {
+            //sets rotation
+            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            playerBody.Rotate(Vector3.up * mouseX);
+        }
     }
 }

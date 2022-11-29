@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1023590460}
   - component: {fileID: 1023590461}
+  - component: {fileID: 7673773689972675622}
   m_Layer: 0
   m_Name: CokeSpriteRenderer
   m_TagString: Untagged
@@ -84,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7673773689972675622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023590459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fbd2fe52cd49343a93f00c7c6fb007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &153050006292921056
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +384,7 @@ GameObject:
   - component: {fileID: 924181591362827489}
   - component: {fileID: 924181591362827488}
   - component: {fileID: 924181591362827491}
+  - component: {fileID: 2177469422328020565}
   m_Layer: 0
   m_Name: Health Canvas
   m_TagString: Untagged
@@ -460,6 +474,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2177469422328020565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924181591362827490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fbd2fe52cd49343a93f00c7c6fb007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &924181591458578840
 GameObject:
   m_ObjectHideFlags: 0

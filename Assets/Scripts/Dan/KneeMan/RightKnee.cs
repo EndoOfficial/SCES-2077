@@ -19,7 +19,8 @@ public class RightKnee : GruntState
         rb = npc.GetComponent<Rigidbody>();
         Grunt = npc.GetComponent<Grunts>();
         head = npc.GetComponentInChildren<HeadShot>();
-       
+        npc.GetComponent<CapsuleCollider>().height = 1;
+        npc.GetComponent<CapsuleCollider>().center = new Vector3(0, -0.5f, 0);
         Grunt.speedEffect = 0f;
         Grunt.damage = 0;
         base.Enter();
