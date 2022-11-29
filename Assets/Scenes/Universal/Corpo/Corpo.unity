@@ -10775,7 +10775,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Wow, replacing that coke with Ritalin has really helped me focus on my
-    writing
+    writing.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -18754,9 +18754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I realise, now, all you need in comedy is a little bit of confidence, and
-    a little bit of nice refreshing water to make everyone come to the same spot
-    to laugh at your jokes.
+  m_text: I realise, now, all you need in comedy is a little bit of confidence.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -20849,7 +20847,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: What robot was created with the sole purpose of cooking? A woman! Yeah,
-    that one needs some work
+    that one needs some work.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
