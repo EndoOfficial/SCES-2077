@@ -34,14 +34,14 @@ public class Eyes : MonoBehaviour
         // has to wait before checking to allow changes to be made
         if (CellManager.State2 == true)
         {
-            gameObject.GetComponent<Renderer>().material.color = Color.red;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             // first sets both eyes from green to red
         }
         if (CellManager.State3 == true)
         {
             if (name == "Right")
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.green;
+                gameObject.GetComponent<SpriteRenderer>().color = Color.green;
                 // then sets one of the eyes back to green
             }
         }
