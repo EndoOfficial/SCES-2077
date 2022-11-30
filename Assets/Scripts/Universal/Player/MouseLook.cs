@@ -21,17 +21,29 @@ public class MouseLook : MonoBehaviour
         if (PlayerPrefs.HasKey("MouseSensitivity"))
         {
             mouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity");
+
         }
     }
 
     private void OnEnable()
     {
         GameEvents.OnPauseGame += OnPauseGame;
+        GameEvents.OnSensitivityChanged += OnSensitivityChanged;
     }
 
     private void OnDisable()
     {
         GameEvents.OnPauseGame -= OnPauseGame;
+        GameEvents.OnSensitivityChanged -= OnSensitivityChanged;
+    }
+
+    private void OnSensitivityChanged()
+    {
+        if (PlayerPrefs.HasKey("MouseSensitivity"))
+        {
+            mouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity");
+
+        }
     }
 
     private void OnPauseGame(bool paused)

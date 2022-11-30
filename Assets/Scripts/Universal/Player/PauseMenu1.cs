@@ -9,6 +9,7 @@ public class PauseMenu1 : MonoBehaviour
     public bool GameIsPaused = false;
     public GameObject pauseMenuUi;
     public string previousLevel;
+    public GameObject OptionMenuUi;
 
     //Update is called once per frame
     void Update()
@@ -30,6 +31,7 @@ public class PauseMenu1 : MonoBehaviour
     {                
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUi.SetActive(false);
+        OptionMenuUi.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         GameEvents.OnPauseGame?.Invoke(false);
@@ -38,6 +40,7 @@ public class PauseMenu1 : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         GameEvents.OnPauseGame?.Invoke(true);
+        OptionMenuUi.SetActive(false);
         pauseMenuUi.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -70,6 +73,19 @@ public class PauseMenu1 : MonoBehaviour
         Time.timeScale = 1f;
         Application.Quit();
         Debug.Log("Quitting game....");
+    }
+    public void Options()
+    {
+        pauseMenuUi.SetActive(false);
+        OptionMenuUi.SetActive(true);
+
+    }
+
+    public void UnOptions()
+    {
+        pauseMenuUi.SetActive(true);
+        OptionMenuUi.SetActive(false);
+
     }
 }
 

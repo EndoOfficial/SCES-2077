@@ -16,7 +16,9 @@ public class SensitivityOption : MonoBehaviour
     }
     public void SensitivityChanged()
     {
+        GameEvents.OnSensitivityChanged?.Invoke();
         Save();
+
     }
 
     private void Load()
@@ -28,4 +30,6 @@ public class SensitivityOption : MonoBehaviour
     {
         PlayerPrefs.SetFloat("MouseSensitivity", sensitivity.value);
     }
+
+
 }

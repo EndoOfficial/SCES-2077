@@ -78,4 +78,6 @@ public static class GameEvents
     public static Action NewWave;
 
     public static Action WaveWin;
+    
+    public static Action OnSensitivityChanged;
 }
