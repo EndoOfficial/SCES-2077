@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1023268035, guid: d87fdfa2d84064a44922bbebd22af095, type: 3}
+      value: {fileID: -1753778620, guid: e671ad881b2752c4e840c1cf049b8772, type: 3}
     attribute: m_Sprite
     path: KneeSR
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1023268035, guid: d87fdfa2d84064a44922bbebd22af095, type: 3}
+    - {fileID: -1753778620, guid: e671ad881b2752c4e840c1cf049b8772, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: bd7ba88a8a71af24784cf0266d3a8290, type: 2}
   m_LightingSettings: {fileID: 2111656577}
 --- !u!196 &4
 NavMeshSettings:
@@ -801,6 +801,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4188563518940702668, guid: 881b49e3396c2f349b9e7f701c1c3ff4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1810209621, guid: 2675b7a9b9cb8e5498a00ca14a2b4040, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881b49e3396c2f349b9e7f701c1c3ff4, type: 3}
 --- !u!114 &1750001209 stripped
