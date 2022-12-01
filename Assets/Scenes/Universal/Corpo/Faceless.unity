@@ -770,6 +770,10 @@ PrefabInstance:
       value: FacelessMap
       objectReference: {fileID: 0}
     - target: {fileID: 5985434112930646635, guid: 8c0a26cef302399469b12c75d9eca614, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434112930646635, guid: 8c0a26cef302399469b12c75d9eca614, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
@@ -791,6 +795,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7faaa55ea7471094ea758d646880a3d3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c0a26cef302399469b12c75d9eca614, type: 3}
+--- !u!1 &1275009416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5985434112930646635, guid: 8c0a26cef302399469b12c75d9eca614, type: 3}
+  m_PrefabInstance: {fileID: 1201424370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1326123170 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7331985560557544736, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
@@ -1339,6 +1348,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5985434112930646634, guid: 8c0a26cef302399469b12c75d9eca614, type: 3}
   m_PrefabInstance: {fileID: 1201424370}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1684998352
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275009416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.688637, y: 1, z: 99.189674}
+  m_Center: {x: -66, y: 0, z: 8.057064}
+--- !u!65 &1684998353
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275009416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.688637, y: 1, z: 99.189674}
+  m_Center: {x: 25.771824, y: 0, z: 8.057064}
+--- !u!65 &1684998354
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275009416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 80.07889, y: 1, z: 10.441971}
+  m_Center: {x: -19.992332, y: 0, z: 52.2}
+--- !u!65 &1684998355
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275009416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 80.07889, y: 1, z: 10.441971}
+  m_Center: {x: -19.992332, y: 0, z: -36.242924}
 --- !u!1 &1698594506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,7 +1412,7 @@ GameObject:
   - component: {fileID: 1698594507}
   - component: {fileID: 1698594509}
   - component: {fileID: 1698594510}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FaceLessSounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}

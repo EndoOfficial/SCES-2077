@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1173789629, guid: f6617fdec958c984d923fb2262d99dbf, type: 3}
+  m_Sprite: {fileID: -1659188441, guid: 87ebc703bf21b9b4a985ede2090757c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -440,6 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 40
   maxHealth: 40
+  xpPoints: 0
   Canvas: {fileID: 7473053725370999603}
   slider: {fileID: 7473053725326492601}
   canDie: 1

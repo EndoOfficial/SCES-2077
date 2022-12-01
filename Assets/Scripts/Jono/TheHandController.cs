@@ -18,6 +18,7 @@ public class TheHandController : MonoBehaviour
     public Transform CentrePoint;
     public float timer;
     public BoxCollider Col;
+    public Animator Anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class TheHandController : MonoBehaviour
         playerDetected = PlayerDetector.GetComponent<PlayerDetection>().playerDetected;
         timer -= Time.deltaTime;
 
-        if(timer <= 0)
+        if(timer <= 0 && !SpawnBucket)
         {
             StartCoroutine(ThrowBucket());
             MoveLeft = MoveLeft ? false : true;
@@ -107,7 +108,8 @@ public class TheHandController : MonoBehaviour
     
 
     public IEnumerator SpawnNewBucket()
-    {        
+    {
+        Anim.SetTrigger("HasBucket");
         Invulnarable = true;
         SpawnBucket = false;
         yield return new WaitForSeconds(Random.Range(2 , 5));
@@ -121,6 +123,7 @@ public class TheHandController : MonoBehaviour
 
     public IEnumerator ThrowBucket()
     {
+        Anim.SetTrigger("Throw");
         GameEvents.OnRuralplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.RuralClipTags.Whoosh);
         var child = BarrelHolder.gameObject.transform.GetChild(0).gameObject;
         child.transform.parent = null;
@@ -129,7 +132,9 @@ public class TheHandController : MonoBehaviour
         SpawnBucket = true;
         Debug.Log("yeet");
         ThrowForce.z = Random.Range(-5, -20);
-        child.GetComponent<Rigidbody>().AddRelativeForce(ThrowForce, ForceMode.Impulse);
+        child.GetComponent<Rigidbody>().AddRelativeForce(ThrowForce, ForceMode.Impulse);       
         yield return new WaitForSeconds(2);
+        Anim.SetTrigger("NoHasBucket");
+
     }
 }

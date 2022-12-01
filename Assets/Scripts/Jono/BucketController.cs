@@ -11,19 +11,27 @@ public class BucketController : MonoBehaviour
     private bool Grounded;
     public bool IsMoving;
     public Rigidbody MyRb;
+    private float GroundTimer;
     // Start is called before the first frame update
     void Start()
     {
+        GroundTimer = 2;
             Player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (MyRb.IsSleeping())
+        if (MyRb.IsSleeping() && IsMoving)
         {
-            IsMoving = false;
-        }
+            GroundTimer -= Time.deltaTime;
+            if (GroundTimer <= 0)
+            {
+                GroundTimer = 2;
+                IsMoving = false;
+            }
+
+        }        
     }
 
     private void OnCollisionEnter(Collision collision)

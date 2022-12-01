@@ -100,6 +100,7 @@ MonoBehaviour:
   CentrePoint: {fileID: 0}
   timer: 0
   Col: {fileID: 6270684581514400295}
+  Anim: {fileID: 2361410802158784618}
 --- !u!114 &2361410802158784619
 MonoBehaviour:
   m_ObjectHideFlags: 0

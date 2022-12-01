@@ -28,7 +28,7 @@ public class FacelessController : MonoBehaviour
         //audio = GetComponent<AudioSource>();
 
         GameController = GameObject.FindGameObjectWithTag("GameManager");
-        SpawnNoise = Random.Range(0, 3);
+        SpawnNoise = Random.Range(1, 3);
         Debug.Log(SpawnNoise);        
 
         if (SpawnNoise == 2)

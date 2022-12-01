@@ -28,7 +28,7 @@ public class EnemyGunSyringe : EnemyGun
             //if the ray hits the player
             if (shootAtPlayerRay = Physics.Raycast(transform.position, bulletDirection, out RaycastHit hit))
             {
-                anim.SetTrigger("Shoot");
+                //anim.SetTrigger("Shoot");
                 TrailRenderer trail = Instantiate(bulletTrail, transform.position, Quaternion.identity);
                 base.StartCoroutine(SpawnTrail(trail, hit));
             }
