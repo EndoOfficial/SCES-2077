@@ -108,6 +108,8 @@ public class LevelLoader : MonoBehaviour
     {
         while (true)
         {
+            GameObject.Find("Head").GetComponent<HeadBobController>().enabled = false;
+            GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
             _camera.transform.LookAt(hitinfo.transform.position);
             yield return null;
         }
