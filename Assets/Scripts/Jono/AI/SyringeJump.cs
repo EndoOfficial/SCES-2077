@@ -136,12 +136,16 @@ public class SyringeJump : MonoBehaviour
         }
         else
         {
-            anim.SetTrigger("Grounded");
-            //GameEvents.OnplayAudio?.Invoke(audioSource,AudioManager.ClipTags.Jump);
-            MyRB.AddForce(new Vector3(Random.Range(-10f,10f),Random.Range(6f,10f), Random.Range(-10f, 10f)) * SpringForce);
-            MyRB.velocity = Vector3.zero;                                         // Makes Jump Up
-            MyRB.angularVelocity = Vector3.zero;
-            Debug.Log("Jump");
+            if (!Paused)
+            {
+                anim.SetTrigger("Grounded");
+                //GameEvents.OnplayAudio?.Invoke(audioSource,AudioManager.ClipTags.Jump);
+                MyRB.AddForce(new Vector3(Random.Range(-10f, 10f), Random.Range(6f, 10f), Random.Range(-10f, 10f)) * SpringForce);
+                MyRB.velocity = Vector3.zero;                                         // Makes Jump Up
+                MyRB.angularVelocity = Vector3.zero;
+                Debug.Log("Jump");
+            }
+            
 
 
         }
