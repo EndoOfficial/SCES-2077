@@ -18,6 +18,7 @@ public class DifficultyOptions : MonoBehaviour
     public void OnDifficultyChange()
     {
         Save();
+        GameEvents.OnDificultyChanged?.Invoke();
     }
 
     private void Load()

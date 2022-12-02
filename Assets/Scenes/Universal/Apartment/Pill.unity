@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1513,7 +1513,7 @@ PrefabInstance:
     - target: {fileID: 2193214932884065639, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 3706ad099c4767a45b86fd3a27174310, type: 3}
+      objectReference: {fileID: 8300000, guid: b511200a05e8e834d905f43044f06fff, type: 3}
     - target: {fileID: 4520434914419971837, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: text
       value: 
@@ -1530,8 +1530,7 @@ PrefabInstance:
       propertyPath: TimerText
       value: 
       objectReference: {fileID: 920633336}
-    m_RemovedComponents:
-    - {fileID: 2193214932884065639, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
 --- !u!43 &135902301
 Mesh:
@@ -12951,6 +12950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KillWait: 1
+  BottleLength: 0
 --- !u!4 &602583840
 Transform:
   m_ObjectHideFlags: 0

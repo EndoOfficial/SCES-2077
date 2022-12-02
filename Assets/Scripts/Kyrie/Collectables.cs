@@ -5,8 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Collectables : MonoBehaviour
 {
+    
     public GameObject Presentable;
     public GameObject Panel;
+
+    public void Start()
+    {
+        Panel = GameObject.Find("Canvas").transform.Find("ImageOfText").gameObject;
+        Panel.SetActive(false); 
+        
+    }
     public void PresentCollect()
     {
         Panel.SetActive(true);
