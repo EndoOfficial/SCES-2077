@@ -80,4 +80,6 @@ public static class GameEvents
     public static Action WaveWin;
     
     public static Action OnSensitivityChanged;
+
+    public static Action OnDificultyChanged;
 }

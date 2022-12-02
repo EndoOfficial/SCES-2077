@@ -8874,6 +8874,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5003964179567099197, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1925917497}
+    - target: {fileID: 5003964179567099197, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8679599372049520130, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: BestTime
       value: 
@@ -24475,6 +24483,11 @@ Transform:
   m_Father: {fileID: 1995867285}
   m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 314.469}
+--- !u!95 &1925917497 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4459825560066012448, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+  m_PrefabInstance: {fileID: 324745355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1937370965
 GameObject:
   m_ObjectHideFlags: 0

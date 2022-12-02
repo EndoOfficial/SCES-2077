@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,40 +18,136 @@ public class Gun : MonoBehaviour
     public GameObject bulletSpawn;
     private AudioCycle audioCycle;
 
+    enum Difficulty { Easy, Normal, Hard }
+    private Difficulty difficulty;
+
+    private bool _paused;
+    private bool burst = false;
+
     private List<Coroutine> fireCorutines = new();
+
+    private void OnEnable()
+    {
+        GameEvents.OnDificultyChanged += OnDificultyChanged;
+        GameEvents.OnPauseGame += OnPauseGame;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnDificultyChanged -= OnDificultyChanged;
+        GameEvents.OnPauseGame += OnPauseGame;
+    }
+
+    private void OnPauseGame(bool paused)
+    {
+        _paused = paused;
+    }
+
+    private void OnDificultyChanged()
+    {
+        if (PlayerPrefs.HasKey("Difficulty"))
+        {
+            if (PlayerPrefs.GetInt("Difficulty") == 0)
+            {
+                difficulty = Difficulty.Easy;
+            }
+            else if (PlayerPrefs.GetInt("Difficulty") == 1)
+            {
+                difficulty = Difficulty.Normal;
+            }
+            else if (PlayerPrefs.GetInt("Difficulty") == 2)
+            {
+                difficulty = Difficulty.Hard;
+            }
+        }
+    }
 
     public void Start()
     {
         fireRate *= .1f;
         audioCycle = GetComponent<AudioCycle>();
+
+        if (PlayerPrefs.HasKey("Difficulty"))
+        {
+            if (PlayerPrefs.GetInt("Difficulty") == 0)
+            {
+                difficulty = Difficulty.Easy;
+            }
+            else if (PlayerPrefs.GetInt("Difficulty") == 1)
+            {
+                difficulty = Difficulty.Normal;
+            }
+            else if (PlayerPrefs.GetInt("Difficulty") == 2)
+            {
+                difficulty = Difficulty.Hard;
+            }
+        }
     }
     public void Update()
     {
-        //checks for mouse1 and nextTimeToFire
-        if (Input.GetButtonDown("Fire1"))
+        if (!_paused)
         {
-            fireCorutines.Add(StartCoroutine(fire()));
-        }
-
-        if (Input.GetButtonUp("Fire1"))
-        {
-            foreach (Coroutine fire in fireCorutines)
+            if (difficulty == Difficulty.Easy)
             {
-                StopCoroutine(fire);
+                //checks for mouse1 and nextTimeToFire
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    fireCorutines.Add(StartCoroutine(fireEasy()));
+                }
+
+                if (Input.GetButtonUp("Fire1"))
+                {
+                    foreach (Coroutine fire in fireCorutines)
+                    {
+                        StopCoroutine(fire);
+                    }
+                    fireCorutines.Clear();
+                }
             }
-            fireCorutines.Clear();
+            else if(difficulty == Difficulty.Normal)
+            {
+                //checks for mouse1 and nextTimeToFire
+                if (Input.GetButtonDown("Fire1") && !burst)
+                {
+                    fireCorutines.Add(StartCoroutine(fireNormal()));
+                    burst = true;
+                }
+
+                if (Input.GetButtonUp("Fire1"))
+                {
+                    fireCorutines.Clear();
+                }
+            }
+            else if(difficulty == Difficulty.Hard)
+            {
+                //checks for mouse1 and nextTimeToFire
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    anim.SetTrigger("Shoot");
+                    Shoot();
+                }
+            }
         }
     }
 
-    private IEnumerator fire()
+    private IEnumerator fireEasy()
     {
         while (true)
         {
-            GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.Gunfire);
             anim.SetTrigger("Shoot");
             Shoot();
             yield return new WaitForSeconds(fireRate);
         }
+    }
+    private IEnumerator fireNormal()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            anim.SetTrigger("Shoot");
+            Shoot();
+            yield return new WaitForSeconds(.1f);
+        }
+        burst = false;
     }
 
     void Shoot()
@@ -60,6 +157,7 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
         {
             TrailRenderer trail = Instantiate(bulletTrail, bulletSpawn.transform.position, Quaternion.identity);
+            GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.Gunfire);
             StartCoroutine(SpawnTrail(trail, hit));
         }
     }
@@ -68,7 +166,7 @@ public class Gun : MonoBehaviour
         float time = 0;
         Vector3 startposition = trail.transform.position;
 
-        while(time < 1)
+        while (time < 1)
         {
             trail.transform.position = Vector3.Lerp(startposition, hit.point, time);
             time += Time.deltaTime / trail.time;

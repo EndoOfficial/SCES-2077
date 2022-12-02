@@ -12633,7 +12633,7 @@ PrefabInstance:
     - target: {fileID: 2193214932884065639, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: f2dac711b93d6aa48a42adb1b07ecd31, type: 3}
+      objectReference: {fileID: 8300000, guid: c8c09ea6cec5da745b2f1642c723dd79, type: 3}
     - target: {fileID: 4520434914419971837, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: text
       value: 
@@ -30679,6 +30679,10 @@ PrefabInstance:
     - target: {fileID: 4958787710120097658, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747739252893755684, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
