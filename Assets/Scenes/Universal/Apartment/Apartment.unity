@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.31463495, g: 0.41064328, b: 0.7320059, a: 1}
+  m_IndirectSpecularColor: {r: 0.31401873, g: 0.40806735, b: 0.73163295, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -51808,7 +51808,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I wonder what Chris is up to tonight\u2026 maybe I could spend a few hours
+  m_text: "I wonder what Chad is up to tonight\u2026 maybe I could spend a few hours
     with him."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -53012,7 +53012,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I\u2019m waiting for my husband to go to sleep so I can head over to Chis's."
+  m_text: "I\u2019m waiting for my husband to go to sleep so I can head over to Chad's."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}

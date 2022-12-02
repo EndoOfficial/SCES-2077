@@ -19037,8 +19037,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Come on Stella, just another day at the office. Think of the food you\u2019ll
-    buy, or the jewellery, something to get through the day."
+  m_text: "I can\u2019t believe how much quicker I\u2019m getting through work after
+    you shot those things in my head! Do uh\u2026 water coolers always have that
+    weird bubble in them?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
