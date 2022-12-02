@@ -21,9 +21,16 @@ public class LevelLoader : MonoBehaviour
     private float time;
     private Animator anim;
 
+
+    public MouseLook mouseLook;
+
     public bool pressedEOnCollectable = false;
+    public bool pressedEOnNPC = false;
+
+    public GameObject Panel;
     private void Start()
     {
+        Panel = GameObject.Find("ImageOfText");
     }
     // Start is called before the first frame update
     private void Update()
@@ -44,20 +51,31 @@ public class LevelLoader : MonoBehaviour
 
             if (hitinfo.transform.CompareTag("NPC"))
             {
+                actionButtonPrompt.gameObject.SetActive(true); // press E text
                 var sceneLoader = hitinfo.transform.GetComponent<SceneLoader>();
-                if (sceneLoader != null)
+                if (Input.GetKeyDown(KeyCode.E) && !pressedEOnNPC)
                 {
-                    actionButtonPrompt.gameObject.SetActive(true); // press E text
-                    if (Input.GetKeyDown(KeyCode.E))
+                    pressedEOnNPC = true;
+                    actionButtonPrompt.gameObject.SetActive(false);          
+                    if (Panel != null)
                     {
-                        //GameObject.Find("Player").SendMessage("Finnnish");
-                        StartCoroutine(LoadScene(sceneLoader, hitinfo));
-                        //minutes = GetComponent<Timer>().minutes;
-                        //seconds = GetComponent<Timer>().seconds;
-                        //GameEvents.OnSaveTimer?.Invoke(GameObject.Find("TimerText"));
+                        Panel.SetActive(true);
                     }
                 }
+
+                else if (pressedEOnNPC)
+                {
+                    actionButtonPrompt.gameObject.SetActive(false);
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        DisableTextPannel();
+                        StartCoroutine(LoadScene(sceneLoader, hitinfo));
+                    }
+                               
+                }
+
             }
+
 
             else if (hitinfo.transform.CompareTag("Collectable")) //if your looking at a collectable
             {
@@ -83,14 +101,21 @@ public class LevelLoader : MonoBehaviour
             {
                 actionButtonPrompt.gameObject.SetActive(false);
                 pressedEOnCollectable = false;
+                pressedEOnNPC = false;
                 if (coll != null)
                     coll.DisableCollect();
+                if (Panel != null)
+                {
+                    Panel.SetActive(false);
+                }
             }
         }
+
         else
         {
             actionButtonPrompt.gameObject.SetActive(false);
             pressedEOnCollectable = false;
+            pressedEOnNPC = false;
             if (coll != null)
                 coll.DisableCollect();
         }
@@ -110,8 +135,18 @@ public class LevelLoader : MonoBehaviour
         {
             GameObject.Find("Head").GetComponent<HeadBobController>().enabled = false;
             GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
+            mouseLook.enabled = false;
             _camera.transform.LookAt(hitinfo.transform.position);
             yield return null;
         }
     }
+    private void DisableTextPannel()
+    {
+        actionButtonPrompt.gameObject.SetActive(false);
+        if (Panel != null)
+        {
+            Panel.SetActive(false);
+        }
+    }
+
 }

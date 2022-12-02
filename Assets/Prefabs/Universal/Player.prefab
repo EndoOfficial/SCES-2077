@@ -1050,7 +1050,10 @@ MonoBehaviour:
   Player: {x: 0, y: 0, z: 0}
   minutes: 
   seconds: 
+  Image: {fileID: 0}
+  mouseLook: {fileID: 2015154809373924600}
   pressedEOnCollectable: 0
+  pressedEOnNPC: 0
 --- !u!114 &595779542
 MonoBehaviour:
   m_ObjectHideFlags: 0
