@@ -4261,6 +4261,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7684796153901098723, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933253866465347263, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
 --- !u!1 &337662171
@@ -31539,6 +31547,7 @@ GameObject:
   - component: {fileID: 2132060063781412396}
   - component: {fileID: 2132060063781412398}
   - component: {fileID: 2132060063781412397}
+  - component: {fileID: 2132060063781412399}
   m_Layer: 0
   m_Name: Intern2
   m_TagString: NPC
@@ -32705,6 +32714,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 10
   levelName: 0
+--- !u!114 &2132060063781412399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647554370063860886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4400c56c2fd98478d1bf46c71804a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lib: {fileID: 11400000, guid: 757ddeb1ada15e14abed1059dfa54661, type: 2}
+  _name: 21
 --- !u!4 &2162557184726530564
 Transform:
   m_ObjectHideFlags: 0
@@ -36176,6 +36199,7 @@ GameObject:
   - component: {fileID: 4261345563232110016}
   - component: {fileID: 4261345563232110018}
   - component: {fileID: 4261345563232110017}
+  - component: {fileID: 4261345563232110019}
   m_Layer: 0
   m_Name: CEO2
   m_TagString: NPC
@@ -36225,6 +36249,7 @@ GameObject:
   - component: {fileID: 4298716561471661709}
   - component: {fileID: 4298716561471661711}
   - component: {fileID: 4298716561471661710}
+  - component: {fileID: 4298716561471661712}
   m_Layer: 0
   m_Name: Accountant2
   m_TagString: NPC
@@ -37629,6 +37654,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 9
   levelName: 0
+--- !u!114 &4261345563232110019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3488187010300206970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4400c56c2fd98478d1bf46c71804a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lib: {fileID: 11400000, guid: f1f35577e40234648ba3d824fb9027af, type: 2}
+  _name: 19
 --- !u!1 &4276941396010592440
 GameObject:
   m_ObjectHideFlags: 0
@@ -37725,6 +37764,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 5
   levelName: 0
+--- !u!114 &4298716561471661712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3522882824273869879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4400c56c2fd98478d1bf46c71804a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lib: {fileID: 11400000, guid: 4ffe58bb8d69c6f458a7d6982ae356aa, type: 2}
+  _name: 23
 --- !u!4 &4310220008458494340
 Transform:
   m_ObjectHideFlags: 0
@@ -39597,6 +39650,7 @@ GameObject:
   - component: {fileID: 4759820784812154949}
   - component: {fileID: 5279792600819153665}
   - component: {fileID: 5279792600819153664}
+  - component: {fileID: 5279792600819153666}
   m_Layer: 0
   m_Name: Intern1
   m_TagString: NPC
@@ -39632,6 +39686,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 10
   levelName: 0
+--- !u!114 &5279792600819153666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279792600819153663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4400c56c2fd98478d1bf46c71804a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lib: {fileID: 11400000, guid: 30c8574a3c8efa24eaaf22cee51805f7, type: 2}
+  _name: 20
 --- !u!4 &5295324918678338909
 Transform:
   m_ObjectHideFlags: 0
@@ -44798,6 +44866,7 @@ GameObject:
   - component: {fileID: 7471560606606169221}
   - component: {fileID: 7853011549619768897}
   - component: {fileID: 7853011549619768896}
+  - component: {fileID: 7853011549619768898}
   m_Layer: 0
   m_Name: Accountant 1
   m_TagString: NPC
@@ -44833,6 +44902,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 5
   levelName: 0
+--- !u!114 &7853011549619768898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853011549619768895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4400c56c2fd98478d1bf46c71804a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lib: {fileID: 11400000, guid: 245f5e9d822dbe34e93bd8d7f065a3ba, type: 2}
+  _name: 22
 --- !u!33 &7889499345880784674
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -44883,6 +44966,7 @@ GameObject:
   - component: {fileID: 7302409944129194591}
   - component: {fileID: 7934374471197626599}
   - component: {fileID: 7934374471197626598}
+  - component: {fileID: 7934374471197626600}
   m_Layer: 0
   m_Name: CEO1
   m_TagString: NPC
@@ -44918,6 +45002,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 9
   levelName: 0
+--- !u!114 &7934374471197626600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7934374471197626597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4400c56c2fd98478d1bf46c71804a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lib: {fileID: 11400000, guid: 8ad27d5e120dafd4c985859e2cc57f5e, type: 2}
+  _name: 18
 --- !u!1 &7946662488219370631
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2504744, g: 0.2744796, b: 0.33485666, a: 1}
+  m_IndirectSpecularColor: {r: 0.24959737, g: 0.27320817, b: 0.3336686, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10939,6 +10939,7 @@ GameObject:
   - component: {fileID: 469266772}
   - component: {fileID: 469266773}
   - component: {fileID: 469266774}
+  - component: {fileID: 469266775}
   m_Layer: 0
   m_Name: Daughter 2
   m_TagString: NPC
@@ -11011,6 +11012,20 @@ CapsuleCollider:
   m_Height: 2.8744867
   m_Direction: 1
   m_Center: {x: 0.60003275, y: 0.24007985, z: -0.18245511}
+--- !u!114 &469266775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469266771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4400c56c2fd98478d1bf46c71804a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lib: {fileID: 11400000, guid: 4e3ee820b84b4ea4594e2bbee4061fe6, type: 2}
+  _name: 11
 --- !u!1 &471151402
 GameObject:
   m_ObjectHideFlags: 0
@@ -12206,6 +12221,7 @@ GameObject:
   - component: {fileID: 498067486}
   - component: {fileID: 498067487}
   - component: {fileID: 498067488}
+  - component: {fileID: 498067489}
   m_Layer: 0
   m_Name: Dad 2
   m_TagString: NPC
@@ -12277,6 +12293,20 @@ CapsuleCollider:
   m_Height: 3.8949971
   m_Direction: 1
   m_Center: {x: -2.1954577, y: 3.478539, z: -3.211346}
+--- !u!114 &498067489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498067485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4400c56c2fd98478d1bf46c71804a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lib: {fileID: 11400000, guid: 5fbece4ed942b0643854f4170a013c54, type: 2}
+  _name: 9
 --- !u!1 &511945349
 GameObject:
   m_ObjectHideFlags: 0
@@ -38291,7 +38321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lib: {fileID: 11400000, guid: edf665612841185418103414d3b70005, type: 2}
-  _name: 0
+  _name: 6
 --- !u!23 &1812092032752802997
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46404,6 +46434,7 @@ GameObject:
   - component: {fileID: 6785399235932530411}
   - component: {fileID: 6785399235932530413}
   - component: {fileID: 6785399235932530412}
+  - component: {fileID: 6785399235932530414}
   m_Layer: 11
   m_Name: Dad 1
   m_TagString: NPC
@@ -47615,6 +47646,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 13
   levelName: 0
+--- !u!114 &6785399235932530414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6152273380373920849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4400c56c2fd98478d1bf46c71804a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lib: {fileID: 11400000, guid: a296e5a5c61416b4b80934fe14fcecb6, type: 2}
+  _name: 8
 --- !u!33 &6787514525150247722
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -50846,6 +50891,7 @@ GameObject:
   - component: {fileID: 8700313522380924875}
   - component: {fileID: 8700313522380924877}
   - component: {fileID: 8700313522380924876}
+  - component: {fileID: 8700313522380924878}
   m_Layer: 11
   m_Name: Daughter 1
   m_TagString: NPC
@@ -56315,6 +56361,20 @@ CapsuleCollider:
   m_Height: 4.847813
   m_Direction: 1
   m_Center: {x: 9.9055895e-15, y: 2.4814603, z: -0.8262772}
+--- !u!114 &8700313522380924878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8355982302915509617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4400c56c2fd98478d1bf46c71804a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lib: {fileID: 11400000, guid: b3cc67e66b750ce47a67b49da8b3917f, type: 2}
+  _name: 10
 --- !u!23 &8700603831141156094
 MeshRenderer:
   m_ObjectHideFlags: 0
