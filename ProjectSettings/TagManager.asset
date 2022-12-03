@@ -27,6 +27,7 @@ TagManager:
   - Collectable
   - SpawnLocation
   - Nose
+  - GameWin
   layers:
   - Default
   - TransparentFX

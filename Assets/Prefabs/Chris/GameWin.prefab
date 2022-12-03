@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 8310078493940662359}
   m_Layer: 11
   m_Name: GameWin
-  m_TagString: NPC
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 8709649848935673863}
   m_Layer: 11
   m_Name: Heart
-  m_TagString: NPC
+  m_TagString: GameWin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

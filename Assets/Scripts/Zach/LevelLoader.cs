@@ -28,9 +28,12 @@ public class LevelLoader : MonoBehaviour
     public bool pressedEOnNPC = false;
 
     public GameObject Panel;
+    public Text DialogueText;
+    private int index; // used to change dialogue text
     private void Start()
     {
         Panel = GameObject.Find("ImageOfText");
+        DialogueText = GameObject.Find("DialogueUIText").GetComponent<Text>();
     }
     // Start is called before the first frame update
     private void Update()
@@ -40,30 +43,30 @@ public class LevelLoader : MonoBehaviour
             this string will have the exact name of the scene that is to be loaded.
             If the raycast hits on update it activates the UI element that has the action button prompt and allow for the player to load the scene from the sceneloader script
         */
+
         if (raycheck = Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hitinfo, raycastRange))
         {
-
-            /*if (Input.anyKey && pressedEOnCollectable == true)
-            {
-                actionButtonPrompt.gameObject.SetActive(false);
-                coll.DisableCollect();
-            }*/
 
             if (hitinfo.transform.CompareTag("NPC"))
             {
                 actionButtonPrompt.gameObject.SetActive(true); // press E text
                 var sceneLoader = hitinfo.transform.GetComponent<SceneLoader>();
+                var dialogueLoader = hitinfo.transform.GetComponent<dialogueLoader>();
                 if (Input.GetKeyDown(KeyCode.E) && !pressedEOnNPC)
                 {
-                    pressedEOnNPC = true;
-                    actionButtonPrompt.gameObject.SetActive(false);          
+                    pressedEOnNPC = true; // toggle
+                    actionButtonPrompt.gameObject.SetActive(false);
                     if (Panel != null)
                     {
                         Panel.SetActive(true);
                     }
+                    if (dialogueLoader != null)
+                    {
+                        dialogueLoader.StartDialogue(DialogueText, index); // open dialogue
+                    }
                 }
 
-                else if (pressedEOnNPC)
+                else if (pressedEOnNPC) // to check if you've pressed E
                 {
                     actionButtonPrompt.gameObject.SetActive(false);
                     if (Input.GetKeyDown(KeyCode.E))
@@ -71,7 +74,25 @@ public class LevelLoader : MonoBehaviour
                         DisableTextPannel();
                         StartCoroutine(LoadScene(sceneLoader, hitinfo));
                     }
-                               
+
+                }
+
+                if (Input.GetKeyDown(KeyCode.LeftArrow) && pressedEOnNPC)
+                {
+                    index = -1;
+                    if (dialogueLoader != null)
+                    {
+                        dialogueLoader.StartDialogue(DialogueText, index); // open dialogue
+                    }
+                }
+
+                if (Input.GetKeyDown(KeyCode.RightArrow) && pressedEOnNPC)
+                {
+                    index = 1;
+                    if (dialogueLoader != null)
+                    {
+                        dialogueLoader.StartDialogue(DialogueText, index); // open dialogue
+                    }
                 }
 
             }
@@ -97,13 +118,22 @@ public class LevelLoader : MonoBehaviour
                     }
                 }
             }
+            else if (hitinfo.transform.CompareTag("GameWin"))
+            {
+                actionButtonPrompt.gameObject.SetActive(false);
+                var sceneLoader = hitinfo.transform.GetComponent<SceneLoader>();
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    StartCoroutine(LoadScene(sceneLoader, hitinfo));
+                }
+            }
             else
             {
                 actionButtonPrompt.gameObject.SetActive(false);
                 pressedEOnCollectable = false;
                 pressedEOnNPC = false;
-                if (coll != null)
-                    coll.DisableCollect();
+                DialogueText.text = "";
+                if (coll != null) coll.DisableCollect();
                 if (Panel != null)
                 {
                     Panel.SetActive(false);
@@ -116,8 +146,8 @@ public class LevelLoader : MonoBehaviour
             actionButtonPrompt.gameObject.SetActive(false);
             pressedEOnCollectable = false;
             pressedEOnNPC = false;
-            if (coll != null)
-                coll.DisableCollect();
+            DialogueText.text = "";
+            if (coll != null) coll.DisableCollect();
         }
     }
 
@@ -136,13 +166,14 @@ public class LevelLoader : MonoBehaviour
             GameObject.Find("Head").GetComponent<HeadBobController>().enabled = false;
             GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
             mouseLook.enabled = false;
-            _camera.transform.LookAt(hitinfo.transform.position);
+            _camera.transform.LookAt(hitinfo.transform.Find("Chest").transform.position);
             yield return null;
         }
     }
     private void DisableTextPannel()
     {
         actionButtonPrompt.gameObject.SetActive(false);
+        DialogueText.text = "";
         if (Panel != null)
         {
             Panel.SetActive(false);
