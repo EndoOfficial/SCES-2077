@@ -22,9 +22,9 @@ public class SceneLoader : MonoBehaviour
     enum LevelName { None, Cat, Addict, Dealer, Mum, Pill, Cigs, Farmer, Son, Cow, CEO, Intern, Accountant };
     [SerializeField]
     private LevelName levelName;
-
     public void LoadScene()
     {
+
         PlayerPrefs.SetString("LevelName", levelName.ToString()); ;
         SceneManager.LoadScene(sceneName.ToString());
     }

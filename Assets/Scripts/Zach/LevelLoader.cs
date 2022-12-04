@@ -27,11 +27,24 @@ public class LevelLoader : MonoBehaviour
     public bool pressedEOnCollectable = false;
     public bool pressedEOnNPC = false;
 
+    GameObject Loading;
+    
+
     public GameObject Panel;
     public Text DialogueText;
     private int index; // used to change dialogue text
     private void Start()
     {
+        
+        if (GameObject.Find("Loading") != null)
+        {
+            Loading = GameObject.Find("Canvas").transform.Find("Loading").gameObject;
+            Loading.SetActive(false);
+        }
+        else
+        {
+
+        }
         Panel = GameObject.Find("ImageOfText");
         DialogueText = GameObject.Find("DialogueUIText").GetComponent<Text>();
     }
@@ -73,6 +86,7 @@ public class LevelLoader : MonoBehaviour
                     {
                         DisableTextPannel();
                         StartCoroutine(LoadScene(sceneLoader, hitinfo));
+
                     }
 
                 }
@@ -154,6 +168,9 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(FreezePlayer(hitinfo));
         GetComponent<Gun>().anim.SetTrigger("JackIn");
         yield return new WaitForSeconds(1.5f);
+
+        Loading.SetActive(true);
+
         sceneLoader.LoadScene();
     }
 
