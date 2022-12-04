@@ -21,6 +21,7 @@ public class FireWisp : FireState
         shoot = npc.GetComponent<FireBallShoot>();
         enemy = npc.GetComponent<FireEnemy>();
 
+        //change all data to become Wisp
         anim.SetTrigger("BecomeWisp");
         enemy.maxHealth = enemy.wispHealth;
         enemy.IsWisp();
@@ -40,9 +41,9 @@ public class FireWisp : FireState
     public override void Update()
     {
         agent.destination = wheat.closestWheatPatch;
-        if (wheat.inWheat)
+        if (wheat.inWheat)// change to FireBall when they touch wheat
         {
-            wheat.inWheat = false;
+            wheat.inWheat = false; 
             nextState = new FireBall(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }

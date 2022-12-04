@@ -21,6 +21,7 @@ public class FireBall : FireState
         shoot = npc.GetComponent<FireBallShoot>();
         enemy = npc.GetComponent<FireEnemy>();
 
+        //change all data to become Fireball
         anim.SetTrigger("BecomeFireball");
         enemy.maxHealth = enemy.fireballHealth;
         enemy.IsFireball();

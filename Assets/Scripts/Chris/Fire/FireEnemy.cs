@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FireEnemy : Enemy
 {
+    /*
+        this code tells the states when to change because they took damage
+    */
     public int wispHealth;
     public int fireballHealth;
     public int tornadoHealth;

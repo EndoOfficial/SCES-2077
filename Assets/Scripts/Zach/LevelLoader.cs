@@ -82,7 +82,7 @@ public class LevelLoader : MonoBehaviour
                     index = -1;
                     if (dialogueLoader != null)
                     {
-                        dialogueLoader.StartDialogue(DialogueText, index); // open dialogue
+                        dialogueLoader.ChangeDialogue(DialogueText, index); // open dialogue
                     }
                 }
 
@@ -91,7 +91,7 @@ public class LevelLoader : MonoBehaviour
                     index = 1;
                     if (dialogueLoader != null)
                     {
-                        dialogueLoader.StartDialogue(DialogueText, index); // open dialogue
+                        dialogueLoader.ChangeDialogue(DialogueText, index); // open dialogue
                     }
                 }
 
@@ -134,10 +134,7 @@ public class LevelLoader : MonoBehaviour
                 pressedEOnNPC = false;
                 DialogueText.text = "";
                 if (coll != null) coll.DisableCollect();
-                if (Panel != null)
-                {
-                    Panel.SetActive(false);
-                }
+                if (Panel != null) Panel.SetActive(false);
             }
         }
 
@@ -148,25 +145,25 @@ public class LevelLoader : MonoBehaviour
             pressedEOnNPC = false;
             DialogueText.text = "";
             if (coll != null) coll.DisableCollect();
+            if (Panel != null) Panel.SetActive(false);
         }
     }
 
     private IEnumerator LoadScene(SceneLoader sceneLoader, RaycastHit hitinfo)
     {
-        StartCoroutine(LookAtPlayer(hitinfo));
+        StartCoroutine(FreezePlayer(hitinfo));
         GetComponent<Gun>().anim.SetTrigger("JackIn");
         yield return new WaitForSeconds(1.5f);
         sceneLoader.LoadScene();
     }
 
-    private IEnumerator LookAtPlayer(RaycastHit hitinfo)
+    private IEnumerator FreezePlayer(RaycastHit hitinfo)
     {
         while (true)
         {
             GameObject.Find("Head").GetComponent<HeadBobController>().enabled = false;
-            GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
+            GetComponent<PlayerMovement>().enabled = false;
             mouseLook.enabled = false;
-            _camera.transform.LookAt(hitinfo.transform.Find("Chest").transform.position);
             yield return null;
         }
     }
