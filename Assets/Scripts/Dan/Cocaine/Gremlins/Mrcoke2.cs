@@ -17,8 +17,10 @@ public class Mrcoke2 : MonoBehaviour
     public GameObject CokeChecker;
     public bool Melee;
     private NavMeshAgent _agent;
+    private Animator anim;
     void Start()
     {
+        anim = GetComponent<Animator>();
         CokeChecker = GameObject.Find("CocaineCheck");
         targets = GameObject.FindGameObjectsWithTag("CocainePuff");
         targetIndex = Random.Range(0, targets.Length);
@@ -35,6 +37,7 @@ public class Mrcoke2 : MonoBehaviour
         {
             if (!hit)
             {
+                anim.SetTrigger("Puff");
                 hit = true;
                 StartCoroutine(HitDelay());
                 GameEvents.DamagePlayer?.Invoke(damage);
@@ -45,6 +48,7 @@ public class Mrcoke2 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("CocainePuff"))
         {
+            anim.SetTrigger("Puff");
             other.gameObject.tag = ("Untagged"); // Ensures that the patch can't be targeted
             GameEvents.CokeTarget?.Invoke(); // Event to retarget if need be
             Retarget();

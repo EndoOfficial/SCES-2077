@@ -39,6 +39,7 @@ public class Cocaine : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && particleActivated)
         {
+            
             if (Physics.CheckSphere(transform.position, radius, Player))
             {
                 if (!hit)
