@@ -85,6 +85,6 @@ public static class GameEvents
 
     public static Action OnDificultyChanged;
 
-    public static Action OnDeath; //to play audio for deaths
+    public static Action DeathSound; //to play audio for deaths
 
 }

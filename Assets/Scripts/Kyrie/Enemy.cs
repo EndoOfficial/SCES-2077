@@ -43,11 +43,14 @@ public class Enemy : MonoBehaviour
             health -= damage;
         }
     }
+    protected virtual void DieSound()
+    {
+        GameEvents.DeathSound?.Invoke();
+    }
     protected virtual void Die()
     {
         if (slider != null) slider.enabled = false;
         GameEvents.GetXP?.Invoke(xpPoints);
-        GameEvents.OnDeath?.Invoke();
         Destroy(gameObject);
     }
 

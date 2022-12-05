@@ -3,25 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PTEnemySound : MonoBehaviour
+public class PTEnemySound : Enemy
 {
-    private AudioCycle audioCycle;
+    //private AudioCycle audioCycle;
     private AudioSource source;
-    private void OnEnable()
+
+    protected override void TakeDamage(int damage, GameObject target)
     {
-        GameEvents.OnDeath += DeathAudio;
+        if (gameObject == target)
+        {
+            anim.SetTrigger("Death");
+        }
     }
-    private void OnDisable()
-    {
-        GameEvents.OnDeath -= DeathAudio;
-    }
+
+    //private void OnEnable()
+    //{
+    //    GameEvents.DeathSound += DeathAudio;
+    //}
+    //private void OnDisable()
+    //{
+    //    GameEvents.DeathSound -= DeathAudio;
+    //}
     private void Start()
     {
-        audioCycle = GetComponent<AudioCycle>();
+        //audioCycle = GetComponent<AudioCycle>();
         source = GetComponent<AudioSource>();
     }
     void DeathAudio()
     {
-        GameEvents.OnRuralplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.RuralClipTags.TargetDeath);
+        GameEvents.OnRuralplayAudio?.Invoke(source, AudioManager.RuralClipTags.TargetDeath);
     }
 }

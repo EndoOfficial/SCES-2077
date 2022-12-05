@@ -34,10 +34,10 @@ public class PTTargetchecker : MonoBehaviour
             Enemy = GameObject.FindGameObjectsWithTag("Enemy").Length;
             if (doorOpen == false && Enemy <= 0)
             {
+                GameEvents.DoorOpen?.Invoke();
                 door.transform.RotateAround(door.transform.position, Vector3.up, 90);
                 doorOpen = true;
                 nextArea.SetActive(true);
-                GameEvents.DoorOpen?.Invoke();
             }
             yield return new WaitForSeconds(1.5f);
         }
