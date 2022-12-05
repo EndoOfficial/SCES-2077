@@ -581,6 +581,7 @@ GameObject:
   - component: {fileID: 7107950113865490133}
   - component: {fileID: 2330392502249578331}
   - component: {fileID: 1703942531407322947}
+  - component: {fileID: 2862434221516682260}
   m_Layer: 10
   m_Name: CocaineGremlin
   m_TagString: Enemy
@@ -666,10 +667,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.7870266
+  m_Radius: 0.5545686
   m_Height: 2.154016
   m_Direction: 1
-  m_Center: {x: -0.24579555, y: 0.07700801, z: -0.041230977}
+  m_Center: {x: -0.24579567, y: 0.07700801, z: 0.19122702}
 --- !u!114 &924181592070297931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,6 +798,19 @@ MonoBehaviour:
   - {fileID: 3372662757583620199}
   - {fileID: 883386635484369785}
   - {fileID: 1540582608018784159}
+--- !u!65 &2862434221516682260
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924181592070297940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3425488, y: 2.2771816, z: 1.8899617}
+  m_Center: {x: 0.30525136, y: 0.13859093, z: 0.44498086}
 --- !u!1 &1309251805310444907
 GameObject:
   m_ObjectHideFlags: 0
