@@ -17,3 +17,7 @@ MonoBehaviour:
   - God, I could go for a cigarette after this.
   - All the family together with me, watching TV, just the way it should be.
   - I can take care of my family, myself. You can go now.
+  audio:
+  - {fileID: 8300000, guid: 14af09584517209418cb639d385b8c99, type: 3}
+  - {fileID: 8300000, guid: bd956746c18ce144ba6e58b9e997f42b, type: 3}
+  - {fileID: 8300000, guid: 3c0ef534d0fce2a4b8cebb1f40f58c98, type: 3}

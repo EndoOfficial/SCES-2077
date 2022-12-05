@@ -17,3 +17,7 @@ MonoBehaviour:
   - "God, I\u2019m so boreeeeed. How many pills before the threat of overdose again?"
   - "I can\u2019t feel a thing, I might try a few more pills mixed in with my lunch."
   - "Nothing to do\u2026 nothing to do."
+  audio:
+  - {fileID: 8300000, guid: 10e19ea9fd255ef47998d839673c55d0, type: 3}
+  - {fileID: 8300000, guid: 944f9370a90ec654792a384c96263848, type: 3}
+  - {fileID: 8300000, guid: 2fa680eb3b53d7f4d9357bcbee3d0dba, type: 3}

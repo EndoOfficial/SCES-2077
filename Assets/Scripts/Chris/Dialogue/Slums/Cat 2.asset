@@ -22,3 +22,7 @@ MonoBehaviour:
     family name to uphold!"
   - My hunger is satiated, at last I can go back to doing what I enjoy most. A rather
     lovely napping schedule to help keep up my physique.
+  audio:
+  - {fileID: 8300000, guid: e070ae258b803104d80881d64d512198, type: 3}
+  - {fileID: 8300000, guid: 35026db5a205fdd4cbd56b73625268f6, type: 3}
+  - {fileID: 8300000, guid: 94a72b29acfa3274d82952c8df7b3a90, type: 3}

@@ -26,6 +26,7 @@ public class LevelLoader : MonoBehaviour
 
     public bool pressedEOnCollectable = false;
     public bool pressedEOnNPC = false;
+    private bool pressedE = false;
 
     GameObject Loading;
     
@@ -33,6 +34,8 @@ public class LevelLoader : MonoBehaviour
     public GameObject Panel;
     public Text DialogueText;
     private int index; // used to change dialogue text
+    public AudioSource _audio;
+
     private void Start()
     {
         
@@ -65,6 +68,7 @@ public class LevelLoader : MonoBehaviour
                 actionButtonPrompt.gameObject.SetActive(true); // press E text
                 var sceneLoader = hitinfo.transform.GetComponent<SceneLoader>();
                 var dialogueLoader = hitinfo.transform.GetComponent<dialogueLoader>();
+                _audio = hitinfo.transform.GetComponent<AudioSource>();
                 if (Input.GetKeyDown(KeyCode.E) && !pressedEOnNPC)
                 {
                     pressedEOnNPC = true; // toggle
@@ -75,20 +79,21 @@ public class LevelLoader : MonoBehaviour
                     }
                     if (dialogueLoader != null)
                     {
-                        dialogueLoader.StartDialogue(DialogueText, index); // open dialogue
+                        dialogueLoader.StartDialogue(DialogueText, index, _audio); // open dialogue
                     }
                 }
 
                 else if (pressedEOnNPC) // to check if you've pressed E
                 {
                     actionButtonPrompt.gameObject.SetActive(false);
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (Input.GetKeyDown(KeyCode.E) && !pressedE)
                     {
+                        pressedE = true;
                         DisableTextPannel();
                         StartCoroutine(LoadScene(sceneLoader, hitinfo));
+                        _audio.Stop();
 
                     }
-
                 }
 
                 if (Input.GetKeyDown(KeyCode.LeftArrow) && pressedEOnNPC)
@@ -96,7 +101,7 @@ public class LevelLoader : MonoBehaviour
                     index = -1;
                     if (dialogueLoader != null)
                     {
-                        dialogueLoader.ChangeDialogue(DialogueText, index); // open dialogue
+                        dialogueLoader.ChangeDialogue(DialogueText, index, _audio); // open dialogue
                     }
                 }
 
@@ -105,36 +110,44 @@ public class LevelLoader : MonoBehaviour
                     index = 1;
                     if (dialogueLoader != null)
                     {
-                        dialogueLoader.ChangeDialogue(DialogueText, index); // open dialogue
+                        dialogueLoader.ChangeDialogue(DialogueText, index, _audio); // open dialogue
                     }
                 }
 
             }
 
-
             else if (hitinfo.transform.CompareTag("Collectable")) //if your looking at a collectable
             {
                 actionButtonPrompt.gameObject.SetActive(true); // press E text
-                coll = hitinfo.transform.GetComponent<Collectables>();
+                var dialogueLoader = hitinfo.transform.GetComponent<dialogueLoader>();
+                _audio = hitinfo.transform.GetComponent<AudioSource>();
                 if (Input.GetKeyDown(KeyCode.E) && !pressedEOnCollectable)
                 {
                     pressedEOnCollectable = true;
-                    actionButtonPrompt.gameObject.SetActive(false);
-                    coll.PresentCollect();
+                    actionButtonPrompt.gameObject.SetActive(false); if (Panel != null)
+                    {
+                        Panel.SetActive(true);
+                    }
+                    dialogueLoader.StartDialogue(DialogueText, index, _audio); // open dialogue
                 }
                 else if (pressedEOnCollectable)
                 {
                     actionButtonPrompt.gameObject.SetActive(false);
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        coll.DisableCollect();
                         pressedEOnCollectable = false;
+                        DialogueText.text = "";
+                        if (Panel != null)
+                        {
+                            Panel.SetActive(false);
+                        }
+                        _audio.Stop();
                     }
                 }
             }
             else if (hitinfo.transform.CompareTag("GameWin"))
             {
-                actionButtonPrompt.gameObject.SetActive(false);
+                actionButtonPrompt.gameObject.SetActive(true);
                 var sceneLoader = hitinfo.transform.GetComponent<SceneLoader>();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -160,6 +173,7 @@ public class LevelLoader : MonoBehaviour
             DialogueText.text = "";
             if (coll != null) coll.DisableCollect();
             if (Panel != null) Panel.SetActive(false);
+            if(_audio != null) _audio.Stop();
         }
     }
 

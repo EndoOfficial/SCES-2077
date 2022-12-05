@@ -17,3 +17,7 @@ MonoBehaviour:
   - Sad moo.
   - Very sad moo.
   - extremely sad moo.
+  audio:
+  - {fileID: 8300000, guid: fe3faaa78fb71a74ba99c330f5314527, type: 3}
+  - {fileID: 8300000, guid: 8a86eb0f0736b6a47a12eb01a647cb86, type: 3}
+  - {fileID: 8300000, guid: 875f3b14db1b90043a1c7fac7c53c783, type: 3}

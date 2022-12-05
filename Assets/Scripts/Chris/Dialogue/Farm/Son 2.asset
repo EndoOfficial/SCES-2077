@@ -17,3 +17,7 @@ MonoBehaviour:
   - Thanks for helping my Dad, now he actually spends time with me.
   - I guess I never really was all alone, just too busy in my own world.
   - "Isn\u2019t Betsy cute when she\u2019s out in the paddock?"
+  audio:
+  - {fileID: 8300000, guid: 3fb9c6d2b9361d94895d68b467177741, type: 3}
+  - {fileID: 8300000, guid: 6bc53afa357ee9b4bb2a3aa2946e977a, type: 3}
+  - {fileID: 8300000, guid: 3ac8530ae133e634282d7a2850b5359c, type: 3}

@@ -17,6 +17,9 @@ public class Gun : MonoBehaviour
     public TrailRenderer bulletTrail;
     public GameObject bulletSpawn;
     private AudioCycle audioCycle;
+    private float volume;
+    public float maxVol = .5f;
+    public float minVol = .1f;
 
     enum Difficulty { Easy, Normal, Hard }
     private Difficulty difficulty;
@@ -128,6 +131,9 @@ public class Gun : MonoBehaviour
                 }
             }
         }
+        volume += .2f * Time.deltaTime;
+        volume = Mathf.Clamp(volume, minVol, maxVol);
+        audioCycle.SetVolume(volume);
     }
 
     private IEnumerator fireEasy()
@@ -156,6 +162,9 @@ public class Gun : MonoBehaviour
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
         {
+            volume += -.05f;
+            volume = Mathf.Clamp(volume, minVol, maxVol);
+            audioCycle.SetVolume(volume);
             TrailRenderer trail = Instantiate(bulletTrail, bulletSpawn.transform.position, Quaternion.identity);
             GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.Gunfire);
             StartCoroutine(SpawnTrail(trail, hit));

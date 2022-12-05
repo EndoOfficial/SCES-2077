@@ -19,3 +19,7 @@ MonoBehaviour:
     Alpha\u2026 Omega\u2026"
   - The sheet never ends the sheet never ends the sheet never ends the sheet never
     ends.
+  audio:
+  - {fileID: 8300000, guid: 62ce2c99b0e3c3843bf5d5a1d57aed50, type: 3}
+  - {fileID: 8300000, guid: 911ee4b452421ab4386aada528c10205, type: 3}
+  - {fileID: 8300000, guid: 3800b8f6c44b51b41b44774fe5ea4b26, type: 3}

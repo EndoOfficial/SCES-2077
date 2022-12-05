@@ -20,3 +20,7 @@ MonoBehaviour:
     trying to keep things together."
   - "This shit hole is really cramping my style, and yet the land lord is expecting
     me to pay a higher rent each month. He\u2019s drowning me."
+  audio:
+  - {fileID: 8300000, guid: 948e1ed571eee244eb39ff24dfba3e6d, type: 3}
+  - {fileID: 8300000, guid: 6c42e06b2811ef2409380aca2ff9c2d8, type: 3}
+  - {fileID: 8300000, guid: f05b3558fc9cea44092ae35568d4e2f8, type: 3}

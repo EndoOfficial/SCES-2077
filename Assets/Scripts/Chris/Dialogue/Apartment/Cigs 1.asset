@@ -17,3 +17,7 @@ MonoBehaviour:
   - "I can quit whenever I want. Tobacco doesn\u2019t control me."
   - "Who cares what others think? I\u2019m what matters."
   - Pfft, I own this place. My family, they listen to me.
+  audio:
+  - {fileID: 8300000, guid: 758f234f526737f42adde2bbc7958dee, type: 3}
+  - {fileID: 8300000, guid: 828ff86fca5bcd24ba47d98f58845dc8, type: 3}
+  - {fileID: 8300000, guid: 7f970ffe68991704d81eb9fa4fd83946, type: 3}

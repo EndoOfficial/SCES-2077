@@ -21,3 +21,7 @@ MonoBehaviour:
     in them always?"
   - Did somebody move that water cooler closer to me? Anyways, thanks for helping
     clear out my anxieties!
+  audio:
+  - {fileID: 8300000, guid: 1c5cb58aff0ff8746a9c886039f4f66a, type: 3}
+  - {fileID: 8300000, guid: da2020c363cf5464eb8cb214677b3401, type: 3}
+  - {fileID: 8300000, guid: 7e487a02da6a34342afe12066bb0637c, type: 3}

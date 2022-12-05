@@ -18,3 +18,7 @@ MonoBehaviour:
   - "Shit dude, I\u2019m so lucky I work doing the thing I love, rent or no rent."
   - "With a little bit of this\u2026 and a little bit of that\u2026 you can make
     anyone chemically dependent on your product!"
+  audio:
+  - {fileID: 8300000, guid: 1ac504bc3487bd24ba21ff974588b1bb, type: 3}
+  - {fileID: 8300000, guid: fd560273bf92f9047965cd1e741c6d57, type: 3}
+  - {fileID: 8300000, guid: e818ef0d2a06652408a40d20462775bf, type: 3}

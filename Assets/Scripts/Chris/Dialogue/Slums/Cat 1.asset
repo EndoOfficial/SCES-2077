@@ -17,3 +17,7 @@ MonoBehaviour:
   - Endless, Hunger, Food, Please.
   - Unbearable, Pain, Starvation, Prevent.
   - Angry, Human, Bad, Food.
+  audio:
+  - {fileID: 8300000, guid: d5f2d7a8dbc61734baf2259399625733, type: 3}
+  - {fileID: 8300000, guid: c743934e3e0e7c14f950fa6d3760d837, type: 3}
+  - {fileID: 8300000, guid: f8507f50196873142bac8b7c9125ba5e, type: 3}

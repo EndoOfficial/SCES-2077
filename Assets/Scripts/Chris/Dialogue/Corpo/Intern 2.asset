@@ -19,3 +19,7 @@ MonoBehaviour:
   - "I can\u2019t quit. I need the money or I\u2019ll starve."
   - "Come on Stella, just another day at the office. Think of the food you\u2019ll
     buy, or the jewellery, something to get through the day."
+  audio:
+  - {fileID: 8300000, guid: 458ac5a05f62ad648b9faf9559598951, type: 3}
+  - {fileID: 8300000, guid: 2f530cd03be37ec44b93f1cbde6693a1, type: 3}
+  - {fileID: 8300000, guid: b7a7147350d30444fb96c5384dbbea42, type: 3}

@@ -18,3 +18,7 @@ MonoBehaviour:
   - "There\u2019s only so much \u2018finding yourself\u2019 I can do before it\u2019s
     just repetitive."
   - "It\u2019s so lonely out here on the farm, nobody around for miles and miles."
+  audio:
+  - {fileID: 8300000, guid: 2531381dda3a252459f1cf352fd801a3, type: 3}
+  - {fileID: 8300000, guid: 1006fdbb231d59a40aeda122bc410d92, type: 3}
+  - {fileID: 8300000, guid: 9f5c802e62f8ec14daa72047eb11b49e, type: 3}

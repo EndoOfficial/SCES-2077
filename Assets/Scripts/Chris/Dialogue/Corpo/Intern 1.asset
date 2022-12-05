@@ -17,3 +17,7 @@ MonoBehaviour:
   - "Why won\u2019t he just leave me alone"
   - "I can\u2019t tolerate this anymore"
   - "I\u2019m really at my wits end"
+  audio:
+  - {fileID: 8300000, guid: 617cfacd63790f34d97ec6c1563d5699, type: 3}
+  - {fileID: 8300000, guid: 52b06451082e0714992ed635e8a9e8fd, type: 3}
+  - {fileID: 8300000, guid: 4b01c9d938bc86d4d8c2a271dd7b6889, type: 3}

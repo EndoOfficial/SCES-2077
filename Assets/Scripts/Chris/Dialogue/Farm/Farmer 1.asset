@@ -19,3 +19,7 @@ MonoBehaviour:
   - "I just can\u2019t sit around when there\u2019s so much work to be done. I need
     to be prepared."
   - "A lot of people are going to starve, I don\u2019t know if I can stop this."
+  audio:
+  - {fileID: 8300000, guid: 566e51f99b412dc4f9a92e1d84466212, type: 3}
+  - {fileID: 8300000, guid: fb9174f9572f7c74289ef22f68146f85, type: 3}
+  - {fileID: 8300000, guid: a46af05472753104f9c03fe3730beb35, type: 3}

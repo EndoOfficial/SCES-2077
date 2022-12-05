@@ -17,3 +17,7 @@ MonoBehaviour:
   - "I\u2019ll never make it in the stand up industry!"
   - "Why won\u2019t anyone find me funny!"
   - " I just want to make the world smile, but I can\u2019t even make myself smile! "
+  audio:
+  - {fileID: 8300000, guid: 647a5376efd8da842afc4bb7e5d7ce19, type: 3}
+  - {fileID: 8300000, guid: 89fecae51f059a547b49c3c77a506864, type: 3}
+  - {fileID: 8300000, guid: 01cdcfa533ec76c48802427f665a2793, type: 3}

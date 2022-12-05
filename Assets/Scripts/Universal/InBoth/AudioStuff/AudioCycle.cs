@@ -15,4 +15,12 @@ public class AudioCycle : MonoBehaviour
         //Debug.Log($"Current Index {currentIndex} {audioSources.Count}");
         return audioSources[currentIndex];
     }
+
+    public void SetVolume(float volume)
+    {
+        foreach (AudioSource source in audioSources)
+        {
+            source.volume = volume;
+        }
+    }
 }

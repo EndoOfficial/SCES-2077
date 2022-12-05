@@ -20,3 +20,7 @@ MonoBehaviour:
     I\u2019m saying? Please, please."
   - "Oh God, I can\u2019t even take care of a cat let alone a human. Fuck dude, just
     give me a little more then I\u2019ll quit, I swear I\u2019m done."
+  audio:
+  - {fileID: 8300000, guid: 1f7b0989798a1bf4f9dcb6a2475bfc36, type: 3}
+  - {fileID: 8300000, guid: 915c500db896c20458fe56d655df42d7, type: 3}
+  - {fileID: 8300000, guid: 7c81d1e069ac480429a143a3e0fc8f61, type: 3}

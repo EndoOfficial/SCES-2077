@@ -19,3 +19,7 @@ MonoBehaviour:
     going to have more pills after this."
   - "God, my parents are so boring. All they do is bicker, I\u2019m just waiting
     to pop more pills when they leave."
+  audio:
+  - {fileID: 8300000, guid: b77309759e13c5b4eb01ac7312ff6c51, type: 3}
+  - {fileID: 8300000, guid: 519f81ff373c28c428a86a85bbf80f08, type: 3}
+  - {fileID: 8300000, guid: 0731b615b5bac9744a68789a77268581, type: 3}

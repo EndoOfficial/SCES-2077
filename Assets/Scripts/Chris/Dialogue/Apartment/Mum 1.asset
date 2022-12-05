@@ -20,3 +20,7 @@ MonoBehaviour:
     around."
   - "I wonder what Chad is up to tonight\u2026 maybe I could spend a few hours with
     him."
+  audio:
+  - {fileID: 8300000, guid: 7de19d22cfccbe44aa2372aaff01a040, type: 3}
+  - {fileID: 8300000, guid: 3ee930ef688dc104786ab9e14372c755, type: 3}
+  - {fileID: 8300000, guid: 3ea396974ea08dc468162919ad91e9cf, type: 3}
