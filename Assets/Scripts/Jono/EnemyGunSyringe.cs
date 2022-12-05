@@ -12,6 +12,8 @@ public class EnemyGunSyringe : EnemyGun
     {
         if (!grounded.Grounded && seePlayer && !Paused)
         {
+            GameEvents.OnSlumsplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.SlumsClipTags.NeedleShoot);
+
             //randomizes bulletSpread
             float temp = Random.Range(-bulletSpread, bulletSpread);
             float temp1 = Random.Range(-bulletSpread, bulletSpread);

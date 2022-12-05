@@ -22,23 +22,23 @@ public class BucketController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MyRb.IsSleeping() && IsMoving)
-        {
-            GroundTimer -= Time.deltaTime;
-            if (GroundTimer <= 0)
-            {
-                GroundTimer = 2;
-                IsMoving = false;
-            }
+        //if (IsMoving)
+        //{
+        //    GroundTimer -= Time.deltaTime;
+        //    if (GroundTimer <= 0)
+        //    {
+        //        GroundTimer = 2;
+        //        IsMoving = false;
+        //    }
 
-        }        
+        //}        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (IsMoving)
+            if (!Grounded)
             {
                 StartCoroutine(KnockBack());
                 damage = 10;
@@ -68,7 +68,7 @@ public class BucketController : MonoBehaviour
     }
     private IEnumerator GroundSet()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         Grounded = true;
     }
     private IEnumerator KnockBack()

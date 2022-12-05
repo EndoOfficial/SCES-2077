@@ -19,6 +19,7 @@ public class FacelessController : MonoBehaviour
     public Animator Anim;
 
     public bool CanLunge;
+    public bool HitPlayer;
 
     private int damage;
     public GameObject GameController;
@@ -50,6 +51,12 @@ public class FacelessController : MonoBehaviour
         {            
             transform.Translate(Vector3.forward* Time.deltaTime * Speed);
         }        
+
+        if(GetComponent<Enemy>().health <= 0)
+        {
+            Speed = 0;
+            GetComponent<Collider>().enabled = false; 
+        }
     }
     private void OnDestroy()
     {
@@ -76,8 +83,9 @@ public class FacelessController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !HitPlayer)
         {
+            HitPlayer = true;
             Debug.Log("Damage");
             damage = 10;
             GameEvents.DamagePlayer(damage);
@@ -97,6 +105,7 @@ public class FacelessController : MonoBehaviour
     public void Lunge()
     {
         moveTowards = true;
+        GetComponent<Enemy>().health = 10;
         Speed = 12;
         Debug.Log("Lunge");
     }

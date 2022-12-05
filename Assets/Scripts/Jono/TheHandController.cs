@@ -34,7 +34,7 @@ public class TheHandController : MonoBehaviour
         {
             StartCoroutine(ThrowBucket());
             MoveLeft = MoveLeft ? false : true;
-            timer = Random.Range(5, 15);
+            timer = Random.Range(10, 20);
             
         }
 
@@ -131,8 +131,8 @@ public class TheHandController : MonoBehaviour
         child.GetComponent<Rigidbody>().useGravity = true;
         SpawnBucket = true;
         Debug.Log("yeet");
-        ThrowForce.z = Random.Range(-5, -20);
-        child.GetComponent<Rigidbody>().AddRelativeForce(ThrowForce, ForceMode.Impulse);       
+        ThrowForce.x = Random.Range(5, 20);
+        child.GetComponent<Rigidbody>().AddRelativeForce(-ThrowForce.x, 0,0, ForceMode.Impulse);       
         yield return new WaitForSeconds(2);
         Anim.SetTrigger("NoHasBucket");
 

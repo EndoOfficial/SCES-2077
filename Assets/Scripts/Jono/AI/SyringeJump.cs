@@ -123,6 +123,7 @@ public class SyringeJump : MonoBehaviour
             if(!Paused)
             {
                 anim.ResetTrigger("Grounded");
+                GameEvents.OnSlumsplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.SlumsClipTags.NeedleJump);
                 MyRB.AddRelativeForce(-transform.forward * ForwardSpeed);
                 MyChildRB.AddRelativeForce(-transform.forward * ForwardSpeed);
                 TargetPos = Target.transform.position;
