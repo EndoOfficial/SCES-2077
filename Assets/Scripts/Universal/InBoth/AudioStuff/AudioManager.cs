@@ -86,7 +86,9 @@ public class AudioManager : MonoBehaviour
         FireGrow,
 
         //Farmer's son Level
-
+        TargetDeath,
+        DoorCreak,
+        DoorSlam,
 
         //Cow Level
         Whoosh,

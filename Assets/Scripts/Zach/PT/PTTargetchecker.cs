@@ -37,6 +37,7 @@ public class PTTargetchecker : MonoBehaviour
                 door.transform.RotateAround(door.transform.position, Vector3.up, 90);
                 doorOpen = true;
                 nextArea.SetActive(true);
+                GameEvents.DoorOpen?.Invoke();
             }
             yield return new WaitForSeconds(1.5f);
         }

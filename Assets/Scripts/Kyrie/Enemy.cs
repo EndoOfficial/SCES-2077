@@ -47,6 +47,7 @@ public class Enemy : MonoBehaviour
     {
         if (slider != null) slider.enabled = false;
         GameEvents.GetXP?.Invoke(xpPoints);
+        GameEvents.OnDeath?.Invoke();
         Destroy(gameObject);
     }
 

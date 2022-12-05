@@ -69,6 +69,8 @@ public static class GameEvents
     
     public static Action DoorClose; //pt level
 
+    public static Action DoorOpen; //pt
+
     public static Action BottleCount;// Keeps track of pill bottles
 
     public static Action BottleDeath;// When all pill bottles die
@@ -82,4 +84,7 @@ public static class GameEvents
     public static Action OnSensitivityChanged;
 
     public static Action OnDificultyChanged;
+
+    public static Action OnDeath; //to play audio for deaths
+
 }
