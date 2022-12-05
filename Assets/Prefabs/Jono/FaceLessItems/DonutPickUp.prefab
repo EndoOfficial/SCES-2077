@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2611244442710949104}
   - component: {fileID: 2405590129568187971}
   - component: {fileID: 8677263238725298443}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: -5728010528634492302}
   - component: {fileID: 3193981582457488057}
   - component: {fileID: 5810206085713271506}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DonutPickUp
   m_TagString: Pickup
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 9048095729581189069}
-  Speed: 10
+  Speed: 20
 --- !u!1 &7556536284991133585
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 190846933790949464}
   - component: {fileID: 8538811151897846081}
   - component: {fileID: 7720614830769763145}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,6 +426,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9048095729581189069}
     m_Modifications:
+    - target: {fileID: 1394401253255230960, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946551002645757187, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183542632401638104, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4652979804879619454, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -489,6 +501,10 @@ PrefabInstance:
     - target: {fileID: 5465510495129362372, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
       propertyPath: m_Name
       value: Lamp 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465510495129362372, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
@@ -592,6 +608,10 @@ PrefabInstance:
     - target: {fileID: 7052269678214479131, guid: c462569b53e270943b79e2cd5ed094d1, type: 3}
       propertyPath: m_Name
       value: Donut
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052269678214479131, guid: c462569b53e270943b79e2cd5ed094d1, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c462569b53e270943b79e2cd5ed094d1, type: 3}

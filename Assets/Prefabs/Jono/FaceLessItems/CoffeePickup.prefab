@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5318932791219579837}
   - component: {fileID: 3310223850733291824}
   - component: {fileID: 7771273960628397529}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 4055700734590292746}
   - component: {fileID: 8523792713255390120}
   - component: {fileID: 8983940526364146423}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CoffeePickup
   m_TagString: Pickup
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 8436109830497170228}
-  Speed: 10
+  Speed: 20
 --- !u!1 &7774278300120442103
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 3154128108004436912}
   - component: {fileID: 8718113739062589173}
   - component: {fileID: 5733337111139296260}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,6 +430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coffee
       objectReference: {fileID: 0}
+    - target: {fileID: 913693720813554042, guid: dbdf8f05751363444b3b314a9932ead2, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2615421131012686171, guid: dbdf8f05751363444b3b314a9932ead2, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -504,6 +508,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8436109830497170228}
     m_Modifications:
+    - target: {fileID: 1394401253255230960, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946551002645757187, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183542632401638104, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4652979804879619454, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -567,6 +583,10 @@ PrefabInstance:
     - target: {fileID: 5465510495129362372, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
       propertyPath: m_Name
       value: Lamp 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465510495129362372, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 337f6f99ee4af7d45a645322417c0ebf, type: 3}
