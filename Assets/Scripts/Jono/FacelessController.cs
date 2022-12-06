@@ -52,6 +52,14 @@ public class FacelessController : MonoBehaviour
         {
             GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound5);
         }
+        if (SpawnNoise == 6)
+        {
+            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound6);
+        }
+        if (SpawnNoise == 7)
+        {
+            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound7);
+        }
 
         Player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -102,7 +110,7 @@ public class FacelessController : MonoBehaviour
     {
         
         CanLunge = false;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         Anim.SetTrigger("Lunge");
         
         //MyRb.isKinematic = false;

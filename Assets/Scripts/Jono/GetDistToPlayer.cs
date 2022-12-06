@@ -6,15 +6,16 @@ public class GetDistToPlayer : MonoBehaviour
 {
     public GameObject Player;
     public float PlayerDist;
-    // Start is called before the first frame update
+  
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
+        //Gets distance from player to object with this script as float value.
         PlayerDist = Vector3.Distance(transform.position, Player.transform.position);        
     }
 }

@@ -43,15 +43,20 @@ public class GameController : MonoBehaviour
         float NearestDist = 0;
         GameObject NearestSP = null;
 
+        //Looks throgh all values of SpawnPoint in CokeSpawns
         foreach(GameObject SpawnPoint in CokeSpawns)
         {
+            //Gets the player distance value from the player dist script of each object in list
             var PlayDist = SpawnPoint.GetComponent<GetDistToPlayer>();
 
             if(PlayDist != null)
             {
                 float dist = PlayDist.PlayerDist;
+
+                //Checks if the nearest object is 0 or is less thn the distance fo the last object
                 if(NearestDist == 0 || dist < NearestDist)
                 {
+                    //sets the approiate variables once the closest point has been found.
                     NearestDist = dist;
                     NearestSP = SpawnPoint;                    
                 }
@@ -60,6 +65,7 @@ public class GameController : MonoBehaviour
         }
 
         Debug.Log("SpawnBoss");
+        //Spawns prefab at the closest point found
         Instantiate(MrConcaine, NearestSP.transform);
         yield return null;
     }

@@ -23,6 +23,7 @@ public class TheHandController : MonoBehaviour
     void Start()
     {
         timer = Random.Range(1, 3);
+        
     }
 
     private void Update()

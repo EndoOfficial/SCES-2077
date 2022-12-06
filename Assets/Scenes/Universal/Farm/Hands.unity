@@ -313,6 +313,10 @@ PrefabInstance:
       propertyPath: CentrePoint
       value: 
       objectReference: {fileID: 2003002413}
+    - target: {fileID: 2361410802158784622, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
+      propertyPath: HandsCentrePos
+      value: 
+      objectReference: {fileID: 2003002412}
     - target: {fileID: 2361410802158784623, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
       propertyPath: m_Name
       value: TheHand (2)
@@ -1464,6 +1468,10 @@ PrefabInstance:
       propertyPath: CentrePoint
       value: 
       objectReference: {fileID: 2003002413}
+    - target: {fileID: 2361410802158784622, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
+      propertyPath: HandsCentrePos
+      value: 
+      objectReference: {fileID: 2003002412}
     - target: {fileID: 2361410802158784623, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
       propertyPath: m_Name
       value: TheHand (5)
@@ -1707,6 +1715,10 @@ PrefabInstance:
       propertyPath: CentrePoint
       value: 
       objectReference: {fileID: 2003002413}
+    - target: {fileID: 2361410802158784622, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
+      propertyPath: HandsCentrePos
+      value: 
+      objectReference: {fileID: 2003002412}
     - target: {fileID: 2361410802158784623, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
       propertyPath: m_Name
       value: TheHand (6)
@@ -1781,6 +1793,10 @@ PrefabInstance:
       propertyPath: CentrePoint
       value: 
       objectReference: {fileID: 2003002413}
+    - target: {fileID: 2361410802158784622, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
+      propertyPath: HandsCentrePos
+      value: 
+      objectReference: {fileID: 2003002412}
     - target: {fileID: 2361410802158784623, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
       propertyPath: m_Name
       value: TheHand (4)
@@ -1964,17 +1980,13 @@ PrefabInstance:
       propertyPath: CentrePoint
       value: 
       objectReference: {fileID: 2003002413}
+    - target: {fileID: 2361410802158784622, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
+      propertyPath: HandsCentrePos
+      value: 
+      objectReference: {fileID: 2003002412}
     - target: {fileID: 2361410802158784623, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
       propertyPath: m_Name
       value: TheHand (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5127375460061437607, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5127375460061437607, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
@@ -2182,7 +2194,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2534964839176971238, guid: 9a4ab2f1d9da43d4792a516b72c89bc3, type: 3}
+  m_Mesh: {fileID: -944563635335726766, guid: 9a4ab2f1d9da43d4792a516b72c89bc3, type: 3}
 --- !u!1001 &1387026412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2542,6 +2554,10 @@ PrefabInstance:
       propertyPath: CentrePoint
       value: 
       objectReference: {fileID: 2003002413}
+    - target: {fileID: 2361410802158784622, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
+      propertyPath: HandsCentrePos
+      value: 
+      objectReference: {fileID: 2003002412}
     - target: {fileID: 2361410802158784623, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
       propertyPath: m_Name
       value: TheHand
@@ -3086,6 +3102,10 @@ PrefabInstance:
       propertyPath: CentrePoint
       value: 
       objectReference: {fileID: 2003002413}
+    - target: {fileID: 2361410802158784622, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
+      propertyPath: HandsCentrePos
+      value: 
+      objectReference: {fileID: 2003002412}
     - target: {fileID: 2361410802158784623, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
       propertyPath: m_Name
       value: TheHand (7)
@@ -3189,6 +3209,10 @@ PrefabInstance:
       propertyPath: CentrePoint
       value: 
       objectReference: {fileID: 2003002413}
+    - target: {fileID: 2361410802158784622, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
+      propertyPath: HandsCentrePos
+      value: 
+      objectReference: {fileID: 2003002412}
     - target: {fileID: 2361410802158784623, guid: 57fc09236a6428a42b7e7dae46f6e61c, type: 3}
       propertyPath: m_Name
       value: TheHand (3)
@@ -3214,7 +3238,7 @@ GameObject:
   - component: {fileID: 2003002413}
   m_Layer: 0
   m_Name: CentrePos
-  m_TagString: Untagged
+  m_TagString: CentreCube
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

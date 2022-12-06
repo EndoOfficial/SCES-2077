@@ -73,3 +73,8 @@ MonoBehaviour:
     Pitch: 1
     Volume: 1
     RuralClipTag: 7
+  - audioClip: {fileID: 8300000, guid: 8fb10757c5e1048428b78f73a2d9989a, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    RuralClipTag: 9

@@ -50,7 +50,7 @@ public class BucketController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             StartCoroutine(GroundSet());
-            GameEvents.OnRuralplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.RuralClipTags.BucketLand);
+            
         }
     }
 
@@ -69,6 +69,7 @@ public class BucketController : MonoBehaviour
     }
     private IEnumerator GroundSet()
     {
+        //GameEvents.OnRuralplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.RuralClipTags.BucketLand);
         yield return new WaitForSeconds(2);
         Grounded = true;
     }

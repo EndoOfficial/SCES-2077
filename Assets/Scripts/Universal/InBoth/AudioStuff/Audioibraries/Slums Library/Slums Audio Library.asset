@@ -53,23 +53,18 @@ MonoBehaviour:
     Pitch: 1
     Volume: 1
     SlumsClipTag: 11
-  - audioClip: {fileID: 8300000, guid: bc032148b9a0d664eb0a05a8489ca7a9, type: 3}
+  - audioClip: {fileID: 8300000, guid: e23fa46c0b1378f498687afcf60e7afe, type: 3}
     Loop: 0
     Pitch: 1
-    Volume: 1
-    SlumsClipTag: 4
-  - audioClip: {fileID: 8300000, guid: bc032148b9a0d664eb0a05a8489ca7a9, type: 3}
-    Loop: 0
-    Pitch: 1
-    Volume: 1
+    Volume: 3
     SlumsClipTag: 5
-  - audioClip: {fileID: 8300000, guid: bc032148b9a0d664eb0a05a8489ca7a9, type: 3}
+  - audioClip: {fileID: 8300000, guid: 75043fe1202945549ab1458222341a88, type: 3}
     Loop: 0
     Pitch: 1
-    Volume: 1
+    Volume: 3
     SlumsClipTag: 6
-  - audioClip: {fileID: 8300000, guid: bc032148b9a0d664eb0a05a8489ca7a9, type: 3}
+  - audioClip: {fileID: 8300000, guid: 470658f193427eb4ea7ee89335ac1460, type: 3}
     Loop: 0
     Pitch: 1
-    Volume: 1
+    Volume: 3
     SlumsClipTag: 7

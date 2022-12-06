@@ -539,7 +539,9 @@ MonoBehaviour:
   maxHealth: 40
   xpPoints: 0
   Canvas: {fileID: 7473053725370999603}
-  slider: {fileID: 7473053725326492601}
+  image: {fileID: 7473053725370999603}
+  CurrentHealth: 0
+  imageFill: {fileID: 6753556754924947938}
   canDie: 1
 --- !u!114 &954595400
 MonoBehaviour:
@@ -939,6 +941,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7068124799584983970}
     m_Modifications:
+    - target: {fileID: 6764855922256486818, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7488767426299318922, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -2.5000153
@@ -1065,15 +1071,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
---- !u!114 &7473053725326492601 stripped
+--- !u!114 &6753556754924947938 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7488767427271502841, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6764855922256486818, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
   m_PrefabInstance: {fileID: 25029869653354560}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7473053725370999603 stripped

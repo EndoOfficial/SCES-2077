@@ -884,10 +884,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 954595400, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: damage
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7068124799584983970, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -935,18 +931,6 @@ PrefabInstance:
     - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_Name
       value: SyringeEnemy (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ff428855e419444851f57d3c69b645, type: 3}
@@ -1004,14 +988,6 @@ PrefabInstance:
     - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_Name
       value: SyringeEnemy (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ff428855e419444851f57d3c69b645, type: 3}

@@ -118,7 +118,9 @@ MonoBehaviour:
   maxHealth: 100
   xpPoints: 0
   Canvas: {fileID: 5127375461549226014}
-  slider: {fileID: 5127375461334718612}
+  image: {fileID: 5127375461334718618}
+  CurrentHealth: 0
+  imageFill: {fileID: 5127375460061437606}
   canDie: 1
 --- !u!95 &2361410802158784618
 Animator:
@@ -259,7 +261,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

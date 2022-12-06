@@ -75,7 +75,12 @@ public class AudioManager : MonoBehaviour
         FacelessSound3,
         FacelessSound4,
         FacelessSound5,
-        BossSpawn,
+        FacelessSound6,
+        FacelessSound7,
+        BossSpawn1,
+        BossSpawn2,
+        BossSpawn3,
+        BossSpawn4,
 
         // For Cocaine Level,
         PuffNoise,
