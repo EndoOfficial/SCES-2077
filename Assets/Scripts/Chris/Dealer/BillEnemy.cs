@@ -9,9 +9,16 @@ public class BillEnemy : Enemy
     public GameObject[] spawners;
     public List<GameObject> temp;
 
+    protected override void Start()
+    {
+        GameEvents.OnSlumsplayAudio?.Invoke(gameObject.GetComponent<AudioSource>(), AudioManager.SlumsClipTags.BillBossFlick);
+        base.Start();
+    }
+
     protected override void Die()
     {
-        for(int i = 0; i < spawners.Length; i++)
+        GameEvents.OnSlumsplayAudio?.Invoke(gameObject.GetComponent<AudioSource>(), AudioManager.SlumsClipTags.BillPaperDeath);
+        for (int i = 0; i < spawners.Length; i++)
         {
             //instantiate baby Bills on all the spawn Points
            BabyBill babyBill = Instantiate(baby, spawners[i].transform.position, Quaternion.identity);

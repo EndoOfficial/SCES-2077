@@ -13,7 +13,7 @@ public class DealerAttack : MonoBehaviour
     public int chance;
     public float delay;
 
-    private void Start()
+    protected void Start()
     {
         anim = GetComponent<Animator>();
         StartCoroutine(Delay());

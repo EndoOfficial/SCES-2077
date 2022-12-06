@@ -7,6 +7,11 @@ public class BabyBill : MonoBehaviour
     public float moveDistance;
     private float moveTime = 0.5f;
 
+    private void Start()
+    {
+        GameEvents.OnSlumsplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.SlumsClipTags.BillBossSwarm);
+    }
+
     public void SetParentPos(Vector3 parentPos)
     {
         //gets a direction away from the parentPos

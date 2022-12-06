@@ -13,46 +13,46 @@ MonoBehaviour:
   m_Name: Slums Audio Library
   m_EditorClassIdentifier: 
   audioClips:
-  - audioClip: {fileID: 8300000, guid: c0d9be51b0b90674b964fa6107eaec7b, type: 3}
+  - audioClip: {fileID: 8300000, guid: 65d22be549cd65340935ebc6e51316ee, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     SlumsClipTag: 0
-  - audioClip: {fileID: 8300000, guid: 185b0e65ff419e74f8b5d8e8275e9714, type: 3}
+  - audioClip: {fileID: 8300000, guid: e34c53e1579c2844fbf0d2b94fc4a1a3, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     SlumsClipTag: 3
-  - audioClip: {fileID: 8300000, guid: c0d9be51b0b90674b964fa6107eaec7b, type: 3}
+  - audioClip: {fileID: 8300000, guid: f530a0d015067124fbec7af34f94dfd3, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     SlumsClipTag: 1
-  - audioClip: {fileID: 8300000, guid: 765a70a650ae4e74fa3fa5d4d7beae91, type: 3}
+  - audioClip: {fileID: 8300000, guid: cf0e8ace22b2cb840928ccd94deebc83, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     SlumsClipTag: 11
-  - audioClip: {fileID: 8300000, guid: 94f90b783a7a6df4eba9148aafb6baa0, type: 3}
+  - audioClip: {fileID: 8300000, guid: 9185fb1d91270a549a244ad4c40eea61, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    SlumsClipTag: 8
+  - audioClip: {fileID: 8300000, guid: 9185fb1d91270a549a244ad4c40eea61, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     SlumsClipTag: 9
-  - audioClip: {fileID: 8300000, guid: 94f90b783a7a6df4eba9148aafb6baa0, type: 3}
+  - audioClip: {fileID: 8300000, guid: 10cd0150ee80469498c02e8aa5a7c98b, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     SlumsClipTag: 10
-  - audioClip: {fileID: 8300000, guid: 765a70a650ae4e74fa3fa5d4d7beae91, type: 3}
+  - audioClip: {fileID: 8300000, guid: 7a561a024cc833e4e9e6aa46b08c03bb, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
-    SlumsClipTag: 8
-  - audioClip: {fileID: 8300000, guid: 765a70a650ae4e74fa3fa5d4d7beae91, type: 3}
-    Loop: 0
-    Pitch: 1
-    Volume: 1
-    SlumsClipTag: 8
+    SlumsClipTag: 11
   - audioClip: {fileID: 8300000, guid: bc032148b9a0d664eb0a05a8489ca7a9, type: 3}
     Loop: 0
     Pitch: 1
