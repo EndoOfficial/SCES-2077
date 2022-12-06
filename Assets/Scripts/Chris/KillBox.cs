@@ -11,6 +11,7 @@ public class KillBox : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameEvents.OnRuralplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.RuralClipTags.Splash);
             chara = other.GetComponent<CharacterController>();
             chara.enabled = false;
             other.transform.position = respawnPos.transform.position;

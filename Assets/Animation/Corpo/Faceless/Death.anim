@@ -21,13 +21,13 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 1204289506, guid: 834e65381ad8155429f6223450dad830, type: 3}
-    - time: 0.16666667
+    - time: 0.21666667
       value: {fileID: 390992762, guid: 834e65381ad8155429f6223450dad830, type: 3}
-    - time: 0.33333334
+    - time: 0.41666666
       value: {fileID: -1008426766, guid: 834e65381ad8155429f6223450dad830, type: 3}
-    - time: 0.5
+    - time: 0.6333333
       value: {fileID: -886909456, guid: 834e65381ad8155429f6223450dad830, type: 3}
-    - time: 0.53333336
+    - time: 0.6666667
       value: {fileID: -886909456, guid: 834e65381ad8155429f6223450dad830, type: 3}
     attribute: m_Sprite
     path: SpriteRenderer
@@ -58,7 +58,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.55
+    m_StopTime: 0.68333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,7 +78,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 0.6166667
+    functionName: AddKillCount
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6333333
     functionName: Die
     data: 
     objectReferenceParameter: {fileID: 0}

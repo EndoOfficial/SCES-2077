@@ -22,7 +22,7 @@ public class TheHandController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = Random.Range(0, 3);
+        timer = Random.Range(1, 3);
     }
 
     private void Update()
@@ -30,22 +30,22 @@ public class TheHandController : MonoBehaviour
         playerDetected = PlayerDetector.GetComponent<PlayerDetection>().playerDetected;
         timer -= Time.deltaTime;
 
-        if(timer <= 0 && !SpawnBucket)
+        if(timer <= 0 && !SpawnBucket && transform.childCount >= 1)
         {
             StartCoroutine(ThrowBucket());
             MoveLeft = MoveLeft ? false : true;
-            timer = Random.Range(10, 20);
+            
             
         }
 
-        if (Invulnarable)
-        {
-            Col.enabled = false;
-        }
-        else
-        {
-            Col.enabled = true;
-        }
+        //if (Invulnarable)
+        //{
+        //    Col.enabled = false;
+        //}
+        //else
+        //{
+        //    Col.enabled = true;
+        //}
 
         Debug.Log(BarrelHolder.transform.childCount);
         if (MoveLeft)
@@ -110,10 +110,10 @@ public class TheHandController : MonoBehaviour
     public IEnumerator SpawnNewBucket()
     {
         Anim.SetTrigger("HasBucket");
-        Invulnarable = true;
+        //Invulnarable = true;
         SpawnBucket = false;
         yield return new WaitForSeconds(Random.Range(2 , 5));
-        Invulnarable = false;
+        //Invulnarable = false;
         var newBucket = Instantiate(Bucket, (BarrelHolder.transform));
         
         
@@ -125,14 +125,15 @@ public class TheHandController : MonoBehaviour
     {
         Anim.SetTrigger("Throw");
         GameEvents.OnRuralplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.RuralClipTags.Whoosh);
-        var child = BarrelHolder.gameObject.transform.GetChild(0).gameObject;
-        child.transform.parent = null;
+        GameObject child = BarrelHolder.transform.GetChild(0).gameObject;        
         child.GetComponent<Rigidbody>().isKinematic = false;
-        child.GetComponent<Rigidbody>().useGravity = true;
+        child.GetComponent<Rigidbody>().useGravity = true;        
         SpawnBucket = true;
         Debug.Log("yeet");
         ThrowForce.x = Random.Range(5, 20);
-        child.GetComponent<Rigidbody>().AddRelativeForce(-ThrowForce.x, 0,0, ForceMode.Impulse);       
+        child.GetComponent<Rigidbody>().AddRelativeForce(-ThrowForce.x, 0,0, ForceMode.Impulse);
+        child.transform.parent = null;
+        timer = Random.Range(10, 20);
         yield return new WaitForSeconds(2);
         Anim.SetTrigger("NoHasBucket");
 

@@ -72,6 +72,9 @@ public class AudioManager : MonoBehaviour
         PickUp,
         FacelessSound1,
         FaceLessSound2,
+        FacelessSound3,
+        FacelessSound4,
+        FacelessSound5,
         BossSpawn,
 
         // For Cocaine Level,
@@ -93,6 +96,9 @@ public class AudioManager : MonoBehaviour
 
         //Cow Level
         Whoosh,
+        PlayerHitByBucket,
+        Splash,
+        BucketLand,
 
     }
 

@@ -31,6 +31,11 @@ public class SyringeAI : MonoBehaviour
 
         grounded = Child.GetComponent<GroundCheck>().Grounded;
 
+        if(GetComponent<Enemy>().health <= 0)
+        {
+            GameEvents.OnSlumsplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.SlumsClipTags.NeedleDeath);
+        }
+
         Debug.Log(CurrentState);
         //if (grounded)
         //{

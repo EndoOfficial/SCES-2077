@@ -50,6 +50,7 @@ public class BucketController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             StartCoroutine(GroundSet());
+            GameEvents.OnRuralplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.RuralClipTags.BucketLand);
         }
     }
 
@@ -75,6 +76,7 @@ public class BucketController : MonoBehaviour
     {
         Direction = new Vector3(-Player.transform.position.x, 10, -Player.transform.position.z);
         Player.GetComponent<PlayerMovement>().velocity = Direction.normalized * ForceMulti;
+        GameEvents.OnRuralplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.RuralClipTags.PlayerHitByBucket);
 
         LeanTween.value(Player.GetComponent<PlayerMovement>().velocity.x, 0, 2f)
             .setOnUpdate((float val) => Player.GetComponent<PlayerMovement>().velocity.x = val);

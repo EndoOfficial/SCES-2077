@@ -29,16 +29,28 @@ public class FacelessController : MonoBehaviour
         //audio = GetComponent<AudioSource>();
 
         GameController = GameObject.FindGameObjectWithTag("GameManager");
-        SpawnNoise = Random.Range(1, 3);
+        SpawnNoise = Random.Range(1, 5);
         Debug.Log(SpawnNoise);        
 
-        if (SpawnNoise == 2)
+        if (SpawnNoise == 1)
         {
             GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound1);
         }
-        if (SpawnNoise == 1)
+        if (SpawnNoise == 2)
         {
             GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FaceLessSound2);
+        }
+        if (SpawnNoise == 3)
+        {
+            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound3);
+        }
+        if (SpawnNoise == 4)
+        {
+            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound4);
+        }
+        if (SpawnNoise == 5)
+        {
+            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound5);
         }
 
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -58,13 +70,7 @@ public class FacelessController : MonoBehaviour
             GetComponent<Collider>().enabled = false; 
         }
     }
-    private void OnDestroy()
-    {
-        
-        GameController.GetComponent<GameController>().KillCount += 1;
-        Debug.Log("Dead");
-        
-    }
+    
 
     private void FixedUpdate()
     {
@@ -108,5 +114,11 @@ public class FacelessController : MonoBehaviour
         GetComponent<Enemy>().health = 10;
         Speed = 12;
         Debug.Log("Lunge");
+    }
+
+    public void AddKillCount()
+    {
+        GameController.GetComponent<GameController>().KillCount += 1;
+        Debug.Log("Dead");
     }
 }
