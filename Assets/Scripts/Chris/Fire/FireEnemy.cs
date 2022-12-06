@@ -47,7 +47,7 @@ public class FireEnemy : Enemy
 
     public void IsWisp()
     {
-        slider.gameObject.SetActive(false);
+        image.gameObject.SetActive(false);
         health = maxHealth;
         isWisp = true;
         isFireball = false;
@@ -56,7 +56,7 @@ public class FireEnemy : Enemy
 
     public void IsFireball()
     {
-        slider.gameObject.SetActive(true);
+        image.gameObject.SetActive(true);
         health = maxHealth;
         isWisp = false;
         isFireball = true;
@@ -65,7 +65,7 @@ public class FireEnemy : Enemy
 
     public void IsTornado()
     {
-        slider.gameObject.SetActive(true);
+        image.gameObject.SetActive(true);
         health = maxHealth;
         isWisp = false;
         isFireball = false;

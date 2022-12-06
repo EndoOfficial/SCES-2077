@@ -11,7 +11,9 @@ public class Enemy : MonoBehaviour
     protected Animator anim;
 
     public GameObject Canvas;
-    public Slider slider;
+    public GameObject image;
+    public float CurrentHealth;
+    public Image imageFill;
 
     public bool canDie = true;
     private void OnEnable()
@@ -28,11 +30,9 @@ public class Enemy : MonoBehaviour
         Debug.Log("start");
         anim = GetComponent<Animator>();
         health = maxHealth;
-        if (Canvas != null)
-        {
-            slider = Canvas.transform.Find("Slider").GetComponent<Slider>();
-            slider.value = CalculateHealth();
-        }
+        CalculateHealth();
+        if (imageFill != null) imageFill.fillAmount = CurrentHealth;
+
     }
 
     protected virtual void TakeDamage(int damage, GameObject target)
@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
             //GameEvents.OnCorporateplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.CorporateClipTags.CokeHurt);
             anim.SetTrigger("Damage");
             health -= damage;
+            CalculateHealth();
         }
     }
     protected virtual void DieSound()
@@ -50,7 +51,7 @@ public class Enemy : MonoBehaviour
     }
     protected virtual void Die()
     {
-        if (slider != null) slider.enabled = false;
+        //if (slider != null) slider.enabled = false;
         GameEvents.GetXP?.Invoke(xpPoints);
         Destroy(gameObject);
     }
@@ -67,14 +68,16 @@ public class Enemy : MonoBehaviour
                 //Add Die function as event in death animator
             }
         }
-        if (slider != null)
-        {
-            // update health slider
-            slider.value = CalculateHealth();
-        }
+        if(imageFill != null) imageFill.fillAmount = CurrentHealth;
+        
+        //if (slider != null)
+        //{
+        //    // update health slider
+        //    slider.value = CalculateHealth();
+        //}
     }
-    float CalculateHealth()
+    void CalculateHealth()
     {
-        return health / maxHealth;
+        CurrentHealth = health / maxHealth;
     }
 }

@@ -247,7 +247,9 @@ MonoBehaviour:
   maxHealth: 150
   xpPoints: 0
   Canvas: {fileID: 4600407970777075093}
-  slider: {fileID: 4600407970999708959}
+  image: {fileID: 0}
+  CurrentHealth: 0
+  imageFill: {fileID: 421935930032727876}
   canDie: 1
   pill:
   - {fileID: 7540080838102888225, guid: 7857f2a52f5948441825921747d29f66, type: 3}
@@ -281,6 +283,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3111766049081666911}
     m_Modifications:
+    - target: {fileID: 1570059841602791263, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089345316431510077, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7488767426199869115, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -407,7 +417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.123
+      value: 0.228
       objectReference: {fileID: 0}
     - target: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -427,6 +437,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+--- !u!114 &421935930032727876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6764855922256486818, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+  m_PrefabInstance: {fileID: 6357566312848852710}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4600407970777075090 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
@@ -437,14 +458,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7488767427628731251, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
   m_PrefabInstance: {fileID: 6357566312848852710}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4600407970999708959 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7488767427271502841, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
-  m_PrefabInstance: {fileID: 6357566312848852710}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
