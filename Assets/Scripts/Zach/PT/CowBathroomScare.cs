@@ -7,13 +7,26 @@ public class CowBathroomScare : MonoBehaviour
     public Transform endPoint;
     private float scareTime = 1;
     public GameObject Cow;
+    public GameObject door;
+    private AudioSource source;
 
+    private void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
+        GameEvents.OnRuralplayAudio?.Invoke(source, AudioManager.RuralClipTags.Moo);
         LeanTween.move(Cow, endPoint, scareTime)
-            .setEaseInOutQuart();
-        //play audio
-        //slam door
+            .setEaseInOutQuart()
+            .setOnComplete(() =>
+            {
+                //slam door
+                LeanTween.rotateAround(door, Vector3.up, -20, 0.5f);
+                //play audio
+                GameEvents.OnRuralplayAudio?.Invoke(source, AudioManager.RuralClipTags.DoorSlam);
+                Cow.SetActive(false);
+            });
     }
 
 }

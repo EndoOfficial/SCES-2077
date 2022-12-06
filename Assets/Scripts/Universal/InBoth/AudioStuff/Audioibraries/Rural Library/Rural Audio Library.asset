@@ -27,7 +27,7 @@ MonoBehaviour:
     Loop: 0
     Pitch: 1
     Volume: 1
-    RuralClipTag: 5
+    RuralClipTag: 6
   - audioClip: {fileID: 8300000, guid: e09c7015d46134e4790e1fb327f1d39f, type: 3}
     Loop: 0
     Pitch: 1
@@ -63,11 +63,11 @@ MonoBehaviour:
     Pitch: 1
     Volume: 1
     RuralClipTag: 8
-  - audioClip: {fileID: 8300000, guid: 8fb10757c5e1048428b78f73a2d9989a, type: 3}
+  - audioClip: {fileID: 8300000, guid: 35c79ce247b5a634e9ca032cfe48c093, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
-    RuralClipTag: 6
+    RuralClipTag: 5
   - audioClip: {fileID: 8300000, guid: 8fb10757c5e1048428b78f73a2d9989a, type: 3}
     Loop: 0
     Pitch: 1
