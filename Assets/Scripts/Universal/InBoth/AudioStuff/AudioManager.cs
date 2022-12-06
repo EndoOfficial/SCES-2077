@@ -76,7 +76,7 @@ public class AudioManager : MonoBehaviour
 
         // For Cocaine Level,
         PuffNoise,
-        CokeHurt,
+        Sniffing,
         CokeDeath,
     }
     public enum RuralClipTags

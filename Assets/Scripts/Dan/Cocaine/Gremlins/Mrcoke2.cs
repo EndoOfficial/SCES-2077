@@ -18,6 +18,7 @@ public class Mrcoke2 : MonoBehaviour
     public bool Melee;
     private NavMeshAgent _agent;
     private Animator anim;
+   
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -27,6 +28,7 @@ public class Mrcoke2 : MonoBehaviour
         target = targets[targetIndex];
         _agent = GetComponent<NavMeshAgent>();
         _agent.SetDestination(target.transform.position);
+        
 
     }
     public void Update()
@@ -37,6 +39,7 @@ public class Mrcoke2 : MonoBehaviour
         {
             if (!hit)
             {
+                
                 anim.SetTrigger("Puff");
                 hit = true;
                 StartCoroutine(HitDelay());
