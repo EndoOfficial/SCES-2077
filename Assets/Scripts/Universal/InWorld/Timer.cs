@@ -51,7 +51,6 @@ public class Timer : MonoBehaviour
         SceneName = C_Scene.name;
 
         FoundTime = LookUpTime(SceneName);
-        Debug.Log(FoundTime);
 
         if(FoundTime == null)
         {

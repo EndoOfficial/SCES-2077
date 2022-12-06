@@ -24,8 +24,7 @@ public class SceneLoader : MonoBehaviour
     private LevelName levelName;
     public void LoadScene()
     {
-
-        PlayerPrefs.SetString("LevelName", levelName.ToString()); ;
+        PlayerPrefs.SetString("LevelName", levelName.ToString());
         SceneManager.LoadScene(sceneName.ToString());
     }
 
