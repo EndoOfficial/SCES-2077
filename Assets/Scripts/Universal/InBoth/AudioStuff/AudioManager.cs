@@ -89,6 +89,7 @@ public class AudioManager : MonoBehaviour
         TargetDeath,
         DoorCreak,
         DoorSlam,
+        Moo,
 
         //Cow Level
         Whoosh,

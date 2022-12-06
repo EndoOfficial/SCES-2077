@@ -23,8 +23,9 @@ public class Enemy : MonoBehaviour
         GameEvents.DamageEnemy -= TakeDamage;
     }
 
-    private void Start()
+    protected virtual void Start()
     {
+        Debug.Log("start");
         anim = GetComponent<Animator>();
         health = maxHealth;
         if (Canvas != null)

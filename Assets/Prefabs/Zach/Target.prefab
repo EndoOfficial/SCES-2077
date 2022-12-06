@@ -175,7 +175,6 @@ GameObject:
   - component: {fileID: 4857613675387156898}
   - component: {fileID: 8124976754539110338}
   - component: {fileID: 6344133562006507803}
-  - component: {fileID: 4857613675387156897}
   - component: {fileID: 4857613675387156894}
   - component: {fileID: 3877427073165985550}
   m_Layer: 10
@@ -291,24 +290,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82e0646d796fc9b4cba3b14316502859, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
-  xpPoints: 0
-  Canvas: {fileID: 0}
-  slider: {fileID: 0}
-  canDie: 1
---- !u!114 &4857613675387156897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4857613675387156901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3cfef0b94a96a4caded3440bb98e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
