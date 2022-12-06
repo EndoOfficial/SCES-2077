@@ -10,9 +10,16 @@ public class BottleEnemy : Enemy
     private int Pillnum;
     public float spawnlimit;
     private float randomizer;
+    public AudioSource Source;
     private void Explosion()
     {
         StartCoroutine(Explode());
+    }
+    private void PlayDeath()
+    {
+        Debug.Log("HI");
+        Source = GetComponent<AudioSource>();
+        GameEvents.OnApartmentplayAudio?.Invoke(Source, AudioManager.ApartmentClipTags.PillBottleDeath);
     }
     private IEnumerator Explode()
     {

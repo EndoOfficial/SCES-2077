@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10e321038e9dfa45853b7604e18b798, type: 3}
   m_Name: Apartment Audio Library
   m_EditorClassIdentifier: 
+  audioClips:
+  - audioClip: {fileID: 8300000, guid: 49e7c2383f0b8ca42a8e774e01a4e62f, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    ApartmentClipTag: 8

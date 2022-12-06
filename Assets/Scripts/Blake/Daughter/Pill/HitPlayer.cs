@@ -5,6 +5,9 @@ using UnityEngine;
 public class HitPlayer : MonoBehaviour
 {
     public LayerMask Player;
+    public float PosX;
+    public float PosY;
+    public float PosZ;
     public float radius;
     public int damage;
     public float cooldown;
@@ -13,7 +16,7 @@ public class HitPlayer : MonoBehaviour
     public bool hit;
     void Update()
     {
-        if (Physics.CheckSphere(transform.position, radius, Player))
+        if (Physics.CheckSphere(new Vector3(transform.position.x + PosX, transform.position.y + PosY, transform.position.z + PosZ), radius, Player))
         {
             if (!hit)
             {
