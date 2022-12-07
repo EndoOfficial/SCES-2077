@@ -27,7 +27,4 @@ MonoBehaviour:
     me, people like those who make them laugh, right? Why don\u2019t people like
     me. "
   audio:
-  - {fileID: 0}
   - {fileID: 8300000, guid: bb9872d3c1f0dd740bff023d831f9770, type: 3}
-  - {fileID: 8300000, guid: 15c9d8660da8a824eb8bfec3c7f192b7, type: 3}
-  - {fileID: 8300000, guid: fd215dd006ed9df498d98571902600f8, type: 3}

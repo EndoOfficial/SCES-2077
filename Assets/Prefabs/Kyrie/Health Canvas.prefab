@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 7488767427628731255}
   - component: {fileID: 7488767427628731254}
   - component: {fileID: 7488767427628731253}
+  - component: {fileID: 3763503688679093492}
   m_Layer: 0
   m_Name: Health Canvas
   m_TagString: Untagged
@@ -104,7 +105,7 @@ RectTransform:
   m_GameObject: {fileID: 7488767427628731251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.0432845}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: -6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4089345316431510077}
@@ -178,6 +179,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3763503688679093492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7488767427628731251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fbd2fe52cd49343a93f00c7c6fb007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8184682560668976396
 GameObject:
   m_ObjectHideFlags: 0

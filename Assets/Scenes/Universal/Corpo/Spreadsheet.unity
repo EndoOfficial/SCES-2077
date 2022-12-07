@@ -6172,7 +6172,9 @@ MonoBehaviour:
   maxHealth: 150
   xpPoints: 0
   Canvas: {fileID: 1208714557}
-  slider: {fileID: 1456132604}
+  image: {fileID: 0}
+  CurrentHealth: 0
+  imageFill: {fileID: 0}
   canDie: 1
 --- !u!95 &1444660735
 Animator:
@@ -6221,17 +6223,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1456132604 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7488767427271502841, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
-  m_PrefabInstance: {fileID: 1808320765}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1494741802
 GameObject:
   m_ObjectHideFlags: 0
@@ -7760,7 +7751,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3763503688679093492, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
 --- !u!1 &1820071775
 GameObject:

@@ -129,6 +129,7 @@ MonoBehaviour:
   moveTowards: 0
   Anim: {fileID: 359679531442265646}
   CanLunge: 1
+  HitPlayer: 0
   GameController: {fileID: 4639332557990989947, guid: a8d686c067c22114a9e3940b3f5eb339, type: 3}
 --- !u!82 &-5776644775041538086
 AudioSource:
@@ -270,7 +271,9 @@ MonoBehaviour:
   maxHealth: 30
   xpPoints: 0
   Canvas: {fileID: 3269116464224554482}
-  slider: {fileID: 3269116464403541368}
+  image: {fileID: 7286562743908021754}
+  CurrentHealth: 0
+  imageFill: {fileID: 1680641766667347747}
   canDie: 1
 --- !u!95 &359679531442265646
 Animator:
@@ -527,8 +530,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7488767427628731255, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+--- !u!114 &1680641766667347747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6764855922256486818, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+  m_PrefabInstance: {fileID: 5382732114438375041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3269116464224554482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7488767427628731251, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
@@ -539,14 +557,8 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7488767427628731252, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
   m_PrefabInstance: {fileID: 5382732114438375041}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3269116464403541368 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7488767427271502841, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
+--- !u!1 &7286562743908021754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3435222197693870971, guid: 00b279b2eb652c447a959fcc6840823a, type: 3}
   m_PrefabInstance: {fileID: 5382732114438375041}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

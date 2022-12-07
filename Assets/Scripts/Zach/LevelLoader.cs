@@ -91,7 +91,7 @@ public class LevelLoader : MonoBehaviour
                         pressedE = true;
                         DisableTextPannel();
                         StartCoroutine(LoadScene(sceneLoader, hitinfo));
-                        _audio.Stop();
+                        if (_audio != null) _audio.Stop();
 
                     }
                 }
@@ -141,7 +141,7 @@ public class LevelLoader : MonoBehaviour
                         {
                             Panel.SetActive(false);
                         }
-                        _audio.Stop();
+                        if (_audio != null) _audio.Stop();
                     }
                 }
             }
@@ -162,6 +162,7 @@ public class LevelLoader : MonoBehaviour
                 DialogueText.text = "";
                 if (coll != null) coll.DisableCollect();
                 if (Panel != null) Panel.SetActive(false);
+                if (_audio != null) _audio.Stop();
             }
         }
 
