@@ -23,3 +23,13 @@ MonoBehaviour:
     Pitch: 1
     Volume: 0.3
     UniversalClipTag: 1
+  - audioClip: {fileID: 8300000, guid: c505c6210da218b49bccb9d3104b65b9, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    UniversalClipTag: 6
+  - audioClip: {fileID: 8300000, guid: 890a7cdd29925c345ab10896c73169b3, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 0.3
+    UniversalClipTag: 7

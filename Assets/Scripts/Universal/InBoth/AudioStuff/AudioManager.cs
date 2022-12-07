@@ -17,7 +17,9 @@ public class AudioManager : MonoBehaviour
         PlayerJump,
         PlayerWalk,
         PlayerLowHealth,
-        EnemyBasicMelee
+        EnemyBasicMelee,
+        MenuClick,
+        MenuOver
     }
     public enum SlumsClipTags
     {
