@@ -2,22 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GremlinAudio : Enemy
+public class GremlinAudio : MonoBehaviour
 {
     private AudioSource source;
     // Start is called before the first frame update
-    void Start()
+   
+    private void DeathSound()
     {
         source = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    protected virtual void DeathSound()
-    {
         GameEvents.OnCorporateplayAudio?.Invoke(source,AudioManager.CorporateClipTags.CokeDeath);
+    }
+    private void CokePuffSound()
+    {
+        source=GetComponent<AudioSource>();
+        GameEvents.OnCorporateplayAudio?.Invoke(source,AudioManager.CorporateClipTags.PuffNoise);
     }
 }
