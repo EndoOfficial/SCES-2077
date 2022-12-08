@@ -388,7 +388,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714968198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 500}
+  m_LocalPosition: {x: 0, y: 0, z: 1000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -397,8 +397,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 500, y: 1000}
-  m_SizeDelta: {x: -1000, y: -1100}
+  m_AnchoredPosition: {x: 1000, y: 2000}
+  m_SizeDelta: {x: -2000, y: -3000}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &714968200
 MonoBehaviour:
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 450.05
+  m_fontSize: 250.05
   m_fontSizeBase: 300
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -740,8 +740,8 @@ MonoBehaviour:
   sceneName: Apartment
   Canvas: {fileID: 983051883}
   Loading: {fileID: 170293106}
-  Text: {fileID: 714968198}
-  TextDisable: {fileID: 1696519633}
+  Text: {fileID: 1696519633}
+  TextDisable: {fileID: 714968198}
 --- !u!1 &1184443941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,7 +1170,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696519633}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 500}
+  m_LocalPosition: {x: 0, y: 0, z: 1000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1179,8 +1179,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 500, y: 1000}
-  m_SizeDelta: {x: -1000, y: -1100}
+  m_AnchoredPosition: {x: 1000, y: 2000}
+  m_SizeDelta: {x: -2000, y: -3000}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1696519635
 MonoBehaviour:
