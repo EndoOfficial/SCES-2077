@@ -10366,6 +10366,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 3528127163738682165, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528127163738682165, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3871996318174187533, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -12864,7 +12872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1613124725
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12939,7 +12947,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.8
+  m_fontSize: 14.05
   m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 1
