@@ -38,7 +38,7 @@ public class LevelLoader : MonoBehaviour
 
     private void Start()
     {
-        
+
         if (GameObject.Find("Loading") != null)
         {
             Loading = GameObject.Find("Canvas").transform.Find("Loading").gameObject;

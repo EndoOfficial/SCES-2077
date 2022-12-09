@@ -158,8 +158,8 @@ MonoBehaviour:
   sceneName: Slums
   Canvas: {fileID: 54893835}
   Loading: {fileID: 1365052669}
-  Text: {fileID: 334223130}
-  TextDisable: {fileID: 1756939124}
+  Text: {fileID: 1756939124}
+  TextDisable: {fileID: 334223130}
 --- !u!114 &54893837
 MonoBehaviour:
   m_ObjectHideFlags: 0
