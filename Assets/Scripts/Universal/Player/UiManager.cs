@@ -9,10 +9,6 @@ public class UiManager : MonoBehaviour
 {
     public GameObject GameOverMenuUi;
 
-    public Text currentXPText;
-    public Text nextXPText;
-    public Text currentLevelText;
-
     public GameObject Wave1TXT;
     public GameObject GameWinTXT;
 
@@ -20,23 +16,14 @@ public class UiManager : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnGameOver += OnGameOver;
-        GameEvents.XPtoUI += XPtoUI;
         GameEvents.NewWave += Wave1;
         GameEvents.WaveWin += OnWaveWin;
     }
     private void OnDisable()
     {
         GameEvents.OnGameOver -= OnGameOver;
-        GameEvents.XPtoUI += XPtoUI;
         GameEvents.NewWave -= Wave1;
         GameEvents.WaveWin -= OnWaveWin;
-    }
-
-    private void XPtoUI(int currentXP, int nextXP, int currentLevel)
-    {
-        currentXPText.text = currentXP.ToString();
-        nextXPText.text = nextXP.ToString();
-        currentLevelText.text = currentLevel.ToString();
     }
 
     public void OnGameOver(bool gameover)
