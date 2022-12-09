@@ -18,6 +18,6 @@ MonoBehaviour:
   - "I can\u2019t tolerate this anymore"
   - "I\u2019m really at my wits end"
   audio:
-  - {fileID: 8300000, guid: 617cfacd63790f34d97ec6c1563d5699, type: 3}
-  - {fileID: 8300000, guid: 52b06451082e0714992ed635e8a9e8fd, type: 3}
-  - {fileID: 8300000, guid: 4b01c9d938bc86d4d8c2a271dd7b6889, type: 3}
+  - {fileID: 8300000, guid: 50f70e735243e7c47858dfcef848175f, type: 3}
+  - {fileID: 8300000, guid: 4464d40aa234a534eae75eb9e578b335, type: 3}
+  - {fileID: 8300000, guid: 37bcc0f87080fba4f82cf2033303d3c9, type: 3}

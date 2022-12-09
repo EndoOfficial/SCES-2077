@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Rural Audio Library
   m_EditorClassIdentifier: 
   audioClips:
-  - audioClip: {fileID: 8300000, guid: cf1586cdffdf68d46aba1f62116cc634, type: 3}
+  - audioClip: {fileID: 8300000, guid: 9d1ff521dcabb814d921f59c5e6c5229, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     RuralClipTag: 0
-  - audioClip: {fileID: 8300000, guid: cf1586cdffdf68d46aba1f62116cc634, type: 3}
+  - audioClip: {fileID: 8300000, guid: e46b2e725a2c7fa438168a54f2e6de80, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     RuralClipTag: 1
-  - audioClip: {fileID: 8300000, guid: 3853687d65a6d3e44bbb4d73f6e273c8, type: 3}
+  - audioClip: {fileID: 8300000, guid: 5485df56a6a6959459384583533d0d4e, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1

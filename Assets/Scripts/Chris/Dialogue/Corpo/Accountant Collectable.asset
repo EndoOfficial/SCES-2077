@@ -23,5 +23,4 @@ MonoBehaviour:
     causing it to no longer prevent you from having panic attacks. Look after yourself. 
     \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDr. Terry White"
   audio:
-  - {fileID: 0}
   - {fileID: 8300000, guid: 1bb87fb67cd6fc84cabce00d034b9072, type: 3}

@@ -19,6 +19,6 @@ MonoBehaviour:
   - What robot was created with the sole purpose of cooking? A woman! Yeah, that
     one needs some work
   audio:
-  - {fileID: 8300000, guid: a3a447bee5f394247bae323d4455a78a, type: 3}
-  - {fileID: 8300000, guid: f245450ddaa01164298225033a01dae6, type: 3}
-  - {fileID: 8300000, guid: ab7b0ccb84598e443862b05c79dc1b42, type: 3}
+  - {fileID: 8300000, guid: ce16ad2101761be4c9ee2c0dc8403fcb, type: 3}
+  - {fileID: 8300000, guid: 39bc7e56c32201f4094e55c49109ab3e, type: 3}
+  - {fileID: 8300000, guid: b0c6247b61fdb554ab85e9c0022e54a5, type: 3}

@@ -20,6 +20,6 @@ MonoBehaviour:
     to be prepared."
   - "A lot of people are going to starve, I don\u2019t know if I can stop this."
   audio:
-  - {fileID: 8300000, guid: 566e51f99b412dc4f9a92e1d84466212, type: 3}
-  - {fileID: 8300000, guid: fb9174f9572f7c74289ef22f68146f85, type: 3}
-  - {fileID: 8300000, guid: a46af05472753104f9c03fe3730beb35, type: 3}
+  - {fileID: 8300000, guid: c8a6f7c85af856346b3a09f9c0beb874, type: 3}
+  - {fileID: 8300000, guid: cd95b800dca817943b685d727a6ad9a1, type: 3}
+  - {fileID: 8300000, guid: ebcfbc26c4404c44d9344b47eb09b286, type: 3}
