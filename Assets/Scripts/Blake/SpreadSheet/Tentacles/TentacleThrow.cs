@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class TentacleThrow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Transform Spawn;
+    public GameObject CellToThrow;
+    private void Launch()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        var obj = Instantiate(CellToThrow, Spawn.position, transform.rotation);
     }
 }

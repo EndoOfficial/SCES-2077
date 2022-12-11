@@ -96,7 +96,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6047450425656885113
 MonoBehaviour:
@@ -220,9 +220,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   maxHealth: 1
+  xpPoints: 0
   Canvas: {fileID: 0}
-  slider: {fileID: 0}
+  image: {fileID: 0}
+  CurrentHealth: 0
+  imageFill: {fileID: 0}
   canDie: 1
+  Spreadsheet: {fileID: 0}
   Damage: 0
 --- !u!95 &8879772274127975973
 Animator:
@@ -258,3 +262,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   DamageInt: {fileID: 6047450425656885113}
+  RndColour: 0

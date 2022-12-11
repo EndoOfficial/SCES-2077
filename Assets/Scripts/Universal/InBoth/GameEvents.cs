@@ -87,4 +87,6 @@ public static class GameEvents
 
     public static Action DeathSound; //to play audio for deaths
 
+    public static Action KillSpread; // Kill Spreadsheet boss
+
 }
