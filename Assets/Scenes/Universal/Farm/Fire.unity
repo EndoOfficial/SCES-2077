@@ -826,14 +826,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 854243818540849436, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 118.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 854243818540849436, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 107.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1644254529688549005, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: previousLevel
       value: Farm
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174622671202689594, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4958787710120097658, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6970319024211182218, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a0973ace50020d48b9a1e2ba90e3a10, type: 3}
     - target: {fileID: 8933253866465347263, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_IsActive
       value: 0
