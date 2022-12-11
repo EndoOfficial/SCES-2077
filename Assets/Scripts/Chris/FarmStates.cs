@@ -8,14 +8,17 @@ public class FarmStates: MonoBehaviour
     // cat objects
     public GameObject Farmer1;
     public GameObject Farmer2;
+    private bool farmer = false;
 
     //dealer objects
     public GameObject Son1;
     public GameObject Son2;
+    private bool son = false;
 
     // addict objects
     public GameObject Cow1;
     public GameObject Cow2;
+    private bool cow = false;
 
     private string levelName;
 
@@ -46,6 +49,7 @@ public class FarmStates: MonoBehaviour
             //change Farmer Position
             Farmer1.SetActive(false);
             Farmer2.SetActive(true);
+            farmer = true;
         }
 
         if (PlayerPrefs.GetString("sonBool") == "T")
@@ -53,6 +57,7 @@ public class FarmStates: MonoBehaviour
             //change Son Position
             Son1.SetActive(false);
             Son2.SetActive(true);
+            son = true;
         }
         
         if (PlayerPrefs.GetString("cowBool") == "T")
@@ -60,9 +65,10 @@ public class FarmStates: MonoBehaviour
             //change Cow Position
             Cow1.SetActive(false);
             Cow2.SetActive(true);
+            cow = true;
         }
 
-        if (PlayerPrefs.GetString("farmerBool") == "T" && PlayerPrefs.GetString("sonBool") == "T" && PlayerPrefs.GetString("cowBool") == "T")
+        if (farmer && son && cow)
         {
             GameEvents.LevelWin?.Invoke();
         }

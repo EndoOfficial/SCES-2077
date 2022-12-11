@@ -8,14 +8,17 @@ public class ApartmentStates: MonoBehaviour
     // cat objects
     public GameObject Mum1;
     public GameObject Mum2;
+    private bool mum = false;
 
     //dealer objects
     public GameObject Pill1;
     public GameObject Pill2;
+    private bool pill = false;
 
     // addict objects
     public GameObject Cigs1;
     public GameObject Cigs2;
+    private bool cigs = false;
 
     private string levelName;
 
@@ -45,6 +48,7 @@ public class ApartmentStates: MonoBehaviour
             //change Mum Position
             Mum1.SetActive(false);
             Mum2.SetActive(true);
+            mum = true;
         }
 
         if (PlayerPrefs.GetString("pillBool") == "T")
@@ -52,6 +56,7 @@ public class ApartmentStates: MonoBehaviour
             //change Pill Position
             Pill1.SetActive(false);
             Pill2.SetActive(true);
+            pill = true;
         }
         
         if (PlayerPrefs.GetString("cigsBool") == "T")
@@ -59,9 +64,10 @@ public class ApartmentStates: MonoBehaviour
             //change Cigs Position
             Cigs1.SetActive(false);
             Cigs2.SetActive(true);
+            cigs = true;
         }
 
-        if (PlayerPrefs.GetString("mumBool") == "T" && PlayerPrefs.GetString("pillBool") == "T" && PlayerPrefs.GetString("cigsBool") == "T")
+        if (mum && pill & cigs)
         {
             GameEvents.LevelWin?.Invoke();
         }

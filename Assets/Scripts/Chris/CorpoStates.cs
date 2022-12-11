@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CorpoStates: MonoBehaviour
 {
+    private int areaWin = 0;
+
     // cat objects
     public GameObject CEO1;
     public GameObject CEO2;
@@ -21,6 +23,7 @@ public class CorpoStates: MonoBehaviour
 
     private void Awake()
     {
+        areaWin = 0;
         levelName = PlayerPrefs.GetString("LevelName"); // get the completed level's name
         Debug.Log(levelName);
         if (levelName == "CEO")
@@ -46,6 +49,7 @@ public class CorpoStates: MonoBehaviour
             //change Farmer Position
             CEO1.SetActive(false);
             CEO2.SetActive(true);
+            areaWin++;
         }
 
         if (PlayerPrefs.GetString("internBool") == "T")
@@ -53,6 +57,7 @@ public class CorpoStates: MonoBehaviour
             //change Son Position
             Intern1.SetActive(false);
             Intern2.SetActive(true);
+            areaWin++;
         }
         
         if (PlayerPrefs.GetString("accountantBool") == "T")
@@ -60,9 +65,10 @@ public class CorpoStates: MonoBehaviour
             //change Cow Position
             Accountant1.SetActive(false);
             Accountant2.SetActive(true);
+            areaWin++;
         }
 
-        if (PlayerPrefs.GetString("ceoBool") == "T" && PlayerPrefs.GetString("internBool") == "T" && PlayerPrefs.GetString("accountantBool") == "T")
+        if (areaWin == 3)
         {
             GameEvents.LevelWin?.Invoke();
         }

@@ -8,14 +8,17 @@ public class SlumsStates : MonoBehaviour
     // cat objects
     public GameObject Cat1;
     public GameObject Cat2;
+    private bool cat = false;
 
     //dealer objects
     public GameObject Dealer1;
     public GameObject Dealer2;
+    private bool dealer = false;
 
     // addict objects
     public GameObject Addict1;
     public GameObject Addict2;
+    private bool addict = false;
 
     private string levelName;
 
@@ -45,6 +48,7 @@ public class SlumsStates : MonoBehaviour
             // cat changes position
             Cat1.SetActive(false);
             Cat2.SetActive(true);
+            cat = true;
         }
 
         if (PlayerPrefs.GetString("dealerBool") == "T")
@@ -52,6 +56,7 @@ public class SlumsStates : MonoBehaviour
             //Dealer changes position
             Dealer1.SetActive(false);
             Dealer2.SetActive(true);
+            dealer = true;
         }
         
         if (PlayerPrefs.GetString("addictBool") == "T")
@@ -59,13 +64,15 @@ public class SlumsStates : MonoBehaviour
             //addict changes position
             Addict1.SetActive(false);
             Addict2.SetActive(true);
+            addict = true;
         }
 
-        if(PlayerPrefs.GetString("catBool") == "T" && PlayerPrefs.GetString("dealerBool") == "T" && PlayerPrefs.GetString("addictBool") == "T")
+        if(cat && addict && dealer)
         {
             GameEvents.LevelWin?.Invoke();
         }
 
+        //Save PlayerPrefs
         PlayerPrefs.Save();
     }
 }
