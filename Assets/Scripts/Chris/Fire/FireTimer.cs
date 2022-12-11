@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,22 @@ public class FireTimer : MonoBehaviour
     public int interval;
     public int changeTime;
     public bool timeDone;
+    private bool _paused;
+
+    private void OnEnable()
+    {
+        GameEvents.OnPauseGame += OnPauseGame;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnPauseGame -= OnPauseGame;
+    }
+
+    private void OnPauseGame(bool paused)
+    {
+        _paused = paused;
+    }
 
     public void StartTimer()
     {
@@ -17,7 +34,8 @@ public class FireTimer : MonoBehaviour
 
     public void StopTimer()
     {
-        StopCoroutine(Timer());
+        time = 0;
+        StopAllCoroutines();
     }
 
     private IEnumerator Timer()
@@ -25,7 +43,10 @@ public class FireTimer : MonoBehaviour
         while (time <= changeTime)
         {
             yield return new WaitForSecondsRealtime(interval);
-            time++;
+            if (!_paused)
+            {
+                time++;
+            }
         }
         timeDone = true;
     }

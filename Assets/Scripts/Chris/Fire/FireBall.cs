@@ -40,15 +40,18 @@ public class FireBall : FireState
 
     public override void Update()
     {
-        if (Vector3.Distance(npc.transform.position, player.transform.position) >= 15)
+        if (!shoot._paused)
         {
-            agent.isStopped = false;
-            agent.destination = player.transform.position;
-        }
-        else
-        {
-            agent.isStopped = true;
-            npc.transform.RotateAround(player.transform.position, Vector3.up, 0.07f);
+            if (Vector3.Distance(npc.transform.position, player.transform.position) >= 15)
+            {
+                agent.isStopped = false;
+                agent.destination = player.transform.position;
+            }
+            else
+            {
+                agent.isStopped = true;
+                npc.transform.RotateAround(player.transform.position, Vector3.up, 0.07f);
+            }
         }
 
         if(timer.timeDone)

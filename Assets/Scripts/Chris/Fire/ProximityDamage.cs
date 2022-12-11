@@ -9,6 +9,22 @@ public class ProximityDamage : MonoBehaviour
     private bool toggle;
     public int damage;
     private float tempDamage;
+    private bool _paused;
+
+    private void OnEnable()
+    {
+        GameEvents.OnPauseGame += OnPauseGame;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnPauseGame -= OnPauseGame;
+    }
+
+    private void OnPauseGame(bool paused)
+    {
+        _paused = paused;   
+    }
 
     private void Start()
     {
@@ -33,12 +49,16 @@ public class ProximityDamage : MonoBehaviour
     {
         while (true)
         {
-            var dist = (Vector3.Distance(transform.position, player.transform.position) + 1); // set dam to destance converted to an int
-            tempDamage = dist/distance;
-            tempDamage = 1 -tempDamage;
-            tempDamage = Mathf.Clamp(tempDamage, 0, float.PositiveInfinity);
-            var dam = tempDamage * damage;
-            GameEvents.DamagePlayer?.Invoke((int)dam + 1);
+            while (!_paused)
+            {
+                var dist = (Vector3.Distance(transform.position, player.transform.position) + 1); // set dam to destance converted to an int
+                tempDamage = dist / distance;
+                tempDamage = 1 - tempDamage;
+                tempDamage = Mathf.Clamp(tempDamage, 0, float.PositiveInfinity);
+                var dam = tempDamage * damage;
+                GameEvents.DamagePlayer?.Invoke((int)dam + 1);
+                yield return new WaitForSecondsRealtime(1);
+            }
             yield return new WaitForSecondsRealtime(1);
         }
     }

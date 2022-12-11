@@ -7,6 +7,22 @@ public class FireBallShoot : MonoBehaviour
     public int damage;
     public float FireRate;
     public GameObject fireBall;
+    public bool _paused;
+
+    private void OnEnable()
+    {
+        GameEvents.OnPauseGame += OnPauseGame;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnPauseGame -= OnPauseGame;
+    }
+
+    private void OnPauseGame(bool paused)
+    {
+        _paused = paused;
+    }
 
     public void ShootStart()
     {
@@ -22,9 +38,13 @@ public class FireBallShoot : MonoBehaviour
     {
         while (true)
         {
+            if (!_paused)
+            {
+                yield return new WaitForSecondsRealtime(FireRate);
+                var obj = Instantiate(fireBall, transform.position, transform.rotation);
+                obj.GetComponent<FireBallProjectile>().damage = damage;
+            }
             yield return new WaitForSecondsRealtime(FireRate);
-            var obj = Instantiate(fireBall, transform.position, transform.rotation);
-            obj.GetComponent<FireBallProjectile>().damage = damage;
         }
     }
 }

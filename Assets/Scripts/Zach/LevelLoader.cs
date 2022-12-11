@@ -41,7 +41,7 @@ public class LevelLoader : MonoBehaviour
 
         if (GameObject.Find("Loading") != null)
         {
-            Loading = GameObject.Find("Canvas").transform.Find("Loading").gameObject;
+            Loading = GameObject.Find("Loading");
             Loading.SetActive(false);
         }
         else
