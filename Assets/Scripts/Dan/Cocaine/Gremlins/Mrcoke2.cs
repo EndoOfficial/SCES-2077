@@ -25,7 +25,10 @@ public class Mrcoke2 : MonoBehaviour
         CokeChecker = GameObject.Find("CocaineCheck");
         targets = GameObject.FindGameObjectsWithTag("CocainePuff");
         targetIndex = Random.Range(0, targets.Length);
-        target = targets[targetIndex];
+        if (target != null)
+        {
+            target = targets[targetIndex];
+        }
         _agent = GetComponent<NavMeshAgent>();
         _agent.SetDestination(target.transform.position);
         
@@ -76,7 +79,6 @@ public class Mrcoke2 : MonoBehaviour
     {
         if (target.tag != ("CocainePuff")) // first checks if the current target is no longer a valid target
         {
-            Debug.Log($"Retarget");
             StartCoroutine(GetTargets()); // starts the retargetting coroutine
         }
     }
@@ -88,7 +90,6 @@ public class Mrcoke2 : MonoBehaviour
         {
             yield break;
         }
-        Debug.Log($"NewTarget{target.name}");
         targetIndex = Random.Range(0, targets.Length); // re-sets the target array
         target = targets[targetIndex]; // gets a new target
         _agent.SetDestination( target.transform.position);

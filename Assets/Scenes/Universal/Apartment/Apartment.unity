@@ -26297,7 +26297,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -28266,6 +28266,10 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 595779550, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+      propertyPath: m_Height
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 879084276, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -28369,6 +28373,10 @@ PrefabInstance:
     - target: {fileID: 5003964179567099197, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410541316103668388, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 8679599372049520130, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
       propertyPath: BestTime

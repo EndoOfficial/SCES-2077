@@ -137,8 +137,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 1
+  xpPoints: 0
   Canvas: {fileID: 0}
-  slider: {fileID: 0}
+  image: {fileID: 0}
+  CurrentHealth: 0
+  imageFill: {fileID: 0}
   canDie: 1
 --- !u!114 &-184083816775416110
 MonoBehaviour:
@@ -180,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6402070920795909432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.076, y: 0.174, z: 0}
+  m_LocalPosition: {x: 0.015, y: 0.283, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []

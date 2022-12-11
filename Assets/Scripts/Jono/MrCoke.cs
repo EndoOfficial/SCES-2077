@@ -22,7 +22,6 @@ public class MrCoke : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("Hello");
         StartCoroutine(GiveOrder());
         SpawnSound();
         //audio.PlayOneShot(SpawnNoise);

@@ -25,7 +25,6 @@ public class CorpoStates: MonoBehaviour
     {
         areaWin = 0;
         levelName = PlayerPrefs.GetString("LevelName"); // get the completed level's name
-        Debug.Log(levelName);
         if (levelName == "CEO")
         {
             //farmerBool = T

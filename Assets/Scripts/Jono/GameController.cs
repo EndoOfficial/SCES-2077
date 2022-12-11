@@ -64,7 +64,6 @@ public class GameController : MonoBehaviour
             //float Dist 
         }
 
-        Debug.Log("SpawnBoss");
         //Spawns prefab at the closest point found
         Instantiate(MrConcaine, NearestSP.transform);
         yield return null;

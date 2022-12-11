@@ -14,7 +14,6 @@ public class SyringeIdle : SyringeState
     }
     public override void Enter()
     {
-        Debug.Log("Syringe IDLE");
 
         rb = NPC.GetComponent<Rigidbody>();
         AI = NPC.GetComponent<SyringeAI>();        
@@ -37,7 +36,6 @@ public class SyringeIdle : SyringeState
 
     public override void Exit()
     {
-        Debug.Log("Syringe left IDLE");
         base.Exit();
     }
 

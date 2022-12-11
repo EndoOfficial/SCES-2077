@@ -82,7 +82,6 @@ public class FaceLessSoundsController : MonoBehaviour
     {
         Spawned = true;
         CanSpawn = false;
-        Debug.Log("Psst");
         RotateSpeed = 0;
         var NewFaceless = Instantiate(FacelessFella, this.gameObject.transform.GetChild(0).position, Quaternion.identity);
         yield return new WaitForSeconds(2);

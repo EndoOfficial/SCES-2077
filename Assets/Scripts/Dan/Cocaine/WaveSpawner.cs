@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public enum SpawnState { SPAWNING,WAITING,COUNTING};
+    public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
     [System.Serializable]
     public class Wave
@@ -26,18 +26,17 @@ public class WaveSpawner : MonoBehaviour
 
     private void Start()
     {
-        
+
         waveCountDown = timeBeetweenWave;
 
     }
     private void Update()
     {
-        if(state== SpawnState.WAITING)
+        if (state == SpawnState.WAITING)
         {
-            if (EnemyIsAlive()==false)
+            if (EnemyIsAlive() == false)
             {
                 WaveCompleated();
-                Debug.Log("Completed Current Wave");
                 GameEvents.WaveWin?.Invoke();
             }
             else
@@ -45,11 +44,10 @@ public class WaveSpawner : MonoBehaviour
                 return;
             }
         }
-        if(waveCountDown > 0)
+        if (waveCountDown > 0)
         {
-            if(state!= SpawnState.SPAWNING)
+            if (state != SpawnState.SPAWNING)
             {
-                Debug.Log("New Wave");
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
             else
@@ -61,40 +59,35 @@ public class WaveSpawner : MonoBehaviour
     void WaveCompleated()
     {
         state = SpawnState.COUNTING;
-        waveCountDown=timeBeetweenWave;
-        if(nextWave+1 > waves.Length - 1)
+        waveCountDown = timeBeetweenWave;
+        if (nextWave + 1 > waves.Length - 1)
         {
-            
-           
+
+
             nextWave = 0;
             GameEvents.LevelWin?.Invoke();
             //GameEvents.WaveWin?.Invoke();
-            Debug.Log("Compleated all waves");
         }
         else
         {
-           
-            Debug.Log("new Wave");
             nextWave++;
         }
-       
+
     }
     bool EnemyIsAlive()
     {
         searchCountdown -= Time.deltaTime;
-        if(searchCountdown <= 0f)
+        if (searchCountdown <= 0f)
         {
             searchCountdown = 1f;
-            Debug.Log($"EnemyIsAlive: {GameObject.FindGameObjectsWithTag("Enemy").Length}");
 
-            if (GameObject.FindGameObjectsWithTag("Enemy").Length==0)
-                {
-              
-                Debug.Log("All enemies dead");
+            if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+            {
+
                 return false;
             }
         }
-        
+
         return true;
     }
     IEnumerator SpawnWave(Wave _wave)
@@ -103,19 +96,17 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.SPAWNING;
         for (int i = 0; i < _wave.count; i++)
         {
-            Debug.Log("Spawn New Enemy");
             SpawnEnemy(_wave.enemy);
-            yield return new WaitForSeconds(1/_wave.spawnRate);
+            yield return new WaitForSeconds(1 / _wave.spawnRate);
         }
 
         state = SpawnState.WAITING;
-        Debug.Log("Waiting for next Wave");
         yield break;
     }
     void SpawnEnemy(Transform _enemy)
     {
-       
-        Transform _sp= spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(_enemy, _sp.position,_sp.rotation);
+
+        Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        Instantiate(_enemy, _sp.position, _sp.rotation);
     }
 }

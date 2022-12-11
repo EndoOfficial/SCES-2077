@@ -17,7 +17,6 @@ public class BottleEnemy : Enemy
     }
     private void PlayDeath()
     {
-        Debug.Log("HI");
         Source = GetComponent<AudioSource>();
         GameEvents.OnApartmentplayAudio?.Invoke(Source, AudioManager.ApartmentClipTags.PillBottleDeath);
     }

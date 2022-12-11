@@ -20,12 +20,10 @@ public class CellShot : Enemy
         {
             if (name == "TakeDamageCell(Clone)")
             {
-                Debug.Log(Damage + " Damage taken");
                 GameEvents.DamagePlayer?.Invoke(Damage);
             }
             else if(name == "DealDamageCell(Clone)")
             {
-                Debug.Log(Damage + " Damage Dealt (once I get there)");
                 GameEvents.DamageEnemy?.Invoke(Damage, Spreadsheet);
             }
             GameEvents.CellsShot?.Invoke();

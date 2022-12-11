@@ -29,8 +29,7 @@ public class FacelessController : MonoBehaviour
         //audio = GetComponent<AudioSource>();
 
         GameController = GameObject.FindGameObjectWithTag("GameManager");
-        SpawnNoise = Random.Range(1, 5);
-        Debug.Log(SpawnNoise);        
+        SpawnNoise = Random.Range(1, 7);
 
         if (SpawnNoise == 1)
         {
@@ -100,7 +99,6 @@ public class FacelessController : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !HitPlayer)
         {
             HitPlayer = true;
-            Debug.Log("Damage");
             damage = 10;
             GameEvents.DamagePlayer(damage);
             Destroy(this.gameObject);
@@ -121,12 +119,10 @@ public class FacelessController : MonoBehaviour
         moveTowards = true;
         GetComponent<Enemy>().health = 10;
         Speed = 12;
-        Debug.Log("Lunge");
     }
 
     public void AddKillCount()
     {
         GameController.GetComponent<GameController>().KillCount += 1;
-        Debug.Log("Dead");
     }
 }

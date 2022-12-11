@@ -46,17 +46,14 @@ public class DealerAttack : MonoBehaviour
 
     private IEnumerator Delay()
     {
-        Debug.Log("Start Delay");
         yield return new WaitForSecondsRealtime(delay + Random.Range(0, 2));
         float rand = Random.Range(0, 100);
         if (rand <= chance)
         {
-            Debug.Log("Flurry Attack");
             anim.SetTrigger("Flurry");
         }
         else
         {
-            Debug.Log("Normal Attack");
             anim.SetTrigger("NormalAttack");
         }
     }

@@ -108,7 +108,6 @@ public class SyringeJump : MonoBehaviour
             MyRB.isKinematic = true;
             MyRB.useGravity = false;
             CanJumpToRoof = false;
-            Debug.Log("Doink");
             anim.SetTrigger("Jump");
             anim.SetTrigger("Wall");
 
@@ -124,7 +123,10 @@ public class SyringeJump : MonoBehaviour
             {
                 anim.ResetTrigger("Grounded");
                 GameEvents.OnSlumsplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.SlumsClipTags.NeedleJump);
-                MyRB.AddRelativeForce(-transform.forward * ForwardSpeed);
+                if (MyRB != null)
+                {
+                    MyRB.AddRelativeForce(-transform.forward * ForwardSpeed);
+                }
                 MyChildRB.AddRelativeForce(-transform.forward * ForwardSpeed);
                 TargetPos = Target.transform.position;
                 ThisPos = transform.position;                                           //Makes Move Forwards when not grounded
@@ -144,7 +146,6 @@ public class SyringeJump : MonoBehaviour
                 MyRB.AddForce(new Vector3(Random.Range(-10f, 10f), Random.Range(6f, 10f), Random.Range(-10f, 10f)) * SpringForce);
                 MyRB.velocity = Vector3.zero;                                         // Makes Jump Up
                 MyRB.angularVelocity = Vector3.zero;
-                Debug.Log("Jump");
             }
             
 

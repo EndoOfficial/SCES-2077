@@ -23,12 +23,10 @@ public class PickupIndicator : MonoBehaviour
 
             Indicator.SetActive(false);
             //PickUp = null;
-            Debug.Log("NoPickup");
         }
 
         if (GameObject.FindGameObjectsWithTag("Pickup").Length >= 1)
         {
-            Debug.Log("Pickup Found");
             Indicator.SetActive(true);
             //PickUp = GameObject.FindGameObjectWithTag("Pickup");
             transform.LookAt(GameObject.FindGameObjectWithTag("Pickup").transform);

@@ -52,11 +52,9 @@ public class PTTargetchecker : MonoBehaviour
             {
               lastArea.SetActive(false);
             }
-            Debug.Log("A");
         }
         else
         {
-            Debug.Log("B");
             return;
         }
     }

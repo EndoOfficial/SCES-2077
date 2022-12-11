@@ -25,7 +25,6 @@ public class FarmStates: MonoBehaviour
     private void Awake()
     {
         levelName = PlayerPrefs.GetString("LevelName"); // get the completed level's name
-        Debug.Log(levelName);
         if (levelName == "Farmer")
         {
             //farmerBool = T

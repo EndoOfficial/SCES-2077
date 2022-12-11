@@ -36,7 +36,6 @@ public class SyringeAI : MonoBehaviour
             GameEvents.OnSlumsplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.SlumsClipTags.NeedleDeath);
         }
 
-        Debug.Log(CurrentState);
         //if (grounded)
         //{
         //    if (Random.Range(0, 100) < 100 && !Turretable)

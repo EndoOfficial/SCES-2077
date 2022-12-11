@@ -18,37 +18,37 @@ MonoBehaviour:
     Pitch: 1
     Volume: 1
     CorporateClipTag: 0
-  - audioClip: {fileID: 8300000, guid: 2ae097843551eb142ab895105c16d6be, type: 3}
+  - audioClip: {fileID: 8300000, guid: 5a42d392181e1bd42912be0d1ffa2871, type: 3}
     Loop: 0
     Pitch: 0.9
     Volume: 1
     CorporateClipTag: 1
-  - audioClip: {fileID: 8300000, guid: ebe66c445d1891546901124f25b25a8c, type: 3}
+  - audioClip: {fileID: 8300000, guid: bfde13f4c934c3e43865b671f8f1a17a, type: 3}
     Loop: 0
     Pitch: 0.9
     Volume: 1
     CorporateClipTag: 2
-  - audioClip: {fileID: 8300000, guid: 1d7cf59449d387a45b3fddebee8a109b, type: 3}
+  - audioClip: {fileID: 8300000, guid: da685fb8e3de48f42a0e6a127a338950, type: 3}
     Loop: 0
     Pitch: 0.9
     Volume: 1
     CorporateClipTag: 3
-  - audioClip: {fileID: 8300000, guid: e007ed10c0aa5fb408456c11c4654afd, type: 3}
+  - audioClip: {fileID: 8300000, guid: 41c5c3584a0dd6340bf842eb2db95ad0, type: 3}
     Loop: 0
     Pitch: 0.9
     Volume: 1
     CorporateClipTag: 4
-  - audioClip: {fileID: 8300000, guid: c662cb70a1a2c05448a5f5141c586a34, type: 3}
+  - audioClip: {fileID: 8300000, guid: 0371d5613837f504aae83106b8268179, type: 3}
     Loop: 0
     Pitch: 0.9
     Volume: 1
     CorporateClipTag: 5
-  - audioClip: {fileID: 8300000, guid: caf65dda7e9851842a7cbdddbb7b5412, type: 3}
+  - audioClip: {fileID: 8300000, guid: fb0868de8ceecf04ca27cae5124d061a, type: 3}
     Loop: 0
     Pitch: 0.9
     Volume: 1
     CorporateClipTag: 6
-  - audioClip: {fileID: 8300000, guid: d0faeb3fe7b68a04e9c88bee9541013f, type: 3}
+  - audioClip: {fileID: 8300000, guid: f2365ccbfcae9ce479dcab3eef6afbcf, type: 3}
     Loop: 0
     Pitch: 0.9
     Volume: 1

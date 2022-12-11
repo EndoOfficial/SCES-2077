@@ -45,6 +45,7 @@ public class Health : MonoBehaviour
             }
         }
 
+        damage = Mathf.Clamp(damage, 1, 100000);
         health -= damage;
         GameEvents.OnUniversalplayAudio?.Invoke(audioCycle.GetNextAudioSource(), AudioManager.UniversalClipTags.PlayerHurt);
         if (health <= 0f)

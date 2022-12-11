@@ -5,10 +5,10 @@ using UnityEngine;
 public class CameraSwap : MonoBehaviour
 {
     int i = 2;
-    public Camera MainCamera1;
-    public Camera MainCamera2;
-    public Camera MainCamera3;
-    public Camera MainCamera4;
+    public Camera CameraSlums;
+    public Camera CameraApartment;
+    public Camera CameraFarm;
+    public Camera CameraCorpo;
 
     public Camera OptionsCamera;
     public Camera CreditCamera;
@@ -60,34 +60,33 @@ public class CameraSwap : MonoBehaviour
     public void RandomArea()
     {
         i = Random.Range(1, 5);
-        Debug.Log(i);
         if (i == 1)
         {
-            MainCamera1.enabled = true;
-            MainCamera2.enabled = false;
-            MainCamera3.enabled = false;
-            MainCamera4.enabled = false;
+            CameraSlums.enabled = true;
+            CameraApartment.enabled = false;
+            CameraFarm.enabled = false;
+            CameraCorpo.enabled = false;
         }
         if (i == 2)
         {
-            MainCamera1.enabled = false;
-            MainCamera2.enabled = true;
-            MainCamera3.enabled = false;
-            MainCamera4.enabled = false;
+            CameraSlums.enabled = false;
+            CameraApartment.enabled = true;
+            CameraFarm.enabled = false;
+            CameraCorpo.enabled = false;
         }
         if (i == 3)
         {
-            MainCamera1.enabled = false;
-            MainCamera2.enabled = false;
-            MainCamera3.enabled = true;
-            MainCamera4.enabled = false;
+            CameraSlums.enabled = false;
+            CameraApartment.enabled = false;
+            CameraFarm.enabled = true;
+            CameraCorpo.enabled = false;
         }
         if (i == 4)
         {
-             MainCamera1.enabled = false;
-             MainCamera2.enabled = false;
-             MainCamera3.enabled = false;
-             MainCamera4.enabled = true;
+             CameraSlums.enabled = false;
+             CameraApartment.enabled = false;
+             CameraFarm.enabled = false;
+             CameraCorpo.enabled = true;
         }
 
 
@@ -96,10 +95,10 @@ public class CameraSwap : MonoBehaviour
     
     public void TurnOffAreas()
     {
-        MainCamera1.enabled = false;
-        MainCamera2.enabled = false;
-        MainCamera3.enabled = false;
-        MainCamera4.enabled = false;
+        CameraSlums.enabled = false;
+        CameraApartment.enabled = false;
+        CameraFarm.enabled = false;
+        CameraCorpo.enabled = false;
         MainCanvas.SetActive(false);
     }
        

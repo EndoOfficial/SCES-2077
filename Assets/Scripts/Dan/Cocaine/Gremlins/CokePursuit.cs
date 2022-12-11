@@ -23,7 +23,6 @@ public class CokePursuit : CokeEnemyState
         
         MrCocaine.target = player;
         agent.SetDestination(playersPosition);
-        Debug.Log($"Target{player.transform.position}");
         /*agent.SetDestination(player.transform.position)*/ // targets the player
         base.Enter();
     }

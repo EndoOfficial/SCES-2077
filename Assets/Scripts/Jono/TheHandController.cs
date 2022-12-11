@@ -130,7 +130,6 @@ public class TheHandController : MonoBehaviour
         child.GetComponent<Rigidbody>().isKinematic = false;
         child.GetComponent<Rigidbody>().useGravity = true;        
         SpawnBucket = true;
-        Debug.Log("yeet");
         ThrowForce.x = Random.Range(5, 20);
         child.GetComponent<Rigidbody>().AddRelativeForce(-ThrowForce.x, 0,0, ForceMode.Impulse);
         child.transform.parent = null;

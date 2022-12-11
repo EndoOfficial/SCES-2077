@@ -13847,6 +13847,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1644254529688549005, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
+      propertyPath: previousLevel
+      value: Corpo
+      objectReference: {fileID: 0}
     - target: {fileID: 4958787710120097658, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -14239,7 +14243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a37879a11f7214abdb469a07c76cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 375916346}
   RotateSpeed: 80
   timer: 0
   FacelessFella: {fileID: 3238503305658340918, guid: dd0b4798375bc4c4890609991b9a03b5, type: 3}

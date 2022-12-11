@@ -16,7 +16,6 @@ public class SyringePursuit : SyringeState
 
     public override void Enter()
     {
-        Debug.Log("InPursuit");
         rb = NPC.GetComponent<Rigidbody>();
         ai = NPC.GetComponent<SyringeAI>();
         Jump = NPC.GetComponent<SyringeJump>();

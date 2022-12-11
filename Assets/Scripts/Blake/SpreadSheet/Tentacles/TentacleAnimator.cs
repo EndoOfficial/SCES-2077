@@ -33,7 +33,6 @@ public class TentacleAnimator : MonoBehaviour
     {
         float Wait = Random.Range(0, 6);
         float Time = Wait/10;
-        Debug.Log(Time);
         yield return new WaitForSeconds(Time);
         Anim.SetTrigger("Wiggle");
     }
