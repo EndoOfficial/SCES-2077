@@ -10,8 +10,18 @@ public class PauseMenu1 : MonoBehaviour
     public GameObject pauseMenuUi;
     public string previousLevel;
     public GameObject OptionMenuUi;
+    public GameObject HintScreen;
+    public GameObject HintImage;
 
     //Update is called once per frame
+
+    private void Start()
+    {
+        HintScreen = GameObject.Find("HintScreen");
+        HintImage = GameObject.Find("HintImage");
+        HintScreen.SetActive(false);
+        pauseMenuUi.SetActive(false);
+    }
 
     void Update()
     {
@@ -33,9 +43,11 @@ public class PauseMenu1 : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUi.SetActive(false);
         OptionMenuUi.SetActive(false);
+        HintScreen.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         GameEvents.OnPauseGame?.Invoke(false);
+
     }
     public void Pause()
     {
@@ -45,6 +57,8 @@ public class PauseMenu1 : MonoBehaviour
         pauseMenuUi.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        HintScreen.SetActive(false);
+
     }
     public void Tutorial()
     {
@@ -75,18 +89,27 @@ public class PauseMenu1 : MonoBehaviour
         Application.Quit();
         Debug.Log("Quitting game....");
     }
+
+    public void Hint()
+    {
+
+        HintScreen.SetActive(true);
+        pauseMenuUi.SetActive(false);
+
+    }
     public void Options()
     {
         pauseMenuUi.SetActive(false);
         OptionMenuUi.SetActive(true);
-
+        HintScreen.SetActive(false);
     }
 
     public void UnOptions()
     {
+
         pauseMenuUi.SetActive(true);
         OptionMenuUi.SetActive(false);
-
+        HintScreen.SetActive(false);
     }
 }
 

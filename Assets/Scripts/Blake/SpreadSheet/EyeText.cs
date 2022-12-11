@@ -26,7 +26,7 @@ public class EyeText : MonoBehaviour
     public void DamagePlayer(int damage)
     {
         PlayerHealth -= damage;
-        if(PlayerHealth <= 75)
+        if(PlayerHealth <= 25)
         {
             Hint.enabled = true;
         }
