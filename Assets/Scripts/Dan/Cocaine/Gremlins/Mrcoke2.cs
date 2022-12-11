@@ -93,7 +93,7 @@ public class Mrcoke2 : MonoBehaviour
         targetIndex = Random.Range(0, targets.Length); // re-sets the target array
         target = targets[targetIndex]; // gets a new target
         _agent.SetDestination( target.transform.position);
-        _agent.speed += 5;
+        //_agent.speed += 5;
     }
     
 }

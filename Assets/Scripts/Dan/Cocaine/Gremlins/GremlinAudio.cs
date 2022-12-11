@@ -9,12 +9,14 @@ public class GremlinAudio : MonoBehaviour
    
     private void DeathSound()
     {
+        // Gets the audio source and plays the audio from the corporate library, we do this trough the animations
         source = GetComponent<AudioSource>();
         GameEvents.OnCorporateplayAudio?.Invoke(source,AudioManager.CorporateClipTags.CokeDeath);
     }
     private void CokePuffSound()
     {
-        source=GetComponent<AudioSource>();
+        // Gets the audio source and plays the audio from the corporate library, we do this trough the animations
+        source = GetComponent<AudioSource>();
         GameEvents.OnCorporateplayAudio?.Invoke(source,AudioManager.CorporateClipTags.PuffNoise);
     }
 }

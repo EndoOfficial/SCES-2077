@@ -57,6 +57,7 @@ public class Nose : MonoBehaviour
     }
     private void CokeParticle()
     {
+        // moves the partciles attached in the inspector towards a empty game object to give player feedback that the nose clears the patches, i used lean tween move
         cokeParticleLeft.Play();
         cokeParticleRight.Play();
         LeanTween.move(cokeParticleRight.gameObject, SniffRight, SniffTime);
