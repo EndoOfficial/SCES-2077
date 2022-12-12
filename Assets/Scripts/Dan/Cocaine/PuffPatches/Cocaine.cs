@@ -25,14 +25,14 @@ public class Cocaine : MonoBehaviour
         {
            var mrCoke= other.gameObject.GetComponent<Mrcoke2>();
 
-            if (mrCoke !=null&& mrCoke.target==this.gameObject)
-            {
+            //if (mrCoke !=null&& mrCoke.target==this.gameObject)
+            //{
                 Debug.Log("Particle activated");
                 particleActivated = true;
                 cokeParticle.Play();
                 //animator.SetTrigger("Puff");
                 
-            }
+            //}
            
             
         }
