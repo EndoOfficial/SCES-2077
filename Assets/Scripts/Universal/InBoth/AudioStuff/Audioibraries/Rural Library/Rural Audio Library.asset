@@ -28,16 +28,21 @@ MonoBehaviour:
     Pitch: 1
     Volume: 1
     RuralClipTag: 6
-  - audioClip: {fileID: 8300000, guid: e09c7015d46134e4790e1fb327f1d39f, type: 3}
+  - audioClip: {fileID: 8300000, guid: ddb5b9a06edd9ca449023eec0dfeebbe, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     RuralClipTag: 2
-  - audioClip: {fileID: 8300000, guid: aebb685e205f5da42a8c5286ce2d67e8, type: 3}
+  - audioClip: {fileID: 8300000, guid: 2472a406a4d2f834a83e5642d308a0da, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     RuralClipTag: 2
+  - audioClip: {fileID: 8300000, guid: 8241ac6511700ad4bacd00e6ebb3d6fb, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    RuralClipTag: 3
   - audioClip: {fileID: 8300000, guid: 8241ac6511700ad4bacd00e6ebb3d6fb, type: 3}
     Loop: 0
     Pitch: 1
@@ -48,17 +53,12 @@ MonoBehaviour:
     Pitch: 1
     Volume: 1
     RuralClipTag: 3
-  - audioClip: {fileID: 8300000, guid: 71aa4f58f0bf6684880adf66c7b6dc85, type: 3}
-    Loop: 0
-    Pitch: 1
-    Volume: 1
-    RuralClipTag: 3
-  - audioClip: {fileID: 8300000, guid: c13aef38e0a00584fb7d90f8d0a24ecb, type: 3}
+  - audioClip: {fileID: 8300000, guid: dbb43204d09fe194497a3830586dbd29, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     RuralClipTag: 4
-  - audioClip: {fileID: 8300000, guid: 8fb10757c5e1048428b78f73a2d9989a, type: 3}
+  - audioClip: {fileID: 8300000, guid: c5ba3caf2b7a24b4982f66c26910829f, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
@@ -68,12 +68,12 @@ MonoBehaviour:
     Pitch: 1
     Volume: 1
     RuralClipTag: 5
-  - audioClip: {fileID: 8300000, guid: 8fb10757c5e1048428b78f73a2d9989a, type: 3}
+  - audioClip: {fileID: 8300000, guid: e9410856d5d2de1408528c7cdc8a0e2d, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
     RuralClipTag: 7
-  - audioClip: {fileID: 8300000, guid: 8fb10757c5e1048428b78f73a2d9989a, type: 3}
+  - audioClip: {fileID: 8300000, guid: 876a65a4705ca774ea0ce4d155ea6e9c, type: 3}
     Loop: 0
     Pitch: 1
     Volume: 1
