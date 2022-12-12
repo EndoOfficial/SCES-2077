@@ -89,4 +89,7 @@ public static class GameEvents
 
     public static Action KillSpread; // Kill Spreadsheet boss
 
+    public delegate void UIPanelToggleDelegate(bool active);
+    public static UIPanelToggleDelegate UIPanelToggle;
+
 }

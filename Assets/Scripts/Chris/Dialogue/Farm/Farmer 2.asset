@@ -19,6 +19,6 @@ MonoBehaviour:
   - As important as the future is, I mustn't let my anxieties hurt those around me.
     Thanks, for showing me that.
   audio:
-  - {fileID: 8300000, guid: fbeff82d945ef21439761e9bf9d1d9d3, type: 3}
-  - {fileID: 8300000, guid: 8f8e5ac4b403c2f4b8608a78c60143c2, type: 3}
-  - {fileID: 8300000, guid: 78d80ce2acacad841871f7300f939ced, type: 3}
+  - {fileID: 8300000, guid: d2c32556cedf8714f837edf8d6faa551, type: 3}
+  - {fileID: 8300000, guid: 6a17841705a5f884fb1111fb35705bd1, type: 3}
+  - {fileID: 8300000, guid: bc6856bf20dcfe5489e9daa2277ba6d8, type: 3}

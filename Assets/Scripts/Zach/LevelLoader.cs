@@ -30,8 +30,6 @@ public class LevelLoader : MonoBehaviour
 
     GameObject Loading;
     
-
-    public GameObject Panel;
     public Text DialogueText;
     private int index; // used to change dialogue text
     public AudioSource _audio;
@@ -48,7 +46,6 @@ public class LevelLoader : MonoBehaviour
         {
 
         }
-        Panel = GameObject.Find("ImageOfText");
         DialogueText = GameObject.Find("DialogueUIText").GetComponent<Text>();
     }
     // Start is called before the first frame update
@@ -73,10 +70,7 @@ public class LevelLoader : MonoBehaviour
                 {
                     pressedEOnNPC = true; // toggle
                     actionButtonPrompt.gameObject.SetActive(false);
-                    if (Panel != null)
-                    {
-                        Panel.SetActive(true);
-                    }
+                    GameEvents.UIPanelToggle?.Invoke(true);
                     if (dialogueLoader != null)
                     {
                         dialogueLoader.StartDialogue(DialogueText, index, _audio); // open dialogue
@@ -124,10 +118,8 @@ public class LevelLoader : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E) && !pressedEOnCollectable)
                 {
                     pressedEOnCollectable = true;
-                    actionButtonPrompt.gameObject.SetActive(false); if (Panel != null)
-                    {
-                        Panel.SetActive(true);
-                    }
+                    actionButtonPrompt.gameObject.SetActive(false);
+                    GameEvents.UIPanelToggle?.Invoke(true);
                     dialogueLoader.StartDialogue(DialogueText, index, _audio); // open dialogue
                 }
                 else if (pressedEOnCollectable)
@@ -136,11 +128,7 @@ public class LevelLoader : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         pressedEOnCollectable = false;
-                        DialogueText.text = "";
-                        if (Panel != null)
-                        {
-                            Panel.SetActive(false);
-                        }
+                        DisableTextPannel();
                         if (_audio != null) _audio.Stop();
                     }
                 }
@@ -159,9 +147,8 @@ public class LevelLoader : MonoBehaviour
                 actionButtonPrompt.gameObject.SetActive(false);
                 pressedEOnCollectable = false;
                 pressedEOnNPC = false;
-                DialogueText.text = "";
+                DisableTextPannel();
                 if (coll != null) coll.DisableCollect();
-                if (Panel != null) Panel.SetActive(false);
                 if (_audio != null) _audio.Stop();
             }
         }
@@ -171,9 +158,8 @@ public class LevelLoader : MonoBehaviour
             actionButtonPrompt.gameObject.SetActive(false);
             pressedEOnCollectable = false;
             pressedEOnNPC = false;
-            DialogueText.text = "";
+            DisableTextPannel();
             if (coll != null) coll.DisableCollect();
-            if (Panel != null) Panel.SetActive(false);
             if(_audio != null) _audio.Stop();
         }
     }
@@ -203,10 +189,8 @@ public class LevelLoader : MonoBehaviour
     {
         actionButtonPrompt.gameObject.SetActive(false);
         DialogueText.text = "";
-        if (Panel != null)
-        {
-            Panel.SetActive(false);
-        }
+        GameEvents.UIPanelToggle?.Invoke(false);
+        if (_audio != null) _audio.Stop();
     }
 
 }

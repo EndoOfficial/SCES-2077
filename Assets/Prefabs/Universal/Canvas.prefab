@@ -3554,6 +3554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverMenuUi: {fileID: 3683578541616498590}
+  dialoguePane: {fileID: 8933253866465347263}
   Wave1TXT: {fileID: 0}
   GameWinTXT: {fileID: 0}
 --- !u!114 &1644254529688549005
