@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 460310921, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
-    - time: 0.11666667
-      value: {fileID: -2009325271, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
-    - time: 0.21666667
       value: {fileID: -1981326346, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
-    - time: 0.33333334
+    - time: 0.083333336
       value: {fileID: 2083184682, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
+    - time: 0.25
+      value: {fileID: 460310921, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
+    - time: 0.33333334
+      value: {fileID: -2009325271, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
     attribute: m_Sprite
     path: Bill Sprite Renderer
     classID: 212
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 460310921, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
-    - {fileID: -2009325271, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
     - {fileID: -1981326346, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
     - {fileID: 2083184682, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
+    - {fileID: 460310921, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
+    - {fileID: -2009325271, guid: 94b1aa36b86bd13409d6294bff7b86fe, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -29,7 +29,9 @@ public class UiManager : MonoBehaviour
     public void OnGameOver(bool gameover)
     {
         //FindObjectOfType<AudioManager>().Play("GameOver");
+        
         Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0;
         GameOverMenuUi.SetActive(true);
         //GameObject slider = gameObject.transform.Find("Slider").gameObject;
         //Destroy(slider);
