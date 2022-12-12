@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public Transform CocaineSpawn;
 
     public List<GameObject> CokeSpawns;
+    public float FacelessSpawnSound;
     // Start is called before the first frame update
     void Start()
     {

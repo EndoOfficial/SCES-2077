@@ -23,42 +23,52 @@ public class FacelessController : MonoBehaviour
 
     private int damage;
     public GameObject GameController;
+    public float SpawnedSound;
     // Start is called before the first frame update
     void Start()
     {
         //audio = GetComponent<AudioSource>();
-
+        SpawnedSound = GameController.GetComponent<GameController>().FacelessSpawnSound;
         GameController = GameObject.FindGameObjectWithTag("GameManager");
-        SpawnNoise = Random.Range(1, 7);
+        SpawnNoise = Random.Range(1, 8);
 
-        if (SpawnNoise == 1)
+        if(SpawnNoise == SpawnedSound)
         {
-            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound1);
+            SpawnNoise = Random.Range(1, 8);
         }
-        if (SpawnNoise == 2)
+        if(SpawnNoise != SpawnedSound)
         {
-            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FaceLessSound2);
+            if (SpawnNoise == 1)
+            {
+                GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound1);
+            }
+            if (SpawnNoise == 2)
+            {
+                GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FaceLessSound2);
+            }
+            if (SpawnNoise == 3)
+            {
+                GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound3);
+            }
+            if (SpawnNoise == 4)
+            {
+                GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound4);
+            }
+            if (SpawnNoise == 5)
+            {
+                GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound5);
+            }
+            if (SpawnNoise == 6)
+            {
+                GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound6);
+            }
+            if (SpawnNoise == 7)
+            {
+                GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound7);
+            }
         }
-        if (SpawnNoise == 3)
-        {
-            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound3);
-        }
-        if (SpawnNoise == 4)
-        {
-            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound4);
-        }
-        if (SpawnNoise == 5)
-        {
-            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound5);
-        }
-        if (SpawnNoise == 6)
-        {
-            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound6);
-        }
-        if (SpawnNoise == 7)
-        {
-            GameEvents.OnCorporateplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.CorporateClipTags.FacelessSound7);
-        }
+
+        
 
         Player = GameObject.FindGameObjectWithTag("Player");
     }
