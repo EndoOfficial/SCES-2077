@@ -6,17 +6,26 @@ public class PlayerDetect : MonoBehaviour
 {
     bool range;
     public float distance;
-    public LayerMask player;
-    private void Update()
+    public GameObject player;
+    private void Start()
     {
-        range = Physics.CheckSphere(gameObject.transform.position, distance, player); // checks if player is within distance
-        if (range)
+        StartCoroutine(Repeat());
+    }
+
+    private IEnumerator Repeat()
+    {
+        while (true)
         {
-            GameEvents.DetectPlayer?.Invoke(range);
-        }
-        if (!range)
-        {
-            GameEvents.DetectPlayer?.Invoke(range);
+            range = Vector3.Distance(transform.position, player.transform.position) < distance; // checks if player is within distance
+            if (range)
+            {
+                GameEvents.DetectPlayer?.Invoke(range);
+            }
+            if (!range)
+            {
+                GameEvents.DetectPlayer?.Invoke(range);
+            }
+            yield return new WaitForSeconds(1);
         }
     }
 }

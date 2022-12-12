@@ -18,12 +18,12 @@ public class FishIdle : FishState
         rb = npc.GetComponent<Rigidbody>();
         ai = npc.GetComponent<FishAI>();
         jump = npc.GetComponent<FishJump>();
+        jump.jumpDirection = Vector3.zero;
         base.Enter();
     }
 
     public override void Update()
     {
-        jump.jumpDirection = Vector3.zero;
         if (ai.detected)// if player is detected
         {
             nextState = new FishPursuit(npc, agent, anim, player);
