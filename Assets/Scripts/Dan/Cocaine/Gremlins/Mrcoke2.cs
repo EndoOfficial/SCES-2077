@@ -18,24 +18,31 @@ public class Mrcoke2 : MonoBehaviour
     public bool Melee;
     private NavMeshAgent _agent;
     private Animator anim;
+    private Transform PlayerTransform;
    
     void Start()
     {
+        _agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         CokeChecker = GameObject.Find("CocaineCheck");
         targets = GameObject.FindGameObjectsWithTag("CocainePuff");
-        targetIndex = Random.Range(0, targets.Length);
-        if (target != null)
+
+        StartCoroutine(GetTargets());
+
+        if (targets.Length > 0)
         {
+            targetIndex = Random.Range(0, targets.Length);
             target = targets[targetIndex];
+            //_agent.SetDestination(target.transform.position);
         }
-        _agent = GetComponent<NavMeshAgent>();
-        _agent.SetDestination(target.transform.position);
+
         
 
     }
     public void Update()
     {
+
+        PlayerTransform = GameObject.FindWithTag("Player").transform;
         //transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
         //transform.position += transform.forward * speed * Time.deltaTime;
         if (Physics.CheckSphere(transform.position, radius, Player))
@@ -77,9 +84,16 @@ public class Mrcoke2 : MonoBehaviour
     }
     public void Retarget()
     {
-        if (target.tag != ("CocainePuff")) // first checks if the current target is no longer a valid target
+        if (target != null)
         {
-            StartCoroutine(GetTargets()); // starts the retargetting coroutine
+            if (target.tag != ("CocainePuff")) // first checks if the current target is no longer a valid target
+            {
+                StartCoroutine(GetTargets()); // starts the retargetting coroutine
+            }
+        }
+        else
+        {
+            _agent.SetDestination(PlayerTransform.transform.position);
         }
     }
     public IEnumerator GetTargets()
@@ -88,12 +102,14 @@ public class Mrcoke2 : MonoBehaviour
         targets = GameObject.FindGameObjectsWithTag("CocainePuff"); // re-gets the places that can be puffed in
         if (targets.Length <= 0)
         {
+            _agent.SetDestination(PlayerTransform.transform.position);
             yield break;
         }
         targetIndex = Random.Range(0, targets.Length); // re-sets the target array
         target = targets[targetIndex]; // gets a new target
         _agent.SetDestination( target.transform.position);
         //_agent.speed += 5;
+
     }
     
 }

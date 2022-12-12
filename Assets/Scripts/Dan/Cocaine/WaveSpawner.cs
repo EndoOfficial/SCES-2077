@@ -23,6 +23,7 @@ public class WaveSpawner : MonoBehaviour
 
     private float searchCountdown = 1;
     private SpawnState state = SpawnState.COUNTING;
+    private bool wavesCompleted=false;
 
     private void Start()
     {
@@ -32,12 +33,16 @@ public class WaveSpawner : MonoBehaviour
     }
     private void Update()
     {
+        if (wavesCompleted)
+        {
+            return;
+        }
         if (state == SpawnState.WAITING)
         {
             if (EnemyIsAlive() == false)
             {
                 WaveCompleated();
-                GameEvents.WaveWin?.Invoke();
+                //GameEvents.WaveWin?.Invoke();
             }
             else
             {
@@ -63,14 +68,17 @@ public class WaveSpawner : MonoBehaviour
         if (nextWave + 1 > waves.Length - 1)
         {
 
-
+           
             nextWave = 0;
+            Debug.Log("WaveCompleted");
+            wavesCompleted=true;
             GameEvents.LevelWin?.Invoke();
             //GameEvents.WaveWin?.Invoke();
         }
         else
         {
             nextWave++;
+            GameEvents.WaveWin?.Invoke();
         }
 
     }
@@ -92,6 +100,11 @@ public class WaveSpawner : MonoBehaviour
     }
     IEnumerator SpawnWave(Wave _wave)
     {
+
+        if (wavesCompleted)
+        {
+            yield break;
+        }
         //GameEvents.NewWave?.Invoke();
         state = SpawnState.SPAWNING;
         for (int i = 0; i < _wave.count; i++)
@@ -99,6 +112,7 @@ public class WaveSpawner : MonoBehaviour
             SpawnEnemy(_wave.enemy);
             yield return new WaitForSeconds(1 / _wave.spawnRate);
         }
+
 
         state = SpawnState.WAITING;
         yield break;

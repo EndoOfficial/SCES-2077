@@ -73,3 +73,18 @@ MonoBehaviour:
     Pitch: 1
     Volume: 1
     CorporateClipTag: 11
+  - audioClip: {fileID: 8300000, guid: 894c533df7f46fd4b87248eb0c24244b, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    CorporateClipTag: 14
+  - audioClip: {fileID: 8300000, guid: 894c533df7f46fd4b87248eb0c24244b, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    CorporateClipTag: 13
+  - audioClip: {fileID: 8300000, guid: 894c533df7f46fd4b87248eb0c24244b, type: 3}
+    Loop: 0
+    Pitch: 1
+    Volume: 1
+    CorporateClipTag: 12
