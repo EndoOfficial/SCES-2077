@@ -493,7 +493,7 @@ MonoBehaviour:
   MyRB: {fileID: 7068124799584983974}
   MyChildRB: {fileID: 7068124800717697801}
   Child: {fileID: 7068124800717697907}
-  SpringForce: 100
+  SpringForce: 400
   ForwardSpeed: 20
   stopDist: 5
   MainSpeed: 0
