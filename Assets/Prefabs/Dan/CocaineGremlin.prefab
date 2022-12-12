@@ -689,7 +689,9 @@ MonoBehaviour:
   maxHealth: 30
   xpPoints: 0
   Canvas: {fileID: 924181591362827490}
-  slider: {fileID: 924181590793779568}
+  image: {fileID: 0}
+  CurrentHealth: 0
+  imageFill: {fileID: 0}
   canDie: 1
 --- !u!114 &924181592070297943
 MonoBehaviour:
@@ -775,9 +777,9 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
+  m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 1
@@ -825,12 +827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3db85d2cb6e1a4988f4bbbea99f507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
-  xpPoints: 0
-  Canvas: {fileID: 0}
-  slider: {fileID: 0}
-  canDie: 1
 --- !u!82 &5275845811866057685
 AudioSource:
   m_ObjectHideFlags: 0

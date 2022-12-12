@@ -59,12 +59,18 @@ public class Mrcoke2 : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        //if (other != target && target != null)
+        //{
+        //    return;
+        //}
         if (other.gameObject.CompareTag("CocainePuff"))
         {
+
             anim.SetTrigger("Puff");
-            other.gameObject.tag = ("Untagged"); // Ensures that the patch can't be targeted
+            other.gameObject.tag = ("Untagged");  
+            Retarget(); // Ensures that the patch can't be targeted
             GameEvents.CokeTarget?.Invoke(); // Event to retarget if need be
-            Retarget();
+            
         }
 
        
@@ -107,6 +113,7 @@ public class Mrcoke2 : MonoBehaviour
         }
         targetIndex = Random.Range(0, targets.Length); // re-sets the target array
         target = targets[targetIndex]; // gets a new target
+        
         _agent.SetDestination( target.transform.position);
         //_agent.speed += 5;
 

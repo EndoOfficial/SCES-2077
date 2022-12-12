@@ -15,6 +15,7 @@ public class Cocaine : MonoBehaviour
     private void Start()
     {
         //animator = GetComponent<Animator>();
+         
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +27,7 @@ public class Cocaine : MonoBehaviour
 
             if (mrCoke !=null&& mrCoke.target==this.gameObject)
             {
+                Debug.Log("Particle activated");
                 particleActivated = true;
                 cokeParticle.Play();
                 //animator.SetTrigger("Puff");

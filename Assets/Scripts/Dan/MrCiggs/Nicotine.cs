@@ -19,6 +19,14 @@ public class Nicotine : MonoBehaviour
     {
         transform.Rotate(0f, rotation, 0f);
     }
+    private void OnEnable()
+    {
+        GameEvents.LevelWin += DestroyNicotine;
+    }
+    private void OnDisable()
+    {
+        GameEvents.LevelWin -= DestroyNicotine;
+    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Pickup"))
@@ -37,5 +45,9 @@ public class Nicotine : MonoBehaviour
             rb.isKinematic = true;
             Col.enabled = false;
         }
+    }
+    public void DestroyNicotine()
+    {
+        Destroy(gameObject);
     }
 }
