@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e208afafe3cb66548999c3bfefb8e227
+guid: d8f5105106a9e78408349c3cfba3606e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,11 +116,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_0
+      name: spritesheet (12)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3244
+        y: 1622
         width: 2162
         height: 1622
       alignment: 0
@@ -130,18 +130,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ecc11935d816b04bb1dc4e8ab4c8732
-      internalID: -895879739
+      spriteID: 3f2335f09950b5543ad9c2b833b3a408
+      internalID: 1087226594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_1
+      name: spritesheet (12)_1
       rect:
         serializedVersion: 2
         x: 2162
-        y: 3244
+        y: 1622
         width: 2162
         height: 1622
       alignment: 0
@@ -151,38 +151,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 155f0e0472869a74591713193bff7692
-      internalID: -627800440
+      spriteID: d9ec1a2b541a4674c920886648158e44
+      internalID: 233925588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_2
+      name: spritesheet (12)_2
       rect:
         serializedVersion: 2
         x: 4324
-        y: 3244
-        width: 2162
-        height: 1622
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0c044e45289d224fbacc3d438cbe458
-      internalID: -2070840636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_3
-      rect:
-        serializedVersion: 2
-        x: 0
         y: 1622
         width: 2162
         height: 1622
@@ -193,35 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f542ec86f4d9cb8459f64657a9410c45
-      internalID: -1261791041
+      spriteID: 56ddce6b93defdf4ba9d7d8f5328d5d7
+      internalID: 1361734978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_4
-      rect:
-        serializedVersion: 2
-        x: 2162
-        y: 1622
-        width: 2162
-        height: 1622
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 040776368dfa487469427ce25d72a3eb
-      internalID: -1260856957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_5
+      name: spritesheet (12)_3
       rect:
         serializedVersion: 2
         x: 0
@@ -235,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b54d542653acb6744a119508246a346e
-      internalID: -1312494964
+      spriteID: f7207af7f034ea643ae99e5a964df80e
+      internalID: 229625162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_6
+      name: spritesheet (12)_4
       rect:
         serializedVersion: 2
         x: 2162
@@ -256,8 +214,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 339c2f94d9de9ea46b8282455020fdfa
-      internalID: 1117633569
+      spriteID: bfd1b0937b266d04284cc98b4963c6f5
+      internalID: 691233014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet (12)_5
+      rect:
+        serializedVersion: 2
+        x: 4324
+        y: 0
+        width: 2162
+        height: 1622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9d8fcf701f93f4bb25aef4b605d0a0
+      internalID: 666481709
       vertices: []
       indices: 
       edges: []
@@ -265,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 18c5806d6db6a654884d70fcec0415e2
+    spriteID: 1437b8a7bb731464c993c636c131fc1a
     internalID: 0
     vertices: []
     indices: 
@@ -273,13 +252,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Death_1: -627800440
-      Death_5: -1312494964
-      Death_0: -895879739
-      Death_4: -1260856957
-      Death_2: -2070840636
-      Death_6: 1117633569
-      Death_3: -1261791041
+      spritesheet (12)_0: 1087226594
+      spritesheet (12)_2: 1361734978
+      spritesheet (12)_4: 691233014
+      spritesheet (12)_5: 666481709
+      spritesheet (12)_3: 229625162
+      spritesheet (12)_1: 233925588
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

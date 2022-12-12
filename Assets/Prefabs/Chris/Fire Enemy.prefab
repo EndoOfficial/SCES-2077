@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wisp: {fileID: 3204511869751107905}
+  _paused: 0
 --- !u!135 &2755120432055071399
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -187,6 +188,7 @@ MonoBehaviour:
   damage: 10
   FireRate: 2
   fireBall: {fileID: 3008580272504976746, guid: a784a2b8d8386434082b9b09d34adbfb, type: 3}
+  _paused: 0
 --- !u!114 &7808737524930748934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,7 +350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6161943243945451997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.087, y: 0.155, z: 0}
+  m_LocalPosition: {x: 0.053, y: 0.535, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -396,7 +398,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f7c2378680a2b3d41bb09120994aab6b, type: 3}
+  m_Sprite: {fileID: -125609098, guid: a371d39b729dc5b4c9867611378bbb90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

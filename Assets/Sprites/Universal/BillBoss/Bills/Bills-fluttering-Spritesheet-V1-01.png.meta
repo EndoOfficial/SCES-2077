@@ -120,11 +120,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1622
-        height: 2162
+        y: 1622
+        width: 2162
+        height: 1622
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -140,12 +140,12 @@ TextureImporter:
       name: Bills-fluttering-Spritesheet-V1-01_1
       rect:
         serializedVersion: 2
-        x: 1622
-        y: 0
-        width: 1622
-        height: 2162
+        x: 2162
+        y: 1622
+        width: 2162
+        height: 1622
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,12 +161,12 @@ TextureImporter:
       name: Bills-fluttering-Spritesheet-V1-01_2
       rect:
         serializedVersion: 2
-        x: 3244
+        x: 2162
         y: 0
-        width: 1622
-        height: 2162
+        width: 2162
+        height: 1622
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
