@@ -130,14 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 954595400, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7065607485802250847, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: SpringForce
-      value: 70
-      objectReference: {fileID: 0}
+    - target: {fileID: 2637365479096450985, guid: a0ff428855e419444851f57d3c69b645, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 728519213}
     - target: {fileID: 7068124799584983970, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -185,18 +181,6 @@ PrefabInstance:
     - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_Name
       value: SyringeEnemy (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ff428855e419444851f57d3c69b645, type: 3}
@@ -517,6 +501,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &728519213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2015154809514674855, guid: b45e4f06e3a8f1b4b9688abbf784e73a, type: 3}
+  m_PrefabInstance: {fileID: 1121472060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &738936340 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4459825560066012448, guid: 8f3348f49c4010742ab802d9c1411498, type: 3}
@@ -888,10 +877,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7065607485802250847, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: SpringForce
-      value: 70
-      objectReference: {fileID: 0}
+    - target: {fileID: 2637365479096450985, guid: a0ff428855e419444851f57d3c69b645, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 728519213}
     - target: {fileID: 7068124799584983970, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -949,10 +938,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7065607485802250847, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: SpringForce
-      value: 70
-      objectReference: {fileID: 0}
+    - target: {fileID: 2637365479096450985, guid: a0ff428855e419444851f57d3c69b645, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 728519213}
     - target: {fileID: 7068124799584983970, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1405,14 +1394,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 954595400, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7065607485802250847, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: SpringForce
-      value: 70
-      objectReference: {fileID: 0}
+    - target: {fileID: 2637365479096450985, guid: a0ff428855e419444851f57d3c69b645, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 728519213}
     - target: {fileID: 7068124799584983970, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -1460,14 +1445,6 @@ PrefabInstance:
     - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_Name
       value: SyringeEnemy (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ff428855e419444851f57d3c69b645, type: 3}
@@ -1547,14 +1524,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 954595400, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7065607485802250847, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: SpringForce
-      value: 70
-      objectReference: {fileID: 0}
+    - target: {fileID: 2637365479096450985, guid: a0ff428855e419444851f57d3c69b645, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 728519213}
     - target: {fileID: 7068124799584983970, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1602,18 +1575,6 @@ PrefabInstance:
     - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_Name
       value: SyringeEnemy (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ff428855e419444851f57d3c69b645, type: 3}
@@ -1982,14 +1943,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 954595400, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7065607485802250847, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: SpringForce
-      value: 70
-      objectReference: {fileID: 0}
+    - target: {fileID: 2637365479096450985, guid: a0ff428855e419444851f57d3c69b645, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 728519213}
     - target: {fileID: 7068124799584983970, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2037,14 +1994,6 @@ PrefabInstance:
     - target: {fileID: 7068124799584983973, guid: a0ff428855e419444851f57d3c69b645, type: 3}
       propertyPath: m_Name
       value: SyringeEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473053723901789578, guid: a0ff428855e419444851f57d3c69b645, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ff428855e419444851f57d3c69b645, type: 3}

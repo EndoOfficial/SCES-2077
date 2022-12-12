@@ -520,9 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 100
-  player:
-    serializedVersion: 2
-    m_Bits: 64
+  player: {fileID: 0}
 --- !u!114 &1469248374227010636
 MonoBehaviour:
   m_ObjectHideFlags: 0

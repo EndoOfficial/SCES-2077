@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public float KillsToSpawn;
 
     public GameObject MrConcaine;
+    public GameObject itemSpawner;
     public Transform CocaineSpawn;
 
     public List<GameObject> CokeSpawns;
@@ -23,7 +24,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(KillCount >= KillsToSpawn)
+        if(KillCount >= KillsToSpawn && itemSpawner.GetComponent<ItemSpawner>().ItemsToSpawn.Count > 0)
         {
             KillCount = 0;
             
