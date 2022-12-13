@@ -9,10 +9,12 @@ public class CowBathroomScare : MonoBehaviour
     public GameObject Cow;
     public GameObject door;
     private AudioSource source;
+    private Collider thisTrigger;
 
     private void Start()
     {
         source = GetComponent<AudioSource>();
+        thisTrigger = GetComponent<Collider>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +28,7 @@ public class CowBathroomScare : MonoBehaviour
                 //play audio
                 GameEvents.OnRuralplayAudio?.Invoke(source, AudioManager.RuralClipTags.DoorSlam);
                 Cow.SetActive(false);
+                thisTrigger.enabled = false;
             });
     }
 

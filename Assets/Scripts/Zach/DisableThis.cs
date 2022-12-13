@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class DisableThis : MonoBehaviour
 {
-    private GameObject disablee;
+    public GameObject disablee;
+    public Collider disableeCollider;
+    private AudioSource source;
     private void Start()
     {
-        disablee = this.gameObject;
+        this.source = GetComponent<AudioSource>();
+
     }
     private void OnTriggerEnter(Collider other)
     {
+        GameEvents.OnRuralplayAudio?.Invoke(source, AudioManager.RuralClipTags.Moo);
         disablee.SetActive(false);
+        disableeCollider.enabled = false;
     }
 }
