@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDetect : MonoBehaviour
 {
-    public bool range;
+    public bool range; 
     public float distance;
     public GameObject player;
     private void Start()
