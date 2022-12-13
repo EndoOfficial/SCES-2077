@@ -17,7 +17,6 @@ public class PauseMenu1 : MonoBehaviour
 
     private void Start()
     {
-        HintScreen = GameObject.Find("HintScreen");
         HintImage = GameObject.Find("HintImage");
         HintScreen.SetActive(false);
         pauseMenuUi.SetActive(false);
@@ -60,31 +59,29 @@ public class PauseMenu1 : MonoBehaviour
         HintScreen.SetActive(false);
 
     }
-    public void Tutorial()
-    {
-        SceneManager.LoadScene("Tutorial");
-    }
     //LoadMenu() was really misleading so im renaming the function - Zach
     public void LoadPreviousArea()
     {
         Time.timeScale = 1f;
+        GameEvents.UILoading?.Invoke(true);
         SceneManager.LoadScene(previousLevel);
     }
     public void ResetScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
+        GameEvents.UILoading?.Invoke(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void QuitToMenu()
     {
         Time.timeScale = 1f;
+        GameEvents.UILoading?.Invoke(true);
         Debug.Log("Quitting to menu");
         SceneManager.LoadScene("MainMenu");        
     }
 
     public void QuitGame()
     {
-
         Time.timeScale = 1f;
         Application.Quit();
         Debug.Log("Quitting game....");
@@ -92,10 +89,8 @@ public class PauseMenu1 : MonoBehaviour
 
     public void Hint()
     {
-
         HintScreen.SetActive(true);
         pauseMenuUi.SetActive(false);
-
     }
     public void Options()
     {

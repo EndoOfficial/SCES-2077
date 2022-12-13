@@ -15,13 +15,16 @@ public class SyringeAI : MonoBehaviour
     public bool JumpToRoof;
     public bool Turretable;
     SyringeJump TurretBool;
+    private Enemy enemy;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         CurrentState = new SyringeIdle(this.gameObject, anim, Player);
-
+        enemy = GetComponent<Enemy>();
         TurretBool = GetComponent<SyringeJump>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,9 +34,9 @@ public class SyringeAI : MonoBehaviour
 
         grounded = Child.GetComponent<GroundCheck>().Grounded;
 
-        if(GetComponent<Enemy>().health <= 0)
+        if(enemy.health <= 0)
         {
-            GameEvents.OnSlumsplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.SlumsClipTags.NeedleDeath);
+            GameEvents.OnSlumsplayAudio?.Invoke(audioSource, AudioManager.SlumsClipTags.NeedleDeath);
         }
 
         //if (grounded)

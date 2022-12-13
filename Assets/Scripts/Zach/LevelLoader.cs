@@ -28,24 +28,12 @@ public class LevelLoader : MonoBehaviour
     public bool pressedEOnNPC = false;
     private bool pressedE = false;
 
-    GameObject Loading;
-    
     public Text DialogueText;
     private int index; // used to change dialogue text
     public AudioSource _audio;
 
     private void Start()
     {
-
-        if (GameObject.Find("Loading") != null)
-        {
-            Loading = GameObject.Find("Loading");
-            Loading.SetActive(false);
-        }
-        else
-        {
-
-        }
         DialogueText = GameObject.Find("DialogueUIText").GetComponent<Text>();
     }
     // Start is called before the first frame update
@@ -170,7 +158,7 @@ public class LevelLoader : MonoBehaviour
         GetComponent<Gun>().anim.SetTrigger("JackIn");
         yield return new WaitForSeconds(1.5f);
 
-        Loading.SetActive(true);
+        GameEvents.UILoading?.Invoke(true);
 
         sceneLoader.LoadScene();
     }

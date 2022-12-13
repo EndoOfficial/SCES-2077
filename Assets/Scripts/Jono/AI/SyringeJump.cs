@@ -28,13 +28,13 @@ public class SyringeJump : MonoBehaviour
     public Animator anim;
     SyringeAI AI;
     public bool Paused;
-    AudioSource audioSource;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         CFGJ = GetComponentInChildren<ConfigurableJoint>();
         Target = GameObject.FindGameObjectWithTag("Player");
-
+        audioSource = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         AI = GetComponent<SyringeAI>();
         //IsGrounded = GetComponent<GroundCheck>().Grounded;
@@ -122,7 +122,7 @@ public class SyringeJump : MonoBehaviour
             if(!Paused)
             {
                 anim.ResetTrigger("Grounded");
-                GameEvents.OnSlumsplayAudio?.Invoke(GetComponent<AudioSource>(), AudioManager.SlumsClipTags.NeedleJump);
+                //GameEvents.OnSlumsplayAudio?.Invoke(audioSource, AudioManager.SlumsClipTags.NeedleJump);
                 if (MyRB != null)
                 {
                     MyRB.AddRelativeForce(-transform.forward * ForwardSpeed);

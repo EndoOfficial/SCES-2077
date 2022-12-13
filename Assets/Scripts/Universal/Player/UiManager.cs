@@ -9,7 +9,8 @@ public class UiManager : MonoBehaviour
 {
     public GameObject GameOverMenuUi;
 
-    public GameObject dialoguePane;
+    public GameObject dialoguePanel;
+    public GameObject LoadingPanel;
 
     public GameObject Wave1TXT;
     public GameObject GameWinTXT;
@@ -19,6 +20,7 @@ public class UiManager : MonoBehaviour
     {
         GameEvents.OnGameOver += OnGameOver;
         GameEvents.UIPanelToggle += UIPanelToggle;
+        GameEvents.UILoading += UILoading;
         GameEvents.NewWave += Wave1;
         GameEvents.WaveWin += OnWaveWin;
     }
@@ -26,11 +28,15 @@ public class UiManager : MonoBehaviour
     {
         GameEvents.OnGameOver -= OnGameOver;
         GameEvents.UIPanelToggle -= UIPanelToggle;
+        GameEvents.UILoading -= UILoading;
         GameEvents.NewWave -= Wave1;
         GameEvents.WaveWin -= OnWaveWin;
     }
 
-    
+    private void UILoading(bool active)
+    {
+        LoadingPanel.SetActive(active);
+    }
 
     public void OnGameOver(bool gameover)
     {
@@ -45,7 +51,7 @@ public class UiManager : MonoBehaviour
     }
     private void UIPanelToggle(bool active)
     {
-        dialoguePane.SetActive(active);
+        dialoguePanel.SetActive(active);
     }
 
     public void Wave1()

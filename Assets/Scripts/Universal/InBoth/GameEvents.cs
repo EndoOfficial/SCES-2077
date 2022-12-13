@@ -92,4 +92,7 @@ public static class GameEvents
     public delegate void UIPanelToggleDelegate(bool active);
     public static UIPanelToggleDelegate UIPanelToggle;
 
+    public delegate void UILoadingDelegate(bool active);
+    public static UILoadingDelegate UILoading;
+
 }

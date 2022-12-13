@@ -1101,7 +1101,7 @@ MonoBehaviour:
   bulletTrail: {fileID: 5491431827969203855, guid: 58d9cd4e5a23ca449a7f1f23754e5f51, type: 3}
   bulletSpawn: {fileID: 5868568634376584252}
   maxVol: 0.2
-  minVol: 0
+  minVol: 0.03
 --- !u!114 &4520434914419971837
 MonoBehaviour:
   m_ObjectHideFlags: 0

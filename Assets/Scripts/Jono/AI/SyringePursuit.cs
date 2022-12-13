@@ -24,7 +24,7 @@ public class SyringePursuit : SyringeState
 
     public override void Update()
     {
-        Jump.IsJumping();        
+        Jump.IsJumping();
 
         if (!ai.Detected)
         {
