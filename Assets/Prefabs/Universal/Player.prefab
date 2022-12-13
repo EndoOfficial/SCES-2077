@@ -1053,7 +1053,6 @@ MonoBehaviour:
   mouseLook: {fileID: 2015154809373924600}
   pressedEOnCollectable: 0
   pressedEOnNPC: 0
-  Panel: {fileID: 0}
   DialogueText: {fileID: 0}
   _audio: {fileID: 0}
 --- !u!114 &595779542
@@ -1101,8 +1100,8 @@ MonoBehaviour:
   paperHit: {fileID: 2666401237946873333, guid: 31fc99f99413cdc409b58ef3bdc0f6e2, type: 3}
   bulletTrail: {fileID: 5491431827969203855, guid: 58d9cd4e5a23ca449a7f1f23754e5f51, type: 3}
   bulletSpawn: {fileID: 5868568634376584252}
-  maxVol: 0.3
-  minVol: 0.1
+  maxVol: 0.2
+  minVol: 0
 --- !u!114 &4520434914419971837
 MonoBehaviour:
   m_ObjectHideFlags: 0
