@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: 22
   dialogue:
-  - The boxes, everywhere I look the boxes are there!
+  - The boxes, everywhere I look there are boxes! AaAhH!
   - "1\u2026 5\u2026 Monday\u2026 A through Z\u2026 Friday morning\u2026 7\u2026
-    Alpha\u2026 Omega\u2026"
+    Alpha\u2026 Omega\u2026 *Sobs*"
   - The sheet never ends the sheet never ends the sheet never ends the sheet never
     ends.
   audio:

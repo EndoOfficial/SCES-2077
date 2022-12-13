@@ -15,11 +15,11 @@ MonoBehaviour:
   _name: 24
   dialogue:
   - "I\u2019ve been stuck in this wretched rural place for my whole existence. What
-    a bore, there\u2019s nobody around and nothing to do. I\u2019m so alone, all
-    I do is sit inside all day, with no reason to go out, nobody to go with, to talk
-    to. I sit in my room, staring at a wall, lying in bed, listening to music. At
-    least that is an out, but I just wish I had someone to go outside and do things
-    with. There\u2019s so much \u2018know your self\u2019 bull shit these days, I
-    just wish I could also know somebody else besides myself."
+    a bore, there\u2019s nothing to do around here. I\u2019m so alone, all I do is
+    sit inside all day, there's no reason to go out, nobody to go with, to talk to.
+    I sit in my room, staring at a wall, lying in bed, listening to music. At least
+    that is an out, but I just wish I had someone to go outside and do things with.
+    There\u2019s so much \u2018know your self\u2019 bull shit these days, I just
+    wish I could also know somebody else besides myself."
   audio:
   - {fileID: 8300000, guid: 6c6caa66873450a46a290450c0416d44, type: 3}

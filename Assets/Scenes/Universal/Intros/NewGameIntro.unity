@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -364,14 +364,13 @@ MonoBehaviour:
     serotonin, essentially it is pure happiness. However, as the population has grown
     more and more dependent on the drug a new challenge has arrived. Following consistent
     and intensive use of the drug, a virus of unknown origin. \u2018The Sadness\u2019,
-    is formed within the human\u2019s psyche which can lead to detrimental physical
-    ramifications, ultimately leading to a form of suicidal insanity. To help prevent
-    the death of their consumer base, Hedo Corp has created a militarized unit of
-    robots called the \u201CSadness-Control-Empathy Squad.\u201D This task force
-    involves single units being dropped into situations in which \u2018The Sadness\u2019
-    is running rampant. The bots are tasked with jacking into the psyche of Hedo
-    Corp product buyers and clearing out their psyche of the virus. Note, the S.C.E.S
-    unit is not a cure for The Sadness, but merely just a deterrent. "
+    is formed within the human\u2019s psyche. To help prevent the death of their
+    consumer base, Hedo Corp has created a militarized unit of robots called the
+    \u201CSadness-Control-Empathy Squad.\u201D This task force involves single units
+    being dropped into situations in which \u2018The Sadness\u2019 is running rampant.
+    The bots are tasked with jacking into the psyche of Hedo Corp product buyers
+    and clearing out their psyche of the virus. Note, the S.C.E.S unit is not a cure
+    for The Sadness, but merely just a deterrent. "
 --- !u!114 &714987774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,15 +398,13 @@ MonoBehaviour:
     with dopamine and serotonin, essentially it is pure happiness. However, as the
     population has grown more and more dependent on the drug a new challenge has
     arrived. Following consistent and intensive use of the drug, a virus of unknown
-    origin. \u2018The Sadness\u2019, is formed within the human\u2019s psyche which
-    can lead to detrimental physical ramifications, ultimately leading to a form
-    of suicidal insanity. To help prevent the death of their consumer base, Hedo
-    Corp has created a militarized unit of robots called the \u201CSadness-Control-Empathy
-    Squad.\u201D This task force involves single units being dropped into situations
-    in which \u2018The Sadness\u2019 is running rampant. The bots are tasked with
-    jacking into the psyche of Hedo Corp product buyers and clearing out their psyche
-    of the virus. Note, the S.C.E.S unit is not a cure for The Sadness, but merely
-    just a deterrent.\r\n"
+    origin. \u2018The Sadness\u2019, is formed within the human\u2019s psyche. To
+    help prevent the death of their consumer base, Hedo Corp has created a militarized
+    unit of robots called the \u201CSadness-Control-Empathy Squad.\u201D This task
+    force involves single units being dropped into situations in which \u2018The
+    Sadness\u2019 is running rampant. The bots are tasked with jacking into the psyche
+    of Hedo Corp product buyers and clearing out their psyche of the virus. Note,
+    the S.C.E.S unit is not a cure for The Sadness, but merely just a deterrent.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}

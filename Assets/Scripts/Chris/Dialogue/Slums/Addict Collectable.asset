@@ -22,6 +22,6 @@ MonoBehaviour:
     of another. He is sentenced to three years on a good behaviour bond to be tracked
     via an anklet. During this time, he should be in for monthly psychiatric evaluations.
     At the end of this time period, he shall come back to the court for re-evaluation. 
-    Signed: Reg Ashby \t\t\t\t\t\t\t\tDated: 05/04/2074  "
+    Signed: Reg Ashby \t\t\t\t\t\t\t\tDated: 05/04/2074"
   audio:
   - {fileID: 8300000, guid: 1ee26c05ffe07da42ab040f6a4dd08ed, type: 3}
