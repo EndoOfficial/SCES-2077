@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class FishIdle : FishState
 {
-    FishAI ai;
+    PlayerDetect detect;
     FishJump jump;
     public FishIdle(GameObject _npc, NavMeshAgent _agent, Animator _anim, GameObject _player)
         : base(_npc, _agent, _anim, _player)
@@ -16,15 +16,15 @@ public class FishIdle : FishState
     public override void Enter()
     {
         rb = npc.GetComponent<Rigidbody>();
-        ai = npc.GetComponent<FishAI>();
         jump = npc.GetComponent<FishJump>();
+        detect = npc.GetComponent<PlayerDetect>();
         jump.jumpDirection = Vector3.zero;
         base.Enter();
     }
 
     public override void Update()
     {
-        if (ai.detected)// if player is detected
+        if (detect.range)// if player is detected
         {
             nextState = new FishPursuit(npc, agent, anim, player);
             stage = EVENT.EXIT;

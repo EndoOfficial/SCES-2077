@@ -26,21 +26,4 @@ public class FishAI : MonoBehaviour
     {
         currentState = currentState.Process();
     }
-
-    private void OnEnable()
-    {
-        GameEvents.DetectPlayer += DetectPlayer;
-    }
-
-    private void OnDisable()
-    {
-        GameEvents.DetectPlayer -= DetectPlayer;
-    }
-
-    private void DetectPlayer(bool detect)
-    {
-        //passthrough a bool
-        if (detect) { detected = true; }
-        else { detected = false; }
-    }
 }

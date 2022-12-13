@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerDetect : MonoBehaviour
 {
-    bool range;
+    public bool range;
     public float distance;
     public GameObject player;
     private void Start()
     {
+        player = GameObject.Find("Player");
         StartCoroutine(Repeat());
     }
 
@@ -16,15 +17,11 @@ public class PlayerDetect : MonoBehaviour
     {
         while (true)
         {
-            range = Vector3.Distance(transform.position, player.transform.position) < distance; // checks if player is within distance
-            if (range)
+            if (Vector3.Distance(transform.position, player.transform.position) < distance)
             {
-                GameEvents.DetectPlayer?.Invoke(range);
+                range = true;
             }
-            if (!range)
-            {
-                GameEvents.DetectPlayer?.Invoke(range);
-            }
+            else range = false;
             yield return new WaitForSeconds(1);
         }
     }
